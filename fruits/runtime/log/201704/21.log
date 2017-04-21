@@ -1,0 +1,310 @@
+[ 2017-04-21T09:06:51+08:00 ] 127.0.0.1 127.0.0.1 GET /frit/fruits/public/index.php
+[ log ] www.peng.com/frit/fruits/public/index.php [运行时间：0.639037s][吞吐率：1.56req/s] [内存消耗：1,239.52kb] [文件加载：34]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.peng.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:52.0) Gecko/20100101 Firefox/52.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.peng.com/frit/fruits/public/',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] Method [ <user> public method index ] {
+  @@ E:\study\HHH\frit\fruits\application\index\controller\Index.php 7 - 12
+}
+
+[ info ] [ VIEW ] E:\study\HHH\frit\fruits\public/../application/index\view\index\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-04-21T09:07:24+08:00 ] 127.0.0.1 127.0.0.1 GET /frit/fruits/public/index.php/home/user/login
+[ log ] www.peng.com/frit/fruits/public/index.php/home/user/login [运行时间：0.071004s][吞吐率：14.08req/s] [内存消耗：1,164.55kb] [文件加载：33]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'user',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.peng.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:52.0) Gecko/20100101 Firefox/52.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] Method [ <user> public method login ] {
+  @@ E:\study\HHH\frit\fruits\application\home\controller\User.php 86 - 109
+}
+
+[ info ] [ VIEW ] E:\study\HHH\frit\fruits\public/../application/home\view\user\login.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-04-21T09:07:25+08:00 ] 127.0.0.1 127.0.0.1 GET /frit/fruits/public/images/icon_close.png
+[ log ] www.peng.com/frit/fruits/public/images/icon_close.png [运行时间：0.506029s][吞吐率：1.98req/s] [内存消耗：914.48kb] [文件加载：29]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'frit',
+    1 => 'fruits',
+    2 => 'public',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.peng.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:52.0) Gecko/20100101 Firefox/52.0',
+  'accept' => '*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.peng.com/frit/fruits/public/index.php/home/user/login',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+  '/images/icon_close_png' => '',
+  'images' => 'icon_close.png',
+)
+[ info ] [ LANG ] E:\study\HHH\frit\fruits\framework\lang\zh-cn.php
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-04-21T09:07:37+08:00 ] 127.0.0.1 127.0.0.1 POST /frit/fruits/public/index.php/home/user/login.html
+[ log ] www.peng.com/frit/fruits/public/index.php/home/user/login.html [运行时间：0.665038s][吞吐率：1.50req/s] [内存消耗：1,829.40kb] [文件加载：41]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'user',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.peng.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:52.0) Gecko/20100101 Firefox/52.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.peng.com/frit/fruits/public/index.php/home/user/login',
+  'cookie' => 'think_var=zh-cn',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'content-length' => '38',
+)
+[ info ] [ PARAM ] array (
+  'u_name' => '张三',
+  'u_pwd' => '123456',
+)
+[ info ] [ RUN ] Method [ <user> public method login ] {
+  @@ E:\study\HHH\frit\fruits\application\home\controller\User.php 86 - 109
+}
+
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.123007s ] mysql:dbname=fruits;host=101.200.41.87;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sg_user` [ RunTime:0.018001s ]
+[ sql ] [ SQL ] SELECT * FROM `sg_user` WHERE  `u_name` = '张三'  AND `u_pwd` = '123456' LIMIT 1     [ RunTime:0.014001s ]
+[ sql ] [ SQL ] SELECT * FROM `sg_user` WHERE  `u_tel` = '张三'  AND `u_pwd` = '123456' LIMIT 1     [ RunTime:0.026001s ]
+
+---------------------------------------------------------------
+[ 2017-04-21T09:07:37+08:00 ] 127.0.0.1 127.0.0.1 GET /frit/fruits/public/index.php/home/userinfo/user.html
+[ log ] www.peng.com/frit/fruits/public/index.php/home/userinfo/user.html [运行时间：0.229013s][吞吐率：4.37req/s] [内存消耗：1,918.62kb] [文件加载：42]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'userinfo',
+    2 => 'user',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.peng.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:52.0) Gecko/20100101 Firefox/52.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.peng.com/frit/fruits/public/index.php/home/user/login',
+  'cookie' => 'think_var=zh-cn; PHPSESSID=qsk1qeg00tmanaoqoh3kf29cs4',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] Method [ <user> public method user ] {
+  @@ E:\study\HHH\frit\fruits\application\home\controller\Userinfo.php 8 - 14
+}
+
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\study\HHH\frit\fruits\public/../application/home\view\userinfo\user.html [ array (
+  0 => 'one',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.084005s ] mysql:dbname=fruits;host=101.200.41.87;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sg_user` [ RunTime:0.030002s ]
+[ sql ] [ SQL ] SELECT * FROM `sg_user` WHERE  (  u_tel = 17319231328 )  [ RunTime:0.040002s ]
+
+---------------------------------------------------------------
+[ 2017-04-21T09:07:45+08:00 ] 127.0.0.1 127.0.0.1 GET /frit/fruits/public/index.html
+[ log ] www.peng.com/frit/fruits/public/index.html [运行时间：0.027002s][吞吐率：37.03req/s] [内存消耗：914.23kb] [文件加载：29]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'frit',
+    1 => 'fruits',
+    2 => 'public',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.peng.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:52.0) Gecko/20100101 Firefox/52.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.peng.com/frit/fruits/public/index.php/home/userinfo/user.html',
+  'cookie' => 'think_var=zh-cn; PHPSESSID=qsk1qeg00tmanaoqoh3kf29cs4',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+  '/index_html' => '',
+)
+[ info ] [ LANG ] E:\study\HHH\frit\fruits\framework\lang\zh-cn.php
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-04-21T09:08:04+08:00 ] 127.0.0.1 127.0.0.1 GET /frit/fruits/public/index.php/home/userinfo/address.html
+[ log ] www.peng.com/frit/fruits/public/index.php/home/userinfo/address.html [运行时间：0.760043s][吞吐率：1.32req/s] [内存消耗：1,916.04kb] [文件加载：42]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'userinfo',
+    2 => 'address',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.peng.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:52.0) Gecko/20100101 Firefox/52.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.peng.com/frit/fruits/public/index.php/home/userinfo/user.html',
+  'cookie' => 'think_var=zh-cn; PHPSESSID=qsk1qeg00tmanaoqoh3kf29cs4',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] Method [ <user> public method address ] {
+  @@ E:\study\HHH\frit\fruits\application\home\controller\Userinfo.php 17 - 23
+}
+
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\study\HHH\frit\fruits\public/../application/home\view\userinfo\addres.html [ array (
+  0 => 'data',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.634036s ] mysql:dbname=fruits;host=101.200.41.87;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sg_uaddress` [ RunTime:0.019001s ]
+[ sql ] [ SQL ] SELECT * FROM `sg_uaddress` WHERE  (  u_id = 1 )  [ RunTime:0.030002s ]
+
+---------------------------------------------------------------
+[ 2017-04-21T09:08:13+08:00 ] 127.0.0.1 127.0.0.1 GET /frit/fruits/public/index.php/home/userinfo/address.html
+[ log ] www.peng.com/frit/fruits/public/index.php/home/userinfo/address.html [运行时间：0.356021s][吞吐率：2.81req/s] [内存消耗：1,774.06kb] [文件加载：40]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'userinfo',
+    2 => 'address',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.peng.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:52.0) Gecko/20100101 Firefox/52.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.peng.com/frit/fruits/public/index.php/home/userinfo/user.html',
+  'cookie' => 'think_var=zh-cn; PHPSESSID=qsk1qeg00tmanaoqoh3kf29cs4',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] Method [ <user> public method address ] {
+  @@ E:\study\HHH\frit\fruits\application\home\controller\Userinfo.php 17 - 23
+}
+
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\study\HHH\frit\fruits\public/../application/home\view\userinfo\addres.html [ array (
+  0 => 'data',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.048002s ] mysql:dbname=fruits;host=101.200.41.87;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sg_uaddress` [ RunTime:0.243014s ]
+[ sql ] [ SQL ] SELECT * FROM `sg_uaddress` WHERE  (  u_id = 1 )  [ RunTime:0.032002s ]
+
+---------------------------------------------------------------
+[ 2017-04-21T09:08:26+08:00 ] 127.0.0.1 127.0.0.1 GET /frit/fruits/public/myorder.html
+[ log ] www.peng.com/frit/fruits/public/myorder.html [运行时间：0.024002s][吞吐率：41.66req/s] [内存消耗：914.30kb] [文件加载：29]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'frit',
+    1 => 'fruits',
+    2 => 'public',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.peng.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:52.0) Gecko/20100101 Firefox/52.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.peng.com/frit/fruits/public/index.php/home/userinfo/user.html',
+  'cookie' => 'think_var=zh-cn; PHPSESSID=qsk1qeg00tmanaoqoh3kf29cs4',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+  '/myorder_html' => '',
+)
+[ info ] [ LANG ] E:\study\HHH\frit\fruits\framework\lang\zh-cn.php
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------

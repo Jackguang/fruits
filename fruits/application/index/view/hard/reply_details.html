@@ -1,0 +1,85 @@
+
+<?php if(!empty($panduan)){ ?>
+
+
+<div class="main-content">
+    <div class="breadcrumbs" id="breadcrumbs">
+        <script type="text/javascript">
+            try{ace.settings.check('breadcrumbs' , 'fixed')}catch(e){}
+        </script>
+        <!--<form action="{:url('index/hard/show')}" method="post">-->
+        <ul class="breadcrumb">
+            <li>
+                <i class="icon-home home-icon"></i>
+                <a href="#">管理员回复</a>
+            </li>
+            <li class="active">回复列表</li>
+            <li class="active" style="color: grey">回复详情</li>
+        </ul><!-- .breadcrumb -->
+    </div>
+    <h2 style="margin-left: 50px;">回复内容:</h2>
+    <div style="width: 500px;height: 500px; margin-left: 150px; float: left">
+        <font style="font-size: 20px;">
+            <br><br>
+            <?php echo str_repeat('&nbsp;','10');?>{$arr.reply_content}
+        </font>
+    </div>
+    <div style="margin-left: 150px; width: 500px;height: 50px;">
+        <div style="margin-left: 250px;">
+            <font style="font-size: 18px;">反馈时间：{$arr.reply_time|date="y-m-d H:i:s",###}
+                <br>
+                反馈人：{$arr.a_name}</font></div>
+    </div>
+
+
+
+
+
+    <?php } else{ ?>
+
+
+
+
+
+
+    <div class="main-content">
+        <div class="breadcrumbs" id="breadcrumbs">
+            <script type="text/javascript">
+                try{ace.settings.check('breadcrumbs' , 'fixed')}catch(e){}
+            </script>
+            <!--<form action="{:url('index/hard/show')}" method="post">-->
+            <ul class="breadcrumb">
+                <li>
+                    <i class="icon-home home-icon"></i>
+                    <a href="#">用户意见</a>
+                </li>
+                <li class="active">意见列表</li>
+                <li class="active" style="color: grey">意见详情</li>
+            </ul><!-- .breadcrumb -->
+        </div>
+        <h2 style="margin-left: 50px;">意见内容:</h2>
+        <div style="width: 500px;height: 500px; margin-left: 150px; float: left">
+            <font style="font-size: 20px;">
+                <br><br>
+                <?php echo str_repeat('&nbsp;','10');?>111{$arr.opinion_content}
+            </font>
+        </div>
+        <div style="margin-left: 150px; width: 500px;height: 50px;">
+            <div style="margin-left: 250px;">
+                <font style="font-size: 18px;">反馈时间：{$arr.opinion_time|date="y-m-d H:i:s",###}
+                    <br>
+                    反馈人：{$arr.u_name}</font></div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+        <?php } ?>

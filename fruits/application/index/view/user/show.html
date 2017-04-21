@@ -1,0 +1,125 @@
+	<div class="main-content">
+		<div class="breadcrumbs" id="breadcrumbs">
+			<script type="text/javascript">
+				try{ace.settings.check('breadcrumbs' , 'fixed')}catch(e){}
+			</script>
+
+			<ul class="breadcrumb">
+				<li>
+					<i class="icon-home home-icon"></i>
+					<a href="{:url('index/index/show')}">首页</a>
+				</li>
+				<li class="active">用户管理</li>
+				<li class="active">查看列表</li>
+			</ul><!-- .breadcrumb -->
+		</div>
+
+		<div class="page-content">
+		用户名：<input type="text" id="name">
+		注册时间：<input type="text" class="sang_Calender" id="starttime"/>----
+		<input type="text" class="sang_Calender" id="endtime"/>
+		类型：<input type="text" id="type">
+		<button id="search">搜索</button>
+<div class="row">
+	<div class="col-xs-12">				
+	
+		<div class="table-responsive">
+			<table id="sample-table-1" class="table table-striped table-bordered table-hover">
+				<thead>
+					<tr>
+						<th class="center">
+							<label>
+								<input type="checkbox" class="ace" />
+								<span class="lbl"></span>
+							</label>
+						</th>
+						<th>编号</th>								
+						<th>用户名</th>
+						<th>电话</th>
+						<th>类型</th>
+						<th>注册时间</th>
+						
+					</tr>
+				</thead>
+
+				<tbody id="tbody">
+				{foreach name="data" item="v"}
+					<tr>
+						<td class="center">
+							<label>
+								<input type="checkbox" class="ace" />
+								<span class="lbl"></span>
+							</label>
+						</td>
+
+						<td>{$v.u_id}</td>
+						
+						<td>{$v.u_name}</td>
+						<td>{$v.u_tel}</td>
+						<td>
+							<?php if($v['u_price'] >= 500){?>
+							会员
+							<?php } else{?>
+							普通用户
+							<?php }?>
+						</td>
+						<td>{$v.u_time}</td>
+					<!-- 	<td>
+						<button class="btn">编辑</button>
+						<button class="btn btn-danger">删除</button>
+						</td> -->
+
+					</tr>
+					{/foreach}
+					
+				</tbody>
+			</table>
+<div class="page"><?php echo $str?></div>
+							</div><!-- /.table-responsive -->
+
+						</div><!-- /span -->
+<script src="js/jq.js"></script>
+<script>
+//搜索   分页
+   var arr = new Object();
+   $('#search').click(function(){
+       arr['name']=$("#name").val();
+       arr['type']=$("#type").val();
+       arr['starttime']=$("#starttime").val();
+       arr['endtime']=$("#endtime").val();
+   // alert(arr['name']);
+       page(1);
+   })
+   function page(p){
+       var str='';
+       $.each(arr,function(k,v){
+           str +='&'+k+'='+v;
+       });
+       $.ajax({
+           type: "GET",
+           url: "{:url('index/User/ajaxs')}",
+           data: 'p='+p+str,
+           dataType:'json',
+           success: function(msg){
+               str1(msg);
+           }
+       });
+   }
+   function str1(msg){
+       var str ="";
+       $.each(msg.list,function(k,v){
+       	str+='<tr><td class="center"><label><input type="checkbox" class="ace" /><span class="lbl"></span></label></td>';
+       	str+='<td>'+v.u_id+'</td><td>'+v.u_name+'</td><td>'+v.u_tel+'</td>';
+		if(v.u_price >= 500){									
+			str+='<td>会员</td>';
+		} else{
+			str+='<td>普通用户</td>';						
+		}		
+		str+='<td>'+v.u_time+'</td>';
+       	str+='</tr>';
+       	
+       })
+       $("#tbody").html(str);
+       $('.page').html(msg.page);
+   }
+</script>

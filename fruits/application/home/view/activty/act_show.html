@@ -49,7 +49,7 @@
     <div class="swiper-wrapper">
         <div class="swiper-slide">
             <div class="productphoto">
-                <a href=""><img src="{$v['f_img']}" style="width: 310px;" height="89" alt=""></a>
+                <a href="{:url('fruits/info')}?id={$v.f_id}"><img src="{$v['f_img']}" style="width: 360px;" height="89"></a>
                 <span style="position: absolute; top: 0; left: 0; padding-left: 10px; padding-top: 150px;"><h4 style="color: black;"><b>{$v['f_name']}</b><br>
                     <span style="font-size: 11px; color: lightgrey">({$v['f_title']})</span><br>
                     <span style="font-size: 13px;">市场价：<del>{$v['m_price']}</del></span><br>

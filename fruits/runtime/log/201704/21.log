@@ -308,3 +308,465 @@
 [ info ] [ LOG ] INIT File
 
 ---------------------------------------------------------------
+[ 2017-04-21T14:49:17+08:00 ] ::1 ::1 GET /github/fruits/fruits/public/
+[ log ] localhost/github/fruits/fruits/public/ [运行时间：0.224704s][吞吐率：4.45req/s] [内存消耗：1,242.41kb] [文件加载：34]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:52.0) Gecko/20100101 Firefox/52.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://localhost/github/fruits/fruits/',
+  'cookie' => '_uab_collina=149205509155323278234554; cna=; _umdata=486B7B12C6AA95F2FF634D07C57FF16E1607450D294E756058F1C672FB588E0B4C9A9CC30393E1E7CD43AD3E795C914C308ED8C19D9281FCB4573C28FC37D2AA; l=AjMzQBFJNkxAnvxwgkOnbI4Jwz1dEMcq; isg=Ai8v8plJq0j6Ra90xayvMdnEv0Ac0oP2mlbQqUG8sx6lkE-SSaQTRi0AZDtQ; o2-webp=false',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] Method [ <user> public method index ] {
+  @@ F:\soft\phpStudy\WWW\github\fruits\fruits\application\index\controller\Index.php 7 - 12
+}
+
+[ info ] [ VIEW ] F:\soft\phpStudy\WWW\github\fruits\fruits\public/../application/index\view\index\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-04-21T14:49:36+08:00 ] ::1 ::1 GET /github/fruits/fruits/public/index.php/home/fruits/index
+[ log ] localhost/github/fruits/fruits/public/index.php/home/fruits/index [运行时间：0.430472s][吞吐率：2.32req/s] [内存消耗：2,036.23kb] [文件加载：43]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'fruits',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:52.0) Gecko/20100101 Firefox/52.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => '_uab_collina=149205509155323278234554; cna=; _umdata=486B7B12C6AA95F2FF634D07C57FF16E1607450D294E756058F1C672FB588E0B4C9A9CC30393E1E7CD43AD3E795C914C308ED8C19D9281FCB4573C28FC37D2AA; l=AjMzQBFJNkxAnvxwgkOnbI4Jwz1dEMcq; isg=Ai8v8plJq0j6Ra90xayvMdnEv0Ac0oP2mlbQqUG8sx6lkE-SSaQTRi0AZDtQ; o2-webp=false',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] Method [ <user> public method index ] {
+  @@ F:\soft\phpStudy\WWW\github\fruits\fruits\application\home\controller\Fruits.php 10 - 26
+}
+
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] F:\soft\phpStudy\WWW\github\fruits\fruits\public/../application/home\view\fruits\index.html [ array (
+  0 => 'arr',
+  1 => 'a',
+) ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.110754s ] mysql:dbname=fruits;host=101.200.41.87;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sg_fruits` [ RunTime:0.047568s ]
+[ sql ] [ SQL ] SELECT * FROM `sg_fruits` WHERE  (  is_show =1 ) ORDER BY f_time desc LIMIT 6   [ RunTime:0.015765s ]
+
+---------------------------------------------------------------
+[ 2017-04-21T14:49:39+08:00 ] ::1 ::1 GET /github/fruits/fruits/public/home/js/maps/swiper.min.js.map
+[ log ] localhost/github/fruits/fruits/public/home/js/maps/swiper.min.js.map [运行时间：0.298864s][吞吐率：3.35req/s] [内存消耗：917.80kb] [文件加载：29]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'github',
+    1 => 'fruits',
+    2 => 'fruits',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:52.0) Gecko/20100101 Firefox/52.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => '_uab_collina=149205509155323278234554; cna=; _umdata=486B7B12C6AA95F2FF634D07C57FF16E1607450D294E756058F1C672FB588E0B4C9A9CC30393E1E7CD43AD3E795C914C308ED8C19D9281FCB4573C28FC37D2AA; l=AjMzQBFJNkxAnvxwgkOnbI4Jwz1dEMcq; isg=Ai8v8plJq0j6Ra90xayvMdnEv0Ac0oP2mlbQqUG8sx6lkE-SSaQTRi0AZDtQ; o2-webp=false; PHPSESSID=rk94b4trdmdgr6no71o187j0l0',
+  'connection' => 'keep-alive',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  '/home/js/maps/swiper_min_js_map' => '',
+  'public' => 'home',
+  'js' => 'maps',
+)
+[ info ] [ LANG ] F:\soft\phpStudy\WWW\github\fruits\fruits\framework\lang\zh-cn.php
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-04-21T14:49:39+08:00 ] ::1 ::1 GET /github/fruits/fruits/public/home/js/jquery.min.map
+[ log ] localhost/github/fruits/fruits/public/home/js/jquery.min.map [运行时间：0.057762s][吞吐率：17.31req/s] [内存消耗：917.78kb] [文件加载：29]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'github',
+    1 => 'fruits',
+    2 => 'fruits',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:52.0) Gecko/20100101 Firefox/52.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => '_uab_collina=149205509155323278234554; cna=; _umdata=486B7B12C6AA95F2FF634D07C57FF16E1607450D294E756058F1C672FB588E0B4C9A9CC30393E1E7CD43AD3E795C914C308ED8C19D9281FCB4573C28FC37D2AA; l=AjMzQBFJNkxAnvxwgkOnbI4Jwz1dEMcq; isg=Ai8v8plJq0j6Ra90xayvMdnEv0Ac0oP2mlbQqUG8sx6lkE-SSaQTRi0AZDtQ; o2-webp=false; PHPSESSID=rk94b4trdmdgr6no71o187j0l0',
+  'connection' => 'keep-alive',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  '/home/js/jquery_min_map' => '',
+  'public' => 'home',
+  'js' => 'jquery.min.map',
+)
+[ info ] [ LANG ] F:\soft\phpStudy\WWW\github\fruits\fruits\framework\lang\zh-cn.php
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-04-21T19:54:40+08:00 ] ::1 ::1 GET /github/fruits/fruits/public/index.php/home/fruits/classifyin.html
+[ log ] localhost/github/fruits/fruits/public/index.php/home/fruits/classifyin.html [运行时间：1.408827s][吞吐率：0.71req/s] [内存消耗：2,061.82kb] [文件加载：43]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'fruits',
+    2 => 'classifyin',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:52.0) Gecko/20100101 Firefox/52.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://localhost/github/fruits/fruits/public/index.php/home/fruits/index',
+  'cookie' => '_uab_collina=149205509155323278234554; cna=; _umdata=486B7B12C6AA95F2FF634D07C57FF16E1607450D294E756058F1C672FB588E0B4C9A9CC30393E1E7CD43AD3E795C914C308ED8C19D9281FCB4573C28FC37D2AA; l=AjMzQBFJNkxAnvxwgkOnbI4Jwz1dEMcq; isg=Ai8v8plJq0j6Ra90xayvMdnEv0Ac0oP2mlbQqUG8sx6lkE-SSaQTRi0AZDtQ; o2-webp=false; PHPSESSID=rk94b4trdmdgr6no71o187j0l0',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] Method [ <user> public method classifyin ] {
+  @@ F:\soft\phpStudy\WWW\github\fruits\fruits\application\home\controller\Fruits.php 192 - 206
+}
+
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] F:\soft\phpStudy\WWW\github\fruits\fruits\public/../application/home\view\fruits\classifyin.html [ array (
+  0 => 'arr',
+  1 => 'data',
+  2 => 'a',
+) ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.065886s ] mysql:dbname=fruits;host=101.200.41.87;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sg_fruits` [ RunTime:0.032358s ]
+[ sql ] [ SQL ] SELECT * FROM `sg_fruits` INNER JOIN sg_type ON sg_fruits.t_id = sg_type.t_id  WHERE  (  is_show =1  ) ORDER BY f_time desc LIMIT 6   [ RunTime:0.037146s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.017316s ] mysql:dbname=fruits;host=101.200.41.87;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sg_type` [ RunTime:0.021767s ]
+[ sql ] [ SQL ] SELECT * FROM `sg_type`  [ RunTime:0.224044s ]
+
+---------------------------------------------------------------
+[ 2017-04-21T19:54:41+08:00 ] ::1 ::1 GET /github/fruits/fruits/public/js/bootstrap.min.js
+[ log ] localhost/github/fruits/fruits/public/js/bootstrap.min.js [运行时间：0.619829s][吞吐率：1.61req/s] [内存消耗：917.40kb] [文件加载：29]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'github',
+    1 => 'fruits',
+    2 => 'fruits',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:52.0) Gecko/20100101 Firefox/52.0',
+  'accept' => '*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://localhost/github/fruits/fruits/public/index.php/home/fruits/classifyin.html',
+  'cookie' => '_uab_collina=149205509155323278234554; cna=; _umdata=486B7B12C6AA95F2FF634D07C57FF16E1607450D294E756058F1C672FB588E0B4C9A9CC30393E1E7CD43AD3E795C914C308ED8C19D9281FCB4573C28FC37D2AA; l=AjMzQBFJNkxAnvxwgkOnbI4Jwz1dEMcq; isg=Ai8v8plJq0j6Ra90xayvMdnEv0Ac0oP2mlbQqUG8sx6lkE-SSaQTRi0AZDtQ; o2-webp=false; PHPSESSID=rk94b4trdmdgr6no71o187j0l0',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+  '/js/bootstrap_min_js' => '',
+  'public' => 'js',
+)
+[ info ] [ LANG ] F:\soft\phpStudy\WWW\github\fruits\fruits\framework\lang\zh-cn.php
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-04-21T19:54:41+08:00 ] ::1 ::1 GET /github/fruits/fruits/public/js/jquery_min1_11_2.js
+[ log ] localhost/github/fruits/fruits/public/js/jquery_min1_11_2.js [运行时间：0.717549s][吞吐率：1.39req/s] [内存消耗：917.46kb] [文件加载：29]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'github',
+    1 => 'fruits',
+    2 => 'fruits',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:52.0) Gecko/20100101 Firefox/52.0',
+  'accept' => '*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://localhost/github/fruits/fruits/public/index.php/home/fruits/classifyin.html',
+  'cookie' => '_uab_collina=149205509155323278234554; cna=; _umdata=486B7B12C6AA95F2FF634D07C57FF16E1607450D294E756058F1C672FB588E0B4C9A9CC30393E1E7CD43AD3E795C914C308ED8C19D9281FCB4573C28FC37D2AA; l=AjMzQBFJNkxAnvxwgkOnbI4Jwz1dEMcq; isg=Ai8v8plJq0j6Ra90xayvMdnEv0Ac0oP2mlbQqUG8sx6lkE-SSaQTRi0AZDtQ; o2-webp=false; PHPSESSID=rk94b4trdmdgr6no71o187j0l0',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+  '/js/jquery_min1_11_2_js' => '',
+  'public' => 'js',
+)
+[ info ] [ LANG ] F:\soft\phpStudy\WWW\github\fruits\fruits\framework\lang\zh-cn.php
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-04-21T19:54:41+08:00 ] ::1 ::1 GET /github/fruits/fruits/public/images/icon_shopcar_ok.png
+[ log ] localhost/github/fruits/fruits/public/images/icon_shopcar_ok.png [运行时间：0.338847s][吞吐率：2.95req/s] [内存消耗：917.47kb] [文件加载：29]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'github',
+    1 => 'fruits',
+    2 => 'fruits',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:52.0) Gecko/20100101 Firefox/52.0',
+  'accept' => '*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://localhost/github/fruits/fruits/public/index.php/home/fruits/classifyin.html',
+  'cookie' => '_uab_collina=149205509155323278234554; cna=; _umdata=486B7B12C6AA95F2FF634D07C57FF16E1607450D294E756058F1C672FB588E0B4C9A9CC30393E1E7CD43AD3E795C914C308ED8C19D9281FCB4573C28FC37D2AA; l=AjMzQBFJNkxAnvxwgkOnbI4Jwz1dEMcq; isg=Ai8v8plJq0j6Ra90xayvMdnEv0Ac0oP2mlbQqUG8sx6lkE-SSaQTRi0AZDtQ; o2-webp=false; PHPSESSID=rk94b4trdmdgr6no71o187j0l0',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+  '/images/icon_shopcar_ok_png' => '',
+  'public' => 'images',
+)
+[ info ] [ LANG ] F:\soft\phpStudy\WWW\github\fruits\fruits\framework\lang\zh-cn.php
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-04-21T19:54:42+08:00 ] ::1 ::1 GET /github/fruits/fruits/public/js/bootstrap.min.js
+[ log ] localhost/github/fruits/fruits/public/js/bootstrap.min.js [运行时间：0.060192s][吞吐率：16.61req/s] [内存消耗：916.75kb] [文件加载：29]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'github',
+    1 => 'fruits',
+    2 => 'fruits',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:52.0) Gecko/20100101 Firefox/52.0',
+  'accept' => '*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://localhost/github/fruits/fruits/public/index.php/home/fruits/classifyin.html',
+  'cookie' => '_uab_collina=149205509155323278234554; cna=; _umdata=486B7B12C6AA95F2FF634D07C57FF16E1607450D294E756058F1C672FB588E0B4C9A9CC30393E1E7CD43AD3E795C914C308ED8C19D9281FCB4573C28FC37D2AA; l=AjMzQBFJNkxAnvxwgkOnbI4Jwz1dEMcq; isg=Ai8v8plJq0j6Ra90xayvMdnEv0Ac0oP2mlbQqUG8sx6lkE-SSaQTRi0AZDtQ; o2-webp=false; PHPSESSID=rk94b4trdmdgr6no71o187j0l0; think_var=zh-cn',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+  '/js/bootstrap_min_js' => '',
+  'public' => 'js',
+)
+[ info ] [ LANG ] F:\soft\phpStudy\WWW\github\fruits\fruits\framework\lang\zh-cn.php
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-04-21T19:54:50+08:00 ] ::1 ::1 POST /github/fruits/fruits/public/index.php/home/fruits/jiaf.html
+[ log ] localhost/github/fruits/fruits/public/index.php/home/fruits/jiaf.html [运行时间：0.996777s][吞吐率：1.00req/s] [内存消耗：1,772.19kb] [文件加载：37]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'fruits',
+    2 => 'jiaf',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:52.0) Gecko/20100101 Firefox/52.0',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'x-requested-with' => 'XMLHttpRequest',
+  'referer' => 'http://localhost/github/fruits/fruits/public/index.php/home/fruits/classifyin.html',
+  'cookie' => '_uab_collina=149205509155323278234554; cna=; _umdata=486B7B12C6AA95F2FF634D07C57FF16E1607450D294E756058F1C672FB588E0B4C9A9CC30393E1E7CD43AD3E795C914C308ED8C19D9281FCB4573C28FC37D2AA; l=AjMzQBFJNkxAnvxwgkOnbI4Jwz1dEMcq; isg=Ai8v8plJq0j6Ra90xayvMdnEv0Ac0oP2mlbQqUG8sx6lkE-SSaQTRi0AZDtQ; o2-webp=false; PHPSESSID=rk94b4trdmdgr6no71o187j0l0; think_var=zh-cn',
+  'connection' => 'keep-alive',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'content-length' => '9',
+)
+[ info ] [ PARAM ] array (
+  'p' => '1',
+  'tid' => '2',
+)
+[ info ] [ RUN ] Method [ <user> public method jiaf ] {
+  @@ F:\soft\phpStudy\WWW\github\fruits\fruits\application\home\controller\Fruits.php 154 - 190
+}
+
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.052095s ] mysql:dbname=fruits;host=101.200.41.87;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sg_fruits` [ RunTime:0.037994s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `sg_fruits` WHERE  (  is_show =1 and t_id= 2 ) ORDER BY f_time desc LIMIT 1   [ RunTime:0.026324s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.259349s ] mysql:dbname=fruits;host=101.200.41.87;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `sg_fruits` WHERE  (  is_show =1 and t_id= 2 ) LIMIT 6,6   [ RunTime:0.269683s ]
+
+---------------------------------------------------------------
+[ 2017-04-21T19:56:46+08:00 ] ::1 ::1 GET /github/fruits/fruits/public/
+[ log ] localhost/github/fruits/fruits/public/ [运行时间：0.146821s][吞吐率：6.81req/s] [内存消耗：1,104.71kb] [文件加载：32]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:52.0) Gecko/20100101 Firefox/52.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://localhost/github/fruits/fruits/public/index.php/home/fruits/classifyin.html',
+  'cookie' => '_uab_collina=149205509155323278234554; cna=; _umdata=486B7B12C6AA95F2FF634D07C57FF16E1607450D294E756058F1C672FB588E0B4C9A9CC30393E1E7CD43AD3E795C914C308ED8C19D9281FCB4573C28FC37D2AA; l=AjMzQBFJNkxAnvxwgkOnbI4Jwz1dEMcq; isg=Ai8v8plJq0j6Ra90xayvMdnEv0Ac0oP2mlbQqUG8sx6lkE-SSaQTRi0AZDtQ; o2-webp=false; PHPSESSID=rk94b4trdmdgr6no71o187j0l0; think_var=zh-cn',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] Method [ <user> public method index ] {
+  @@ F:\soft\phpStudy\WWW\github\fruits\fruits\application\index\controller\Index.php 7 - 12
+}
+
+[ info ] [ VIEW ] F:\soft\phpStudy\WWW\github\fruits\fruits\public/../application/index\view\index\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-04-21T19:56:50+08:00 ] ::1 ::1 GET /github/fruits/fruits/public/index.php/home/fruits/classifyin.html
+[ log ] localhost/github/fruits/fruits/public/index.php/home/fruits/classifyin.html [运行时间：0.301614s][吞吐率：3.32req/s] [内存消耗：1,900.60kb] [文件加载：41]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'fruits',
+    2 => 'classifyin',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:52.0) Gecko/20100101 Firefox/52.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://localhost/github/fruits/fruits/public/index.php/home/fruits/index',
+  'cookie' => '_uab_collina=149205509155323278234554; cna=; _umdata=486B7B12C6AA95F2FF634D07C57FF16E1607450D294E756058F1C672FB588E0B4C9A9CC30393E1E7CD43AD3E795C914C308ED8C19D9281FCB4573C28FC37D2AA; l=AjMzQBFJNkxAnvxwgkOnbI4Jwz1dEMcq; isg=Ai8v8plJq0j6Ra90xayvMdnEv0Ac0oP2mlbQqUG8sx6lkE-SSaQTRi0AZDtQ; o2-webp=false; PHPSESSID=rk94b4trdmdgr6no71o187j0l0; think_var=zh-cn',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] Method [ <user> public method classifyin ] {
+  @@ F:\soft\phpStudy\WWW\github\fruits\fruits\application\home\controller\Fruits.php 192 - 206
+}
+
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] F:\soft\phpStudy\WWW\github\fruits\fruits\public/../application/home\view\fruits\classifyin.html [ array (
+  0 => 'arr',
+  1 => 'data',
+  2 => 'a',
+) ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.041025s ] mysql:dbname=fruits;host=101.200.41.87;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sg_fruits` [ RunTime:0.026879s ]
+[ sql ] [ SQL ] SELECT * FROM `sg_fruits` INNER JOIN sg_type ON sg_fruits.t_id = sg_type.t_id  WHERE  (  is_show =1  ) ORDER BY f_time desc LIMIT 6   [ RunTime:0.022750s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.036582s ] mysql:dbname=fruits;host=101.200.41.87;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sg_type` [ RunTime:0.027651s ]
+[ sql ] [ SQL ] SELECT * FROM `sg_type`  [ RunTime:0.030248s ]
+
+---------------------------------------------------------------
+[ 2017-04-21T19:56:50+08:00 ] ::1 ::1 GET /github/fruits/fruits/public/images/icon_shopcar_ok.png
+[ log ] localhost/github/fruits/fruits/public/images/icon_shopcar_ok.png [运行时间：0.043535s][吞吐率：22.97req/s] [内存消耗：916.75kb] [文件加载：29]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'github',
+    1 => 'fruits',
+    2 => 'fruits',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:52.0) Gecko/20100101 Firefox/52.0',
+  'accept' => '*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://localhost/github/fruits/fruits/public/index.php/home/fruits/classifyin.html',
+  'cookie' => '_uab_collina=149205509155323278234554; cna=; _umdata=486B7B12C6AA95F2FF634D07C57FF16E1607450D294E756058F1C672FB588E0B4C9A9CC30393E1E7CD43AD3E795C914C308ED8C19D9281FCB4573C28FC37D2AA; l=AjMzQBFJNkxAnvxwgkOnbI4Jwz1dEMcq; isg=Ai8v8plJq0j6Ra90xayvMdnEv0Ac0oP2mlbQqUG8sx6lkE-SSaQTRi0AZDtQ; o2-webp=false; PHPSESSID=rk94b4trdmdgr6no71o187j0l0; think_var=zh-cn',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+  '/images/icon_shopcar_ok_png' => '',
+  'public' => 'images',
+)
+[ info ] [ LANG ] F:\soft\phpStudy\WWW\github\fruits\fruits\framework\lang\zh-cn.php
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------

@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:82:"E:\WAPM\WWW\chenyan\11\fruits\fruits\public/../application/home\view\cart\buy.html";i:1492994234;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:82:"E:\WAPM\WWW\chenyan\11\fruits\fruits\public/../application/home\view\cart\buy.html";i:1493016509;}*/ ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -76,23 +76,47 @@
             </div>
         </header>
         <div class="buy-list">
+            <!--{forech name='list' item='v'}-->
+            <?php foreach ($list as $k=>$v){ ?>
+            <!--{foreach name='num' item='va'}-->
             <ul>
                 <a href="detail.html">
                     <figure>
-                        <img src="car/images/detail-pp01.png"/>
+                        <img src="<?php echo $v['f_img']; ?>"/>
                     </figure>
                     <li>
-                        <h3>超级大品牌服装，现在够买只要998</h3>
+                        <h3><?php echo $v['f_name']; ?></h3>
+                        <h3><?php echo $v['f_title']; ?></h3>
 							<span>
-								颜色：经典绮丽款
-								<br />
-								尺寸：M
+                                <?php echo $v['f_weight']; ?>
+								<!--颜色：经典绮丽款-->
+								<!--<br />-->
+								<!--尺寸：M-->
 							</span>
-                        <b>￥32.00</b>
-                        <small>×3</small>
+                        <b>￥<?php echo $v['m_price']; ?>.00</b>
+                        <small>×<?php echo $num[$k]?></small>
                     </li>
                 </a>
             </ul>
+            <?php }?>
+
+            <!--<ul>-->
+                <!--<a href="detail.html">-->
+                    <!--<figure>-->
+                        <!--<img src="car/images/detail-pp01.png"/>-->
+                    <!--</figure>-->
+                    <!--<li>-->
+                        <!--<h3>超级大品牌服装，现在够买只要998</h3>-->
+							<!--<span>-->
+								<!--颜色：经典绮丽款-->
+								<!--<br />-->
+								<!--尺寸：M-->
+							<!--</span>-->
+                        <!--<b>￥32.00</b>-->
+                        <!--<small>×3</small>-->
+                    <!--</li>-->
+                <!--</a>-->
+            <!--</ul>-->
             <dl>
                 <dd>
                     <span>运费</span>
@@ -100,7 +124,7 @@
                 </dd>
                 <dd>
                     <span>商品总额</span>
-                    <small>￥98.00</small>
+                    <small>￥<?php echo $data['all_price']; ?>.00</small>
                 </dd>
                 <dt>
                     <textarea rows="4" placeholder="给卖家留言（50字以内）"></textarea>
@@ -116,7 +140,7 @@
 <footer class="buy-footer fixed-footer">
     <p>
         <small>总金额</small>
-        <b>￥98.00</b>
+        <b>￥<?php echo $data['all_price']; ?>.00</b>
     </p>
 
     <input type="button" value="去付款"/>

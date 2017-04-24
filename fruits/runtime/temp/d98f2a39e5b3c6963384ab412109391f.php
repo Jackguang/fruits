@@ -1,3 +1,4 @@
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:85:"E:\phpStudy\WWW\fruits\fruits\public/../application/home\view\userinfo\goaddress.html";i:1493005677;}*/ ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -92,7 +93,7 @@ $(document).on("change",".name",function(){
 		$(this).nextAll().remove();
 		$.ajax({
 		   type: "POST",
-		   url: "{:url('home/Userinfo/ajaxs')}",
+		   url: "<?php echo url('home/Userinfo/ajaxs'); ?>",
 		   data: "id="+id,
 		   dataType:'json',
 		   success: function(msg){
@@ -118,11 +119,11 @@ $(document).on("change",".name",function(){
 		
 		$.ajax({
 		   type: "POST",
-		   url: "{:url('home/Userinfo/forms')}",
+		   url: "<?php echo url('home/Userinfo/forms'); ?>",
 		   data: {ass:ass,names:names,tel:tel},
 		    success: function(msg){
 		    	if(msg == 1){
-		    		window.location.href="{:url('../../../home/userinfo/address')}";
+		    		window.location.href="<?php echo url('../../../home/userinfo/address'); ?>";
 		    		
 		    	}
 		    }

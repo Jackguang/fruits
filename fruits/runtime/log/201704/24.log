@@ -10256,3 +10256,1119 @@
 >>>>>>> 5fc41a170370c3e6f1a9219f9c0a0e01838be58c
 
 ---------------------------------------------------------------
+[ 2017-04-24T14:55:21+08:00 ] 127.0.0.1 127.0.0.1 GET /chenyan/11/fruits/fruits/public/index.php/home/fruits/index
+[ log ] www.chenyan.com/chenyan/11/fruits/fruits/public/index.php/home/fruits/index [运行时间：0.134268s][吞吐率：7.45req/s] [内存消耗：1,894.69kb] [文件加载：41]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'fruits',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.chenyan.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.133 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=ed2gpgf84nsk4mrv3cp1dbre56; think_var=zh-cn',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] Method [ <user> public method index ] {
+  @@ E:\WAPM\WWW\chenyan\11\fruits\fruits\application\home\controller\Fruits.php 10 - 26
+}
+
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\WAPM\WWW\chenyan\11\fruits\fruits\public/../application/home\view\fruits\index.html [ array (
+  0 => 'arr',
+  1 => 'a',
+) ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.031366s ] mysql:dbname=fruits;host=101.200.41.87;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sg_fruits` [ RunTime:0.017047s ]
+[ sql ] [ SQL ] SELECT * FROM `sg_fruits` WHERE  (  is_show =1 ) ORDER BY f_time desc LIMIT 6   [ RunTime:0.015332s ]
+
+---------------------------------------------------------------
+[ 2017-04-24T14:55:28+08:00 ] 127.0.0.1 127.0.0.1 GET /chenyan/11/fruits/fruits/public/home/js/maps/swiper.min.js.map
+[ log ] www.chenyan.com/chenyan/11/fruits/fruits/public/home/js/maps/swiper.min.js.map [运行时间：0.041881s][吞吐率：23.88req/s] [内存消耗：915.71kb] [文件加载：29]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'chenyan',
+    1 => '11',
+    2 => 'fruits',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.chenyan.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 5.0; SM-G900P Build/LRX21T) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.133 Mobile Safari/537.36',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=ed2gpgf84nsk4mrv3cp1dbre56; think_var=zh-cn',
+)
+[ info ] [ PARAM ] array (
+  '/home/js/maps/swiper_min_js_map' => '',
+  'fruits' => 'public',
+  'home' => 'js',
+  'maps' => 'swiper.min.js.map',
+)
+[ info ] [ LANG ] E:\WAPM\WWW\chenyan\11\fruits\fruits\framework\lang\zh-cn.php
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-04-24T14:55:28+08:00 ] 127.0.0.1 127.0.0.1 GET /chenyan/11/fruits/fruits/public/home/js/jquery.min.map
+[ log ] www.chenyan.com/chenyan/11/fruits/fruits/public/home/js/jquery.min.map [运行时间：0.061753s][吞吐率：16.19req/s] [内存消耗：915.52kb] [文件加载：29]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'chenyan',
+    1 => '11',
+    2 => 'fruits',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.chenyan.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 5.0; SM-G900P Build/LRX21T) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.133 Mobile Safari/537.36',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=ed2gpgf84nsk4mrv3cp1dbre56; think_var=zh-cn',
+)
+[ info ] [ PARAM ] array (
+  '/home/js/jquery_min_map' => '',
+  'fruits' => 'public',
+  'home' => 'js',
+)
+[ info ] [ LANG ] E:\WAPM\WWW\chenyan\11\fruits\fruits\framework\lang\zh-cn.php
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-04-24T14:55:30+08:00 ] 127.0.0.1 127.0.0.1 GET /chenyan/11/fruits/fruits/public/index.php/home/fruits/classify.html?t_id=2
+[ log ] www.chenyan.com/chenyan/11/fruits/fruits/public/index.php/home/fruits/classify.html?t_id=2 [运行时间：0.133051s][吞吐率：7.52req/s] [内存消耗：2,042.29kb] [文件加载：43]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'fruits',
+    2 => 'classify',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.chenyan.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 5.0; SM-G900P Build/LRX21T) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.133 Mobile Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://www.chenyan.com/chenyan/11/fruits/fruits/public/index.php/home/fruits/index',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=ed2gpgf84nsk4mrv3cp1dbre56; think_var=zh-cn',
+)
+[ info ] [ PARAM ] array (
+  't_id' => '2',
+)
+[ info ] [ RUN ] Method [ <user> public method classify ] {
+  @@ E:\WAPM\WWW\chenyan\11\fruits\fruits\application\home\controller\Fruits.php 137 - 152
+}
+
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\WAPM\WWW\chenyan\11\fruits\fruits\public/../application/home\view\fruits\classify.html [ array (
+  0 => 'arr',
+  1 => 'a',
+) ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.027443s ] mysql:dbname=fruits;host=101.200.41.87;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sg_fruits` [ RunTime:0.020177s ]
+[ sql ] [ SQL ] SELECT * FROM `sg_fruits` INNER JOIN sg_type ON sg_fruits.t_id = sg_type.t_id  WHERE  (  is_show =1 and sg_fruits.t_id=2 ) ORDER BY f_time desc LIMIT 6   [ RunTime:0.027745s ]
+
+---------------------------------------------------------------
+[ 2017-04-24T14:55:30+08:00 ] 127.0.0.1 127.0.0.1 GET /chenyan/11/fruits/fruits/public/home/js/jquery.min.map
+[ log ] www.chenyan.com/chenyan/11/fruits/fruits/public/home/js/jquery.min.map [运行时间：0.025213s][吞吐率：39.66req/s] [内存消耗：915.52kb] [文件加载：29]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'chenyan',
+    1 => '11',
+    2 => 'fruits',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.chenyan.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 5.0; SM-G900P Build/LRX21T) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.133 Mobile Safari/537.36',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=ed2gpgf84nsk4mrv3cp1dbre56; think_var=zh-cn',
+)
+[ info ] [ PARAM ] array (
+  '/home/js/jquery_min_map' => '',
+  'fruits' => 'public',
+  'home' => 'js',
+)
+[ info ] [ LANG ] E:\WAPM\WWW\chenyan\11\fruits\fruits\framework\lang\zh-cn.php
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-04-24T14:55:32+08:00 ] 127.0.0.1 127.0.0.1 POST /chenyan/11/fruits/fruits/public/index.php/home/cart/cart.html
+[ log ] www.chenyan.com/chenyan/11/fruits/fruits/public/index.php/home/cart/cart.html [运行时间：0.117054s][吞吐率：8.54req/s] [内存消耗：1,728.04kb] [文件加载：37]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'cart',
+    2 => 'cart',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.chenyan.com',
+  'connection' => 'keep-alive',
+  'accept' => '*/*',
+  'origin' => 'http://www.chenyan.com',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 5.0; SM-G900P Build/LRX21T) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.133 Mobile Safari/537.36',
+  'referer' => 'http://www.chenyan.com/chenyan/11/fruits/fruits/public/index.php/home/fruits/classify.html?t_id=2',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=ed2gpgf84nsk4mrv3cp1dbre56; think_var=zh-cn',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'content-length' => '14',
+)
+[ info ] [ PARAM ] array (
+  'fid' => '103',
+  'uid' => '23',
+)
+[ info ] [ RUN ] Method [ <user> public method cart ] {
+  @@ E:\WAPM\WWW\chenyan\11\fruits\fruits\application\home\controller\Cart.php 60 - 97
+}
+
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.021982s ] mysql:dbname=fruits;host=101.200.41.87;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sg_cart` [ RunTime:0.014713s ]
+[ sql ] [ SQL ] SELECT * FROM `sg_cart` WHERE  (  f_id = 103 AND u_id =23 ) LIMIT 1   [ RunTime:0.011563s ]
+[ sql ] [ SQL ] INSERT INTO `sg_cart` (`u_id` , `f_id`) VALUES (23 , 103)    [ RunTime:0.023200s ]
+
+---------------------------------------------------------------
+[ 2017-04-24T14:55:45+08:00 ] 127.0.0.1 127.0.0.1 GET /chenyan/11/fruits/fruits/public/index.php/home/fruits/info.html?id=84
+[ log ] www.chenyan.com/chenyan/11/fruits/fruits/public/index.php/home/fruits/info.html?id=84 [运行时间：1.290545s][吞吐率：0.77req/s] [内存消耗：1,881.28kb] [文件加载：41]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'fruits',
+    2 => 'info',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.chenyan.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 5.0; SM-G900P Build/LRX21T) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.133 Mobile Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://www.chenyan.com/chenyan/11/fruits/fruits/public/index.php/home/fruits/classify.html?t_id=2',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=ed2gpgf84nsk4mrv3cp1dbre56; think_var=zh-cn',
+)
+[ info ] [ PARAM ] array (
+  'id' => '84',
+)
+[ info ] [ RUN ] Method [ <user> public method info ] {
+  @@ E:\WAPM\WWW\chenyan\11\fruits\fruits\application\home\controller\Fruits.php 94 - 128
+}
+
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\WAPM\WWW\chenyan\11\fruits\fruits\public/../application/home\view\fruits\info.html [ array (
+  0 => 'fruit_one',
+  1 => 'opinions',
+  2 => 'count',
+  3 => 't',
+) ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.098644s ] mysql:dbname=fruits;host=101.200.41.87;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sg_fruits` [ RunTime:0.287489s ]
+[ sql ] [ SQL ] SELECT * FROM `sg_fruits` WHERE  (  f_id = 84 )  [ RunTime:0.035899s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.282635s ] mysql:dbname=fruits;host=101.200.41.87;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sg_opinion` [ RunTime:0.271425s ]
+[ sql ] [ SQL ] SELECT * FROM `sg_opinion` INNER JOIN sg_user ON sg_user.u_id = sg_opinion.u_id  WHERE  (  f_id = 84 )  [ RunTime:0.265012s ]
+
+---------------------------------------------------------------
+[ 2017-04-24T14:55:45+08:00 ] 127.0.0.1 127.0.0.1 GET /chenyan/11/fruits/fruits/public/images/icon_shopcar.png
+[ log ] www.chenyan.com/chenyan/11/fruits/fruits/public/images/icon_shopcar.png [运行时间：0.032495s][吞吐率：30.77req/s] [内存消耗：915.88kb] [文件加载：29]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'chenyan',
+    1 => '11',
+    2 => 'fruits',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.chenyan.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 5.0; SM-G900P Build/LRX21T) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.133 Mobile Safari/537.36',
+  'accept' => 'image/webp,image/*,*/*;q=0.8',
+  'referer' => 'http://www.chenyan.com/chenyan/11/fruits/fruits/public/index.php/home/fruits/info.html?id=84',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=ed2gpgf84nsk4mrv3cp1dbre56; think_var=zh-cn',
+)
+[ info ] [ PARAM ] array (
+  '/images/icon_shopcar_png' => '',
+  'fruits' => 'public',
+  'images' => 'icon_shopcar.png',
+)
+[ info ] [ LANG ] E:\WAPM\WWW\chenyan\11\fruits\fruits\framework\lang\zh-cn.php
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-04-24T14:55:46+08:00 ] 127.0.0.1 127.0.0.1 GET /chenyan/11/fruits/fruits/public/home/js/maps/swiper.min.js.map
+[ log ] www.chenyan.com/chenyan/11/fruits/fruits/public/home/js/maps/swiper.min.js.map [运行时间：0.036828s][吞吐率：27.15req/s] [内存消耗：915.71kb] [文件加载：29]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'chenyan',
+    1 => '11',
+    2 => 'fruits',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.chenyan.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 5.0; SM-G900P Build/LRX21T) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.133 Mobile Safari/537.36',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=ed2gpgf84nsk4mrv3cp1dbre56; think_var=zh-cn',
+)
+[ info ] [ PARAM ] array (
+  '/home/js/maps/swiper_min_js_map' => '',
+  'fruits' => 'public',
+  'home' => 'js',
+  'maps' => 'swiper.min.js.map',
+)
+[ info ] [ LANG ] E:\WAPM\WWW\chenyan\11\fruits\fruits\framework\lang\zh-cn.php
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-04-24T14:55:46+08:00 ] 127.0.0.1 127.0.0.1 GET /chenyan/11/fruits/fruits/public/home/js/jquery.min.map
+[ log ] www.chenyan.com/chenyan/11/fruits/fruits/public/home/js/jquery.min.map [运行时间：0.031504s][吞吐率：31.74req/s] [内存消耗：915.52kb] [文件加载：29]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'chenyan',
+    1 => '11',
+    2 => 'fruits',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.chenyan.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 5.0; SM-G900P Build/LRX21T) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.133 Mobile Safari/537.36',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=ed2gpgf84nsk4mrv3cp1dbre56; think_var=zh-cn',
+)
+[ info ] [ PARAM ] array (
+  '/home/js/jquery_min_map' => '',
+  'fruits' => 'public',
+  'home' => 'js',
+)
+[ info ] [ LANG ] E:\WAPM\WWW\chenyan\11\fruits\fruits\framework\lang\zh-cn.php
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-04-24T14:55:50+08:00 ] 127.0.0.1 127.0.0.1 POST /chenyan/11/fruits/fruits/public/index.php/home/fruits/cartdesc.html
+[ log ] www.chenyan.com/chenyan/11/fruits/fruits/public/index.php/home/fruits/cartdesc.html [运行时间：0.207877s][吞吐率：4.81req/s] [内存消耗：1,740.00kb] [文件加载：37]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'fruits',
+    2 => 'cartdesc',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.chenyan.com',
+  'connection' => 'keep-alive',
+  'accept' => '*/*',
+  'origin' => 'http://www.chenyan.com',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 5.0; SM-G900P Build/LRX21T) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.133 Mobile Safari/537.36',
+  'referer' => 'http://www.chenyan.com/chenyan/11/fruits/fruits/public/index.php/home/fruits/info.html?id=84',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=ed2gpgf84nsk4mrv3cp1dbre56; think_var=zh-cn',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'content-length' => '19',
+)
+[ info ] [ PARAM ] array (
+  'fid' => '84',
+  'uid' => '11',
+  'num' => '5',
+)
+[ info ] [ RUN ] Method [ <user> public method cartdesc ] {
+  @@ E:\WAPM\WWW\chenyan\11\fruits\fruits\application\home\controller\Fruits.php 226 - 270
+}
+
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.042044s ] mysql:dbname=fruits;host=101.200.41.87;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sg_fruits` [ RunTime:0.027546s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_surplus` FROM `sg_fruits` WHERE  (  f_id = 84 ) LIMIT 1   [ RunTime:0.029683s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sg_cart` [ RunTime:0.021778s ]
+[ sql ] [ SQL ] SELECT * FROM `sg_cart` WHERE  (  f_id = 84 AND u_id =11 ) LIMIT 1   [ RunTime:0.016105s ]
+[ sql ] [ SQL ] UPDATE `sg_cart`  SET `f_num`=29  WHERE  (  f_id = 84 AND u_id =11 )    [ RunTime:0.035030s ]
+
+---------------------------------------------------------------
+[ 2017-04-24T14:55:53+08:00 ] 127.0.0.1 127.0.0.1 GET /chenyan/11/fruits/fruits/public/
+[ log ] www.chenyan.com/chenyan/11/fruits/fruits/public/ [运行时间：0.024726s][吞吐率：40.44req/s] [内存消耗：1,103.68kb] [文件加载：32]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.chenyan.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 5.0; SM-G900P Build/LRX21T) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.133 Mobile Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://www.chenyan.com/chenyan/11/fruits/fruits/public/index.php/home/fruits/info.html?id=84',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=ed2gpgf84nsk4mrv3cp1dbre56; think_var=zh-cn',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] Method [ <user> public method index ] {
+  @@ E:\WAPM\WWW\chenyan\11\fruits\fruits\application\index\controller\Index.php 7 - 12
+}
+
+[ info ] [ VIEW ] E:\WAPM\WWW\chenyan\11\fruits\fruits\public/../application/index\view\index\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-04-24T14:55:55+08:00 ] 127.0.0.1 127.0.0.1 GET /chenyan/11/fruits/fruits/public/index.php/home/fruits/info.html?id=84
+[ log ] www.chenyan.com/chenyan/11/fruits/fruits/public/index.php/home/fruits/info.html?id=84 [运行时间：0.147525s][吞吐率：6.78req/s] [内存消耗：1,881.28kb] [文件加载：41]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'fruits',
+    2 => 'info',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.chenyan.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 5.0; SM-G900P Build/LRX21T) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.133 Mobile Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://www.chenyan.com/chenyan/11/fruits/fruits/public/index.php/home/fruits/classify.html?t_id=2',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=ed2gpgf84nsk4mrv3cp1dbre56; think_var=zh-cn',
+)
+[ info ] [ PARAM ] array (
+  'id' => '84',
+)
+[ info ] [ RUN ] Method [ <user> public method info ] {
+  @@ E:\WAPM\WWW\chenyan\11\fruits\fruits\application\home\controller\Fruits.php 94 - 128
+}
+
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\WAPM\WWW\chenyan\11\fruits\fruits\public/../application/home\view\fruits\info.html [ array (
+  0 => 'fruit_one',
+  1 => 'opinions',
+  2 => 'count',
+  3 => 't',
+) ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.022488s ] mysql:dbname=fruits;host=101.200.41.87;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sg_fruits` [ RunTime:0.014639s ]
+[ sql ] [ SQL ] SELECT * FROM `sg_fruits` WHERE  (  f_id = 84 )  [ RunTime:0.018056s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.024840s ] mysql:dbname=fruits;host=101.200.41.87;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sg_opinion` [ RunTime:0.016217s ]
+[ sql ] [ SQL ] SELECT * FROM `sg_opinion` INNER JOIN sg_user ON sg_user.u_id = sg_opinion.u_id  WHERE  (  f_id = 84 )  [ RunTime:0.014239s ]
+
+---------------------------------------------------------------
+[ 2017-04-24T14:55:55+08:00 ] 127.0.0.1 127.0.0.1 GET /chenyan/11/fruits/fruits/public/home/js/maps/swiper.min.js.map
+[ log ] www.chenyan.com/chenyan/11/fruits/fruits/public/home/js/maps/swiper.min.js.map [运行时间：0.033662s][吞吐率：29.71req/s] [内存消耗：915.71kb] [文件加载：29]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'chenyan',
+    1 => '11',
+    2 => 'fruits',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.chenyan.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 5.0; SM-G900P Build/LRX21T) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.133 Mobile Safari/537.36',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=ed2gpgf84nsk4mrv3cp1dbre56; think_var=zh-cn',
+)
+[ info ] [ PARAM ] array (
+  '/home/js/maps/swiper_min_js_map' => '',
+  'fruits' => 'public',
+  'home' => 'js',
+  'maps' => 'swiper.min.js.map',
+)
+[ info ] [ LANG ] E:\WAPM\WWW\chenyan\11\fruits\fruits\framework\lang\zh-cn.php
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-04-24T14:55:55+08:00 ] 127.0.0.1 127.0.0.1 GET /chenyan/11/fruits/fruits/public/home/js/jquery.min.map
+[ log ] www.chenyan.com/chenyan/11/fruits/fruits/public/home/js/jquery.min.map [运行时间：0.029059s][吞吐率：34.41req/s] [内存消耗：915.52kb] [文件加载：29]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'chenyan',
+    1 => '11',
+    2 => 'fruits',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.chenyan.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 5.0; SM-G900P Build/LRX21T) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.133 Mobile Safari/537.36',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=ed2gpgf84nsk4mrv3cp1dbre56; think_var=zh-cn',
+)
+[ info ] [ PARAM ] array (
+  '/home/js/jquery_min_map' => '',
+  'fruits' => 'public',
+  'home' => 'js',
+)
+[ info ] [ LANG ] E:\WAPM\WWW\chenyan\11\fruits\fruits\framework\lang\zh-cn.php
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-04-24T14:55:57+08:00 ] 127.0.0.1 127.0.0.1 GET /chenyan/11/fruits/fruits/public/
+[ log ] www.chenyan.com/chenyan/11/fruits/fruits/public/ [运行时间：0.034112s][吞吐率：29.32req/s] [内存消耗：1,103.68kb] [文件加载：32]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.chenyan.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 5.0; SM-G900P Build/LRX21T) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.133 Mobile Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://www.chenyan.com/chenyan/11/fruits/fruits/public/index.php/home/fruits/info.html?id=84',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=ed2gpgf84nsk4mrv3cp1dbre56; think_var=zh-cn',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] Method [ <user> public method index ] {
+  @@ E:\WAPM\WWW\chenyan\11\fruits\fruits\application\index\controller\Index.php 7 - 12
+}
+
+[ info ] [ VIEW ] E:\WAPM\WWW\chenyan\11\fruits\fruits\public/../application/index\view\index\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-04-24T14:55:58+08:00 ] 127.0.0.1 127.0.0.1 GET /chenyan/11/fruits/fruits/public/index.php/home/fruits/info.html?id=84
+[ log ] www.chenyan.com/chenyan/11/fruits/fruits/public/index.php/home/fruits/info.html?id=84 [运行时间：0.179774s][吞吐率：5.56req/s] [内存消耗：1,881.28kb] [文件加载：41]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'fruits',
+    2 => 'info',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.chenyan.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 5.0; SM-G900P Build/LRX21T) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.133 Mobile Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://www.chenyan.com/chenyan/11/fruits/fruits/public/index.php/home/fruits/classify.html?t_id=2',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=ed2gpgf84nsk4mrv3cp1dbre56; think_var=zh-cn',
+)
+[ info ] [ PARAM ] array (
+  'id' => '84',
+)
+[ info ] [ RUN ] Method [ <user> public method info ] {
+  @@ E:\WAPM\WWW\chenyan\11\fruits\fruits\application\home\controller\Fruits.php 94 - 128
+}
+
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\WAPM\WWW\chenyan\11\fruits\fruits\public/../application/home\view\fruits\info.html [ array (
+  0 => 'fruit_one',
+  1 => 'opinions',
+  2 => 'count',
+  3 => 't',
+) ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.019554s ] mysql:dbname=fruits;host=101.200.41.87;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sg_fruits` [ RunTime:0.031032s ]
+[ sql ] [ SQL ] SELECT * FROM `sg_fruits` WHERE  (  f_id = 84 )  [ RunTime:0.021495s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.026875s ] mysql:dbname=fruits;host=101.200.41.87;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sg_opinion` [ RunTime:0.017223s ]
+[ sql ] [ SQL ] SELECT * FROM `sg_opinion` INNER JOIN sg_user ON sg_user.u_id = sg_opinion.u_id  WHERE  (  f_id = 84 )  [ RunTime:0.018892s ]
+
+---------------------------------------------------------------
+[ 2017-04-24T14:55:58+08:00 ] 127.0.0.1 127.0.0.1 GET /chenyan/11/fruits/fruits/public/home/js/maps/swiper.min.js.map
+[ log ] www.chenyan.com/chenyan/11/fruits/fruits/public/home/js/maps/swiper.min.js.map [运行时间：0.034541s][吞吐率：28.95req/s] [内存消耗：915.71kb] [文件加载：29]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'chenyan',
+    1 => '11',
+    2 => 'fruits',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.chenyan.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 5.0; SM-G900P Build/LRX21T) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.133 Mobile Safari/537.36',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=ed2gpgf84nsk4mrv3cp1dbre56; think_var=zh-cn',
+)
+[ info ] [ PARAM ] array (
+  '/home/js/maps/swiper_min_js_map' => '',
+  'fruits' => 'public',
+  'home' => 'js',
+  'maps' => 'swiper.min.js.map',
+)
+[ info ] [ LANG ] E:\WAPM\WWW\chenyan\11\fruits\fruits\framework\lang\zh-cn.php
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-04-24T14:55:59+08:00 ] 127.0.0.1 127.0.0.1 GET /chenyan/11/fruits/fruits/public/home/js/jquery.min.map
+[ log ] www.chenyan.com/chenyan/11/fruits/fruits/public/home/js/jquery.min.map [运行时间：0.035149s][吞吐率：28.45req/s] [内存消耗：915.52kb] [文件加载：29]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'chenyan',
+    1 => '11',
+    2 => 'fruits',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.chenyan.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 5.0; SM-G900P Build/LRX21T) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.133 Mobile Safari/537.36',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=ed2gpgf84nsk4mrv3cp1dbre56; think_var=zh-cn',
+)
+[ info ] [ PARAM ] array (
+  '/home/js/jquery_min_map' => '',
+  'fruits' => 'public',
+  'home' => 'js',
+)
+[ info ] [ LANG ] E:\WAPM\WWW\chenyan\11\fruits\fruits\framework\lang\zh-cn.php
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-04-24T14:59:19+08:00 ] 127.0.0.1 127.0.0.1 GET /chenyan/11/fruits/fruits/public/index.php/home/fruits/info.html?id=84
+[ log ] www.chenyan.com/chenyan/11/fruits/fruits/public/index.php/home/fruits/info.html?id=84 [运行时间：0.176242s][吞吐率：5.67req/s] [内存消耗：2,037.98kb] [文件加载：43]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'fruits',
+    2 => 'info',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.chenyan.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 5.0; SM-G900P Build/LRX21T) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.133 Mobile Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://www.chenyan.com/chenyan/11/fruits/fruits/public/index.php/home/fruits/classify.html?t_id=2',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=ed2gpgf84nsk4mrv3cp1dbre56; think_var=zh-cn',
+)
+[ info ] [ PARAM ] array (
+  'id' => '84',
+)
+[ info ] [ RUN ] Method [ <user> public method info ] {
+  @@ E:\WAPM\WWW\chenyan\11\fruits\fruits\application\home\controller\Fruits.php 94 - 128
+}
+
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\WAPM\WWW\chenyan\11\fruits\fruits\public/../application/home\view\fruits\info.html [ array (
+  0 => 'fruit_one',
+  1 => 'opinions',
+  2 => 'count',
+  3 => 't',
+) ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.029335s ] mysql:dbname=fruits;host=101.200.41.87;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sg_fruits` [ RunTime:0.017733s ]
+[ sql ] [ SQL ] SELECT * FROM `sg_fruits` WHERE  (  f_id = 84 )  [ RunTime:0.011770s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.016261s ] mysql:dbname=fruits;host=101.200.41.87;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sg_opinion` [ RunTime:0.023726s ]
+[ sql ] [ SQL ] SELECT * FROM `sg_opinion` INNER JOIN sg_user ON sg_user.u_id = sg_opinion.u_id  WHERE  (  f_id = 84 )  [ RunTime:0.013161s ]
+
+---------------------------------------------------------------
+[ 2017-04-24T14:59:19+08:00 ] 127.0.0.1 127.0.0.1 GET /chenyan/11/fruits/fruits/public/home/js/maps/swiper.min.js.map
+[ log ] www.chenyan.com/chenyan/11/fruits/fruits/public/home/js/maps/swiper.min.js.map [运行时间：0.038754s][吞吐率：25.80req/s] [内存消耗：915.71kb] [文件加载：29]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'chenyan',
+    1 => '11',
+    2 => 'fruits',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.chenyan.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 5.0; SM-G900P Build/LRX21T) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.133 Mobile Safari/537.36',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=ed2gpgf84nsk4mrv3cp1dbre56; think_var=zh-cn',
+)
+[ info ] [ PARAM ] array (
+  '/home/js/maps/swiper_min_js_map' => '',
+  'fruits' => 'public',
+  'home' => 'js',
+  'maps' => 'swiper.min.js.map',
+)
+[ info ] [ LANG ] E:\WAPM\WWW\chenyan\11\fruits\fruits\framework\lang\zh-cn.php
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-04-24T14:59:19+08:00 ] 127.0.0.1 127.0.0.1 GET /chenyan/11/fruits/fruits/public/home/js/jquery.min.map
+[ log ] www.chenyan.com/chenyan/11/fruits/fruits/public/home/js/jquery.min.map [运行时间：0.041553s][吞吐率：24.07req/s] [内存消耗：915.52kb] [文件加载：29]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'chenyan',
+    1 => '11',
+    2 => 'fruits',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.chenyan.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 5.0; SM-G900P Build/LRX21T) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.133 Mobile Safari/537.36',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=ed2gpgf84nsk4mrv3cp1dbre56; think_var=zh-cn',
+)
+[ info ] [ PARAM ] array (
+  '/home/js/jquery_min_map' => '',
+  'fruits' => 'public',
+  'home' => 'js',
+)
+[ info ] [ LANG ] E:\WAPM\WWW\chenyan\11\fruits\fruits\framework\lang\zh-cn.php
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-04-24T14:59:21+08:00 ] 127.0.0.1 127.0.0.1 GET /chenyan/11/fruits/fruits/public/index.php/home/cart/index.html
+[ log ] www.chenyan.com/chenyan/11/fruits/fruits/public/index.php/home/cart/index.html [运行时间：0.129154s][吞吐率：7.74req/s] [内存消耗：1,866.30kb] [文件加载：41]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'cart',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.chenyan.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 5.0; SM-G900P Build/LRX21T) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.133 Mobile Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://www.chenyan.com/chenyan/11/fruits/fruits/public/index.php/home/fruits/info.html?id=84',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=ed2gpgf84nsk4mrv3cp1dbre56; think_var=zh-cn',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] Method [ <user> public method index ] {
+  @@ E:\WAPM\WWW\chenyan\11\fruits\fruits\application\home\controller\Cart.php 11 - 33
+}
+
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\WAPM\WWW\chenyan\11\fruits\fruits\public/../application/home\view\cart\index.html [ array (
+  0 => 'data',
+  1 => 'money',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.023788s ] mysql:dbname=fruits;host=101.200.41.87;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sg_fruits` [ RunTime:0.035522s ]
+[ sql ] [ SQL ] SELECT a.f_id,`f_name`,`f_img`,`f_weight`,`m_price`,`f_num`,w.u_id FROM sg_fruits a INNER JOIN sg_cart w ON a.f_id = w.f_id  WHERE  `u_id` = 11  [ RunTime:0.018955s ]
+
+---------------------------------------------------------------
+[ 2017-04-24T15:00:42+08:00 ] 127.0.0.1 127.0.0.1 GET /chenyan/11/fruits/fruits/public/index.php/home/userinfo/user.html
+[ log ] www.chenyan.com/chenyan/11/fruits/fruits/public/index.php/home/userinfo/user.html [运行时间：0.359274s][吞吐率：2.78req/s] [内存消耗：1,970.10kb] [文件加载：43]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'userinfo',
+    2 => 'user',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.chenyan.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 5.0; SM-G900P Build/LRX21T) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.133 Mobile Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://www.chenyan.com/chenyan/11/fruits/fruits/public/index.php/home/cart/index.html',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=ed2gpgf84nsk4mrv3cp1dbre56; think_var=zh-cn',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] Method [ <user> public method user ] {
+  @@ E:\WAPM\WWW\chenyan\11\fruits\fruits\application\home\controller\Userinfo.php 8 - 15
+}
+
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\WAPM\WWW\chenyan\11\fruits\fruits\public/../application/home\view\userinfo\user.html [ array (
+  0 => 'one',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.042282s ] mysql:dbname=fruits;host=101.200.41.87;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sg_user` [ RunTime:0.020400s ]
+[ sql ] [ SQL ] SELECT * FROM `sg_user` WHERE  (  u_tel = 18762036831 )  [ RunTime:0.233300s ]
+
+---------------------------------------------------------------
+[ 2017-04-24T15:00:45+08:00 ] 127.0.0.1 127.0.0.1 GET /chenyan/11/fruits/fruits/public/index.php/home/userinfo/address.html
+[ log ] www.chenyan.com/chenyan/11/fruits/fruits/public/index.php/home/userinfo/address.html [运行时间：0.189281s][吞吐率：5.28req/s] [内存消耗：1,961.38kb] [文件加载：43]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'userinfo',
+    2 => 'address',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.chenyan.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 5.0; SM-G900P Build/LRX21T) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.133 Mobile Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://www.chenyan.com/chenyan/11/fruits/fruits/public/index.php/home/userinfo/user.html',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=ed2gpgf84nsk4mrv3cp1dbre56; think_var=zh-cn',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] Method [ <user> public method address ] {
+  @@ E:\WAPM\WWW\chenyan\11\fruits\fruits\application\home\controller\Userinfo.php 18 - 24
+}
+
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\WAPM\WWW\chenyan\11\fruits\fruits\public/../application/home\view\userinfo\addres.html [ array (
+  0 => 'data',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.069683s ] mysql:dbname=fruits;host=101.200.41.87;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sg_uaddress` [ RunTime:0.029135s ]
+[ sql ] [ SQL ] SELECT * FROM `sg_uaddress` WHERE  (  u_id = 11 )  [ RunTime:0.041402s ]
+
+---------------------------------------------------------------
+[ 2017-04-24T15:00:48+08:00 ] 127.0.0.1 127.0.0.1 GET /chenyan/11/fruits/fruits/public/index.php/home/userinfo/user.html
+[ log ] www.chenyan.com/chenyan/11/fruits/fruits/public/index.php/home/userinfo/user.html [运行时间：0.142031s][吞吐率：7.04req/s] [内存消耗：1,820.98kb] [文件加载：41]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'userinfo',
+    2 => 'user',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.chenyan.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 5.0; SM-G900P Build/LRX21T) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.133 Mobile Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://www.chenyan.com/chenyan/11/fruits/fruits/public/index.php/home/cart/index.html',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=ed2gpgf84nsk4mrv3cp1dbre56; think_var=zh-cn',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] Method [ <user> public method user ] {
+  @@ E:\WAPM\WWW\chenyan\11\fruits\fruits\application\home\controller\Userinfo.php 8 - 15
+}
+
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\WAPM\WWW\chenyan\11\fruits\fruits\public/../application/home\view\userinfo\user.html [ array (
+  0 => 'one',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.029692s ] mysql:dbname=fruits;host=101.200.41.87;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sg_user` [ RunTime:0.031259s ]
+[ sql ] [ SQL ] SELECT * FROM `sg_user` WHERE  (  u_tel = 18762036831 )  [ RunTime:0.025652s ]
+
+---------------------------------------------------------------
+[ 2017-04-24T15:00:52+08:00 ] 127.0.0.1 127.0.0.1 GET /chenyan/11/fruits/fruits/public/index.php/home/userinfo/user.html
+[ log ] www.chenyan.com/chenyan/11/fruits/fruits/public/index.php/home/userinfo/user.html [运行时间：1.388921s][吞吐率：0.72req/s] [内存消耗：1,820.98kb] [文件加载：41]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'userinfo',
+    2 => 'user',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.chenyan.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 5.0; SM-G900P Build/LRX21T) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.133 Mobile Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://www.chenyan.com/chenyan/11/fruits/fruits/public/index.php/home/cart/index.html',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=ed2gpgf84nsk4mrv3cp1dbre56; think_var=zh-cn',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] Method [ <user> public method user ] {
+  @@ E:\WAPM\WWW\chenyan\11\fruits\fruits\application\home\controller\Userinfo.php 8 - 15
+}
+
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\WAPM\WWW\chenyan\11\fruits\fruits\public/../application/home\view\userinfo\user.html [ array (
+  0 => 'one',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:1.263362s ] mysql:dbname=fruits;host=101.200.41.87;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sg_user` [ RunTime:0.047946s ]
+[ sql ] [ SQL ] SELECT * FROM `sg_user` WHERE  (  u_tel = 18762036831 )  [ RunTime:0.038680s ]
+
+---------------------------------------------------------------
+[ 2017-04-24T15:00:53+08:00 ] 127.0.0.1 127.0.0.1 GET /chenyan/11/fruits/fruits/public/index.php/home/cart/index.html
+[ log ] www.chenyan.com/chenyan/11/fruits/fruits/public/index.php/home/cart/index.html [运行时间：0.521087s][吞吐率：1.92req/s] [内存消耗：1,866.30kb] [文件加载：41]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'cart',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.chenyan.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 5.0; SM-G900P Build/LRX21T) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.133 Mobile Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://www.chenyan.com/chenyan/11/fruits/fruits/public/index.php/home/fruits/info.html?id=84',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=ed2gpgf84nsk4mrv3cp1dbre56; think_var=zh-cn',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] Method [ <user> public method index ] {
+  @@ E:\WAPM\WWW\chenyan\11\fruits\fruits\application\home\controller\Cart.php 11 - 33
+}
+
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\WAPM\WWW\chenyan\11\fruits\fruits\public/../application/home\view\cart\index.html [ array (
+  0 => 'data',
+  1 => 'money',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.251562s ] mysql:dbname=fruits;host=101.200.41.87;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sg_fruits` [ RunTime:0.014609s ]
+[ sql ] [ SQL ] SELECT a.f_id,`f_name`,`f_img`,`f_weight`,`m_price`,`f_num`,w.u_id FROM sg_fruits a INNER JOIN sg_cart w ON a.f_id = w.f_id  WHERE  `u_id` = 11  [ RunTime:0.014458s ]
+
+---------------------------------------------------------------
+[ 2017-04-24T15:00:55+08:00 ] 127.0.0.1 127.0.0.1 GET /chenyan/11/fruits/fruits/public/index.php/home/userinfo/user.html
+[ log ] www.chenyan.com/chenyan/11/fruits/fruits/public/index.php/home/userinfo/user.html [运行时间：0.103307s][吞吐率：9.68req/s] [内存消耗：1,820.98kb] [文件加载：41]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'userinfo',
+    2 => 'user',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.chenyan.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 5.0; SM-G900P Build/LRX21T) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.133 Mobile Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://www.chenyan.com/chenyan/11/fruits/fruits/public/index.php/home/cart/index.html',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=ed2gpgf84nsk4mrv3cp1dbre56; think_var=zh-cn',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] Method [ <user> public method user ] {
+  @@ E:\WAPM\WWW\chenyan\11\fruits\fruits\application\home\controller\Userinfo.php 8 - 15
+}
+
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\WAPM\WWW\chenyan\11\fruits\fruits\public/../application/home\view\userinfo\user.html [ array (
+  0 => 'one',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.028936s ] mysql:dbname=fruits;host=101.200.41.87;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sg_user` [ RunTime:0.017857s ]
+[ sql ] [ SQL ] SELECT * FROM `sg_user` WHERE  (  u_tel = 18762036831 )  [ RunTime:0.020596s ]
+
+---------------------------------------------------------------

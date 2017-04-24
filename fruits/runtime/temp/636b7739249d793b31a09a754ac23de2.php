@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:85:"E:\WAPM\WWW\chenyan\11\fruits\fruits\public/../application/home\view\fruits\info.html";i:1492744062;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:85:"E:\WAPM\WWW\chenyan\11\fruits\fruits\public/../application/home\view\fruits\info.html";i:1493017158;}*/ ?>
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -38,7 +38,7 @@
         <div class="col-xs-2" >
             <div class="icon_shopcar">
                 <div class="icon_shopcar_ts">15</div>
-                <a class="cwhite" href="#"><div class="photo_30"><img src="images/icon_shopcar.png" alt="购物车"></div></a>
+                <a class="cwhite" href="<?php echo url('home/Cart/index'); ?>"><div class="photo_30"><img src="home/images/icon_shopcar.png" alt="购物车"></div></a>
             </div>
         </div>
     </div>

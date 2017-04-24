@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:89:"E:\WAPM\WWW\chenyan\11\fruits\fruits\public/../application/home\view\fruits\classify.html";i:1492835682;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:89:"E:\WAPM\WWW\chenyan\11\fruits\fruits\public/../application/home\view\fruits\classify.html";i:1492835992;}*/ ?>
 <?php
 use think\Session;
 $uid=Session::get('u_id');
@@ -145,9 +145,9 @@ $uid=Session::get('u_id');
                 if(msg==1){
                     alert('库存不足了');
                 }else if(msg==111){
-                    alert('库加入购物车成功');
+                    alert('加入购物车成功');
                 }else if(msg==222){
-                    alert('库加入购物车成功');
+                    alert('加入购物车成功');
                 }
             }
         });

@@ -272,5 +272,14 @@ public function jia(){
 public function act(){
 
 }
+    //搜索
+    public function sou(){
+      $str=  $_POST['str'];//获取水果名称
+        $data=Db::table('sg_fruits')
+  ->where('f_name','like',"%$str%")
+  ->select();
+       echo json_encode($data);
+
+    }
 
 }

@@ -89,7 +89,7 @@ class User extends Controller
             $name = $_POST['u_name'];
             $u_pwd = $_POST['u_pwd'];
             $arr = Db::table('sg_user')->where("u_name", "$name")->where('u_pwd', "$u_pwd")->find();
-            $arr2 = Db::table('sg_user')->where("u_tel", "$name")->where('u_pwd', "$u_pwd")->find();
+            $arr2= Db::table('sg_user')->where("u_tel", "$name")->where('u_pwd', "$u_pwd")->find();
             $data = $arr ? $arr : $arr2;
             if ($arr || $arr2) {
                 $data = $arr ? $arr : $arr2;

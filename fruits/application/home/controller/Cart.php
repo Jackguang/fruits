@@ -11,17 +11,20 @@ class Cart extends Controller
     public function index()
     {
         $uid = Session::get('u_id');
-       $data= Db::table('sg_fruits')
+        if(!$uid){
+            return view('user/login');
+        }
+          $data= Db::table('sg_fruits')
 
            ->field('a.f_id,f_name,f_img,f_weight,m_price,f_num,w.u_id')
            ->alias('a')
-    ->join('sg_cart w','a.f_id = w.f_id')
-    ->where('u_id',$uid)
-    ->select();
+           ->join('sg_cart w','a.f_id = w.f_id')
+           ->where('u_id',$uid)
+           ->select();
 //        var_dump($data);die;
-foreach($data as $k=>$v){
-    $a[]=$v['m_price']*$v['f_num'];
-}
+    foreach($data as $k=>$v){
+       $a[]=$v['m_price']*$v['f_num'];
+  }
        $money= array_sum($a);//总钱数
         $this->assign('data',$data);
         $this->assign('money',$money);
@@ -57,16 +60,16 @@ foreach($data as $k=>$v){
     public function cart(){
         $uid=$_POST['uid'];
         $fid=$_POST['fid'];
-       $data= Db::table('sg_cart')
+        $data= Db::table('sg_cart')
            ->where("f_id = $fid AND u_id =$uid")
            ->find();
-        if($data){
+          if($data){
             $num=$data['f_num'];//取出原有数量
             //商品已存在过，进行修改数据
             //根据商品id。查库存
            $aq= Db::table('sg_fruits')
            ->where('f_id',$fid)
-          ->find();
+           ->find();
             $max=$aq['f_surplus'];
             if($max>$num){
                 $rsl=Db::table('sg_cart')
@@ -107,8 +110,8 @@ foreach($data as $k=>$v){
     }
     //减少
     public function kushao(){
-$fid=$_POST['fid'];
-$uid=$_POST['uid'];
+       $fid=$_POST['fid'];
+       $uid=$_POST['uid'];
 
        $data= Db::table('sg_cart')
         ->where("u_id = $uid AND f_id = $fid")
@@ -118,5 +121,61 @@ $uid=$_POST['uid'];
         }
 
 
+    }
+
+    //购物车生成订单
+    public function ruku(){
+        $data['u_id'] = Session::get('u_id');
+        $uid = Session::get('u_id');
+        $data['u_name'] = Session::get('u_name');
+        $data['f_name'] = '';
+        $data['o_address'] = '';
+        $data['o_type'] = '';
+        $data['o_num']=$_POST['num'];//数量
+
+        $data['f_id']=$_POST['str'];//商品id
+        $data['o_price']=$_POST['price'];//单价
+        $data['all_price']=$_POST['allprice'];//总价
+        $data['o_time']=date("Y-m-d h:i:s");//下单时间
+
+        $data['o_number']=$uid.time();//总价
+//var_dump($data);die;
+        $res=Db::table('sg_order')->insert($data);
+
+      $userId = Db::table('sg_order')->getLastInsID();
+
+        Db::table('sg_order')
+          ->where('o_id',$userId)
+          ->update(['o_number' => $uid.time().$userId]);
+
+
+
+        if($res){
+         $arr=$data['f_id'];
+            //订单成功。删除响应购物车数据
+           $resls= Db::table('sg_cart')
+                ->where("u_id = $uid AND f_id in($arr)")
+                ->delete();
+            if($resls){
+                Session::set('name','thinkphp');
+                echo 333;
+
+            }else{
+                echo 222;
+            }
+        }
+
+    }
+    //付款
+    public function buy(){
+        $uid = Session::get('u_id');
+        $data=Db::table('sg_order')
+        ->where("u_id = $uid")
+        ->order('o_number desc')
+            ->limit(1)
+            ->select();
+        var_dump($data);die;
+
+        return view('buy');
     }
 }

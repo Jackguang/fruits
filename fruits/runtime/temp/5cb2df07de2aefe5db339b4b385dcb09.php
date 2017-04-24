@@ -1,3 +1,4 @@
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:86:"E:\WAPM\WWW\chenyan\11\fruits\fruits\public/../application/home\view\fruits\index.html";i:1492835992;}*/ ?>
 <?php
 use think\Session;
 $uid=Session::get('u_id');
@@ -78,16 +79,16 @@ $uid=Session::get('u_id');
 <div class=" container-fluid">
     <div class="row">
         <div class="col-xs-3 text-center" >
-            <a class="cgray" href="{:url('home/Fruits/classify')}?t_id=1"><div class="photo_60"><img src="uploads/1.jpg"><br>进口专区</div></a>
+            <a class="cgray" href="<?php echo url('home/Fruits/classify'); ?>?t_id=1"><div class="photo_60"><img src="uploads/1.jpg"><br>进口专区</div></a>
         </div>
         <div class="col-xs-3  text-center">
-            <a class="cgray" href="{:url('home/Fruits/classify')}?t_id=2"><div class="photo_60"><img src="uploads/3.jpg"><br>国产精品</div></a>
+            <a class="cgray" href="<?php echo url('home/Fruits/classify'); ?>?t_id=2"><div class="photo_60"><img src="uploads/3.jpg"><br>国产精品</div></a>
         </div>
         <div class="col-xs-3  text-center" >
-            <a class="cgray" href="{:url('home/Fruits/classify')}?t_id=3"><div class="photo_60"><img src="home/images/pic_07.jpg"><br>休闲干果</div></a>
+            <a class="cgray" href="<?php echo url('home/Fruits/classify'); ?>?t_id=3"><div class="photo_60"><img src="home/images/pic_07.jpg"><br>休闲干果</div></a>
         </div>
         <div class="col-xs-3  text-center" >
-            <a class="cgray" href="{:url('home/Fruits/act')}"><div class="photo_60"><img src="home/images/pic_09.jpg"><br>活动专区</div></a>
+            <a class="cgray" href="<?php echo url('home/Fruits/act'); ?>"><div class="photo_60"><img src="home/images/pic_09.jpg"><br>活动专区</div></a>
         </div>
 
         <!--<div class="col-xs-3  text-center">-->
@@ -104,23 +105,23 @@ $uid=Session::get('u_id');
     <div class=" container-fluid">
         <div class="row">
             <div class="table">
-            {foreach name='arr' item='v'}
+            <?php if(is_array($arr) || $arr instanceof \think\Collection): if( count($arr)==0 ) : echo "" ;else: foreach($arr as $key=>$v): ?>
                 <div class="col-xs-6" style="padding-right:5px;" >
                     <div class="thumbnail" style="padding:0px;">
-                        <a href="{:url('home/Fruits/info')}?id={$v.f_id}"><div class="sosophoto"><img src="{$v.f_img}" width="160" height="120"></div></a>
+                        <a href="<?php echo url('home/Fruits/info'); ?>?id=<?php echo $v['f_id']; ?>"><div class="sosophoto"><img src="<?php echo $v['f_img']; ?>" width="160" height="120"></div></a>
                         <div class="caption">
-                            <h4>{$v.f_name}</h4>
-                            <span class="color_gray">{$v.f_title}</span>
-                            <p class="color_gray"><span class="font16 color_orange">¥ {$v.m_price}</span>/斤</p>
-                            <div class="text-center"><a href="javascript:void(0)" data-toggle="modal" data-target="#shopcar" class="gou" uid="{$uid}" alt="{$v.f_id}"><i class="icon-shopping-cart font16 color_green"></i> 加入购物车</a></div>
+                            <h4><?php echo $v['f_name']; ?></h4>
+                            <span class="color_gray"><?php echo $v['f_title']; ?></span>
+                            <p class="color_gray"><span class="font16 color_orange">¥ <?php echo $v['m_price']; ?></span>/斤</p>
+                            <div class="text-center"><a href="javascript:void(0)" data-toggle="modal" data-target="#shopcar" class="gou" uid="<?php echo $uid; ?>" alt="<?php echo $v['f_id']; ?>"><i class="icon-shopping-cart font16 color_green"></i> 加入购物车</a></div>
                         </div>
                     </div>
                 </div>
-                {/foreach}
+                <?php endforeach; endif; else: echo "" ;endif; ?>
 
             </div>
-            <input type="hidden" value="{$a}" class="p" >
-            <input type="hidden" value="{$uid}" class="uid" >
+            <input type="hidden" value="<?php echo $a; ?>" class="p" >
+            <input type="hidden" value="<?php echo $uid; ?>" class="uid" >
         </div>
         <button type="button" class="btn btn-default btn-group-justified" id="jia">加载更多 <i class="icon-double-angle-down"></i></button>
         <div class="height20"></div>
@@ -136,27 +137,27 @@ $uid=Session::get('u_id');
 <div class="footer navbar-fixed-bottom">
     <div class="row">
         <div class="col-xs-3 text-center" style=" padding-top:5px;">
-            <a class="cgreen" href="{:url('home/Fruits/index')}"><div class="photo_30"><img src="home/images/nav11.png"><br>首页</div></a>
+            <a class="cgreen" href="<?php echo url('home/Fruits/index'); ?>"><div class="photo_30"><img src="home/images/nav11.png"><br>首页</div></a>
         </div>
         <div class="col-xs-3  text-center" style=" padding-top:5px;">
-            <a class="cgray" href="{:url('home/Fruits/classifyin')}"><div class="photo_30"><img src="home/images/nav2.png"><br>分类</div></a>
+            <a class="cgray" href="<?php echo url('home/Fruits/classifyin'); ?>"><div class="photo_30"><img src="home/images/nav2.png"><br>分类</div></a>
         </div>
         <div class="col-xs-3  text-center" style=" padding-top:5px;">
 
-           {if condition="!$uid"}
-            <a class="cgray" href="{:url('home/user/login')}"><div class="photo_30"><img src="home/images/nav3.png"><br>购物车</div></a>
+           <?php if(!$uid): ?>
+            <a class="cgray" href="<?php echo url('home/user/login'); ?>"><div class="photo_30"><img src="home/images/nav3.png"><br>购物车</div></a>
 
-            {else /}
-            <a class="cgray" href="{:url('home/Cart/index')}"><div class="photo_30"><img src="home/images/nav3.png"><br>购物车</div></a>
+            <?php else: ?>
+            <a class="cgray" href="<?php echo url('home/Cart/index'); ?>"><div class="photo_30"><img src="home/images/nav3.png"><br>购物车</div></a>
 
-            {/if}
+            <?php endif; ?>
 
 
-            <a class="cgray" href="{:url('home/Cart/index')}"><div class="photo_30"><img src="home/images/nav3.png"><br>购物车</div></a>
+            <a class="cgray" href="<?php echo url('home/Cart/index'); ?>"><div class="photo_30"><img src="home/images/nav3.png"><br>购物车</div></a>
 
         </div>
         <div class="col-xs-3  text-center" style="padding-top:5px;">
-            <a class="cgray" href="{:url('home/userinfo/user')}"><div class="photo_30"><img src="home/images/nav4.png"><br>我的</div></a>
+            <a class="cgray" href="<?php echo url('home/userinfo/user'); ?>"><div class="photo_30"><img src="home/images/nav4.png"><br>我的</div></a>
         </div>
     </div>
 </div><!-- footer -->
@@ -179,13 +180,13 @@ $uid=Session::get('u_id');
         {
             $.ajax({
                 type: "POST",
-                url: "{:url('index.php/home/Fruits/sou')}",
+                url: "<?php echo url('index.php/home/Fruits/sou'); ?>",
                 data: "str="+str,
                 dataType:'json',
                 success: function(msg){
 //alert(msg);
                         $.each(msg, function(k, v){
-                            chen+='<div class="col-xs-6" style="padding-right:5px;" ><div class="thumbnail" style="padding:0px;"><a href="{:url('home/Fruits/info')}?id='+v.f_id+'"><div class="sosophoto"><img src="'+v.f_img+'" width="160" height="120"></div></a><div class="caption">';
+                            chen+='<div class="col-xs-6" style="padding-right:5px;" ><div class="thumbnail" style="padding:0px;"><a href="<?php echo url('home/Fruits/info'); ?>?id='+v.f_id+'"><div class="sosophoto"><img src="'+v.f_img+'" width="160" height="120"></div></a><div class="caption">';
                              chen+='<h4>'+v.f_name+'</h4><span class="color_gray">'+v.f_title+'</span><p class="color_gray"><span class="font16 color_orange">¥ '+v.m_price+'</span>/斤</p><div class="text-center"><a href="javascript:void(0)" data-toggle="modal" data-target="#shopcar" class="gou" uid="'+uid+'" alt="'+v.f_id+'"><i class="icon-shopping-cart font16 color_green"></i> 加入购物车</a></div></div></div></div>';
                         });
                     $(".table").html(chen);
@@ -202,11 +203,11 @@ $uid=Session::get('u_id');
            var fid=$(this).attr('alt');//商品id
            var uid=$(this).attr('uid');//用户id
         if(!uid){
-            window.location.href="{:url('index.php/home/user/login')}";
+            window.location.href="<?php echo url('index.php/home/user/login'); ?>";
         }
             $.ajax({
                 type: "POST",
-                url: "{:url('index.php/home/cart/cart')}",
+                url: "<?php echo url('index.php/home/cart/cart'); ?>",
                 data: "fid="+fid+"&uid="+uid,
                 success: function(msg){
                 if(msg==1){
@@ -227,14 +228,14 @@ $uid=Session::get('u_id');
      var p=$('.p').val();
      var uid=$('.uid').val();
 //        if(!uid){
-//            window.location.href="{:url('index.php/home/user/login')}";
+//            window.location.href="<?php echo url('index.php/home/user/login'); ?>";
 //        }
 //alert(p);
      var str='';
      var a=parseInt(p)+1;
         $.ajax({
             type: "POST",
-            url: "{:url('index.php/home/fruits/jia')}",
+            url: "<?php echo url('index.php/home/fruits/jia'); ?>",
             data: "p="+p,
             dataType:'json',
             success: function(msg){
@@ -243,7 +244,7 @@ $uid=Session::get('u_id');
 
                 }else {
                     $.each( msg.resl, function(k, v){
-                        str+='<div class="col-xs-6" style="padding-right:5px;" ><div class="thumbnail" style="padding:0px;"><a href="{:url('home/Fruits/info')}?id='+v.f_id+'"><div class="sosophoto"><img src="'+v.f_img+'" width="160" height="120"></div></a><div class="caption"><h4>'+v.f_name+'</h4><span class="color_gray">'+v.f_title+'</span>';
+                        str+='<div class="col-xs-6" style="padding-right:5px;" ><div class="thumbnail" style="padding:0px;"><a href="<?php echo url('home/Fruits/info'); ?>?id='+v.f_id+'"><div class="sosophoto"><img src="'+v.f_img+'" width="160" height="120"></div></a><div class="caption"><h4>'+v.f_name+'</h4><span class="color_gray">'+v.f_title+'</span>';
                         str+='<p class="color_gray"><span class="font16 color_orange">¥ '+v.m_price+'</span>/斤</p><div class="text-center"><a href="javascript:void(0)" data-toggle="modal" data-target="#shopcar" class="gou" uid="'+uid+'" alt="'+v.f_id+'"><i class="icon-shopping-cart font16 color_green"></i> 加入购物车</a></div></div></div></div>';
                     });
                     $(".table").append(str);

@@ -1,3 +1,4 @@
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:82:"E:\phpStudy\WWW\fruits\fruits\public/../application/home\view\userinfo\addres.html";i:1493005670;}*/ ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -38,7 +39,7 @@
 			</a>
 		<h3>收获地址专区</h3>
 			
-			<a class="text-top" href="{:url('home/Userinfo/goaddress')}">
+			<a class="text-top" href="<?php echo url('home/Userinfo/goaddress'); ?>">
 				添加
 			</a>
 	</header>
@@ -50,12 +51,12 @@
 				<dt>
 					<p><?= $v['a_name']?></p>
 					<span><?= $v['a_tel']?></span>
-						{if condition="$v.a_state eq '1'"}
+						<?php if($v['a_state'] == '1'): ?>
 							<small va="<?= $v['a_id']?>">默认</small>
-						{else /}
+						<?php else: ?>
 							<small class="default" val="<?= $v['a_id']?>">			
 							可设为默认</small>
-						{/if}
+						<?php endif; ?>
 				</dt>
 				<dd><?= $v['a_address']?></dd>
 			<!-- </a> -->
@@ -72,7 +73,7 @@
 		var _this = $(this);
 		$.ajax({
 		   type: "POST",
-		   url: "{:url('home/Userinfo/upda')}",
+		   url: "<?php echo url('home/Userinfo/upda'); ?>",
 		   data: {id:id},
 		    success: function(msg){
 		    	if(msg == 1){

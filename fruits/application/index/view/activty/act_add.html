@@ -11,10 +11,8 @@
                         <i class="icon-home home-icon"></i>
                         <a href="#">首页</a>
                     </li>
-                    <li class="active">安居客控制台</li>
-                    <li class="active">房源管理</li>
-                    <li class="active">账号设置</li>
-                    <li class="active">添加账号</li>
+                    <li class="active">水果促销活动添加</li>
+
                 </ul><!-- .breadcrumb -->
             </div>
 
@@ -24,54 +22,42 @@
 
                     <div class="col-xs-12">
 
-
-                        <form class="form-horizontal" action="{:url('index/Active/add_do')}" method="post">
-
-                        <form class="form-horizontal" role="form" >
+                        <form class="form-horizontal" role="form" action="{:url('index/activty/act_add')}" method="post">
 
                             <div class="form-group">
-                                <label class="col-sm-3 control-label no-padding-right" for=""> 活动名称 </label>
+                                <label class="col-sm-3 control-label no-padding-right"> 活动水果分类：</label>
 
-                                <div class="col-sm-9">
+                                <!--<div class="col-sm-9">-->
+                                    <select name="t_id" class="type">
+                                        <option value="">请选择--</option>
+                                        {foreach name='arr' item='v'}
+                                        <option value="{$v.t_id}">{$v.t_name}</option>
+                                        {/foreach}
+                                    </select>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <input type="button" value="+" id="button">
+                                <span id="span" hidden>0</span>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <span style="font-size: 25px;">*时间格式例如：2016-08-09 20:02:12</span>
 
-                                    <input type="text" id="" name="active_name" placeholder="活动名称" class="col-xs-10 col-sm-5" />
-
-
-                                </div>
-                            </div>
 
                             <div class="space-4"></div>
-
-                            <div class="form-group">
-                                <label class="col-sm-3 control-label no-padding-right" for=""> 活动开始时间 </label>
-
-                                <div class="col-sm-9">
-
-                                    <input type="text" id="" name="active_starttime" placeholder="活动开始时间" class="col-xs-10 col-sm-5" />
-
-
-                                </div>
-                            </div>
-
-                            <div class="space-4"></div>
-                            <div class="form-group">
-                                <label class="col-sm-3 control-label no-padding-right" for=""> 活动结束时间 </label>
-
-                                <div class="col-sm-9">
-
-                                    <input type="text" id="" name="active_endtime" placeholder="活动结束时间" class="col-xs-10 col-sm-5" />
-
-
-                                </div>
                             </div>
 
 
+                        <tbody id="div">
+                            <div class="form-group">
+                                <div id="sku"></div>
+                                <div class="space-4"></div>
+                            </div>
+                        </tbody>
+
+                                <span id="jia"></span>
                             <div class="clearfix form-actions">
                                 <div class="col-md-offset-3 col-md-9">
-
                                     <button class="btn btn-info" type="submit">
-
-
                                         <i class="icon-ok bigger-110"></i>
                                         增加
                                     </button>
@@ -83,10 +69,7 @@
                                     </button>
                                 </div>
                             </div>
-
                             <div class="hr hr-24"></div>
-
-
 
                         </form>
                     </div><!-- /span -->
@@ -488,4 +471,101 @@
 </script>
 </body>
 </html>
+        <script src="js/jq.js"></script>
+        <script>
+        $(document).on("change",".type",function(){
+        var num=$('#span').html();
+            if(num==0)
+            {
+                num=1;
+                $('#span').html(num);
+                var t_id=$(this).val();
+                var html='';
+                $.ajax({
+                    type: "POST",
+                    url: "{:url('index/activty/ajax')}",
+                    data: "t_id="+t_id,
+                    dataType:'json',
+                    success: function(msg) {
+                        if(msg=='1')
+                        {
+                            alert('该分类没有水果');
+                        }
+                        else
+                        {
+                            html+='<label class="col-sm-3 control-label no-padding-right">水果名称：</label><select class="ids" name="f_id[]">';
+                            $.each(msg,function(k,v)
+                            {
+                                html+='水果名称：<option value="'+v['f_id']+'">'+ v.f_name+'</option>';
+                            });
+                            html+='</select>&nbsp;&nbsp;促销价格：<select name="price[]"><option value="9">9</option><option value="8">8</option><option value="7">7</option><option value="6">6</option><option value="5">5</option><option value="4">4</option><option value="3">3</option><option value="2">2</option><option value="1">1</option></select> 开始时间：<input type="text" name="hot_star_time[]">结束时间：<input type="text" name="hot_end_time[]">';
+                            $('#sku').html(html);
+                        }
+                    }
+                });
+            }
+            else
+            {
+                var t_id=$('.type').val();
+                var html='<div class="form-group">';
+                html='<div class="form-group">';
+                html+='<div class="space-4"></div></div>';
+                $.ajax({
+                    type: "POST",
+                    url: "{:url('index/activty/ajax')}",
+                    data: "t_id="+t_id,
+                    dataType:'json',
+                    success: function(msg) {
+                        if(msg=='1')
+                        {
+                            alert('该分类没有水果');
+                        }
+                        else
+                        {
+                            html+='<label class="col-sm-3 control-label no-padding-right">水果名称：</label><select class="ids" name="f_id[]">';
+                            $.each(msg,function(k,v)
+                            {
+                                html+='水果名称：<option value="'+v['f_id']+'">'+ v.f_name+'</option>';
+                            });
+                            html+='</select>&nbsp;&nbsp;促销价格：<select name="price[]"><option value="9">9</option><option value="8">8</option><option value="7">7</option><option value="6">6</option><option value="5">5</option><option value="4">4</option><option value="3">3</option><option value="2">2</option><option value="1">1</option></select> 开始时间：<input type="text" name="hot_star_time[]">结束时间：<input type="text" name="hot_end_time[]">';
+                            $('#sku').append(html);
+                        }
+                    }
+                });
+            }
 
+    });
+
+
+
+        $(document).on("click","#button",function(){
+            var t_id=$('.type').val();
+            var html='<div class="form-group">';
+                html='<div class="form-group">';
+                html+='<div class="space-4"></div></div>';
+            $.ajax({
+                type: "POST",
+                url: "{:url('index/activty/ajax')}",
+                data: "t_id="+t_id,
+                dataType:'json',
+                success: function(msg) {
+                    if(msg=='1')
+                    {
+                        alert('该分类没有水果');
+                    }
+                    else
+                    {
+                        html+='<label class="col-sm-3 control-label no-padding-right">水果名称：</label><select class="ids" name="f_id[]">';
+                        $.each(msg,function(k,v)
+                        {
+                            html+='水果名称：<option value="'+v['f_id']+'">'+ v.f_name+'</option>';
+                        });
+                        html+='</select>&nbsp;&nbsp;促销价格折扣：<select name="price[]"><option value="9">9</option><option value="8">8</option><option value="7">7</option><option value="6">6</option><option value="5">5</option><option value="4">4</option><option value="3">3</option><option value="2">2</option><option value="1">1</option></select> 开始时间：<input type="text" name="hot_star_time[]">结束时间：<input type="text" name="hot_end_time[]">';
+                        $('#sku').append(html);
+                    }
+                }
+            });
+        });
+
+
+        </script>

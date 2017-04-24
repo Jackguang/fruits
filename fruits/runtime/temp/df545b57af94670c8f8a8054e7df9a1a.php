@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:5:{s:77:"E:\phpStudy\WWW\frit\fruits\public/../application/index\view\goods\act_list.html";i:1492607196;s:72:"E:\phpStudy\WWW\frit\fruits\public/../application/index\view\layout.html";i:1492483054;s:23:"./index/layout/top.html";i:1492403485;s:24:"./index/layout/left.html";i:1492607197;s:26:"./index/layout/footer.html";i:1492173983;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:5:{s:89:"E:\study\HHH\liupeng\fruits\fruits\public/../application/index\view\activty\act_list.html";i:1492776831;s:79:"E:\study\HHH\liupeng\fruits\fruits\public/../application/index\view\layout.html";i:1491970030;s:23:"./index/layout/top.html";i:1492482732;s:24:"./index/layout/left.html";i:1492776065;s:26:"./index/layout/footer.html";i:1492223397;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -212,6 +212,17 @@
 										发布公告
 									</a>
 								</li>
+								<li>
+									<a href="<?php echo url('index/activty/act_add'); ?>">
+										<i class="icon-double-angle-right"></i>
+										添加活动商品
+									</a>
+								</li><li>
+									<a href="<?php echo url('index/activty/act_list'); ?>">
+										<i class="icon-double-angle-right"></i>
+										促销商品列表
+									</a>
+								</li>
 
 								<li>
 									<a href="form-wizard.html">
@@ -292,9 +303,9 @@
 										<i class="icon-double-angle-right"></i>
 										订单列表</a>
 
-<<<<<<< HEAD
+
 	<!-- 							<li>
-=======
+
 
 									<a href="<?php echo url('index/Order/show'); ?>">
 										<i class="icon-double-angle-right"></i>
@@ -303,36 +314,23 @@
 
 									<a href="<?php echo url('index/Order/show'); ?>">
 										<i class="icon-double-angle-right"></i>
-<<<<<<< HEAD
+								订单列表</a>
+
 										订单列表</a><!--<a href="<?php echo url('index/hard/lists'); ?>">-->
 
-=======
+
 										订单列表</a>
 									<!--<a href="<?php echo url('index/hard/lists'); ?>">-->
->>>>>>> b6d91dc39b5982c40d0fc794462a56c0cfe2d47d
+
 									</a>
+
 								</li>
 								<li>
->>>>>>> 0140b49e2c1e68a59d6d47580c42ac923838d086
 									<a href="form-wizard.html">
 										<i class="icon-double-angle-right"></i>
 										进入论坛
 									</a>
 								</li>
-<<<<<<< HEAD
- -->
-=======
-<<<<<<< HEAD
-
-
-									<a href="<?php echo url('index/Order/show'); ?>">
-										<i class="icon-double-angle-right"></i>
-										订单列表</a>								
-
-=======
->>>>>>> 0140b49e2c1e68a59d6d47580c42ac923838d086
-
->>>>>>> b6d91dc39b5982c40d0fc794462a56c0cfe2d47d
 
 							</ul>
 						</li>
@@ -354,279 +352,87 @@
         <script type="text/javascript">
             try{ace.settings.check('breadcrumbs' , 'fixed')}catch(e){}
         </script>
-
+        <!--<form action="<?php echo url('index/hard/show'); ?>" method="post">-->
         <ul class="breadcrumb">
             <li>
                 <i class="icon-home home-icon"></i>
-                <a href="#">首页</a>
+                <a href="#">用户意见</a>
             </li>
-            <li class="active">后台管理控制台</li>
+            <li class="active">意见列表</li>
+
+            <li>
+                <select name="status" id="status">
+                    <option value="">请选择</option>
+                    <option value="1">未阅读</option>
+                    <option value="0">已阅读</option>
+                </select>
+                姓名：<input type="text" class="name" name="user_name" title="请输入发表人的姓名">
+
+                <input type="submit" class="search">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="<?php echo url('activty/act_add'); ?>" style="font-size: 25px; float: right;">添加活动商品+</a>
+            </li>
         </ul><!-- .breadcrumb -->
     </div>
-<div class="page-content">
-    <div class="row">
+    <div class="page-content">
+        <div class="row">
 
 
-        <div class="col-xs-12">
-
-
-
-            <div class="table-responsive">
-                <center>
-                <table >
-
-                    <tr>
-                        水果名称<input type="text" name="f_name" class="f_name">
-                        水果分类
-                        <select name="t_id" id="" class="t_id">
-                            <option value="">请选择分类</option>
-                            <?php if(is_array($type) || $type instanceof \think\Collection): if( count($type)==0 ) : echo "" ;else: foreach($type as $key=>$vo): ?>
-                            <option value="<?php echo $vo['t_id']; ?>"><?php echo $vo['t_name']; ?></option>
-                            <?php endforeach; endif; else: echo "" ;endif; ?>
-                        </select>
-
-                        上架状态
-                        <select name="is_show"  class="is_show">
-                            <option value="">请选择上架状态</option>
-                            <option value="1">上架</option>
-                            <option value="0">未上架</option>
-                        </select>
-                       活动状态
-                        <select name="is_hot" class="is_hot">
-                            <option value="">请选择活动状态</option>
-                            <option value="1">参与活动</option>
-                            <option value="0">未参与活动</option>
-                        </select>
-                        <input type="button" value="搜索" class="sou">
-                    </tr>
-
-                </table>
-                </center>
-                <table id="sample-table-1" class="table table-striped table-bordered table-hover">
-                    <thead>
-                    <tr>
-
-                        <th class="center">
-                            <label>
-                                <input type="checkbox" class="ace" />
-                                <span class="lbl"></span>
-                            </label>
-                        </th>
-                        <th>商品编号</th>
-                        <th>商品名称</th>
-                        <th>商品图片</th>
-                        <th>所属分类</th>
-                        <th>水果重量</th>
-                        <th>水果库存</th>
-                        <th>已销售量</th>
-                        <th>产地</th>
-                        <th>销售价</th>
-                        <th>会员价</th>
-                        <th>是否上架</th>
-                        <th>是否参与活动</th>
-                        <th>操作</th>
-                    </tr>
-                    </thead>
-
-                    <tbody class="body">
-                    <?php if(is_array($data) || $data instanceof \think\Collection): if( count($data)==0 ) : echo "" ;else: foreach($data as $key=>$v): ?>
-                    <tr>
-                        <td class="center">
-                            <label>
-                                <input type="checkbox" class ='box' name="box" alt="<?php echo $v['f_id']; ?>"/>
-                                <span class="lbl"></span>
-                            </label>
-                        </td>
-
-
-                        <td><?php echo $v['f_id']; ?></td>
-                        <td><?php echo $v['f_name']; ?></td>
-                        <td><img src="<?php echo $v['f_img'];?>" alt="" width="50"></td>
-                        <td><?php echo $v['t_name']; ?></td>
-                        <td><?php echo $v['f_weight']; ?></td>
-                        <td>
-                            <?php if($v['f_surplus'] < 5): ?>
-                            <font color="red "><?php echo $v['f_surplus']; ?></font>
-                            <?php else: ?>
-                            <?php echo $v['f_surplus']; endif; ?>
-
-                        </td>
-                        <td><?php echo $v['f_sale']; ?></td>
-                        <td><?php echo $v['f_place']; ?></td>
-                        <td><?php echo $v['m_price']; ?></td>
-                        <td><?php echo $v['v_price']; ?></td>
-                        <td>
-                            <?php if($v['is_show'] == 1): ?>
-                             上架
-                            <?php else: ?>
-                         下架
-                            <?php endif; ?>
-                        </td>
-                        <td>
-                            <?php if($v['is_hot']== 1): ?>
-                             参与活动
-                            <?php else: ?>
-                         不参与活动
-                            <?php endif; ?>
-                        </td>
-                        <td>
-                            <a href="<?php echo url('index/Goods/modify'); ?>?fid=<?php echo $v['f_id']; ?>">编辑</a>
-                            <button class="del" alt="<?php echo $v['f_id']; ?>">删除</button>
-                        </td>
-
-                    </tr>
-                    <?php endforeach; endif; else: echo "" ;endif; ?>
+            <div class="col-xs-12">
 
 
 
-                    </tbody>
-                </table>
-                <center>
-                <table >
-                <div><div class="pages"><?php echo $page; ?></div>
-                    <input type="button" class="quan" value="全选">
-                    <input type="button" class="fan" value="反选">
-                    <input type="button" class="pishan" value="批删">
-                    <input type="text" class="pa" value="<?php echo $num; ?>"></div>
+                <div class="table-responsive">
+                    <table id="sample-table-1" class="table table-striped table-bordered table-hover">
+                        <thead>
+                        <tr>
+                            <th class="center">
+                                <label>
+                                    <input type="checkbox" class="ace" />
+                                    <span class="lbl"></span>
+                                </label>
+                            </th>
+                            <th>水果ID</th>
+                            <th>水果名称</th>
+                            <th>市场价格</th>
+                            <th>活动价格</th>
+                            <th>取消促销</th>
+                        </tr>
+                        </thead>
 
-                </table>
-                </center>
-            </div><!-- /.table-responsive -->
-        </div><!-- /span -->
-    </div><!-- /row -->
-    <script src="js/jq.js"></script>
-    <script>
-        var obj= new Object();
-        $('.sou').click(function(){
-            obj['f_name']=$('.f_name').val();
-            obj['t_id']=$('.t_id').val();
-            obj['is_show']=$('.is_show').val();
-            obj['is_hot']=$('.is_hot').val();
-//            alert(obj['t_id']);
-            obj['id']=2
-            page(1);
-        })
-        //分页
+                        <tbody>
+                        <?php if(is_array($arr) || $arr instanceof \think\Collection): if( count($arr)==0 ) : echo "" ;else: foreach($arr as $key=>$vo): ?>
+                        <tr>
+                            <td class="center">
+                                <label>
+                                    <input type="checkbox" class="ace" />
+                                    <span class="lbl"></span>
+                                </label>
+                            </td>
+                            <td> <h3><?php echo $vo['f_id']; ?></h3></td>
+                            <td> <h3><?php echo $vo['f_name']; ?></h3></td>
+                            <td> <h3>￥：   <?php echo $vo['m_price']; ?></h3></td>
+                            <td><h3>￥：   <?php echo $vo['v_price']; ?></h3></td>
+                            <td>
+                                <a href="<?php echo url('activty/activty_delete'); ?>?id=<?php echo $vo['f_id']; ?>"><button class="btn">取消</button></a>
+                            </td>
+                        </tr>
+                        <?php endforeach; endif; else: echo "" ;endif; ?>
 
-        function page(p){
-            var html='';
-            $.each(obj,function(k,v){
-                html+=k+'='+v+'&';
+
+                        </tbody>
+                    </table>
+                </div><!-- /.table-responsive -->
+            </div><!-- /span -->
+        </div><!-- /row -->
+        <script src="assets/js/jquery-1.10.2.min.js"></script>
+        <script>
+            $(document).on('click','.name',function(){
+                alert(111);
             });
-            var num=$('.pa').val();
-            var str='';
 
-            $.ajax({
-                type: "POST",
-//                url: "index.php/index/goods/page",
-                url: "<?php echo url('index/Goods/page'); ?>",
-                data: html+"p="+p+"&num="+num,
-                dataType:'json',
-                success: function(msg){
-
-                    $('.pages').html(msg.page);
-                    $('.pa').val(num);
-                    var is_show='';
-                    var is_hot='';
-                    $.each( msg.list, function(k, v){
-                        if(v.is_show==1){
-                            is_show='上架'
-                        }else {
-                            is_show='下架'
-                        }
-                        if(v.is_hot==1){
-                            is_hot='参与活动'
-                        }else {
-                            is_hot='不参与活动'
-                        }
-                        str+='<tr><td class="center"><label><input type="checkbox" class ="box" name="box" alt="'+ v.f_id+'"/><span class="lbl"></span></label></td>';
-                        str+='<td>'+v.f_id+'</td><td>'+v.f_name+'</td><td><img src="'+ v.f_img+'" alt="" width="50"></td><td>'+v.t_name+'</td><td>'+v.f_weight+'</td><td>'+v.f_surplus+'</td><td>'+v.f_sale+'</td><td>'+v.f_place+'</td><td>'+v.m_price+'</td><td>'+v.v_price+'</td>';
-                           str+='<td>'+is_show+'</td><td>'+is_hot+'</td><td><a href="index.php/index/Goods/modify?fid='+v.f_id+'">编辑</a><button class="del" alt="'+v.f_id+'">删除</button></td></tr>';
-//                        str+='<tr><td>'+v.user_id+'</td><td>'+v.username+'</td><td>'+v.sex+'</td><td>'+v.age+'</td><td><'+v.lasttime+'</td></tr>';
-                    });
-                    $('.body').html(str);
-
-        }
-            });
-        }
+        </script>
 
 
-
-        //批删
-//        $('.pishan').click(function(){
-            $(".pishan").on("click", function(){
-
-                var box=document.getElementsByName('box');
-            var str='';
-            var _this=$(this);
-            $('.box').each(function(){
-                if(this.checked==true){
-                    str +=','+$(this).attr('alt');
-                }
-            })
-            str=str.substr(1);
-//            alert(str);
-            $.ajax({
-                type: "POST",
-                url: "index.php/index/goods/up",
-                data: "fid="+str,
-                success: function(msg){
-                    if(msg==1){
-                        for(var i=box.length-1;i>=0;i--){
-                            if(box[i].checked==true){
-                                box[i].parentNode.parentNode.parentNode.remove();
-                            }
-                        }
-                    }
-                }
-            });
-        })
-        //全选
-//        $('.quan').click(function(){
-            $(".quan").on("click", function(){
-
-                var box=document.getElementsByName('box');
-            for(var i=0;i<=box.length;i++){
-                box[i].checked=true;
-            }
-        })
-        //反选
-//        $('.fan').click(function(){
-            $(".fan").on("click", function(){
-
-                var box=document.getElementsByName('box');
-            for(var i=0;i<=box.length;i++){
-                if( box[i].checked==true){
-                    box[i].checked=false;
-                }else{
-                    box[i].checked=true;
-                }
-
-            }
-        })
-
-        //单删
-//        $('.del').click(function(){
-        $(document).on('click','.del',function(){
-            var fid=$(this).attr('alt');
-            var _this=$(this);
-            $.ajax({
-                type: "GET",
-                url: "index.php/index/goods/del",
-                data: "fid="+fid,
-                success: function(msg){
-                   if(msg==1){
-                       _this.parent().parent().remove();
-                       alert('删除成功');
-
-                   }else {
-                       alert('删除失败');
-                   }
-                }
-            });
-        })
-
-    </script>
 <!-- PAGE CONTENT ENDS -->
 						</div><!-- /.row -->
 					</div><!-- /.page-content -->

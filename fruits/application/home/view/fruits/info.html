@@ -92,7 +92,7 @@ $uid=Session::get('u_id');
                     <i class="icon-minus"></i></button>
             </div>
         </span>
-    <p class=" color_gray font16"><span class="color_orange font20">¥<?= $fruit_one[0]['v_price']?></span>&nbsp;&nbsp;&nbsp;&nbsp;<del>¥<?= $fruit_one[0]['m_price']?></del></p>
+    <p class=" color_gray font16"><span class="color_orange font20">¥<?= $fruit_one[0]['m_price']?></span>&nbsp;&nbsp;&nbsp;&nbsp;<del>¥<?= $fruit_one[0]['m_price']?></del></p>
     <div class="height10"></div>
     <div class=" width100 bg_white border_top hang32">
         <span class=" font16">商品规格</span>
@@ -178,11 +178,7 @@ $uid=Session::get('u_id');
             <button class="btn btn-lg btn-success btn-group-justified" type="submit" >联系客服</button>
         </div>
         <div class="col-xs-6" style="padding-left:5px; padding-right:0px;">
-            <?php
-use think\Session;
-Session::set('u_id',11);
-$uid=Session::get('u_id');
-?>
+
 
            {if condition="!$uid "} 请先登录
             <button class="btn btn-lg btn-success btn-group-justified" >加入购物车</button>

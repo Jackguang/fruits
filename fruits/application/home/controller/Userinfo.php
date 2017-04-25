@@ -60,13 +60,15 @@ class Userinfo extends Controller
 		$id = $_POST['id'];
 		$uid =Session::get('u_id');
 		$uaddress = db("sg_uaddress");
-		$data = ['a_state'=>1];       
+		$data = ['a_state'=>1];
 		$res = $uaddress->where("a_id=$id")->update($data);
 		if($res){
 			$da = ['a_state'=>0];
 			$re = $uaddress->where("u_id = $uid AND a_id != $id")->update($da);
-			echo 1;
+			// echo 1;
+			$data = $uaddress->where("u_id = $uid")->select();
+			// print_r($data);die;
+			echo json_encode($data);
 		}
 	}
-
 }

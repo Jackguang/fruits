@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:84:"E:\study\HHH\liupeng\fruits\fruits\public/../application/home\view\fruits\index.html";i:1493002263;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:79:"E:\phpStudy\WWW\fruits\fruits\public/../application/home\view\fruits\index.html";i:1493005028;}*/ ?>
 <?php
 use think\Session;
 $uid=Session::get('u_id');

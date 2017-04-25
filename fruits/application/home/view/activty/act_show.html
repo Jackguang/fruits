@@ -37,8 +37,8 @@
         <div class="col-xs-8 text-center font20">商品详情</div>
         <div class="col-xs-2" >
             <div class="icon_shopcar">
-                <div class="icon_shopcar_ts">15</div>
-                <a class="cwhite" href="#"><div class="photo_30"><img src="images/icon_shopcar.png" alt="购物车"></div></a>
+                <div class="icon_shopcar_ts"></div>
+                <a class="cwhite" href="#"><div class="photo_30"><img src="home/images/icon_shopcar.png" alt="购物车"></div></a>
             </div>
         </div>
     </div>
@@ -49,7 +49,7 @@
     <div class="swiper-wrapper">
         <div class="swiper-slide">
             <div class="productphoto">
-                <a href=""><img src="{$v['f_img']}" style="width: 310px;" height="89" alt=""></a>
+                <a href="{:url('fruits/info')}?id={$v.f_id}"><img src="{$v['f_img']}" style="width: 360px;" height="89"></a>
                 <span style="position: absolute; top: 0; left: 0; padding-left: 10px; padding-top: 150px;"><h4 style="color: black;"><b>{$v['f_name']}</b><br>
                     <span style="font-size: 11px; color: lightgrey">({$v['f_title']})</span><br>
                     <span style="font-size: 13px;">市场价：<del>{$v['m_price']}</del></span><br>
@@ -75,7 +75,7 @@
             <a class="cgray" href="{:url('home/Cart/index')}"><div class="photo_30"><img src="home/images/nav3.png"><br>购物车</div></a>
         </div>
         <div class="col-xs-3  text-center" style="padding-top:5px;">
-            <a class="cgray" href="login.html"><div class="photo_30"><img src="home/images/nav4.png"><br>我的</div></a>
+            <a class="cgray" href="{:url('home/userinfo/index')}"><div class="photo_30"><img src="home/images/nav4.png"><br>我的</div></a>
         </div>
     </div>
 </div>

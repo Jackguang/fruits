@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:88:"E:\study\HHH\liupeng\fruits\fruits\public/../application/home\view\activty\act_show.html";i:1492840881;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:88:"E:\study\HHH\liupeng\fruits\fruits\public/../application/home\view\activty\act_show.html";i:1493081404;}*/ ?>
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -38,8 +38,8 @@
         <div class="col-xs-8 text-center font20">商品详情</div>
         <div class="col-xs-2" >
             <div class="icon_shopcar">
-                <div class="icon_shopcar_ts">15</div>
-                <a class="cwhite" href="#"><div class="photo_30"><img src="images/icon_shopcar.png" alt="购物车"></div></a>
+                <div class="icon_shopcar_ts"></div>
+                <a class="cwhite" href="#"><div class="photo_30"><img src="home/images/icon_shopcar.png" alt="购物车"></div></a>
             </div>
         </div>
     </div>
@@ -50,7 +50,7 @@
     <div class="swiper-wrapper">
         <div class="swiper-slide">
             <div class="productphoto">
-                <img src="<?php echo $v['f_img']; ?>" style="width: 310px;" height="89" alt="">
+                <a href="<?php echo url('fruits/info'); ?>?id=<?php echo $v['f_id']; ?>"><img src="<?php echo $v['f_img']; ?>" style="width: 360px;" height="89"></a>
                 <span style="position: absolute; top: 0; left: 0; padding-left: 10px; padding-top: 150px;"><h4 style="color: black;"><b><?php echo $v['f_name']; ?></b><br>
                     <span style="font-size: 11px; color: lightgrey">(<?php echo $v['f_title']; ?>)</span><br>
                     <span style="font-size: 13px;">市场价：<del><?php echo $v['m_price']; ?></del></span><br>
@@ -76,7 +76,7 @@
             <a class="cgray" href="<?php echo url('home/Cart/index'); ?>"><div class="photo_30"><img src="home/images/nav3.png"><br>购物车</div></a>
         </div>
         <div class="col-xs-3  text-center" style="padding-top:5px;">
-            <a class="cgray" href="login.html"><div class="photo_30"><img src="home/images/nav4.png"><br>我的</div></a>
+            <a class="cgray" href="<?php echo url('home/user/login'); ?>"><div class="photo_30"><img src="home/images/nav4.png"><br>我的</div></a>
         </div>
     </div>
 </div>

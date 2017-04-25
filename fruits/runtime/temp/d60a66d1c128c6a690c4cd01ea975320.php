@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:82:"E:\phpStudy\WWW\fruits\fruits\public/../application/home\view\userinfo\addres.html";i:1493079406;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:82:"E:\phpStudy\WWW\fruits\fruits\public/../application/home\view\userinfo\addres.html";i:1493122180;}*/ ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -51,12 +51,16 @@
 				<dt>
 					<p><?= $v['a_name']?></p>
 					<span><?= $v['a_tel']?></span>
+
 				<?php if($v['a_state'] == '1'): ?>
 					<small va="<?= $v['a_id']?>">默认</small>
 				<?php else: ?>
 					<small class="default" val="<?= $v['a_id']?>">			
 					可设为默认</small>
 				<?php endif; ?>
+
+						
+
 				</dt>
 				<dd><?= $v['a_address']?></dd>
 			<!-- </a> -->
@@ -76,6 +80,7 @@ $(document).on("click",".default",function(){
 		   data: {id:id},
 		   dataType:'json',
 		    success: function(msg){
+
 		    	var str ="";
 		    	$.each(msg,function(k,v){			    	
 			    	str+='<dl class="address"><dt><p>'+v.a_name+'</p>';		
@@ -90,6 +95,13 @@ $(document).on("click",".default",function(){
 		    	})  		
 		    	$("#sty").html(str);	
 		    						    	
+
+		    	if(msg == 1){
+		    		_this.html('默认');
+		    		// _this.prev().html('可设为默认');
+
+		    	}
+
 		    }
 		})
 	})

@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:82:"E:\phpStudy\WWW\fruits\fruits\public/../application/home\view\userinfo\addres.html";i:1493005670;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:82:"E:\phpStudy\WWW\fruits\fruits\public/../application/home\view\userinfo\addres.html";i:1493079406;}*/ ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -44,19 +44,19 @@
 			</a>
 	</header>
 	
-	<div class="contaniner fixed-conta">
+	<div class="contaniner fixed-conta" id="sty">
 		<?php foreach($data as $k=>$v){?>
 		<dl class="address">
 			<!-- <a href="go-address.html"> -->
 				<dt>
 					<p><?= $v['a_name']?></p>
 					<span><?= $v['a_tel']?></span>
-						<?php if($v['a_state'] == '1'): ?>
-							<small va="<?= $v['a_id']?>">默认</small>
-						<?php else: ?>
-							<small class="default" val="<?= $v['a_id']?>">			
-							可设为默认</small>
-						<?php endif; ?>
+				<?php if($v['a_state'] == '1'): ?>
+					<small va="<?= $v['a_id']?>">默认</small>
+				<?php else: ?>
+					<small class="default" val="<?= $v['a_id']?>">			
+					可设为默认</small>
+				<?php endif; ?>
 				</dt>
 				<dd><?= $v['a_address']?></dd>
 			<!-- </a> -->
@@ -66,20 +66,30 @@
 </body>
 </html>
 <script>
-	$(".default").click(function(){
+$(document).on("click",".default",function(){
+
 		var id = $(this).attr('val');
-		// var ids = $(this).prev().attr('va');
-		// alert(ids);
 		var _this = $(this);
 		$.ajax({
 		   type: "POST",
 		   url: "<?php echo url('home/Userinfo/upda'); ?>",
 		   data: {id:id},
+		   dataType:'json',
 		    success: function(msg){
-		    	if(msg == 1){
-		    		_this.html('默认');
-		    		// _this.prev().html('可设为默认');	
-		    	}
+		    	var str ="";
+		    	$.each(msg,function(k,v){			    	
+			    	str+='<dl class="address"><dt><p>'+v.a_name+'</p>';		
+			    	str+='<span>'+v.a_tel+'</span>';
+			    	if(v.a_state == 1){
+			    		str+='<small va='+v.a_id+'>默认</small>';
+			    	}else{
+			    		str+='<small class="default" val='+v.a_id+'>可设为默认</small>';
+			    	}
+			    	str+='<dd>'+v.a_address+'</dd>';
+			    	str+='</dt></dl>';    		
+		    	})  		
+		    	$("#sty").html(str);	
+		    						    	
 		    }
 		})
 	})

@@ -224,13 +224,15 @@ public function jia(){
     }
     //从详情页加入购物车
     public function cartdesc(){
+//       echo  json_encode($_POST);die;
         $num=$_POST['num'];
         $fid=$_POST['fid'];
+
         $q= Db::table('sg_fruits')
             ->field('f_id,f_surplus')
-
             ->where("f_id = $fid")
             ->find();
+//        echo json_encode($q);die;
         $sum=$q['f_surplus'];//库存总个数
 //        foreach($q as $k=>$v){
 //            $qa[]=$v['f_num'];
@@ -242,8 +244,11 @@ public function jia(){
         $data= Db::table('sg_cart')
             ->where("f_id = $fid AND u_id =$uid")
             ->find();
-        $number=$data['f_num'];
+
+
+
         if($data){
+            $number=$data['f_num'];
             if($num<=($sum-$data['f_num'])){
                 //已存在继续累加
                 $a=Db::table('sg_cart')
@@ -259,10 +264,10 @@ public function jia(){
 
         }else{
             //不存在入库
-            $data['num']=$_POST['num'];
-            $data['fid']=$_POST['fid'];
-            $data['uid']=$_POST['uid'];
-            $b=Db::table('sg_cart')->insert($data);
+            $arr['f_num']=$_POST['num'];
+            $arr['f_id']=$_POST['fid'];
+            $arr['u_id']=$_POST['uid'];
+            $b=Db::table('sg_cart')->insert($arr);
             if($b){
                 echo 222;
             }

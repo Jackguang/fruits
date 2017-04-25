@@ -23,6 +23,12 @@
 </header>
 
 <div class="contaniner fixed-contb">
+
+     {if condition="$money==0 "}
+
+
+     {else /}
+
     {foreach name='data' item='v'}
     <section class="shopcar" alt="{$v.f_id}">
         <div class="shopcar-checkbox">
@@ -45,9 +51,44 @@
         </dl>
     </section>
     {/foreach}
+
+     {/if}
+
+
+    <!--{foreach name='data' item='v'}-->
+    <!--<section class="shopcar" alt="{$v.f_id}">-->
+        <!--<div class="shopcar-checkbox">-->
+            <!--<label for="shopcar" onselectstart="return false"  alt="{$v.f_id}" alp="{$v.m_price}" name="box" ></label>-->
+            <!--<input type="checkbox" alt="{$v.f_id}" class="shopcar"/>-->
+        <!--</div>-->
+        <!--<figure><img src="{$v.f_img}"/></figure>-->
+        <!--<dl>-->
+            <!--<dt>{$v.f_name}</dt>-->
+            <!--<dd>{$v.f_weight}</dd>-->
+            <!--&lt;!&ndash;<dd>尺寸：L</dd>&ndash;&gt;-->
+            <!--<div class="add" >-->
+                <!--<span class="jian" alt="{$v.m_price}">-</span>-->
+                <!--<input type="text" value="{$v.f_num}"  class="n{$v.f_id}" name="num"/>-->
+                <!--<span class="jia" alt="{$v.m_price}">+</span>-->
+            <!--</div>-->
+            <!--<h3>￥{$v.m_price}</h3>-->
+
+            <!--<small class="del" alt="{$v.f_id}" ma="{$v.m_price}"><img src="car/images/shopcar-icon01.png"/></small>-->
+        <!--</dl>-->
+    <!--</section>-->
+    <!--{/foreach}-->
     <!--去结算-->
     <div style="margin-bottom: 16%;"></div>
+
+    {if condition="$money == 0"}
+
+
+    {else /}
     <input type="hidden" value="<?php echo $data[0]['u_id']?>" class="uid">
+
+   {/if}
+
+
 </div>
 <script type="text/javascript">
 
@@ -120,6 +161,7 @@
 <script>
     //去结算
     $('.buy').click(function(){
+
         var str='';
         var price='';
         var a='';
@@ -141,6 +183,11 @@
         str=str.substr(1);
         price=price.substr(1);
         num=num.substr(1);
+      if(!num){
+          alert('没有商品被选择');
+          return false;
+      }
+
 //            alert(str);
 //            alert(price);
 //            alert(num);

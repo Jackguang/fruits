@@ -54,7 +54,8 @@
 							<small va="<?= $v['a_id']?>">默认</small>
 						{else /}
 							<small class="default" val="<?= $v['a_id']?>">			
-							可设为默认</small>
+							可设为默认
+							</small>
 						{/if}
 				</dt>
 				<dd><?= $v['a_address']?></dd>
@@ -77,7 +78,8 @@
 		    success: function(msg){
 		    	if(msg == 1){
 		    		_this.html('默认');
-		    		// _this.prev().html('可设为默认');	
+		    		// _this.prev().html('可设为默认');
+
 		    	}
 		    }
 		})

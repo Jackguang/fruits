@@ -1,3 +1,4 @@
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:89:"E:\WAPM\WWW\chenyan\11\fruits\fruits\public/../application/home\view\userinfo\addres.html";i:1493038413;}*/ ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -38,34 +39,25 @@
 			</a>
 		<h3>收获地址专区</h3>
 			
-			<a class="text-top" href="{:url('home/Userinfo/goaddress')}">
+			<a class="text-top" href="<?php echo url('home/Userinfo/goaddress'); ?>">
 				添加
 			</a>
 	</header>
 	
-	<div class="contaniner fixed-conta" id="sty">
+	<div class="contaniner fixed-conta">
 		<?php foreach($data as $k=>$v){?>
 		<dl class="address">
 			<!-- <a href="go-address.html"> -->
 				<dt>
 					<p><?= $v['a_name']?></p>
 					<span><?= $v['a_tel']?></span>
-<<<<<<< HEAD
-				{if condition="$v.a_state eq '1'"}
-					<small va="<?= $v['a_id']?>">默认</small>
-				{else /}
-					<small class="default" val="<?= $v['a_id']?>">			
-					可设为默认</small>
-				{/if}
-=======
-						{if condition="$v.a_state eq '1'"}
+						<?php if($v['a_state'] == '1'): ?>
 							<small va="<?= $v['a_id']?>">默认</small>
-						{else /}
+						<?php else: ?>
 							<small class="default" val="<?= $v['a_id']?>">			
 							可设为默认
 							</small>
-						{/if}
->>>>>>> a23be981d2627317e410756ed36f9b3500b83f95
+						<?php endif; ?>
 				</dt>
 				<dd><?= $v['a_address']?></dd>
 			<!-- </a> -->
@@ -75,38 +67,21 @@
 </body>
 </html>
 <script>
-$(document).on("click",".default",function(){
-
+	$(".default").click(function(){
 		var id = $(this).attr('val');
+		// var ids = $(this).prev().attr('va');
+		// alert(ids);
 		var _this = $(this);
 		$.ajax({
 		   type: "POST",
-		   url: "{:url('home/Userinfo/upda')}",
+		   url: "<?php echo url('home/Userinfo/upda'); ?>",
 		   data: {id:id},
-		   dataType:'json',
 		    success: function(msg){
-<<<<<<< HEAD
-		    	var str ="";
-		    	$.each(msg,function(k,v){			    	
-			    	str+='<dl class="address"><dt><p>'+v.a_name+'</p>';		
-			    	str+='<span>'+v.a_tel+'</span>';
-			    	if(v.a_state == 1){
-			    		str+='<small va='+v.a_id+'>默认</small>';
-			    	}else{
-			    		str+='<small class="default" val='+v.a_id+'>可设为默认</small>';
-			    	}
-			    	str+='<dd>'+v.a_address+'</dd>';
-			    	str+='</dt></dl>';    		
-		    	})  		
-		    	$("#sty").html(str);	
-		    						    	
-=======
 		    	if(msg == 1){
 		    		_this.html('默认');
 		    		// _this.prev().html('可设为默认');
 
 		    	}
->>>>>>> a23be981d2627317e410756ed36f9b3500b83f95
 		    }
 		})
 	})

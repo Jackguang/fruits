@@ -1,3 +1,4 @@
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:89:"E:\study\HHH\liupeng\fruits\fruits\public/../application/home\view\fruits\classifyin.html";i:1493002263;}*/ ?>
 <?php
 use think\Session;
 $uid=Session::get('u_id');
@@ -32,26 +33,35 @@ $uid=Session::get('u_id');
     </style>
 </head>
 <body >
+
 <div class="toper navbar-fixed-top">
     <div class="row color_white " >
-        <div class="col-xs-2" style="padding-left:25px;"><a class="cwhite" href="{:url('index.php/home/fruits/index')}"><i class="icon-angle-left font32"></i></a></div>
-        <div class="col-xs-8 text-center font20" ><?php echo $arr[0]['t_name']?></div>
+        <div class="col-xs-2" style="padding-left:25px;"><a class="cwhite" href="<?php echo url('index.php/home/fruits/index'); ?>"><i class="icon-angle-left font32"></i></a></div>
+        <!--<div class="col-xs-8 text-center font20" >-->
+          <a href="<?php echo url('home/Fruits/classify'); ?>?t_id=1"><font color="black">进口专区</font></a>
+          <a href="<?php echo url('home/Fruits/classify'); ?>?t_id=2"><font color="black">国产精品</font></a>
+          <a href="<?php echo url('home/Fruits/classify'); ?>?t_id=3"><font color="black">休闲干果</font></a>
+
+            <!--<div class="col-xs-8 text-center font20" >-->
+                <!--<a href="">进口专区</a>-->
+
+            <!--</div>-->
+            <!--<div class="col-xs-8 text-center font20" >     <a href="">国产精品</a></div>-->
+            <!--<div class="col-xs-8 text-center font20" >       <a href="">休闲干果</a>  </div>-->
+
+        <!--</div>-->
         <div class="col-xs-2" >
             <div class="icon_shopcar">
                 <div class="icon_shopcar_ts"></div>
-
-               {if condition="!$uid"}
-
-
-                <a class="cwhite" href="{:url('home/user/login')}"><div class="photo_30"><img src="home/images/icon_shopcar.png" alt="购物车"></div></a>
-
-                {else /}
-                <a class="cwhite" href="{:url('home/Cart/index')}"><div class="photo_30"><img src="home/images/icon_shopcar.png" alt="购物车"></div></a>
-
-                {/if}
+                <?php if(!$uid): ?>
 
 
+                <a class="cwhite" href="<?php echo url('home/user/login'); ?>"><div class="photo_30"><img src="home/images/icon_shopcar.png" alt="购物车"></div></a>
 
+                <?php else: ?>
+                <a class="cwhite" href="<?php echo url('home/Cart/index'); ?>"><div class="photo_30"><img src="home/images/icon_shopcar.png" alt="购物车"></div></a>
+
+                <?php endif; ?>
             </div>
         </div>
     </div>
@@ -61,55 +71,45 @@ $uid=Session::get('u_id');
 <div class=" container-fluid">
     <div class="row">
         <div class="table">
-            {foreach name='arr' item='v'}
+            <?php if(is_array($arr) || $arr instanceof \think\Collection): if( count($arr)==0 ) : echo "" ;else: foreach($arr as $key=>$v): ?>
             <div class="col-xs-6" style="padding-right:5px;" >
                 <div class="thumbnail" style="padding:0px;">
-                    <a href="{:url('home/Fruits/info')}?id={$v.f_id}"><div class="sosophoto"><img src="{$v.f_img}" width="160" height="120"></div></a>
+                    <a href="<?php echo url('home/Fruits/info'); ?>?id=<?php echo $v['f_id']; ?>"><div class="sosophoto"><img src="<?php echo $v['f_img']; ?>" width="160" height="120"></div></a>
                     <div class="caption">
-                        <h4>{$v.f_name}</h4>
-                        <span class="color_gray">{$v.f_title}</span>
-                        <p class="color_gray"><span class="font16 color_orange">¥ {$v.m_price}</span>/斤</p>
+                        <h4><?php echo $v['f_name']; ?></h4>
+                        <span class="color_gray"><?php echo $v['f_title']; ?></span>
+                        <p class="color_gray"><span class="font16 color_orange">¥ <?php echo $v['m_price']; ?></span>/斤</p>
 
-                        <!--{if condition="!$uid"}-->
-                      <!--请先登录-->
-                        <!--&lt;!&ndash;<div class="text-center"><a href="javascript:void(0)" data-toggle="modal" data-target="#shopcar" class="gou" uid="{$uid}" alt="{$v.f_id}"><i class="icon-shopping-cart font16 color_green"></i> 加入购物车</a></div>&ndash;&gt;-->
-
-                        <!--{else /}-->
-                        <!--<div class="text-center"><a href="javascript:void(0)" data-toggle="modal" data-target="#shopcar" class="gou" uid="{$uid}" alt="{$v.f_id}"><i class="icon-shopping-cart font16 color_green"></i> 加入购物车</a></div>-->
-
-                        <!--{/if}-->
+                        <div class="text-center"><a href="javascript:void(0)" data-toggle="modal" data-target="#shopcar" class="gou" uid="<?php echo $uid; ?>" alt="<?php echo $v['f_id']; ?>"><i class="icon-shopping-cart font16 color_green"></i> 加入购物车</a></div>
 
 
-                        <div class="text-center"><a href="javascript:void(0)" data-toggle="modal" data-target="#shopcar" class="gou" uid="{$uid}" alt="{$v.f_id}"><i class="icon-shopping-cart font16 color_green"></i> 加入购物车</a></div>
+
                     </div>
                 </div>
             </div>
-            {/foreach}
+            <?php endforeach; endif; else: echo "" ;endif; ?>
 
         </div>
-        <input type="hidden" value="{$a}" class="p" >
-        {if condition="!$uid"}
-
-
-        {else /}
-        <input type="hidden" value="{$uid}" class="uid" >
-        {/if}
+        <input type="hidden" value="<?php echo $a; ?>" class="p" >
+        <?php if(!$uid): else: ?>
+        <input type="hidden" value="<?php echo $uid; ?>" class="uid" >
+        <?php endif; ?>
         <input type="hidden" class="tid" value="<?php echo $arr[0]['t_id']?>">
     </div>
-    <button type="button" class="btn btn-default btn-group-justified" id="jia">加载更多 <i class="icon-double-angle-down"></i></button>
+    <!--<button type="button" class="btn btn-default btn-group-justified" id="jia">加载更多 <i class="icon-double-angle-down"></i></button>-->
     <div class="height20"></div>
 </div>
 
 <!-- Modal -->
-<!--<div class="modal fade" id="shopcar" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">-->
-    <!--<div class="modal-dialog" role="document">-->
-        <!--<div class="modal-content">-->
+<div class="modal fade" id="shopcar" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
             <!--<div class="modal-header">-->
                 <!--<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>-->
                 <!--<h5 class="modal-title font16" id="myModalLabel">我的购物车</h5>-->
             <!--</div>-->
             <!--<div class="modal-body aligncenter">-->
-                <!--<div class="photo_60"><img src="home/images/icon_shopcar_ok.png"></div><br>-->
+                <!--<div class="photo_60"><img src="images/icon_shopcar_ok.png"></div><br>-->
                 <!--您选购的商品已加入购物车<br>-->
                 <!--购物车有2件商品，共计<span class="font16 color_orange">¥ 12</span>-->
             <!--</div>-->
@@ -117,9 +117,9 @@ $uid=Session::get('u_id');
                 <!--<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>-->
                 <!--<button type="button" class="btn btn-success">去结算</button>-->
             <!--</div>-->
-        <!--</div>-->
-    <!--</div>-->
-<!--</div>-->
+        </div>
+    </div>
+</div>
 
 
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
@@ -130,6 +130,17 @@ $uid=Session::get('u_id');
 </html>
 <script src="js/jq.js"></script>
 <script>
+    //分类条
+//    $('#options dd div').click(function() {
+//        var firstName = $(this).parents('dl').children('dt').text();
+//        var fn = $.trim(firstName);
+//        if(fn=='月薪范围')
+//        {
+//            var val=$(this).html();
+//            $('#yxInput').attr('value',val);
+//            var par=window.location.search;
+//            location.href='index.php'+par+'&yx='+val;
+//        }
     //加购物车
     $(document).on('click','.gou',function(){
 
@@ -137,11 +148,11 @@ $uid=Session::get('u_id');
         var fid=$(this).attr('alt');//商品id
         var uid=$(this).attr('uid');//用户id
         if(!uid){
-            window.location.href="{:url('index.php/home/user/login')}";
+            window.location.href="<?php echo url('index.php/home/user/login'); ?>";
         }
         $.ajax({
             type: "POST",
-            url: "{:url('index.php/home/cart/cart')}",
+            url: "<?php echo url('index.php/home/cart/cart'); ?>",
             data: "fid="+fid+"&uid="+uid,
             success: function(msg){
                 if(msg==1){
@@ -167,7 +178,7 @@ $uid=Session::get('u_id');
         var a=parseInt(p)+1;
         $.ajax({
             type: "POST",
-            url: "{:url('index.php/home/fruits/jiaf')}",
+            url: "<?php echo url('index.php/home/fruits/jiaf'); ?>",
             data: "p="+p+"&tid="+tid,
             dataType:'json',
             success: function(msg){
@@ -177,7 +188,7 @@ $uid=Session::get('u_id');
 
                 }else {
                     $.each( msg.resl, function(k, v){
-                        str+='<div class="col-xs-6" style="padding-right:5px;" ><div class="thumbnail" style="padding:0px;"><a href="{:url('home/Fruits/info')}?id='+v.f_id+'"><div class="sosophoto"><img src="'+v.f_img+'" width="160" height="120"></div></a><div class="caption"><h4>'+v.f_name+'</h4><span class="color_gray">'+v.f_title+'</span>';
+                        str+='<div class="col-xs-6" style="padding-right:5px;" ><div class="thumbnail" style="padding:0px;"><a href="<?php echo url('home/Fruits/info'); ?>?id='+v.f_id+'"><div class="sosophoto"><img src="'+v.f_img+'" width="160" height="120"></div></a><div class="caption"><h4>'+v.f_name+'</h4><span class="color_gray">'+v.f_title+'</span>';
                         str+='<p class="color_gray"><span class="font16 color_orange">¥ '+v.m_price+'</span>/斤</p><div class="text-center"><a href="javascript:void(0)" data-toggle="modal" data-target="#shopcar" class="gou" uid="'+uid+'" alt="'+v.f_id+'"><i class="icon-shopping-cart font16 color_green"></i> 加入购物车</a></div></div></div></div>';
                     });
                     $(".table").append(str);

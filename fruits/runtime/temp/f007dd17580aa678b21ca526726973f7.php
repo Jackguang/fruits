@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:89:"E:\WAPM\WWW\chenyan\11\fruits\fruits\public/../application/home\view\fruits\classify.html";i:1493093306;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:96:"F:\soft\phpStudy\WWW\github\fruits\fruits\public/../application/home\view\fruits\classifyin.html";i:1492745078;}*/ ?>
 <?php
 use think\Session;
 $uid=Session::get('u_id');
@@ -34,26 +34,25 @@ $uid=Session::get('u_id');
 </head>
 <body >
 <div class="toper navbar-fixed-top">
-    <div class="row color_white " >
-        <div class="col-xs-2" style="padding-left:25px;"><a class="cwhite" href="<?php echo url('index.php/home/fruits/index'); ?>"><i class="icon-angle-left font32"></i></a></div>
-        <div class="col-xs-8 text-center font20" ><?php echo $arr[0]['t_name']?></div>
-        <div class="col-xs-2" >
-            <div class="icon_shopcar">
-                <div class="icon_shopcar_ts"></div>
+        <div class="col-xs-2" style="padding-left:25px;">
+            <a class="cwhite" href="<?php echo url('index.php/home/fruits/index'); ?>">
+                <i class="icon-angle-left font32"></i></a></div>
 
-               <?php if(!$uid): ?>
+            <select name="" id="">
+                <option value="">请选择分类</option>
+                <?php if(is_array($data) || $data instanceof \think\Collection): if( count($data)==0 ) : echo "" ;else: foreach($data as $key=>$vo): ?>
+                    <div class="col-xs-8 text-center font20" >
+                <option value="<?php echo $vo['t_id']; ?>"><?php echo $vo['t_name']; ?></option> </div>
 
-
-                <a class="cwhite" href="<?php echo url('home/user/login'); ?>"><div class="photo_30"><img src="home/images/icon_shopcar.png" alt="购物车"></div></a>
-
-                <?php else: ?>
-                <a class="cwhite" href="<?php echo url('home/Cart/index'); ?>"><div class="photo_30"><img src="home/images/icon_shopcar.png" alt="购物车"></div></a>
-
-                <?php endif; ?>
+                <?php endforeach; endif; else: echo "" ;endif; ?>
+            </select>
 
 
-
-            </div>
+       <div class="col-xs-2" >
+            <div class="icon_shopcar"> <a href="<?php echo url('home/Cart/index'); ?>">
+                <div class="icon_shopcar_ts">15</div>
+                <a class="cwhite" href="#"><div class="photo_30"><img src="home/images/icon_shopcar.png" alt="购物车"></div></a>
+            </a></div>
         </div>
     </div>
 </div><!-- toper -->
@@ -71,17 +70,17 @@ $uid=Session::get('u_id');
                         <span class="color_gray"><?php echo $v['f_title']; ?></span>
                         <p class="color_gray"><span class="font16 color_orange">¥ <?php echo $v['m_price']; ?></span>/斤</p>
 
-                        <!--<?php if(!$uid): ?>-->
-                      <!--请先登录-->
-                        <!--&lt;!&ndash;<div class="text-center"><a href="javascript:void(0)" data-toggle="modal" data-target="#shopcar" class="gou" uid="<?php echo $uid; ?>" alt="<?php echo $v['f_id']; ?>"><i class="icon-shopping-cart font16 color_green"></i> 加入购物车</a></div>&ndash;&gt;-->
-
-                        <!--<?php else: ?>-->
+                        <?php if(!$uid): ?>
+                        请先登录
                         <!--<div class="text-center"><a href="javascript:void(0)" data-toggle="modal" data-target="#shopcar" class="gou" uid="<?php echo $uid; ?>" alt="<?php echo $v['f_id']; ?>"><i class="icon-shopping-cart font16 color_green"></i> 加入购物车</a></div>-->
 
-                        <!--<?php endif; ?>-->
-
-
+                        <?php else: ?>
                         <div class="text-center"><a href="javascript:void(0)" data-toggle="modal" data-target="#shopcar" class="gou" uid="<?php echo $uid; ?>" alt="<?php echo $v['f_id']; ?>"><i class="icon-shopping-cart font16 color_green"></i> 加入购物车</a></div>
+
+                        <?php endif; ?>
+
+
+                        <!--<div class="text-center"><a href="javascript:void(0)" data-toggle="modal" data-target="#shopcar" class="gou" uid="<?php echo $uid; ?>" alt="<?php echo $v['f_id']; ?>"><i class="icon-shopping-cart font16 color_green"></i> 加入购物车</a></div>-->
                     </div>
                 </div>
             </div>
@@ -99,31 +98,31 @@ $uid=Session::get('u_id');
 </div>
 
 <!-- Modal -->
-<!--<div class="modal fade" id="shopcar" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">-->
-    <!--<div class="modal-dialog" role="document">-->
-        <!--<div class="modal-content">-->
-            <!--<div class="modal-header">-->
-                <!--<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>-->
-                <!--<h5 class="modal-title font16" id="myModalLabel">我的购物车</h5>-->
-            <!--</div>-->
-            <!--<div class="modal-body aligncenter">-->
-                <!--<div class="photo_60"><img src="home/images/icon_shopcar_ok.png"></div><br>-->
-                <!--您选购的商品已加入购物车<br>-->
-                <!--购物车有2件商品，共计<span class="font16 color_orange">¥ 12</span>-->
-            <!--</div>-->
-            <!--<div class="modal-footer">-->
-                <!--<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>-->
-                <!--<button type="button" class="btn btn-success">去结算</button>-->
-            <!--</div>-->
-        <!--</div>-->
-    <!--</div>-->
-<!--</div>-->
+<div class="modal fade" id="shopcar" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h5 class="modal-title font16" id="myModalLabel">我的购物车</h5>
+            </div>
+            <div class="modal-body aligncenter">
+                <div class="photo_60"><img src="images/icon_shopcar_ok.png"></div><br>
+                您选购的商品已加入购物车<br>
+                购物车有2件商品，共计<span class="font16 color_orange">¥ 12</span>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                <button type="button" class="btn btn-success">去结算</button>
+            </div>
+        </div>
+    </div>
+</div>
 
 
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-<script src="home/js/jquery_min1_11_2.js"></script>
+<script src="js/jquery_min1_11_2.js"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
-<script src="home/js/bootstrap.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
 </body>
 </html>
 <script src="js/jq.js"></script>
@@ -134,9 +133,6 @@ $uid=Session::get('u_id');
 //        $(".gou").on("click", function(){
         var fid=$(this).attr('alt');//商品id
         var uid=$(this).attr('uid');//用户id
-        if(!uid){
-            window.location.href="<?php echo url('index.php/home/user/login'); ?>";
-        }
         $.ajax({
             type: "POST",
             url: "<?php echo url('index.php/home/cart/cart'); ?>",
@@ -145,9 +141,9 @@ $uid=Session::get('u_id');
                 if(msg==1){
                     alert('库存不足了');
                 }else if(msg==111){
-                    alert('加入购物车成功');
+                    alert('库加入购物车成功');
                 }else if(msg==222){
-                    alert('加入购物车成功');
+                    alert('库加入购物车成功');
                 }
             }
         });

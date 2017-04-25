@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:82:"E:\study\HHH\liupeng\fruits\fruits\public/../application/home\view\user\login.html";i:1492668438;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:82:"E:\study\HHH\liupeng\fruits\fruits\public/../application/home\view\user\login.html";i:1493081798;}*/ ?>
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -31,7 +31,7 @@
   <body >
     <div class="toper navbar-fixed-top">
     	<div class="row color_white " >
-      	  <div class="col-xs-2"><a href="#"><div class="photo_30"><img src="images/icon_close.png" alt="关闭"></div></a></div>
+      	  <div class="col-xs-2"><div class="photo_30"><img src="home/images/icon_close.png" alt="关闭" onclick="javascript:window.history.back();"></div></div>
           <div class="col-xs-8 text-center font20">快速登录</div>
           <div class="col-xs-2">&nbsp;</div>
       	</div>

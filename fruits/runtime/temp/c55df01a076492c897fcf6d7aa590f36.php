@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:84:"E:\WAPM\WWW\chenyan\11\fruits\fruits\public/../application/home\view\cart\index.html";i:1493099720;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:82:"E:\study\HHH\liupeng\fruits\fruits\public/../application/home\view\cart\index.html";i:1493002263;}*/ ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -24,8 +24,7 @@
 </header>
 
 <div class="contaniner fixed-contb">
-
-     <?php if($money==0): else: if(is_array($data) || $data instanceof \think\Collection): if( count($data)==0 ) : echo "" ;else: foreach($data as $key=>$v): ?>
+    <?php if(is_array($data) || $data instanceof \think\Collection): if( count($data)==0 ) : echo "" ;else: foreach($data as $key=>$v): ?>
     <section class="shopcar" alt="<?php echo $v['f_id']; ?>">
         <div class="shopcar-checkbox">
             <label for="shopcar" onselectstart="return false"  alt="<?php echo $v['f_id']; ?>" alp="<?php echo $v['m_price']; ?>" name="box" ></label>
@@ -46,40 +45,10 @@
             <small class="del" alt="<?php echo $v['f_id']; ?>" ma="<?php echo $v['m_price']; ?>"><img src="car/images/shopcar-icon01.png"/></small>
         </dl>
     </section>
-    <?php endforeach; endif; else: echo "" ;endif; endif; ?>
-
-
-    <!--<?php if(is_array($data) || $data instanceof \think\Collection): if( count($data)==0 ) : echo "" ;else: foreach($data as $key=>$v): ?>-->
-    <!--<section class="shopcar" alt="<?php echo $v['f_id']; ?>">-->
-        <!--<div class="shopcar-checkbox">-->
-            <!--<label for="shopcar" onselectstart="return false"  alt="<?php echo $v['f_id']; ?>" alp="<?php echo $v['m_price']; ?>" name="box" ></label>-->
-            <!--<input type="checkbox" alt="<?php echo $v['f_id']; ?>" class="shopcar"/>-->
-        <!--</div>-->
-        <!--<figure><img src="<?php echo $v['f_img']; ?>"/></figure>-->
-        <!--<dl>-->
-            <!--<dt><?php echo $v['f_name']; ?></dt>-->
-            <!--<dd><?php echo $v['f_weight']; ?></dd>-->
-            <!--&lt;!&ndash;<dd>尺寸：L</dd>&ndash;&gt;-->
-            <!--<div class="add" >-->
-                <!--<span class="jian" alt="<?php echo $v['m_price']; ?>">-</span>-->
-                <!--<input type="text" value="<?php echo $v['f_num']; ?>"  class="n<?php echo $v['f_id']; ?>" name="num"/>-->
-                <!--<span class="jia" alt="<?php echo $v['m_price']; ?>">+</span>-->
-            <!--</div>-->
-            <!--<h3>￥<?php echo $v['m_price']; ?></h3>-->
-
-            <!--<small class="del" alt="<?php echo $v['f_id']; ?>" ma="<?php echo $v['m_price']; ?>"><img src="car/images/shopcar-icon01.png"/></small>-->
-        <!--</dl>-->
-    <!--</section>-->
-    <!--<?php endforeach; endif; else: echo "" ;endif; ?>-->
+    <?php endforeach; endif; else: echo "" ;endif; ?>
     <!--去结算-->
     <div style="margin-bottom: 16%;"></div>
-
-    <?php if($money == 0): else: ?>
     <input type="hidden" value="<?php echo $data[0]['u_id']?>" class="uid">
-
-   <?php endif; ?>
-
-
 </div>
 <script type="text/javascript">
 
@@ -152,7 +121,6 @@
 <script>
     //去结算
     $('.buy').click(function(){
-
         var str='';
         var price='';
         var a='';
@@ -174,11 +142,6 @@
         str=str.substr(1);
         price=price.substr(1);
         num=num.substr(1);
-      if(!num){
-          alert('没有商品被选择');
-          return false;
-      }
-
 //            alert(str);
 //            alert(price);
 //            alert(num);

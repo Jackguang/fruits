@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:87:"E:\WAPM\WWW\chenyan\11\fruits\fruits\public/../application/home\view\userinfo\user.html";i:1492744062;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:87:"E:\WAPM\WWW\chenyan\11\fruits\fruits\public/../application/home\view\userinfo\user.html";i:1493107895;}*/ ?>
 <!DOCTYPE html>
 <html class="no-js">
 <head>
@@ -29,9 +29,18 @@
   <!-- windows phone 点击无高光 -->
   <meta name="msapplication-tap-highlight" content="no">
   <!-- 适应移动端end -->
-	<title>水果拼团网站</title>
+	<title>个人中心主页</title>
 	<base href="__PUBLIC__">
     <link rel="stylesheet" href="home/css/index.css"/>
+
+    <link href="home/css/bootstrap.min.css" rel="stylesheet">
+        <link href="home/css/font-awesome.min.css" rel="stylesheet">
+        <link href="home/css/alongsty.css" rel="stylesheet">
+
+        <!-- Link Swiper's CSS -->
+        <link rel="stylesheet" href="home/css/swiper.min.css">
+
+
 </head>
 <body>
 	<div id="user-b">
@@ -47,7 +56,9 @@
 	    </nav>
 		<section class="m-component-user" id="m-user">
 	        <div class="m-user-avatar text-center">
-	            <span class="avatarPic"><img style="display: inline;" class="lazy img-circle" src="home/images/user-img0.jpg"></span>
+	            <span class="avatarPic"><img style="display: inline;" class="lazy img-circle" src="home/images/user-img0.jpg">
+					<?= $one[0]['u_name']?>
+	            </span>
 
 	        </div>
 	        
@@ -56,14 +67,14 @@
 	        		<li><span>￥<?= $one[0]['u_balance']?></span><br>账户余额</li>
 	        		<li><span class="bar"></span>
 	        		<span>	        			
-	        			<?php if($one['0']['u_price'] == '200'): ?>
+	        			<?php if($one['0']['u_price'] <= '200'): ?>
 	        			普通用户
 	        			<?php else: ?> 
 	        			会员用户
 	        			<?php endif; ?>
 	        		</span>
 	        		<br>等级</li>
-	        		<li><a href="myorder.html"><span class="bar"></span><span>2</span><br>我的订单</a></li>
+	        		<li><a href="<?php echo url('home/Cart/orderinfo'); ?>"><span class="bar"></span><span>2</span><br>我的订单</a></li>
 	        	</ul>
 	        </div>
 	        <ul class="m-user-content">
@@ -92,7 +103,7 @@
 	        </ul>
 	    </section>
 	    <!--footer begin-->
-		<footer class="footer">
+	<!-- 	<footer class="footer">
 	        <nav>
 	            <ul>
 	                <li><a href="index.html" class="nav-controller"><div class="fb-home"></div>首页</a></li>
@@ -101,8 +112,27 @@
 	                <li><a href="javascript:void(0);" class="nav-controller active"><div class="fb-user"></div>个人中心</a></li>
 	            </ul>
 	        </nav>
-	    </footer>
+	    </footer> -->
 	    <!--footer end-->
+	
+<div class="footer navbar-fixed-bottom">
+    <div class="row">
+        <div class="col-xs-3 text-center" style=" padding-top:5px;">
+            <a class="cgreen" href="<?php echo url('home/fruits/index'); ?>"><div class="photo_30"><img src="home/images/nav11.png"><br>首页</div></a>
+        </div>
+        <div class="col-xs-3  text-center" style=" padding-top:5px;">
+            <a class="cgray" href="<?php echo url('home/Fruits/classifyin'); ?>"><div class="photo_30"><img src="home/images/nav2.png"><br>分类</div></a>
+        </div>
+        <div class="col-xs-3  text-center" style=" padding-top:5px;">
+            <a class="cgray" href="<?php echo url('home/Cart/index'); ?>"><div class="photo_30"><img src="home/images/nav3.png"><br>购物车</div></a>
+        </div>
+        <div class="col-xs-3  text-center" style="padding-top:5px;">
+            <a class="cgray" href="<?php echo url('home/userinfo/user'); ?>"><div class="photo_30"><img src="home/images/nav4.png"><br>我的</div></a>
+        </div>
+    </div>
+</div>
+
+
 	</div>
 </body>
 </html>

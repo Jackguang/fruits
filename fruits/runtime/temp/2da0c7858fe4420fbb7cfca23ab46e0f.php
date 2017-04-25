@@ -1,6 +1,7 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:84:"E:\study\HHH\liupeng\fruits\fruits\public/../application/home\view\fruits\index.html";i:1493002263;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:91:"F:\soft\phpStudy\WWW\github\fruits\fruits\public/../application/home\view\fruits\index.html";i:1492745078;}*/ ?>
 <?php
 use think\Session;
+Session::set('u_id',12);
 $uid=Session::get('u_id');
 ?>
 <!DOCTYPE html>
@@ -39,14 +40,7 @@ $uid=Session::get('u_id');
     <div class="row color_white " >
         <div class="col-xs-2">&nbsp;</div>
         <div class="col-xs-8 text-center font20">水果派对</div>
-        <div class="col-xs-2" >
-            <a href="javascript:void(0)" >
-                <div class="photo_25" style="margin-top:3px;" id="chen">
-            <img src="home/images/icon_soso.png" alt="搜索" class="sou">
-
-        </div></a>
-
-        </div>
+        <div class="col-xs-2"><a href="#"><div class="photo_25" style="margin-top:3px;"><img src="home/images/icon_soso.png" alt="搜索"></div></a></div>
     </div>
 </div><!-- toper -->
 <div class="height53"></div>
@@ -79,7 +73,7 @@ $uid=Session::get('u_id');
 <div class=" container-fluid">
     <div class="row">
         <div class="col-xs-3 text-center" >
-            <a class="cgray" href="<?php echo url('home/Fruits/classify'); ?>?t_id=1"><div class="photo_60"><img src="uploads/1.jpg"><br>进口专区</div></a>
+            <a class="cgray" href="<?php echo url('home/Fruits/classify'); ?>?t_id=1"><div class="photo_60"><img src="uploads/1.jpg"><br>进1口专区</div></a>
         </div>
         <div class="col-xs-3  text-center">
             <a class="cgray" href="<?php echo url('home/Fruits/classify'); ?>?t_id=2"><div class="photo_60"><img src="uploads/3.jpg"><br>国产精品</div></a>
@@ -137,27 +131,16 @@ $uid=Session::get('u_id');
 <div class="footer navbar-fixed-bottom">
     <div class="row">
         <div class="col-xs-3 text-center" style=" padding-top:5px;">
-            <a class="cgreen" href="<?php echo url('home/Fruits/index'); ?>"><div class="photo_30"><img src="home/images/nav11.png"><br>首页</div></a>
+            <a class="cgreen" href="index.html"><div class="photo_30"><img src="home/images/nav11.png"><br>首页</div></a>
         </div>
         <div class="col-xs-3  text-center" style=" padding-top:5px;">
             <a class="cgray" href="<?php echo url('home/Fruits/classifyin'); ?>"><div class="photo_30"><img src="home/images/nav2.png"><br>分类</div></a>
         </div>
         <div class="col-xs-3  text-center" style=" padding-top:5px;">
-
-           <?php if(!$uid): ?>
-            <a class="cgray" href="<?php echo url('home/user/login'); ?>"><div class="photo_30"><img src="home/images/nav3.png"><br>购物车</div></a>
-
-            <?php else: ?>
             <a class="cgray" href="<?php echo url('home/Cart/index'); ?>"><div class="photo_30"><img src="home/images/nav3.png"><br>购物车</div></a>
-
-            <?php endif; ?>
-
-
-            <a class="cgray" href="<?php echo url('home/Cart/index'); ?>"><div class="photo_30"><img src="home/images/nav3.png"><br>购物车</div></a>
-
         </div>
         <div class="col-xs-3  text-center" style="padding-top:5px;">
-            <a class="cgray" href="<?php echo url('home/userinfo/user'); ?>"><div class="photo_30"><img src="home/images/nav4.png"><br>我的</div></a>
+            <a class="cgray" href="login.html"><div class="photo_30"><img src="home/images/nav4.png"><br>我的</div></a>
         </div>
     </div>
 </div><!-- footer -->
@@ -170,41 +153,12 @@ $uid=Session::get('u_id');
 </html>
 <script src="js/jq.js"></script>
 <script>
-    //搜索
-    $('.sou').click(function(){
-        var str=prompt("水果名称","");
-        var uid=$('.uid').val();
-        var chen='';
-
-        if(str)
-        {
-            $.ajax({
-                type: "POST",
-                url: "<?php echo url('index.php/home/Fruits/sou'); ?>",
-                data: "str="+str,
-                dataType:'json',
-                success: function(msg){
-//alert(msg);
-                        $.each(msg, function(k, v){
-                            chen+='<div class="col-xs-6" style="padding-right:5px;" ><div class="thumbnail" style="padding:0px;"><a href="<?php echo url('home/Fruits/info'); ?>?id='+v.f_id+'"><div class="sosophoto"><img src="'+v.f_img+'" width="160" height="120"></div></a><div class="caption">';
-                             chen+='<h4>'+v.f_name+'</h4><span class="color_gray">'+v.f_title+'</span><p class="color_gray"><span class="font16 color_orange">¥ '+v.m_price+'</span>/斤</p><div class="text-center"><a href="javascript:void(0)" data-toggle="modal" data-target="#shopcar" class="gou" uid="'+uid+'" alt="'+v.f_id+'"><i class="icon-shopping-cart font16 color_green"></i> 加入购物车</a></div></div></div></div>';
-                        });
-                    $(".table").html(chen);
-
-                }
-            });
-        }
-        <!--$('#chen').html(str);-->
-    })
     //加购物车
     $(document).on('click','.gou',function(){
 
 //        $(".gou").on("click", function(){
            var fid=$(this).attr('alt');//商品id
            var uid=$(this).attr('uid');//用户id
-        if(!uid){
-            window.location.href="<?php echo url('index.php/home/user/login'); ?>";
-        }
             $.ajax({
                 type: "POST",
                 url: "<?php echo url('index.php/home/cart/cart'); ?>",
@@ -213,9 +167,9 @@ $uid=Session::get('u_id');
                 if(msg==1){
                     alert('库存不足了');
                 }else if(msg==111){
-                    alert('加入购物车成功');
+                    alert('库加入购物车成功');
                 }else if(msg==222){
-                    alert('加入购物车成功');
+                    alert('库加入购物车成功');
                 }
                 }
             });
@@ -227,9 +181,6 @@ $uid=Session::get('u_id');
     $("#jia").on("click", function(){
      var p=$('.p').val();
      var uid=$('.uid').val();
-//        if(!uid){
-//            window.location.href="<?php echo url('index.php/home/user/login'); ?>";
-//        }
 //alert(p);
      var str='';
      var a=parseInt(p)+1;

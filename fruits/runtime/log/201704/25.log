@@ -32261,3 +32261,818 @@ Method [ <user> public method payfor ] {
 [ sql ] [ SQL ] SELECT * FROM sg_order a INNER JOIN sg_uaddress w ON a.o_address = w.a_id  WHERE  (  a.u_id = 25  )  [ RunTime:0.195472s ]
 
 ---------------------------------------------------------------
+[ 2017-04-25T20:05:19+08:00 ] 127.0.0.1 127.0.0.1 GET /chenyan/11/fruits/fruits/public/index.php/home/cart/orderinfo.html
+[ log ] www.chenyan.com/chenyan/11/fruits/fruits/public/index.php/home/cart/orderinfo.html [运行时间：0.332588s][吞吐率：3.01req/s] [内存消耗：1,801.63kb] [文件加载：37]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'cart',
+    2 => 'orderinfo',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.chenyan.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 5.0; SM-G900P Build/LRX21T) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.133 Mobile Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://www.chenyan.com/chenyan/11/fruits/fruits/public/index.php/home/userinfo/user.html',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=it93kiqsp4ddhtimja637ios67',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] Method [ <user> public method orderinfo ] {
+  @@ E:\WAPM\WWW\chenyan\11\fruits\fruits\application\home\controller\Cart.php 310 - 346
+}
+
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.230829s ] mysql:dbname=fruits;host=101.200.41.87;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sg_order` [ RunTime:0.014651s ]
+[ sql ] [ SQL ] SELECT * FROM sg_order a INNER JOIN sg_uaddress w ON a.o_address = w.a_id  WHERE  (  a.u_id = 25  )  [ RunTime:0.016223s ]
+
+---------------------------------------------------------------
+[ 2017-04-25T20:05:43+08:00 ] 127.0.0.1 127.0.0.1 GET /chenyan/11/fruits/fruits/public/index.php/home/cart/orderinfo.html
+[ log ] www.chenyan.com/chenyan/11/fruits/fruits/public/index.php/home/cart/orderinfo.html [运行时间：2.175775s][吞吐率：0.46req/s] [内存消耗：1,812.36kb] [文件加载：37]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'cart',
+    2 => 'orderinfo',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.chenyan.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 5.0; SM-G900P Build/LRX21T) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.133 Mobile Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://www.chenyan.com/chenyan/11/fruits/fruits/public/index.php/home/userinfo/user.html',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=it93kiqsp4ddhtimja637ios67',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] Method [ <user> public method orderinfo ] {
+  @@ E:\WAPM\WWW\chenyan\11\fruits\fruits\application\home\controller\Cart.php 310 - 347
+}
+
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:1.272843s ] mysql:dbname=fruits;host=101.200.41.87;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sg_order` [ RunTime:0.052680s ]
+[ sql ] [ SQL ] SELECT * FROM sg_order a INNER JOIN sg_uaddress w ON a.o_address = w.a_id  WHERE  (  a.u_id = 25  )  [ RunTime:0.028701s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sg_fruits` [ RunTime:0.017158s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 84 ) LIMIT 1   [ RunTime:0.020686s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 62 ) LIMIT 1   [ RunTime:0.021074s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 85 ) LIMIT 1   [ RunTime:0.026847s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 102 ) LIMIT 1   [ RunTime:0.242953s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 103 ) LIMIT 1   [ RunTime:0.020817s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 102 ) LIMIT 1   [ RunTime:0.016223s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 102 ) LIMIT 1   [ RunTime:0.019607s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 103 ) LIMIT 1   [ RunTime:0.017847s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 85 ) LIMIT 1   [ RunTime:0.029538s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 103 ) LIMIT 1   [ RunTime:0.024286s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 102 ) LIMIT 1   [ RunTime:0.027568s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 86 ) LIMIT 1   [ RunTime:0.030963s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 85 ) LIMIT 1   [ RunTime:0.244659s ]
+
+---------------------------------------------------------------
+[ 2017-04-25T20:06:04+08:00 ] 127.0.0.1 127.0.0.1 GET /chenyan/11/fruits/fruits/public/index.php/home/cart/orderinfo.html
+[ log ] www.chenyan.com/chenyan/11/fruits/fruits/public/index.php/home/cart/orderinfo.html [运行时间：0.105104s][吞吐率：9.51req/s] [内存消耗：1,913.45kb] [文件加载：45]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'cart',
+    2 => 'orderinfo',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.chenyan.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 5.0; SM-G900P Build/LRX21T) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.133 Mobile Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://www.chenyan.com/chenyan/11/fruits/fruits/public/index.php/home/userinfo/user.html',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=it93kiqsp4ddhtimja637ios67',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] Method [ <user> public method orderinfo ] {
+  @@ E:\WAPM\WWW\chenyan\11\fruits\fruits\application\home\controller\Cart.php 310 - 347
+}
+
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] E:\WAPM\WWW\chenyan\11\fruits\fruits\framework\lang\zh-cn.php
+[ info ] [ LANG ] E:\WAPM\WWW\chenyan\11\fruits\fruits\framework\lang\zh-cn.php
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.021652s ] mysql:dbname=fruits;host=101.200.41.87;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sg_order` [ RunTime:0.016448s ]
+[ sql ] [ SQL ] SELECT * FROM sg_order a INNER JOIN sg_uaddress w ON a.o_address = w.a_id  WHERE  (  a.u_id = 25  )  [ RunTime:0.013535s ]
+[ error ] [8]Array to string conversion[E:\WAPM\WWW\chenyan\11\fruits\fruits\application\home\controller\Cart.php:335]
+
+---------------------------------------------------------------
+[ 2017-04-25T20:07:26+08:00 ] 127.0.0.1 127.0.0.1 GET /chenyan/11/fruits/fruits/public/index.php/home/cart/orderinfo.html
+[ log ] www.chenyan.com/chenyan/11/fruits/fruits/public/index.php/home/cart/orderinfo.html [运行时间：0.695457s][吞吐率：1.44req/s] [内存消耗：1,913.06kb] [文件加载：45]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'cart',
+    2 => 'orderinfo',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.chenyan.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 5.0; SM-G900P Build/LRX21T) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.133 Mobile Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://www.chenyan.com/chenyan/11/fruits/fruits/public/index.php/home/userinfo/user.html',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=it93kiqsp4ddhtimja637ios67; think_var=zh-cn',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] Method [ <user> public method orderinfo ] {
+  @@ E:\WAPM\WWW\chenyan\11\fruits\fruits\application\home\controller\Cart.php 310 - 347
+}
+
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] E:\WAPM\WWW\chenyan\11\fruits\fruits\framework\lang\zh-cn.php
+[ info ] [ LANG ] E:\WAPM\WWW\chenyan\11\fruits\fruits\framework\lang\zh-cn.php
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.493866s ] mysql:dbname=fruits;host=101.200.41.87;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sg_order` [ RunTime:0.083508s ]
+[ sql ] [ SQL ] SELECT * FROM sg_order a INNER JOIN sg_uaddress w ON a.o_address = w.a_id  WHERE  (  a.u_id = 25  )  [ RunTime:0.043458s ]
+[ error ] [8]Array to string conversion[E:\WAPM\WWW\chenyan\11\fruits\fruits\application\home\controller\Cart.php:335]
+
+---------------------------------------------------------------
+[ 2017-04-25T20:08:02+08:00 ] 127.0.0.1 127.0.0.1 GET /chenyan/11/fruits/fruits/public/index.php/home/cart/orderinfo.html
+[ log ] www.chenyan.com/chenyan/11/fruits/fruits/public/index.php/home/cart/orderinfo.html [运行时间：0.496507s][吞吐率：2.01req/s] [内存消耗：1,953.88kb] [文件加载：47]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'cart',
+    2 => 'orderinfo',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.chenyan.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 5.0; SM-G900P Build/LRX21T) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.133 Mobile Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://www.chenyan.com/chenyan/11/fruits/fruits/public/index.php/home/userinfo/user.html',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=it93kiqsp4ddhtimja637ios67; think_var=zh-cn',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] Method [ <user> public method orderinfo ] {
+  @@ E:\WAPM\WWW\chenyan\11\fruits\fruits\application\home\controller\Cart.php 310 - 347
+}
+
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\WAPM\WWW\chenyan\11\fruits\fruits\public/../application/home\view\cart\orderinfo.html [ array (
+  0 => 'data',
+  1 => 'list',
+  2 => 'num',
+) ]
+[ info ] [ LANG ] E:\WAPM\WWW\chenyan\11\fruits\fruits\framework\lang\zh-cn.php
+[ info ] [ LANG ] E:\WAPM\WWW\chenyan\11\fruits\fruits\framework\lang\zh-cn.php
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.024573s ] mysql:dbname=fruits;host=101.200.41.87;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sg_order` [ RunTime:0.012951s ]
+[ sql ] [ SQL ] SELECT * FROM sg_order a INNER JOIN sg_uaddress w ON a.o_address = w.a_id  WHERE  (  a.u_id = 25  )  [ RunTime:0.017261s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sg_fruits` [ RunTime:0.013560s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 84 ) LIMIT 1   [ RunTime:0.012786s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 62 ) LIMIT 1   [ RunTime:0.019883s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 85 ) LIMIT 1   [ RunTime:0.075811s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 102 ) LIMIT 1   [ RunTime:0.027129s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 103 ) LIMIT 1   [ RunTime:0.018288s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 102 ) LIMIT 1   [ RunTime:0.013713s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 102 ) LIMIT 1   [ RunTime:0.013088s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 103 ) LIMIT 1   [ RunTime:0.013217s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 85 ) LIMIT 1   [ RunTime:0.012174s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 103 ) LIMIT 1   [ RunTime:0.014232s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 102 ) LIMIT 1   [ RunTime:0.013241s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 86 ) LIMIT 1   [ RunTime:0.014924s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 85 ) LIMIT 1   [ RunTime:0.012811s ]
+[ error ] [8]未定义数组索引: f_img[E:\WAPM\WWW\chenyan\11\fruits\fruits\runtime\temp\7ac6bb9c40d3dfd0c3094e3f128525ba.php:59]
+
+---------------------------------------------------------------
+[ 2017-04-25T20:08:17+08:00 ] 127.0.0.1 127.0.0.1 GET /chenyan/11/fruits/fruits/public/index.php/home/cart/orderinfo.html
+[ log ] www.chenyan.com/chenyan/11/fruits/fruits/public/index.php/home/cart/orderinfo.html [运行时间：1.385038s][吞吐率：0.72req/s] [内存消耗：1,953.73kb] [文件加载：47]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'cart',
+    2 => 'orderinfo',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.chenyan.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.133 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://www.chenyan.com/chenyan/11/fruits/fruits/public/index.php/home/userinfo/user.html',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=it93kiqsp4ddhtimja637ios67; think_var=zh-cn',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] Method [ <user> public method orderinfo ] {
+  @@ E:\WAPM\WWW\chenyan\11\fruits\fruits\application\home\controller\Cart.php 310 - 347
+}
+
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\WAPM\WWW\chenyan\11\fruits\fruits\public/../application/home\view\cart\orderinfo.html [ array (
+  0 => 'data',
+  1 => 'list',
+  2 => 'num',
+) ]
+[ info ] [ LANG ] E:\WAPM\WWW\chenyan\11\fruits\fruits\framework\lang\zh-cn.php
+[ info ] [ LANG ] E:\WAPM\WWW\chenyan\11\fruits\fruits\framework\lang\zh-cn.php
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.052128s ] mysql:dbname=fruits;host=101.200.41.87;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sg_order` [ RunTime:0.685789s ]
+[ sql ] [ SQL ] SELECT * FROM sg_order a INNER JOIN sg_uaddress w ON a.o_address = w.a_id  WHERE  (  a.u_id = 25  )  [ RunTime:0.229758s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sg_fruits` [ RunTime:0.040895s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 84 ) LIMIT 1   [ RunTime:0.029135s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 62 ) LIMIT 1   [ RunTime:0.024084s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 85 ) LIMIT 1   [ RunTime:0.026565s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 102 ) LIMIT 1   [ RunTime:0.026400s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 103 ) LIMIT 1   [ RunTime:0.029896s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 102 ) LIMIT 1   [ RunTime:0.021066s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 102 ) LIMIT 1   [ RunTime:0.013076s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 103 ) LIMIT 1   [ RunTime:0.014924s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 85 ) LIMIT 1   [ RunTime:0.015511s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 103 ) LIMIT 1   [ RunTime:0.027594s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 102 ) LIMIT 1   [ RunTime:0.021261s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 86 ) LIMIT 1   [ RunTime:0.026364s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 85 ) LIMIT 1   [ RunTime:0.031408s ]
+[ error ] [8]未定义数组索引: f_img[E:\WAPM\WWW\chenyan\11\fruits\fruits\runtime\temp\7ac6bb9c40d3dfd0c3094e3f128525ba.php:59]
+
+---------------------------------------------------------------
+[ 2017-04-25T20:08:35+08:00 ] 127.0.0.1 127.0.0.1 GET /chenyan/11/fruits/fruits/public/index.php/home/cart/orderinfo.html
+[ log ] www.chenyan.com/chenyan/11/fruits/fruits/public/index.php/home/cart/orderinfo.html [运行时间：2.084461s][吞吐率：0.48req/s] [内存消耗：1,953.77kb] [文件加载：47]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'cart',
+    2 => 'orderinfo',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.chenyan.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.133 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://www.chenyan.com/chenyan/11/fruits/fruits/public/index.php/home/userinfo/user.html',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=it93kiqsp4ddhtimja637ios67; think_var=zh-cn',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] Method [ <user> public method orderinfo ] {
+  @@ E:\WAPM\WWW\chenyan\11\fruits\fruits\application\home\controller\Cart.php 310 - 347
+}
+
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\WAPM\WWW\chenyan\11\fruits\fruits\public/../application/home\view\cart\orderinfo.html [ array (
+  0 => 'data',
+  1 => 'list',
+  2 => 'num',
+) ]
+[ info ] [ LANG ] E:\WAPM\WWW\chenyan\11\fruits\fruits\framework\lang\zh-cn.php
+[ info ] [ LANG ] E:\WAPM\WWW\chenyan\11\fruits\fruits\framework\lang\zh-cn.php
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.762153s ] mysql:dbname=fruits;host=101.200.41.87;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sg_order` [ RunTime:0.037493s ]
+[ sql ] [ SQL ] SELECT * FROM sg_order a INNER JOIN sg_uaddress w ON a.o_address = w.a_id  WHERE  (  a.u_id = 25  )  [ RunTime:0.030225s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sg_fruits` [ RunTime:0.030446s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 84 ) LIMIT 1   [ RunTime:0.256273s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 62 ) LIMIT 1   [ RunTime:0.037915s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 85 ) LIMIT 1   [ RunTime:0.039728s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 102 ) LIMIT 1   [ RunTime:0.039936s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 103 ) LIMIT 1   [ RunTime:0.032074s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 102 ) LIMIT 1   [ RunTime:0.035533s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 102 ) LIMIT 1   [ RunTime:0.024156s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 103 ) LIMIT 1   [ RunTime:0.249076s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 85 ) LIMIT 1   [ RunTime:0.039197s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 103 ) LIMIT 1   [ RunTime:0.254326s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 102 ) LIMIT 1   [ RunTime:0.038579s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 86 ) LIMIT 1   [ RunTime:0.038974s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 85 ) LIMIT 1   [ RunTime:0.030193s ]
+[ error ] [8]未定义数组索引: f_img[E:\WAPM\WWW\chenyan\11\fruits\fruits\runtime\temp\7ac6bb9c40d3dfd0c3094e3f128525ba.php:59]
+
+---------------------------------------------------------------
+[ 2017-04-25T20:08:58+08:00 ] 127.0.0.1 127.0.0.1 GET /chenyan/11/fruits/fruits/public/index.php/home/cart/orderinfo.html
+[ log ] www.chenyan.com/chenyan/11/fruits/fruits/public/index.php/home/cart/orderinfo.html [运行时间：2.427446s][吞吐率：0.41req/s] [内存消耗：1,955.43kb] [文件加载：47]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'cart',
+    2 => 'orderinfo',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.chenyan.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.133 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://www.chenyan.com/chenyan/11/fruits/fruits/public/index.php/home/userinfo/user.html',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=it93kiqsp4ddhtimja637ios67; think_var=zh-cn',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] Method [ <user> public method orderinfo ] {
+  @@ E:\WAPM\WWW\chenyan\11\fruits\fruits\application\home\controller\Cart.php 310 - 347
+}
+
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\WAPM\WWW\chenyan\11\fruits\fruits\public/../application/home\view\cart\orderinfo.html [ array (
+  0 => 'data',
+  1 => 'list',
+  2 => 'num',
+) ]
+[ info ] [ LANG ] E:\WAPM\WWW\chenyan\11\fruits\fruits\framework\lang\zh-cn.php
+[ info ] [ LANG ] E:\WAPM\WWW\chenyan\11\fruits\fruits\framework\lang\zh-cn.php
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.283037s ] mysql:dbname=fruits;host=101.200.41.87;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sg_order` [ RunTime:0.698589s ]
+[ sql ] [ SQL ] SELECT * FROM sg_order a INNER JOIN sg_uaddress w ON a.o_address = w.a_id  WHERE  (  a.u_id = 25  )  [ RunTime:0.034567s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sg_fruits` [ RunTime:0.034885s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 84 ) LIMIT 1   [ RunTime:0.241751s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 62 ) LIMIT 1   [ RunTime:0.246290s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 85 ) LIMIT 1   [ RunTime:0.257159s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 102 ) LIMIT 1   [ RunTime:0.066902s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 103 ) LIMIT 1   [ RunTime:0.043638s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 102 ) LIMIT 1   [ RunTime:0.035845s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 102 ) LIMIT 1   [ RunTime:0.030919s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 103 ) LIMIT 1   [ RunTime:0.023403s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 85 ) LIMIT 1   [ RunTime:0.246211s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 103 ) LIMIT 1   [ RunTime:0.032500s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 102 ) LIMIT 1   [ RunTime:0.030401s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 86 ) LIMIT 1   [ RunTime:0.032964s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 85 ) LIMIT 1   [ RunTime:0.030361s ]
+[ error ] [8]未定义数组索引: f_img[E:\WAPM\WWW\chenyan\11\fruits\fruits\runtime\temp\7ac6bb9c40d3dfd0c3094e3f128525ba.php:59]
+
+---------------------------------------------------------------
+[ 2017-04-25T20:09:08+08:00 ] 127.0.0.1 127.0.0.1 GET /chenyan/11/fruits/fruits/public/index.php/home/cart/orderinfo.html
+[ log ] www.chenyan.com/chenyan/11/fruits/fruits/public/index.php/home/cart/orderinfo.html [运行时间：2.212291s][吞吐率：0.45req/s] [内存消耗：1,955.35kb] [文件加载：47]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'cart',
+    2 => 'orderinfo',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.chenyan.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.133 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://www.chenyan.com/chenyan/11/fruits/fruits/public/index.php/home/userinfo/user.html',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=it93kiqsp4ddhtimja637ios67; think_var=zh-cn',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] Method [ <user> public method orderinfo ] {
+  @@ E:\WAPM\WWW\chenyan\11\fruits\fruits\application\home\controller\Cart.php 310 - 347
+}
+
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\WAPM\WWW\chenyan\11\fruits\fruits\public/../application/home\view\cart\orderinfo.html [ array (
+  0 => 'data',
+  1 => 'list',
+  2 => 'num',
+) ]
+[ info ] [ LANG ] E:\WAPM\WWW\chenyan\11\fruits\fruits\framework\lang\zh-cn.php
+[ info ] [ LANG ] E:\WAPM\WWW\chenyan\11\fruits\fruits\framework\lang\zh-cn.php
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.334458s ] mysql:dbname=fruits;host=101.200.41.87;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sg_order` [ RunTime:0.024418s ]
+[ sql ] [ SQL ] SELECT * FROM sg_order a INNER JOIN sg_uaddress w ON a.o_address = w.a_id  WHERE  (  a.u_id = 25  )  [ RunTime:0.035795s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sg_fruits` [ RunTime:0.032334s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 84 ) LIMIT 1   [ RunTime:0.257472s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 62 ) LIMIT 1   [ RunTime:0.487892s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 85 ) LIMIT 1   [ RunTime:0.027831s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 102 ) LIMIT 1   [ RunTime:0.261293s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 103 ) LIMIT 1   [ RunTime:0.031310s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 102 ) LIMIT 1   [ RunTime:0.027356s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 102 ) LIMIT 1   [ RunTime:0.025815s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 103 ) LIMIT 1   [ RunTime:0.033771s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 85 ) LIMIT 1   [ RunTime:0.245203s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 103 ) LIMIT 1   [ RunTime:0.025758s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 102 ) LIMIT 1   [ RunTime:0.029305s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 86 ) LIMIT 1   [ RunTime:0.242215s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 85 ) LIMIT 1   [ RunTime:0.027559s ]
+[ error ] [8]未定义数组索引: f_img[E:\WAPM\WWW\chenyan\11\fruits\fruits\runtime\temp\7ac6bb9c40d3dfd0c3094e3f128525ba.php:59]
+
+---------------------------------------------------------------
+[ 2017-04-25T20:13:33+08:00 ] 127.0.0.1 127.0.0.1 GET /chenyan/11/fruits/fruits/public/index.php/home/cart/orderinfo.html
+[ log ] www.chenyan.com/chenyan/11/fruits/fruits/public/index.php/home/cart/orderinfo.html [运行时间：3.694261s][吞吐率：0.27req/s] [内存消耗：1,955.43kb] [文件加载：47]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'cart',
+    2 => 'orderinfo',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.chenyan.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.133 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://www.chenyan.com/chenyan/11/fruits/fruits/public/index.php/home/userinfo/user.html',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=it93kiqsp4ddhtimja637ios67; think_var=zh-cn',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] Method [ <user> public method orderinfo ] {
+  @@ E:\WAPM\WWW\chenyan\11\fruits\fruits\application\home\controller\Cart.php 310 - 347
+}
+
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\WAPM\WWW\chenyan\11\fruits\fruits\public/../application/home\view\cart\orderinfo.html [ array (
+  0 => 'data',
+  1 => 'list',
+  2 => 'num',
+) ]
+[ info ] [ LANG ] E:\WAPM\WWW\chenyan\11\fruits\fruits\framework\lang\zh-cn.php
+[ info ] [ LANG ] E:\WAPM\WWW\chenyan\11\fruits\fruits\framework\lang\zh-cn.php
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.294416s ] mysql:dbname=fruits;host=101.200.41.87;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sg_order` [ RunTime:0.173066s ]
+[ sql ] [ SQL ] SELECT * FROM sg_order a INNER JOIN sg_uaddress w ON a.o_address = w.a_id  WHERE  (  a.u_id = 25  )  [ RunTime:0.214180s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sg_fruits` [ RunTime:0.206001s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 84 ) LIMIT 1   [ RunTime:0.152397s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 62 ) LIMIT 1   [ RunTime:0.182022s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 85 ) LIMIT 1   [ RunTime:0.174289s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 102 ) LIMIT 1   [ RunTime:0.184694s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 103 ) LIMIT 1   [ RunTime:0.168755s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 102 ) LIMIT 1   [ RunTime:0.177304s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 102 ) LIMIT 1   [ RunTime:0.172703s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 103 ) LIMIT 1   [ RunTime:0.174035s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 85 ) LIMIT 1   [ RunTime:0.196476s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 103 ) LIMIT 1   [ RunTime:0.218509s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 102 ) LIMIT 1   [ RunTime:0.524717s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 86 ) LIMIT 1   [ RunTime:0.215290s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 85 ) LIMIT 1   [ RunTime:0.185757s ]
+[ error ] [8]未定义数组索引: f_img[E:\WAPM\WWW\chenyan\11\fruits\fruits\runtime\temp\7ac6bb9c40d3dfd0c3094e3f128525ba.php:59]
+
+---------------------------------------------------------------
+[ 2017-04-25T20:19:37+08:00 ] 127.0.0.1 127.0.0.1 GET /chenyan/11/fruits/fruits/public/index.php/home/cart/orderinfo.html
+[ log ] www.chenyan.com/chenyan/11/fruits/fruits/public/index.php/home/cart/orderinfo.html [运行时间：3.297239s][吞吐率：0.30req/s] [内存消耗：1,953.77kb] [文件加载：47]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'cart',
+    2 => 'orderinfo',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.chenyan.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.133 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://www.chenyan.com/chenyan/11/fruits/fruits/public/index.php/home/userinfo/user.html',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=it93kiqsp4ddhtimja637ios67; think_var=zh-cn',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] Method [ <user> public method orderinfo ] {
+  @@ E:\WAPM\WWW\chenyan\11\fruits\fruits\application\home\controller\Cart.php 310 - 347
+}
+
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\WAPM\WWW\chenyan\11\fruits\fruits\public/../application/home\view\cart\orderinfo.html [ array (
+  0 => 'data',
+  1 => 'list',
+  2 => 'num',
+) ]
+[ info ] [ LANG ] E:\WAPM\WWW\chenyan\11\fruits\fruits\framework\lang\zh-cn.php
+[ info ] [ LANG ] E:\WAPM\WWW\chenyan\11\fruits\fruits\framework\lang\zh-cn.php
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:1.783963s ] mysql:dbname=fruits;host=101.200.41.87;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sg_order` [ RunTime:0.099143s ]
+[ sql ] [ SQL ] SELECT * FROM sg_order a INNER JOIN sg_uaddress w ON a.o_address = w.a_id  WHERE  (  a.u_id = 25  )  [ RunTime:0.085774s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sg_fruits` [ RunTime:0.079449s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 84 ) LIMIT 1   [ RunTime:0.063570s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 62 ) LIMIT 1   [ RunTime:0.062756s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 85 ) LIMIT 1   [ RunTime:0.126193s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 102 ) LIMIT 1   [ RunTime:0.335537s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 103 ) LIMIT 1   [ RunTime:0.158911s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 102 ) LIMIT 1   [ RunTime:0.081812s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 102 ) LIMIT 1   [ RunTime:0.060787s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 103 ) LIMIT 1   [ RunTime:0.042610s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 85 ) LIMIT 1   [ RunTime:0.033711s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 103 ) LIMIT 1   [ RunTime:0.043742s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 102 ) LIMIT 1   [ RunTime:0.042318s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 86 ) LIMIT 1   [ RunTime:0.061476s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 85 ) LIMIT 1   [ RunTime:0.066928s ]
+[ error ] [8]未定义数组索引: f_img[E:\WAPM\WWW\chenyan\11\fruits\fruits\runtime\temp\7ac6bb9c40d3dfd0c3094e3f128525ba.php:59]
+
+---------------------------------------------------------------
+[ 2017-04-25T20:20:01+08:00 ] 127.0.0.1 127.0.0.1 GET /chenyan/11/fruits/fruits/public/index.php/home/cart/orderinfo.html
+[ log ] www.chenyan.com/chenyan/11/fruits/fruits/public/index.php/home/cart/orderinfo.html [运行时间：0.637472s][吞吐率：1.57req/s] [内存消耗：1,812.86kb] [文件加载：37]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'cart',
+    2 => 'orderinfo',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.chenyan.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.133 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://www.chenyan.com/chenyan/11/fruits/fruits/public/index.php/home/userinfo/user.html',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=it93kiqsp4ddhtimja637ios67; think_var=zh-cn',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] Method [ <user> public method orderinfo ] {
+  @@ E:\WAPM\WWW\chenyan\11\fruits\fruits\application\home\controller\Cart.php 310 - 347
+}
+
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.047659s ] mysql:dbname=fruits;host=101.200.41.87;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sg_order` [ RunTime:0.033240s ]
+[ sql ] [ SQL ] SELECT * FROM sg_order a INNER JOIN sg_uaddress w ON a.o_address = w.a_id  WHERE  (  a.u_id = 25  )  [ RunTime:0.016226s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sg_fruits` [ RunTime:0.015912s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 84 ) LIMIT 1   [ RunTime:0.018647s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 62 ) LIMIT 1   [ RunTime:0.015561s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 85 ) LIMIT 1   [ RunTime:0.014100s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 102 ) LIMIT 1   [ RunTime:0.013152s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 103 ) LIMIT 1   [ RunTime:0.014974s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 102 ) LIMIT 1   [ RunTime:0.015539s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 102 ) LIMIT 1   [ RunTime:0.024831s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 103 ) LIMIT 1   [ RunTime:0.234547s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 85 ) LIMIT 1   [ RunTime:0.025478s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 103 ) LIMIT 1   [ RunTime:0.020786s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 102 ) LIMIT 1   [ RunTime:0.026895s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 86 ) LIMIT 1   [ RunTime:0.023524s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 85 ) LIMIT 1   [ RunTime:0.013205s ]
+
+---------------------------------------------------------------
+[ 2017-04-25T20:20:39+08:00 ] 127.0.0.1 127.0.0.1 GET /chenyan/11/fruits/fruits/public/index.php/home/cart/orderinfo.html
+[ log ] www.chenyan.com/chenyan/11/fruits/fruits/public/index.php/home/cart/orderinfo.html [运行时间：0.330381s][吞吐率：3.03req/s] [内存消耗：1,812.86kb] [文件加载：37]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'cart',
+    2 => 'orderinfo',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.chenyan.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.133 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://www.chenyan.com/chenyan/11/fruits/fruits/public/index.php/home/userinfo/user.html',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=it93kiqsp4ddhtimja637ios67; think_var=zh-cn',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] Method [ <user> public method orderinfo ] {
+  @@ E:\WAPM\WWW\chenyan\11\fruits\fruits\application\home\controller\Cart.php 310 - 347
+}
+
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.030173s ] mysql:dbname=fruits;host=101.200.41.87;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sg_order` [ RunTime:0.022889s ]
+[ sql ] [ SQL ] SELECT * FROM sg_order a INNER JOIN sg_uaddress w ON a.o_address = w.a_id  WHERE  (  a.u_id = 25  )  [ RunTime:0.015292s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sg_fruits` [ RunTime:0.017851s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 84 ) LIMIT 1   [ RunTime:0.015611s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 62 ) LIMIT 1   [ RunTime:0.015053s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 85 ) LIMIT 1   [ RunTime:0.015479s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 102 ) LIMIT 1   [ RunTime:0.016785s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 103 ) LIMIT 1   [ RunTime:0.014663s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 102 ) LIMIT 1   [ RunTime:0.012846s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 102 ) LIMIT 1   [ RunTime:0.012850s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 103 ) LIMIT 1   [ RunTime:0.014373s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 85 ) LIMIT 1   [ RunTime:0.013427s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 103 ) LIMIT 1   [ RunTime:0.012339s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 102 ) LIMIT 1   [ RunTime:0.025176s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 86 ) LIMIT 1   [ RunTime:0.014246s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 85 ) LIMIT 1   [ RunTime:0.015672s ]
+
+---------------------------------------------------------------
+[ 2017-04-25T20:20:43+08:00 ] 127.0.0.1 127.0.0.1 GET /chenyan/11/fruits/fruits/public/index.php/home/cart/orderinfo.html
+[ log ] www.chenyan.com/chenyan/11/fruits/fruits/public/index.php/home/cart/orderinfo.html [运行时间：0.381687s][吞吐率：2.62req/s] [内存消耗：1,812.86kb] [文件加载：37]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'cart',
+    2 => 'orderinfo',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.chenyan.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.133 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://www.chenyan.com/chenyan/11/fruits/fruits/public/index.php/home/userinfo/user.html',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=it93kiqsp4ddhtimja637ios67; think_var=zh-cn',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] Method [ <user> public method orderinfo ] {
+  @@ E:\WAPM\WWW\chenyan\11\fruits\fruits\application\home\controller\Cart.php 310 - 347
+}
+
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.039271s ] mysql:dbname=fruits;host=101.200.41.87;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sg_order` [ RunTime:0.030393s ]
+[ sql ] [ SQL ] SELECT * FROM sg_order a INNER JOIN sg_uaddress w ON a.o_address = w.a_id  WHERE  (  a.u_id = 25  )  [ RunTime:0.024735s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sg_fruits` [ RunTime:0.020542s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 84 ) LIMIT 1   [ RunTime:0.015173s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 62 ) LIMIT 1   [ RunTime:0.015943s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 85 ) LIMIT 1   [ RunTime:0.016560s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 102 ) LIMIT 1   [ RunTime:0.015273s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 103 ) LIMIT 1   [ RunTime:0.013803s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 102 ) LIMIT 1   [ RunTime:0.014303s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 102 ) LIMIT 1   [ RunTime:0.014078s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 103 ) LIMIT 1   [ RunTime:0.013785s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 85 ) LIMIT 1   [ RunTime:0.020768s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 103 ) LIMIT 1   [ RunTime:0.016882s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 102 ) LIMIT 1   [ RunTime:0.016291s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 86 ) LIMIT 1   [ RunTime:0.018394s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 85 ) LIMIT 1   [ RunTime:0.019045s ]
+
+---------------------------------------------------------------

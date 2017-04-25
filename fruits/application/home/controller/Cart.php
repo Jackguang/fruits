@@ -325,22 +325,20 @@ public function address(){
 
       }
 //每一份数量
-        foreach($num as $k=>$v){
-            foreach($v as $ke=>$ve){
-              $numn[]=$ve;
-            }
-        }
+
         foreach($a as $k=>$v){
 
             foreach($v as $ke=>$ve){
+                echo $ve;die;
 //                $va[]=$ve;
-            $list[]=Db::table('sg_fruits')
+            $list[$ke][]=Db::table('sg_fruits')
                 ->field('f_id,f_name,f_img,f_weight,f_title,m_price')
                 ->where("f_id = $ve")
                 ->find();
 
         }
         }
+        var_dump($a);die;
 
         $this->assign('data',$data); //水果数量
         $this->assign('list',$list); //水果单个详细信息

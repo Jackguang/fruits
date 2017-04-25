@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:85:"E:\WAPM\WWW\chenyan\11\fruits\fruits\public/../application/home\view\fruits\info.html";i:1493017995;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:85:"E:\WAPM\WWW\chenyan\11\fruits\fruits\public/../application/home\view\fruits\info.html";i:1493093277;}*/ ?>
 <?php
 use think\Session;
 $uid=Session::get('u_id');
@@ -37,11 +37,11 @@ $uid=Session::get('u_id');
 <body >
 <div class="toper navbar-fixed-top">
     <div class="row color_white " >
-        <div class="col-xs-2" style="padding-left:25px;"><a class="cwhite" href="#"><i class="icon-angle-left font32"></i></a></div>
+        <div class="col-xs-2" style="padding-left:25px;"><a class="cwhite" href="<?php echo url('home/Fruits/index'); ?>"><i class="icon-angle-left font32"></i></a></div>
         <div class="col-xs-8 text-center font20">商品详情</div>
         <div class="col-xs-2" >
             <div class="icon_shopcar">
-                <div class="icon_shopcar_ts">15</div>
+                <div class="icon_shopcar_ts"></div>
                 <?php if(!$uid): ?>
 
 
@@ -178,8 +178,8 @@ $uid=Session::get('u_id');
         <div class="col-xs-6" style="padding-left:5px; padding-right:0px;">
 
 
-           <?php if(!$uid): ?> 请先登录
-            <button class="btn btn-lg btn-success btn-group-justified" >加入购物车</button>
+           <?php if(!$uid): ?>
+            <a href="<?php echo url('home/user/login'); ?>" class="btn btn-lg btn-success btn-group-justified">加入购物车</a>
 
             <?php else: ?>
             <input type="hidden" class="uid" value="<?php echo $uid; ?>">
@@ -202,6 +202,7 @@ $uid=Session::get('u_id');
 <script>
     //加入购物车
     $('#che').click(function(){
+
         var uid=$('.uid').val();
         var fid=$('.fid').val();
         var num = $(".disabled").html();
@@ -210,6 +211,7 @@ $uid=Session::get('u_id');
             url: "<?php echo url('index.php/home/fruits/cartdesc'); ?>",
             data: "fid="+fid+"&uid="+uid+"&num="+num,
             success: function(msg){
+//                alert(msg);
                 if(msg==222){
                     alert('加入购物车成功');
                 }
@@ -252,5 +254,5 @@ $uid=Session::get('u_id');
 
     })
 
-    $("")
+
 </script>

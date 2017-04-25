@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:89:"E:\WAPM\WWW\chenyan\11\fruits\fruits\public/../application/home\view\fruits\classify.html";i:1492835992;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:89:"E:\WAPM\WWW\chenyan\11\fruits\fruits\public/../application/home\view\fruits\classify.html";i:1493093306;}*/ ?>
 <?php
 use think\Session;
 $uid=Session::get('u_id');
@@ -99,25 +99,25 @@ $uid=Session::get('u_id');
 </div>
 
 <!-- Modal -->
-<div class="modal fade" id="shopcar" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h5 class="modal-title font16" id="myModalLabel">我的购物车</h5>
-            </div>
-            <div class="modal-body aligncenter">
-                <div class="photo_60"><img src="home/images/icon_shopcar_ok.png"></div><br>
-                您选购的商品已加入购物车<br>
-                购物车有2件商品，共计<span class="font16 color_orange">¥ 12</span>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
-                <button type="button" class="btn btn-success">去结算</button>
-            </div>
-        </div>
-    </div>
-</div>
+<!--<div class="modal fade" id="shopcar" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">-->
+    <!--<div class="modal-dialog" role="document">-->
+        <!--<div class="modal-content">-->
+            <!--<div class="modal-header">-->
+                <!--<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>-->
+                <!--<h5 class="modal-title font16" id="myModalLabel">我的购物车</h5>-->
+            <!--</div>-->
+            <!--<div class="modal-body aligncenter">-->
+                <!--<div class="photo_60"><img src="home/images/icon_shopcar_ok.png"></div><br>-->
+                <!--您选购的商品已加入购物车<br>-->
+                <!--购物车有2件商品，共计<span class="font16 color_orange">¥ 12</span>-->
+            <!--</div>-->
+            <!--<div class="modal-footer">-->
+                <!--<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>-->
+                <!--<button type="button" class="btn btn-success">去结算</button>-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</div>-->
+<!--</div>-->
 
 
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->

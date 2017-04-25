@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:89:"E:\WAPM\WWW\chenyan\11\fruits\fruits\public/../application/home\view\userinfo\addres.html";i:1493016793;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:89:"E:\WAPM\WWW\chenyan\11\fruits\fruits\public/../application/home\view\userinfo\addres.html";i:1493038413;}*/ ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -55,7 +55,8 @@
 							<small va="<?= $v['a_id']?>">默认</small>
 						<?php else: ?>
 							<small class="default" val="<?= $v['a_id']?>">			
-							可设为默认</small>
+							可设为默认
+							</small>
 						<?php endif; ?>
 				</dt>
 				<dd><?= $v['a_address']?></dd>
@@ -78,7 +79,8 @@
 		    success: function(msg){
 		    	if(msg == 1){
 		    		_this.html('默认');
-		    		// _this.prev().html('可设为默认');	
+		    		// _this.prev().html('可设为默认');
+
 		    	}
 		    }
 		})

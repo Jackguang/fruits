@@ -173,8 +173,27 @@ class Cart extends Controller
         ->where("u_id = $uid")
         ->order('o_number desc')
             ->limit(1)
-            ->select();
-        var_dump($data);die;
+            ->find();
+//        var_dump($data);die;
+             $a=explode(',',$data['f_id']);//商品id
+             $price=explode(',',$data['o_price']);//商品单价
+             $num=explode(',',$data['o_num']);//商品数量
+        foreach($a as $k=>$v){
+            $list[]=Db::table('sg_fruits')
+                ->field('f_id,f_name,f_img,f_weight,f_title,m_price')
+                ->where("f_id = $v")
+                ->find();
+        }
+
+        foreach($a as $k=>$v){
+            $arr[$k]['f_id']=$a[$k];//商品id
+            $arr[$k]['price']=$price[$k];//商品单价
+            $arr[$k]['num']=$num[$k];//商品数量
+        }
+
+        $this->assign('num',$num); //数量
+        $this->assign('data',$data); //总值
+        $this->assign('list',$list); //单个详情
 
         return view('buy');
     }

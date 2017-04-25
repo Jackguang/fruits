@@ -1,4 +1,8 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:83:"E:\study\HHH\liupeng\fruits\fruits\public/../application/home\view\fruits\info.html";i:1492732980;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:83:"E:\study\HHH\liupeng\fruits\fruits\public/../application/home\view\fruits\info.html";i:1493030010;}*/ ?>
+<?php
+use think\Session;
+$uid=Session::get('u_id');
+?>
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -38,7 +42,16 @@
         <div class="col-xs-2" >
             <div class="icon_shopcar">
                 <div class="icon_shopcar_ts">15</div>
-                <a class="cwhite" href="#"><div class="photo_30"><img src="images/icon_shopcar.png" alt="购物车"></div></a>
+                <?php if(!$uid): ?>
+
+
+                <a class="cwhite" href="<?php echo url('home/user/login'); ?>"><div class="photo_30"><img src="home/images/icon_shopcar.png" alt="购物车"></div></a>
+
+                <?php else: ?>
+                <a class="cwhite" href="<?php echo url('home/Cart/index'); ?>"><div class="photo_30"><img src="home/images/icon_shopcar.png" alt="购物车"></div></a>
+
+                <?php endif; ?>
+
             </div>
         </div>
     </div>
@@ -80,7 +93,7 @@
                     <i class="icon-minus"></i></button>
             </div>
         </span>
-    <p class=" color_gray font16"><span class="color_orange font20">¥<?= $fruit_one[0]['v_price']?></span>&nbsp;&nbsp;&nbsp;&nbsp;<del>¥<?= $fruit_one[0]['m_price']?></del></p>
+    <p class=" color_gray font16"><span class="color_orange font20">¥<?= $fruit_one[0]['m_price']?></span>&nbsp;&nbsp;&nbsp;&nbsp;<del>¥<?= $fruit_one[0]['m_price']?></del></p>
     <div class="height10"></div>
     <div class=" width100 bg_white border_top hang32">
         <span class=" font16">商品规格</span>
@@ -163,11 +176,9 @@
             <button class="btn btn-lg btn-success btn-group-justified" type="submit" >联系客服</button>
         </div>
         <div class="col-xs-6" style="padding-left:5px; padding-right:0px;">
-            <?php
-use think\Session;
-Session::set('u_id',11);
-$uid=Session::get('u_id');
-if(!$uid): ?> 请先登录
+
+
+           <?php if(!$uid): ?> 请先登录
             <button class="btn btn-lg btn-success btn-group-justified" >加入购物车</button>
 
             <?php else: ?>

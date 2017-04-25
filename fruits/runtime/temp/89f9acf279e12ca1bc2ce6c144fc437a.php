@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:89:"E:\WAPM\WWW\chenyan\11\fruits\fruits\public/../application/home\view\fruits\classify.html";i:1492835992;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:89:"E:\study\HHH\liupeng\fruits\fruits\public/../application/home\view\fruits\classifyin.html";i:1493002263;}*/ ?>
 <?php
 use think\Session;
 $uid=Session::get('u_id');
@@ -33,15 +33,27 @@ $uid=Session::get('u_id');
     </style>
 </head>
 <body >
+
 <div class="toper navbar-fixed-top">
     <div class="row color_white " >
         <div class="col-xs-2" style="padding-left:25px;"><a class="cwhite" href="<?php echo url('index.php/home/fruits/index'); ?>"><i class="icon-angle-left font32"></i></a></div>
-        <div class="col-xs-8 text-center font20" ><?php echo $arr[0]['t_name']?></div>
+        <!--<div class="col-xs-8 text-center font20" >-->
+          <a href="<?php echo url('home/Fruits/classify'); ?>?t_id=1"><font color="black">进口专区</font></a>
+          <a href="<?php echo url('home/Fruits/classify'); ?>?t_id=2"><font color="black">国产精品</font></a>
+          <a href="<?php echo url('home/Fruits/classify'); ?>?t_id=3"><font color="black">休闲干果</font></a>
+
+            <!--<div class="col-xs-8 text-center font20" >-->
+                <!--<a href="">进口专区</a>-->
+
+            <!--</div>-->
+            <!--<div class="col-xs-8 text-center font20" >     <a href="">国产精品</a></div>-->
+            <!--<div class="col-xs-8 text-center font20" >       <a href="">休闲干果</a>  </div>-->
+
+        <!--</div>-->
         <div class="col-xs-2" >
             <div class="icon_shopcar">
                 <div class="icon_shopcar_ts"></div>
-
-               <?php if(!$uid): ?>
+                <?php if(!$uid): ?>
 
 
                 <a class="cwhite" href="<?php echo url('home/user/login'); ?>"><div class="photo_30"><img src="home/images/icon_shopcar.png" alt="购物车"></div></a>
@@ -50,9 +62,6 @@ $uid=Session::get('u_id');
                 <a class="cwhite" href="<?php echo url('home/Cart/index'); ?>"><div class="photo_30"><img src="home/images/icon_shopcar.png" alt="购物车"></div></a>
 
                 <?php endif; ?>
-
-
-
             </div>
         </div>
     </div>
@@ -71,17 +80,10 @@ $uid=Session::get('u_id');
                         <span class="color_gray"><?php echo $v['f_title']; ?></span>
                         <p class="color_gray"><span class="font16 color_orange">¥ <?php echo $v['m_price']; ?></span>/斤</p>
 
-                        <!--<?php if(!$uid): ?>-->
-                      <!--请先登录-->
-                        <!--&lt;!&ndash;<div class="text-center"><a href="javascript:void(0)" data-toggle="modal" data-target="#shopcar" class="gou" uid="<?php echo $uid; ?>" alt="<?php echo $v['f_id']; ?>"><i class="icon-shopping-cart font16 color_green"></i> 加入购物车</a></div>&ndash;&gt;-->
-
-                        <!--<?php else: ?>-->
-                        <!--<div class="text-center"><a href="javascript:void(0)" data-toggle="modal" data-target="#shopcar" class="gou" uid="<?php echo $uid; ?>" alt="<?php echo $v['f_id']; ?>"><i class="icon-shopping-cart font16 color_green"></i> 加入购物车</a></div>-->
-
-                        <!--<?php endif; ?>-->
-
-
                         <div class="text-center"><a href="javascript:void(0)" data-toggle="modal" data-target="#shopcar" class="gou" uid="<?php echo $uid; ?>" alt="<?php echo $v['f_id']; ?>"><i class="icon-shopping-cart font16 color_green"></i> 加入购物车</a></div>
+
+
+
                     </div>
                 </div>
             </div>
@@ -94,7 +96,7 @@ $uid=Session::get('u_id');
         <?php endif; ?>
         <input type="hidden" class="tid" value="<?php echo $arr[0]['t_id']?>">
     </div>
-    <button type="button" class="btn btn-default btn-group-justified" id="jia">加载更多 <i class="icon-double-angle-down"></i></button>
+    <!--<button type="button" class="btn btn-default btn-group-justified" id="jia">加载更多 <i class="icon-double-angle-down"></i></button>-->
     <div class="height20"></div>
 </div>
 
@@ -102,19 +104,19 @@ $uid=Session::get('u_id');
 <div class="modal fade" id="shopcar" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h5 class="modal-title font16" id="myModalLabel">我的购物车</h5>
-            </div>
-            <div class="modal-body aligncenter">
-                <div class="photo_60"><img src="home/images/icon_shopcar_ok.png"></div><br>
-                您选购的商品已加入购物车<br>
-                购物车有2件商品，共计<span class="font16 color_orange">¥ 12</span>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
-                <button type="button" class="btn btn-success">去结算</button>
-            </div>
+            <!--<div class="modal-header">-->
+                <!--<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>-->
+                <!--<h5 class="modal-title font16" id="myModalLabel">我的购物车</h5>-->
+            <!--</div>-->
+            <!--<div class="modal-body aligncenter">-->
+                <!--<div class="photo_60"><img src="images/icon_shopcar_ok.png"></div><br>-->
+                <!--您选购的商品已加入购物车<br>-->
+                <!--购物车有2件商品，共计<span class="font16 color_orange">¥ 12</span>-->
+            <!--</div>-->
+            <!--<div class="modal-footer">-->
+                <!--<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>-->
+                <!--<button type="button" class="btn btn-success">去结算</button>-->
+            <!--</div>-->
         </div>
     </div>
 </div>
@@ -128,6 +130,17 @@ $uid=Session::get('u_id');
 </html>
 <script src="js/jq.js"></script>
 <script>
+    //分类条
+//    $('#options dd div').click(function() {
+//        var firstName = $(this).parents('dl').children('dt').text();
+//        var fn = $.trim(firstName);
+//        if(fn=='月薪范围')
+//        {
+//            var val=$(this).html();
+//            $('#yxInput').attr('value',val);
+//            var par=window.location.search;
+//            location.href='index.php'+par+'&yx='+val;
+//        }
     //加购物车
     $(document).on('click','.gou',function(){
 

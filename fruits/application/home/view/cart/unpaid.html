@@ -102,7 +102,7 @@
                 <!--<input type="button" value="确认收货" class="order-que"/>-->
                 <input type="button" value="查看物流"  class="wu"  alt="{$va.o_id}"/>
                 {elseif condition="$va.o_state == 0"/}
-                {if condition="($va.o_address == '')  AND ($address == 0)"}
+                {if condition="($va.o_address == '') OR ($address == '0')"}
                 <a href="{:url('index.php/home/Userinfo/address')}">没有收货地址，请点我去添加,也可以修改默认地址</a>
                 {elseif condition="$address != 0"/}
                 <input type="hidden" class="address" value="{$address}">

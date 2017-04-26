@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:85:"E:\WAPM\WWW\chenyan\11\fruits\fruits\public/../application/home\view\cart\unpaid.html";i:1493210308;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:85:"E:\WAPM\WWW\chenyan\11\fruits\fruits\public/../application/home\view\cart\unpaid.html";i:1493211077;}*/ ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -100,7 +100,7 @@
                 <?php elseif($va['o_state'] == 4): ?>
                 <!--<input type="button" value="确认收货" class="order-que"/>-->
                 <input type="button" value="查看物流"  class="wu"  alt="<?php echo $va['o_id']; ?>"/>
-                <?php elseif($va['o_state'] == 0): if(($va['o_address'] == '')  AND ($address == 0)): ?>
+                <?php elseif($va['o_state'] == 0): if(($va['o_address'] == '') OR ($address == '0')): ?>
                 <a href="<?php echo url('index.php/home/Userinfo/address'); ?>">没有收货地址，请点我去添加,也可以修改默认地址</a>
                 <?php elseif($address != 0): ?>
                 <input type="hidden" class="address" value="<?php echo $address; ?>">

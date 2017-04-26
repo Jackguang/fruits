@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:84:"E:\WAPM\WWW\chenyan\11\fruits\fruits\public/../application/home\view\cart\index.html";i:1493099720;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:84:"E:\WAPM\WWW\chenyan\11\fruits\fruits\public/../application/home\view\cart\index.html";i:1493184994;}*/ ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -28,7 +28,7 @@
      <?php if($money==0): else: if(is_array($data) || $data instanceof \think\Collection): if( count($data)==0 ) : echo "" ;else: foreach($data as $key=>$v): ?>
     <section class="shopcar" alt="<?php echo $v['f_id']; ?>">
         <div class="shopcar-checkbox">
-            <label for="shopcar" onselectstart="return false"  alt="<?php echo $v['f_id']; ?>" alp="<?php echo $v['m_price']; ?>" name="box" ></label>
+            <label for="shopcar" onselectstart="return false"  alt="<?php echo $v['f_id']; ?>" alp="<?php echo $v['m_price']; ?>" name="box" us="<?php echo $v['f_name']; ?>"></label>
             <input type="checkbox" alt="<?php echo $v['f_id']; ?>" class="shopcar"/>
         </div>
         <figure><img src="<?php echo $v['f_img']; ?>"/></figure>
@@ -157,6 +157,7 @@
         var price='';
         var a='';
         var num='';
+        var username='';
         var box=document.getElementsByName('box');
         var _this=$(this);
         var allprice = $('#allprice').html();//总价
@@ -165,15 +166,18 @@
         $('.shopcar-checkd').each(function(){
                 str +=','+$(this).attr('alt');//商品id
                 price +=','+$(this).attr('alp');//商品单价
+               username +=','+$(this).attr('us');//商品单价
                 a=$(this).attr('alt');//商品数量
                 num +=','+$('.n'+a).val();
-//                alert(1111);
+//                username +=','+$('.n'+a).val();
+//                alert(username);
 
         })
 
         str=str.substr(1);
         price=price.substr(1);
         num=num.substr(1);
+        username=username.substr(1);
       if(!num){
           alert('没有商品被选择');
           return false;
@@ -186,7 +190,7 @@
         $.ajax({
             type: "POST",
             url: "<?php echo url('index.php/home/Cart/ruku'); ?>",
-            data: "num="+num+"&str="+str+"&price="+price+"&allprice="+allprice,
+            data: "num="+num+"&str="+str+"&price="+price+"&allprice="+allprice+"&username="+username,
             success: function(msg){
 
             if(msg==333){

@@ -43,6 +43,7 @@ class Controller
      */
     public function __construct(Request $request = null)
     {
+
         if (is_null($request)) {
             $request = Request::instance();
         }

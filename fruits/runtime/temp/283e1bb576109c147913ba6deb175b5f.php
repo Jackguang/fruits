@@ -1,3 +1,4 @@
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:85:"E:\study\HHH\liupeng\fruits\fruits\public/../application/home\view\userinfo\user.html";i:1493260011;}*/ ?>
 <!DOCTYPE html>
 <html class="no-js">
 <head>
@@ -66,15 +67,15 @@
 	        		<li><span>￥<?= $one[0]['u_balance']?></span><br>账户余额</li>
 	        		<li><span class="bar"></span>
 	        		<span>	        			
-	        			{if condition="$one.0.u_price <= '200'"}
+	        			<?php if($one['0']['u_price'] <= '200'): ?>
 	        			普通用户
-	        			{else /} 
+	        			<?php else: ?> 
 	        			会员用户
-	        			{/if}
+	        			<?php endif; ?>
 	        		</span>
 	        		<br>等级</li>
 	        		<li>
-						<a href="{:url('home/Cart/orderinfo')}"><span class="bar"></span><span>2</span><br>我的订单</a>
+						<a href="<?php echo url('home/Cart/orderinfo'); ?>"><span class="bar"></span><span>2</span><br>我的订单</a>
 					</li>
 	        	</ul>
 	        </div>
@@ -90,7 +91,7 @@
 	            <li>
 
 	            	<div class="m-user-item">
-	                   <a href="{:url('home/userinfo/address')}" class="user-site">管理收货地址</a>
+	                   <a href="<?php echo url('home/userinfo/address'); ?>" class="user-site">管理收货地址</a>
 	                </div>
 	                <div class="m-user-item">
 	                   <a href="/user/coupon" class="user-set">设置</a>
@@ -99,8 +100,8 @@
 	                   <div class="user-score"><span class="pull-right">400-110110</span>联系客服</div>
 	                </div>
 					<div>
-						<div class="user-score"><span class="pull-right" style="color: lightgrey	;font-size: 15px;">{$num}</span><span style="font-size: 25px;color: deepskyblue;"> ★</span><a
-								href="{:url('home/reply/order_list')}" style="font-size: 14px;">&nbsp;&nbsp;未评价的订单</a></div>
+						<div class="user-score"><span class="pull-right" style="color: lightgrey	;font-size: 15px;"><?php echo $num; ?></span><span style="font-size: 25px;color: deepskyblue;"> ★</span><a
+								href="<?php echo url('home/reply/order_list'); ?>" style="font-size: 14px;">&nbsp;&nbsp;未评价的订单</a></div>
 					</div>
 
 	            </li>
@@ -125,16 +126,16 @@
 <div class="footer navbar-fixed-bottom">
     <div class="row">
         <div class="col-xs-3 text-center" style=" padding-top:5px;">
-            <a class="cgreen" href="{:url('home/fruits/index')}"><div class="photo_30"><img src="home/images/nav11.png"><br>首页</div></a>
+            <a class="cgreen" href="<?php echo url('home/fruits/index'); ?>"><div class="photo_30"><img src="home/images/nav11.png"><br>首页</div></a>
         </div>
         <div class="col-xs-3  text-center" style=" padding-top:5px;">
-            <a class="cgray" href="{:url('home/Fruits/classifyin')}"><div class="photo_30"><img src="home/images/nav2.png"><br>分类</div></a>
+            <a class="cgray" href="<?php echo url('home/Fruits/classifyin'); ?>"><div class="photo_30"><img src="home/images/nav2.png"><br>分类</div></a>
         </div>
         <div class="col-xs-3  text-center" style=" padding-top:5px;">
-            <a class="cgray" href="{:url('home/Cart/index')}"><div class="photo_30"><img src="home/images/nav3.png"><br>购物车</div></a>
+            <a class="cgray" href="<?php echo url('home/Cart/index'); ?>"><div class="photo_30"><img src="home/images/nav3.png"><br>购物车</div></a>
         </div>
         <div class="col-xs-3  text-center" style="padding-top:5px;">
-            <a class="cgray" href="{:url('home/userinfo/user')}"><div class="photo_30"><img src="home/images/nav4.png"><br>我的</div></a>
+            <a class="cgray" href="<?php echo url('home/userinfo/user'); ?>"><div class="photo_30"><img src="home/images/nav4.png"><br>我的</div></a>
         </div>
     </div>
 </div>

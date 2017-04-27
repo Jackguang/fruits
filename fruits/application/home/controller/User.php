@@ -101,7 +101,7 @@ class User extends Controller
                     $this->redirect('home/userinfo/user');
             } else {
                 echo "<script>alert('账号或密码不正确');</script>";
-                return view('enter');
+                return view('login');
             }
         } else {
             return view('login');

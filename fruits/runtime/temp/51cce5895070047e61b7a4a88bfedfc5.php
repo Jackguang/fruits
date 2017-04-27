@@ -1,3 +1,4 @@
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:88:"E:\study\HHH\liupeng\fruits\fruits\public/../application/home\view\reply\order_list.html";i:1493255652;}*/ ?>
 <?php
 use think\Session;
 $uid=Session::get('u_id');
@@ -48,20 +49,20 @@ $uid=Session::get('u_id');
 <div class="height20"></div>
 <div class=" container-fluid">
     <div class="row">
-        {if condition="$arr['isset'] == 1"}
+        <?php if($arr['isset'] == 1): ?>
         <div class="table">
             <?php foreach($arr as $k=>$v) { ?>
             <div style="padding-right:5px;" >
                 <div class="thumbnail" style="padding:0px;">
-                    <a href="{:url('home/Fruits/info')}?id={$v.f_id}"><div class="sosophoto"><img src="{$v.f_img}" width="160" height="120"></div></a>
+                    <a href="<?php echo url('home/Fruits/info'); ?>?id=<?php echo $v['f_id']; ?>"><div class="sosophoto"><img src="<?php echo $v['f_img']; ?>" width="160" height="120"></div></a>
                     <div class="caption">
-                        <h4>订单号:{$v.o_number}</h4>
-                        <span class="color_gray">{$v.f_name}</span>
-                        <p class="color_gray"><span class="font16 color_orange">¥ {$v.m_price}</span>/斤* <span class="font16 color_orange">{$v.o_num}个</span>(已收货)<span class="font16 color_orange" style="float: right;">
-                            <button type="button" class="button" f_id="{$v.f_id}" o_number="{$v.o_number}" o_id="{$v.o_id}">评价</button>
-                            <!--<a href="{:url('home/reply/reply_add')}?id={$v.f_id}&o_number={$v.o_number}">评价</a>-->
+                        <h4>订单号:<?php echo $v['o_number']; ?></h4>
+                        <span class="color_gray"><?php echo $v['f_name']; ?></span>
+                        <p class="color_gray"><span class="font16 color_orange">¥ <?php echo $v['m_price']; ?></span>/斤* <span class="font16 color_orange"><?php echo $v['o_num']; ?>个</span>(已收货)<span class="font16 color_orange" style="float: right;">
+                            <button type="button" class="button" f_id="<?php echo $v['f_id']; ?>" o_number="<?php echo $v['o_number']; ?>" o_id="<?php echo $v['o_id']; ?>">评价</button>
+                            <!--<a href="<?php echo url('home/reply/reply_add'); ?>?id=<?php echo $v['f_id']; ?>&o_number=<?php echo $v['o_number']; ?>">评价</a>-->
                         </span></p>
-                        <div class="text-center" id="text_{$v.f_id}">
+                        <div class="text-center" id="text_<?php echo $v['f_id']; ?>">
                             <!--<textarea style="background: sandybrown" cols="30px;" rows="5px;"></textarea><button type="submit" style="width: 60px; height: 30px;">提交</button>-->
                         </div>
                     </div>
@@ -69,12 +70,12 @@ $uid=Session::get('u_id');
             </div>
             <?php } ?>
         </div>
-        {else /}
+        <?php else: ?>
         <center><img src="uploads/620.jpg" alt="">
             <br>
-            <a href="{:url('home/fruits/index')}"><span style="font-size: 25px;">去商城买点水果吧→</span></a></center>
+            <a href="<?php echo url('home/fruits/index'); ?>"><span style="font-size: 25px;">去商城买点水果吧→</span></a></center>
 
-        {/if}
+        <?php endif; ?>
 
     </div>
 </div>
@@ -104,7 +105,7 @@ $uid=Session::get('u_id');
         var cont=$('.text').val();
         $.ajax({
             type: "POST",
-            url: "{:url('index.php/home/reply/reply_add')}",
+            url: "<?php echo url('index.php/home/reply/reply_add'); ?>",
             data: "f_id=" + f_id + "&o_number=" + o_number+"&o_id="+o_id+"&opinion_content="+cont,
             success: function (msg) {
             alert(msg);

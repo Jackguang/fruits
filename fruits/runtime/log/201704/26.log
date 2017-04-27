@@ -1,21 +1,37 @@
 <<<<<<< HEAD
+[ 2017-04-26T09:09:09+08:00 ] ::1 ::1 GET /github/fruits/fruits/public/
+[ log ] localhost/github/fruits/fruits/public/ [运行时间：0.481728s][吞吐率：2.08req/s] [内存消耗：1,103.73kb] [文件加载：32]
+=======
+<<<<<<< HEAD
 [ 2017-04-26T10:57:19+08:00 ] 127.0.0.1 127.0.0.1 GET /fruits/fruits/public/
 [ log ] www.phpstudy.com/fruits/fruits/public/ [运行时间：0.453342s][吞吐率：2.21req/s] [内存消耗：1,103.91kb] [文件加载：32]
 =======
 [ 2017-04-26T08:20:59+08:00 ] 127.0.0.1 127.0.0.1 GET /chenyan/11/fruits/fruits/public/index.php/home/user/login
 [ log ] www.chenyan.com/chenyan/11/fruits/fruits/public/index.php/home/user/login [运行时间：0.335233s][吞吐率：2.98req/s] [内存消耗：1,311.20kb] [文件加载：35]
 >>>>>>> 5d49a5e015b9f16950dcbf0344e70db4aa58d4c4
+>>>>>>> a795b2b4ba4b5f7f9f1c4042af3e8b21711fe974
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a795b2b4ba4b5f7f9f1c4042af3e8b21711fe974
     0 => '',
     1 => NULL,
     2 => NULL,
   ),
 )
 [ info ] [ HEADER ] array (
+<<<<<<< HEAD
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:53.0) Gecko/20100101 Firefox/53.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://localhost/github/fruits/fruits/',
+=======
   'host' => 'www.phpstudy.com',
   'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:53.0) Gecko/20100101 Firefox/53.0',
   'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
@@ -23,12 +39,19 @@
   'accept-encoding' => 'gzip, deflate',
   'referer' => 'http://www.phpstudy.com/fruits/fruits/',
   'cookie' => 'Hm_lvt_4233e74dff0ae5bd0a3d81c6ccf756e6=1488243713,1488454475,1488501774,1488606646; _pk_ysp_id.[object Object].027a=8cc65277cd1440f4.1488348524.1.1488348524.1488348524.; Hm_lvt_91c9613acf14840c5b88007112a0878f=1489798824,1489919883,1490154825,1490236390; Hm_lvt_15577700f8ecddb1a927813c81166ade=1489147005,1489193276; pgv_pvi=1849504768; _uab_collina=149205364261451043432196; cna=Pi6eELmegRICAd6As6vrz84G; _umdata=C234BF9D3AFA6FE77CC3B8DABDAB322ECA6997BF84F2EA765C4E6251C8851D615C553413D2367607CD43AD3E795C914C1C77DAC1D01CE3EBC730B5777C933F4B; l=AhkZRwXR-a0SaSA-n33dHtYAKQ/z6g1Y; isg=ArKy6dA1PiPhRQIfQl8uVim7AvhXCLbd6WWeAnyLkmVQD1IJZNMG7bgviRBc; o2-webp=false; tu=1a354589b9e582fac7da3a90fcc7512f',
+>>>>>>> a795b2b4ba4b5f7f9f1c4042af3e8b21711fe974
   'connection' => 'keep-alive',
   'upgrade-insecure-requests' => '1',
 )
 [ info ] [ PARAM ] array (
 )
 [ info ] [ RUN ] Method [ <user> public method index ] {
+<<<<<<< HEAD
+  @@ F:\soft\phpStudy\WWW\github\fruits\fruits\application\index\controller\Index.php 7 - 12
+}
+
+[ info ] [ VIEW ] F:\soft\phpStudy\WWW\github\fruits\fruits\public/../application/index\view\index\index.html [ array (
+=======
   @@ E:\phpStudy\WWW\fruits\fruits\application\index\controller\Index.php 7 - 12
 }
 
@@ -56,10 +79,15 @@
 
 [ info ] [ VIEW ] E:\WAPM\WWW\chenyan\11\fruits\fruits\public/../application/home\view\user\login.html [ array (
 >>>>>>> 5d49a5e015b9f16950dcbf0344e70db4aa58d4c4
+>>>>>>> a795b2b4ba4b5f7f9f1c4042af3e8b21711fe974
 ) ]
 [ info ] [ LOG ] INIT File
 
 ---------------------------------------------------------------
+<<<<<<< HEAD
+[ 2017-04-26T09:09:19+08:00 ] ::1 ::1 GET /github/fruits/fruits/public/index.php/home/user/login
+[ log ] localhost/github/fruits/fruits/public/index.php/home/user/login [运行时间：0.082020s][吞吐率：12.19req/s] [内存消耗：1,166.96kb] [文件加载：33]
+=======
 <<<<<<< HEAD
 [ 2017-04-26T10:57:39+08:00 ] 127.0.0.1 127.0.0.1 GET /fruits/fruits/public/index.php/index/Login/login
 [ log ] www.phpstudy.com/fruits/fruits/public/index.php/index/Login/login [运行时间：0.078755s][吞吐率：12.70req/s] [内存消耗：1,154.62kb] [文件加载：33]
@@ -67,10 +95,15 @@
 [ 2017-04-26T08:21:09+08:00 ] 127.0.0.1 127.0.0.1 GET /chenyan/11/fruits/fruits/public/index.php/home/user/login
 [ log ] www.chenyan.com/chenyan/11/fruits/fruits/public/index.php/home/user/login [运行时间：0.032437s][吞吐率：30.83req/s] [内存消耗：1,166.56kb] [文件加载：33]
 >>>>>>> 5d49a5e015b9f16950dcbf0344e70db4aa58d4c4
+>>>>>>> a795b2b4ba4b5f7f9f1c4042af3e8b21711fe974
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
+<<<<<<< HEAD
+    0 => 'home',
+    1 => 'user',
+=======
 <<<<<<< HEAD
     0 => 'index',
     1 => 'Login',
@@ -78,10 +111,20 @@
     0 => 'home',
     1 => 'user',
 >>>>>>> 5d49a5e015b9f16950dcbf0344e70db4aa58d4c4
+>>>>>>> a795b2b4ba4b5f7f9f1c4042af3e8b21711fe974
     2 => 'login',
   ),
 )
 [ info ] [ HEADER ] array (
+<<<<<<< HEAD
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:53.0) Gecko/20100101 Firefox/53.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+=======
 <<<<<<< HEAD
   'host' => 'www.phpstudy.com',
   'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:53.0) Gecko/20100101 Firefox/53.0',
@@ -101,10 +144,17 @@
   'accept-encoding' => 'gzip, deflate, sdch',
   'accept-language' => 'zh-CN,zh;q=0.8',
 >>>>>>> 5d49a5e015b9f16950dcbf0344e70db4aa58d4c4
+>>>>>>> a795b2b4ba4b5f7f9f1c4042af3e8b21711fe974
 )
 [ info ] [ PARAM ] array (
 )
 [ info ] [ RUN ] Method [ <user> public method login ] {
+<<<<<<< HEAD
+  @@ F:\soft\phpStudy\WWW\github\fruits\fruits\application\home\controller\User.php 86 - 109
+}
+
+[ info ] [ VIEW ] F:\soft\phpStudy\WWW\github\fruits\fruits\public/../application/home\view\user\login.html [ array (
+=======
 <<<<<<< HEAD
   @@ E:\phpStudy\WWW\fruits\fruits\application\index\controller\Login.php 10 - 14
 }
@@ -116,10 +166,15 @@
 
 [ info ] [ VIEW ] E:\WAPM\WWW\chenyan\11\fruits\fruits\public/../application/home\view\user\login.html [ array (
 >>>>>>> 5d49a5e015b9f16950dcbf0344e70db4aa58d4c4
+>>>>>>> a795b2b4ba4b5f7f9f1c4042af3e8b21711fe974
 ) ]
 [ info ] [ LOG ] INIT File
 
 ---------------------------------------------------------------
+<<<<<<< HEAD
+[ 2017-04-26T09:09:19+08:00 ] ::1 ::1 GET /github/fruits/fruits/public/images/icon_close.png
+[ log ] localhost/github/fruits/fruits/public/images/icon_close.png [运行时间：0.289909s][吞吐率：3.45req/s] [内存消耗：916.25kb] [文件加载：29]
+=======
 <<<<<<< HEAD
 [ 2017-04-26T10:57:39+08:00 ] 127.0.0.1 127.0.0.1 GET /fruits/fruits/public/bower_components/metisMenu/dist/metisMenu.min.css
 [ log ] www.phpstudy.com/fruits/fruits/public/bower_components/metisMenu/dist/metisMenu.min.css [运行时间：0.247409s][吞吐率：4.04req/s] [内存消耗：917.70kb] [文件加载：29]
@@ -127,10 +182,37 @@
 [ 2017-04-26T08:21:28+08:00 ] 127.0.0.1 127.0.0.1 GET /chenyan/11/fruits/fruits/public/index.php/home/fruits/index
 [ log ] www.chenyan.com/chenyan/11/fruits/fruits/public/index.php/home/fruits/index [运行时间：0.449008s][吞吐率：2.23req/s] [内存消耗：1,892.68kb] [文件加载：41]
 >>>>>>> 5d49a5e015b9f16950dcbf0344e70db4aa58d4c4
+>>>>>>> a795b2b4ba4b5f7f9f1c4042af3e8b21711fe974
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
+<<<<<<< HEAD
+    0 => 'github',
+    1 => 'fruits',
+    2 => 'fruits',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:53.0) Gecko/20100101 Firefox/53.0',
+  'accept' => '*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://localhost/github/fruits/fruits/public/index.php/home/user/login',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+  '/images/icon_close_png' => '',
+  'public' => 'images',
+)
+[ info ] [ LANG ] F:\soft\phpStudy\WWW\github\fruits\fruits\framework\lang\zh-cn.php
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-04-26T09:09:28+08:00 ] ::1 ::1 POST /github/fruits/fruits/public/index.php/home/user/login.html
+[ log ] localhost/github/fruits/fruits/public/index.php/home/user/login.html [运行时间：0.652320s][吞吐率：1.53req/s] [内存消耗：1,832.38kb] [文件加载：41]
+=======
 <<<<<<< HEAD
     0 => 'fruits',
     1 => 'fruits',
@@ -158,10 +240,40 @@
 ---------------------------------------------------------------
 [ 2017-04-26T10:57:47+08:00 ] 127.0.0.1 127.0.0.1 POST /fruits/fruits/public/index.php/index/Login/posts.html
 [ log ] www.phpstudy.com/fruits/fruits/public/index.php/index/Login/posts.html [运行时间：0.356506s][吞吐率：2.81req/s] [内存消耗：1,816.91kb] [文件加载：41]
+>>>>>>> a795b2b4ba4b5f7f9f1c4042af3e8b21711fe974
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
+<<<<<<< HEAD
+    0 => 'home',
+    1 => 'user',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:53.0) Gecko/20100101 Firefox/53.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://localhost/github/fruits/fruits/public/index.php/home/user/login',
+  'cookie' => 'think_var=zh-cn',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'content-length' => '24',
+)
+[ info ] [ PARAM ] array (
+  'u_name' => 'chen',
+  'u_pwd' => '123321',
+)
+[ info ] [ RUN ] Method [ <user> public method login ] {
+  @@ F:\soft\phpStudy\WWW\github\fruits\fruits\application\home\controller\User.php 86 - 109
+}
+
+[ info ] [ DB ] INIT mysql
+=======
     0 => 'index',
     1 => 'Login',
     2 => 'posts',
@@ -216,6 +328,7 @@
   1 => 'a',
 ) ]
 >>>>>>> 5d49a5e015b9f16950dcbf0344e70db4aa58d4c4
+>>>>>>> a795b2b4ba4b5f7f9f1c4042af3e8b21711fe974
 [ info ] [ SESSION ] INIT array (
   'id' => '',
   'var_session_id' => '',
@@ -224,6 +337,16 @@
   'auto_start' => true,
 )
 [ info ] [ LOG ] INIT File
+<<<<<<< HEAD
+[ sql ] [ DB ] CONNECT:[ UseTime:0.106417s ] mysql:dbname=fruits;host=101.200.41.87;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sg_user` [ RunTime:0.051210s ]
+[ sql ] [ SQL ] SELECT * FROM `sg_user` WHERE  `u_name` = 'chen'  AND `u_pwd` = '123321' LIMIT 1     [ RunTime:0.046352s ]
+[ sql ] [ SQL ] SELECT * FROM `sg_user` WHERE  `u_tel` = 'chen'  AND `u_pwd` = '123321' LIMIT 1     [ RunTime:0.047430s ]
+
+---------------------------------------------------------------
+[ 2017-04-26T09:09:29+08:00 ] ::1 ::1 GET /github/fruits/fruits/public/index.php/home/userinfo/user.html
+[ log ] localhost/github/fruits/fruits/public/index.php/home/userinfo/user.html [运行时间：0.177868s][吞吐率：5.62req/s] [内存消耗：1,821.30kb] [文件加载：41]
+=======
 <<<<<<< HEAD
 [ sql ] [ DB ] CONNECT:[ UseTime:0.041600s ] mysql:dbname=fruits;host=101.200.41.87;charset=utf8
 [ sql ] [ SQL ] SHOW COLUMNS FROM `sg_admin` [ RunTime:0.028205s ]
@@ -241,10 +364,26 @@
 [ 2017-04-26T08:21:29+08:00 ] 127.0.0.1 127.0.0.1 GET /chenyan/11/fruits/fruits/public/uploads/20170425/26bdf37371d79b460d9a788be1654a3c.jpg
 [ log ] www.chenyan.com/chenyan/11/fruits/fruits/public/uploads/20170425/26bdf37371d79b460d9a788be1654a3c.jpg [运行时间：0.455648s][吞吐率：2.19req/s] [内存消耗：916.41kb] [文件加载：29]
 >>>>>>> 5d49a5e015b9f16950dcbf0344e70db4aa58d4c4
+>>>>>>> a795b2b4ba4b5f7f9f1c4042af3e8b21711fe974
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
+<<<<<<< HEAD
+    0 => 'home',
+    1 => 'userinfo',
+    2 => 'user',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:53.0) Gecko/20100101 Firefox/53.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://localhost/github/fruits/fruits/public/index.php/home/user/login',
+  'cookie' => 'think_var=zh-cn; PHPSESSID=avsok9l14h728k44doff141l10',
+=======
 <<<<<<< HEAD
     0 => 'index',
     1 => 'index',
@@ -259,17 +398,25 @@
   'accept-encoding' => 'gzip, deflate',
   'referer' => 'http://www.phpstudy.com/fruits/fruits/public/index.php/index/Login/login',
   'cookie' => 'Hm_lvt_4233e74dff0ae5bd0a3d81c6ccf756e6=1488243713,1488454475,1488501774,1488606646; _pk_ysp_id.[object Object].027a=8cc65277cd1440f4.1488348524.1.1488348524.1488348524.; Hm_lvt_91c9613acf14840c5b88007112a0878f=1489798824,1489919883,1490154825,1490236390; Hm_lvt_15577700f8ecddb1a927813c81166ade=1489147005,1489193276; pgv_pvi=1849504768; _uab_collina=149205364261451043432196; cna=Pi6eELmegRICAd6As6vrz84G; _umdata=C234BF9D3AFA6FE77CC3B8DABDAB322ECA6997BF84F2EA765C4E6251C8851D615C553413D2367607CD43AD3E795C914C1C77DAC1D01CE3EBC730B5777C933F4B; l=AhkZRwXR-a0SaSA-n33dHtYAKQ/z6g1Y; isg=ArKy6dA1PiPhRQIfQl8uVim7AvhXCLbd6WWeAnyLkmVQD1IJZNMG7bgviRBc; o2-webp=false; tu=1a354589b9e582fac7da3a90fcc7512f; think_var=zh-cn; PHPSESSID=dagbqqk28adn1mo1f255cp1q13',
+>>>>>>> a795b2b4ba4b5f7f9f1c4042af3e8b21711fe974
   'connection' => 'keep-alive',
   'upgrade-insecure-requests' => '1',
 )
 [ info ] [ PARAM ] array (
 )
+<<<<<<< HEAD
+[ info ] [ RUN ] Method [ <user> public method user ] {
+  @@ F:\soft\phpStudy\WWW\github\fruits\fruits\application\home\controller\Userinfo.php 8 - 15
+}
+
+=======
 [ info ] [ RUN ] Method [ <user> public method show ] {
   @@ E:\phpStudy\WWW\fruits\fruits\application\index\controller\Index.php 15 - 19
 }
 
 [ info ] [ VIEW ] E:\phpStudy\WWW\fruits\fruits\public/../application/index\view\index\show.html [ array (
 ) ]
+>>>>>>> a795b2b4ba4b5f7f9f1c4042af3e8b21711fe974
 [ info ] [ SESSION ] INIT array (
   'id' => '',
   'var_session_id' => '',
@@ -277,6 +424,20 @@
   'type' => '',
   'auto_start' => true,
 )
+<<<<<<< HEAD
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] F:\soft\phpStudy\WWW\github\fruits\fruits\public/../application/home\view\userinfo\user.html [ array (
+  0 => 'one',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.028848s ] mysql:dbname=fruits;host=101.200.41.87;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sg_user` [ RunTime:0.018041s ]
+[ sql ] [ SQL ] SELECT * FROM `sg_user` WHERE  (  u_tel = 18762036831 )  [ RunTime:0.021213s ]
+
+---------------------------------------------------------------
+[ 2017-04-26T09:27:42+08:00 ] ::1 ::1 GET /github/fruits/fruits/public/index.php/home/fruits/classifyin.html
+[ log ] localhost/github/fruits/fruits/public/index.php/home/fruits/classifyin.html [运行时间：0.837119s][吞吐率：1.19req/s] [内存消耗：2,061.41kb] [文件加载：43]
+=======
 [ info ] [ LOG ] INIT File
 
 ---------------------------------------------------------------
@@ -310,10 +471,26 @@
 [ 2017-04-26T08:21:40+08:00 ] 127.0.0.1 127.0.0.1 GET /chenyan/11/fruits/fruits/public/home/js/jquery.min.map
 [ log ] www.chenyan.com/chenyan/11/fruits/fruits/public/home/js/jquery.min.map [运行时间：0.024626s][吞吐率：40.61req/s] [内存消耗：915.55kb] [文件加载：29]
 >>>>>>> 5d49a5e015b9f16950dcbf0344e70db4aa58d4c4
+>>>>>>> a795b2b4ba4b5f7f9f1c4042af3e8b21711fe974
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
+<<<<<<< HEAD
+    0 => 'home',
+    1 => 'fruits',
+    2 => 'classifyin',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:53.0) Gecko/20100101 Firefox/53.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://localhost/github/fruits/fruits/public/index.php/home/userinfo/user.html',
+  'cookie' => 'think_var=zh-cn; PHPSESSID=avsok9l14h728k44doff141l10',
+=======
 <<<<<<< HEAD
     0 => 'index',
     1 => 'order',
@@ -328,15 +505,30 @@
   'accept-encoding' => 'gzip, deflate',
   'referer' => 'http://www.phpstudy.com/fruits/fruits/public/index.php/index/index/show.html',
   'cookie' => 'ace.settings=%7B%22sidebar-collapsed%22%3A-1%7D; Hm_lvt_4233e74dff0ae5bd0a3d81c6ccf756e6=1488243713,1488454475,1488501774,1488606646; _pk_ysp_id.[object Object].027a=8cc65277cd1440f4.1488348524.1.1488348524.1488348524.; Hm_lvt_91c9613acf14840c5b88007112a0878f=1489798824,1489919883,1490154825,1490236390; Hm_lvt_15577700f8ecddb1a927813c81166ade=1489147005,1489193276; pgv_pvi=1849504768; _uab_collina=149205364261451043432196; cna=Pi6eELmegRICAd6As6vrz84G; _umdata=C234BF9D3AFA6FE77CC3B8DABDAB322ECA6997BF84F2EA765C4E6251C8851D615C553413D2367607CD43AD3E795C914C1C77DAC1D01CE3EBC730B5777C933F4B; l=AhkZRwXR-a0SaSA-n33dHtYAKQ/z6g1Y; isg=ArKy6dA1PiPhRQIfQl8uVim7AvhXCLbd6WWeAnyLkmVQD1IJZNMG7bgviRBc; o2-webp=false; tu=1a354589b9e582fac7da3a90fcc7512f; think_var=zh-cn; PHPSESSID=dagbqqk28adn1mo1f255cp1q13',
+>>>>>>> a795b2b4ba4b5f7f9f1c4042af3e8b21711fe974
   'connection' => 'keep-alive',
   'upgrade-insecure-requests' => '1',
 )
 [ info ] [ PARAM ] array (
 )
+<<<<<<< HEAD
+[ info ] [ RUN ] Method [ <user> public method classifyin ] {
+  @@ F:\soft\phpStudy\WWW\github\fruits\fruits\application\home\controller\Fruits.php 192 - 206
+}
+
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] F:\soft\phpStudy\WWW\github\fruits\fruits\public/../application/home\view\fruits\classifyin.html [ array (
+  0 => 'arr',
+  1 => 'data',
+  2 => 'a',
+) ]
+=======
 [ info ] [ RUN ] Method [ <user> public method show ] {
   @@ E:\phpStudy\WWW\fruits\fruits\application\index\controller\Order.php 9 - 30
 }
 
+>>>>>>> a795b2b4ba4b5f7f9f1c4042af3e8b21711fe974
 [ info ] [ SESSION ] INIT array (
   'id' => '',
   'var_session_id' => '',
@@ -344,6 +536,25 @@
   'type' => '',
   'auto_start' => true,
 )
+<<<<<<< HEAD
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.315779s ] mysql:dbname=fruits;host=101.200.41.87;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sg_fruits` [ RunTime:0.012193s ]
+[ sql ] [ SQL ] SELECT * FROM `sg_fruits` INNER JOIN sg_type ON sg_fruits.t_id = sg_type.t_id  WHERE  (  is_show =1  ) ORDER BY f_time desc LIMIT 6   [ RunTime:0.016175s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.126406s ] mysql:dbname=fruits;host=101.200.41.87;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sg_type` [ RunTime:0.064038s ]
+[ sql ] [ SQL ] SELECT * FROM `sg_type`  [ RunTime:0.087635s ]
+
+---------------------------------------------------------------
+[ 2017-04-26T09:27:42+08:00 ] ::1 ::1 GET /github/fruits/fruits/public/uploads/20170425/26bdf37371d79b460d9a788be1654a3c.jpg
+[ log ] localhost/github/fruits/fruits/public/uploads/20170425/26bdf37371d79b460d9a788be1654a3c.jpg [运行时间：0.041054s][吞吐率：24.36req/s] [内存消耗：916.53kb] [文件加载：29]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'github',
+    1 => 'fruits',
+=======
 [ info ] [ DB ] INIT mysql
 [ info ] [ VIEW ] E:\phpStudy\WWW\fruits\fruits\public/../application/index\view\order\show.html [ array (
   0 => 'order_list',
@@ -361,10 +572,33 @@
 =======
     0 => 'chenyan',
     1 => '11',
+>>>>>>> a795b2b4ba4b5f7f9f1c4042af3e8b21711fe974
     2 => 'fruits',
   ),
 )
 [ info ] [ HEADER ] array (
+<<<<<<< HEAD
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:53.0) Gecko/20100101 Firefox/53.0',
+  'accept' => '*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://localhost/github/fruits/fruits/public/index.php/home/fruits/classifyin.html',
+  'cookie' => 'think_var=zh-cn; PHPSESSID=avsok9l14h728k44doff141l10',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+  '/uploads/20170425/26bdf37371d79b460d9a788be1654a3c_jpg' => '',
+  'public' => 'uploads',
+  0 => '26bdf37371d79b460d9a788be1654a3c.jpg',
+)
+[ info ] [ LANG ] F:\soft\phpStudy\WWW\github\fruits\fruits\framework\lang\zh-cn.php
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-04-26T09:27:47+08:00 ] ::1 ::1 GET /github/fruits/fruits/public/index.php/home/fruits/index.html
+[ log ] localhost/github/fruits/fruits/public/index.php/home/fruits/index.html [运行时间：0.397610s][吞吐率：2.52req/s] [内存消耗：1,894.02kb] [文件加载：41]
+=======
   'host' => 'www.chenyan.com',
   'connection' => 'keep-alive',
   'user-agent' => 'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.133 Mobile Safari/537.36',
@@ -384,10 +618,28 @@
 [ 2017-04-26T09:10:50+08:00 ] 127.0.0.1 127.0.0.1 GET /chenyan/11/fruits/fruits/public/index.php/home/fruits/index
 [ log ] www.chenyan.com/chenyan/11/fruits/fruits/public/index.php/home/fruits/index [运行时间：0.130897s][吞吐率：7.64req/s] [内存消耗：1,892.86kb] [文件加载：41]
 >>>>>>> 5d49a5e015b9f16950dcbf0344e70db4aa58d4c4
+>>>>>>> a795b2b4ba4b5f7f9f1c4042af3e8b21711fe974
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
+<<<<<<< HEAD
+    0 => 'home',
+    1 => 'fruits',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:53.0) Gecko/20100101 Firefox/53.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://localhost/github/fruits/fruits/public/index.php/home/fruits/classifyin.html',
+  'cookie' => 'think_var=zh-cn; PHPSESSID=avsok9l14h728k44doff141l10',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+=======
 <<<<<<< HEAD
     0 => 'index',
     1 => 'hard',
@@ -430,10 +682,20 @@
   'accept-encoding' => 'gzip, deflate, sdch',
   'accept-language' => 'zh-CN,zh;q=0.8',
   'cookie' => 'PHPSESSID=d8ad7ine9q9kr1mkgnmdlngk40; think_var=zh-cn',
+>>>>>>> a795b2b4ba4b5f7f9f1c4042af3e8b21711fe974
 )
 [ info ] [ PARAM ] array (
 )
 [ info ] [ RUN ] Method [ <user> public method index ] {
+<<<<<<< HEAD
+  @@ F:\soft\phpStudy\WWW\github\fruits\fruits\application\home\controller\Fruits.php 10 - 26
+}
+
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] F:\soft\phpStudy\WWW\github\fruits\fruits\public/../application/home\view\fruits\index.html [ array (
+  0 => 'arr',
+  1 => 'a',
+=======
   @@ E:\WAPM\WWW\chenyan\11\fruits\fruits\application\home\controller\Fruits.php 10 - 26
 }
 
@@ -442,6 +704,7 @@
   0 => 'arr',
   1 => 'a',
 >>>>>>> 5d49a5e015b9f16950dcbf0344e70db4aa58d4c4
+>>>>>>> a795b2b4ba4b5f7f9f1c4042af3e8b21711fe974
 ) ]
 [ info ] [ SESSION ] INIT array (
   'id' => '',
@@ -451,6 +714,15 @@
   'auto_start' => true,
 )
 [ info ] [ LOG ] INIT File
+<<<<<<< HEAD
+[ sql ] [ DB ] CONNECT:[ UseTime:0.246086s ] mysql:dbname=fruits;host=101.200.41.87;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sg_fruits` [ RunTime:0.014936s ]
+[ sql ] [ SQL ] SELECT * FROM `sg_fruits` WHERE  (  is_show =1 ) ORDER BY f_time desc LIMIT 6   [ RunTime:0.012189s ]
+
+---------------------------------------------------------------
+[ 2017-04-26T09:27:47+08:00 ] ::1 ::1 GET /github/fruits/fruits/public/uploads/20170425/26bdf37371d79b460d9a788be1654a3c.jpg
+[ log ] localhost/github/fruits/fruits/public/uploads/20170425/26bdf37371d79b460d9a788be1654a3c.jpg [运行时间：0.038148s][吞吐率：26.21req/s] [内存消耗：916.58kb] [文件加载：29]
+=======
 <<<<<<< HEAD
 [ sql ] [ DB ] CONNECT:[ UseTime:0.036446s ] mysql:dbname=fruits;host=101.200.41.87;charset=utf8
 [ sql ] [ SQL ] select * from sg_opinion as a LEFT JOIN sg_user as b on a.u_id=b.u_id [ RunTime:0.019762s ]
@@ -467,10 +739,45 @@
 [ 2017-04-26T09:10:50+08:00 ] 127.0.0.1 127.0.0.1 GET /chenyan/11/fruits/fruits/public/uploads/20170425/26bdf37371d79b460d9a788be1654a3c.jpg
 [ log ] www.chenyan.com/chenyan/11/fruits/fruits/public/uploads/20170425/26bdf37371d79b460d9a788be1654a3c.jpg [运行时间：0.063881s][吞吐率：15.65req/s] [内存消耗：916.07kb] [文件加载：29]
 >>>>>>> 5d49a5e015b9f16950dcbf0344e70db4aa58d4c4
+>>>>>>> a795b2b4ba4b5f7f9f1c4042af3e8b21711fe974
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
+<<<<<<< HEAD
+    0 => 'github',
+    1 => 'fruits',
+    2 => 'fruits',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:53.0) Gecko/20100101 Firefox/53.0',
+  'accept' => '*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://localhost/github/fruits/fruits/public/index.php/home/fruits/index.html',
+  'cookie' => 'think_var=zh-cn; PHPSESSID=avsok9l14h728k44doff141l10',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+  '/uploads/20170425/26bdf37371d79b460d9a788be1654a3c_jpg' => '',
+  'public' => 'uploads',
+  0 => '26bdf37371d79b460d9a788be1654a3c.jpg',
+)
+[ info ] [ LANG ] F:\soft\phpStudy\WWW\github\fruits\fruits\framework\lang\zh-cn.php
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-04-26T09:27:48+08:00 ] ::1 ::1 GET /github/fruits/fruits/public/uploads/20170425/26bdf37371d79b460d9a788be1654a3c.jpg
+[ log ] localhost/github/fruits/fruits/public/uploads/20170425/26bdf37371d79b460d9a788be1654a3c.jpg [运行时间：0.048426s][吞吐率：20.65req/s] [内存消耗：916.58kb] [文件加载：29]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'github',
+    1 => 'fruits',
+=======
 <<<<<<< HEAD
     0 => 'fruits',
     1 => 'fruits',
@@ -500,10 +807,33 @@
 =======
     0 => 'chenyan',
     1 => '11',
+>>>>>>> a795b2b4ba4b5f7f9f1c4042af3e8b21711fe974
     2 => 'fruits',
   ),
 )
 [ info ] [ HEADER ] array (
+<<<<<<< HEAD
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:53.0) Gecko/20100101 Firefox/53.0',
+  'accept' => '*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://localhost/github/fruits/fruits/public/index.php/home/fruits/index.html',
+  'cookie' => 'think_var=zh-cn; PHPSESSID=avsok9l14h728k44doff141l10',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+  '/uploads/20170425/26bdf37371d79b460d9a788be1654a3c_jpg' => '',
+  'public' => 'uploads',
+  0 => '26bdf37371d79b460d9a788be1654a3c.jpg',
+)
+[ info ] [ LANG ] F:\soft\phpStudy\WWW\github\fruits\fruits\framework\lang\zh-cn.php
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-04-26T09:27:51+08:00 ] ::1 ::1 GET /github/fruits/fruits/public/index.php/home/cart/index.html
+[ log ] localhost/github/fruits/fruits/public/index.php/home/cart/index.html [运行时间：0.281031s][吞吐率：3.56req/s] [内存消耗：2,006.55kb] [文件加载：43]
+=======
   'host' => 'www.chenyan.com',
   'connection' => 'keep-alive',
   'user-agent' => 'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.133 Mobile Safari/537.36',
@@ -525,10 +855,26 @@
 [ 2017-04-26T09:10:50+08:00 ] 127.0.0.1 127.0.0.1 GET /chenyan/11/fruits/fruits/public/uploads/20170425/26bdf37371d79b460d9a788be1654a3c.jpg
 [ log ] www.chenyan.com/chenyan/11/fruits/fruits/public/uploads/20170425/26bdf37371d79b460d9a788be1654a3c.jpg [运行时间：0.030165s][吞吐率：33.15req/s] [内存消耗：916.07kb] [文件加载：29]
 >>>>>>> 5d49a5e015b9f16950dcbf0344e70db4aa58d4c4
+>>>>>>> a795b2b4ba4b5f7f9f1c4042af3e8b21711fe974
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
+<<<<<<< HEAD
+    0 => 'home',
+    1 => 'cart',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:53.0) Gecko/20100101 Firefox/53.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://localhost/github/fruits/fruits/public/index.php/home/fruits/index.html',
+  'cookie' => 'think_var=zh-cn; PHPSESSID=avsok9l14h728k44doff141l10',
+=======
 <<<<<<< HEAD
     0 => 'index',
     1 => 'user',
@@ -543,13 +889,19 @@
   'accept-encoding' => 'gzip, deflate',
   'referer' => 'http://www.phpstudy.com/fruits/fruits/public/index.php/index/hard/opinoin_list.html',
   'cookie' => 'Hm_lvt_4233e74dff0ae5bd0a3d81c6ccf756e6=1488243713,1488454475,1488501774,1488606646; _pk_ysp_id.[object Object].027a=8cc65277cd1440f4.1488348524.1.1488348524.1488348524.; Hm_lvt_91c9613acf14840c5b88007112a0878f=1489798824,1489919883,1490154825,1490236390; Hm_lvt_15577700f8ecddb1a927813c81166ade=1489147005,1489193276; pgv_pvi=1849504768; _uab_collina=149205364261451043432196; cna=Pi6eELmegRICAd6As6vrz84G; _umdata=C234BF9D3AFA6FE77CC3B8DABDAB322ECA6997BF84F2EA765C4E6251C8851D615C553413D2367607CD43AD3E795C914C1C77DAC1D01CE3EBC730B5777C933F4B; l=AhkZRwXR-a0SaSA-n33dHtYAKQ/z6g1Y; isg=ArKy6dA1PiPhRQIfQl8uVim7AvhXCLbd6WWeAnyLkmVQD1IJZNMG7bgviRBc; o2-webp=false; tu=1a354589b9e582fac7da3a90fcc7512f; think_var=zh-cn; PHPSESSID=dagbqqk28adn1mo1f255cp1q13',
+>>>>>>> a795b2b4ba4b5f7f9f1c4042af3e8b21711fe974
   'connection' => 'keep-alive',
   'upgrade-insecure-requests' => '1',
 )
 [ info ] [ PARAM ] array (
 )
+<<<<<<< HEAD
+[ info ] [ RUN ] Method [ <user> public method index ] {
+  @@ F:\soft\phpStudy\WWW\github\fruits\fruits\application\home\controller\Cart.php 11 - 33
+=======
 [ info ] [ RUN ] Method [ <user> public method show ] {
   @@ E:\phpStudy\WWW\fruits\fruits\application\index\controller\User.php 8 - 26
+>>>>>>> a795b2b4ba4b5f7f9f1c4042af3e8b21711fe974
 }
 
 [ info ] [ SESSION ] INIT array (
@@ -560,6 +912,20 @@
   'auto_start' => true,
 )
 [ info ] [ DB ] INIT mysql
+<<<<<<< HEAD
+[ info ] [ VIEW ] F:\soft\phpStudy\WWW\github\fruits\fruits\public/../application/home\view\cart\index.html [ array (
+  0 => 'data',
+  1 => 'money',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.072773s ] mysql:dbname=fruits;host=101.200.41.87;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sg_fruits` [ RunTime:0.061008s ]
+[ sql ] [ SQL ] SELECT a.f_id,`f_name`,`f_img`,`f_weight`,`m_price`,`f_num`,w.u_id FROM sg_fruits a INNER JOIN sg_cart w ON a.f_id = w.f_id  WHERE  `u_id` = 23  [ RunTime:0.056242s ]
+
+---------------------------------------------------------------
+[ 2017-04-26T09:28:06+08:00 ] ::1 ::1 GET /github/fruits/fruits/public/index.php/home/fruits/index.html
+[ log ] localhost/github/fruits/fruits/public/index.php/home/fruits/index.html [运行时间：0.341061s][吞吐率：2.93req/s] [内存消耗：1,894.03kb] [文件加载：41]
+=======
 [ info ] [ VIEW ] E:\phpStudy\WWW\fruits\fruits\public/../application/index\view\user\show.html [ array (
   0 => 'data',
   1 => 'str',
@@ -730,10 +1096,13 @@
 [ 2017-04-26T09:11:00+08:00 ] 127.0.0.1 127.0.0.1 GET /chenyan/11/fruits/fruits/public/index.php/home/fruits/index
 [ log ] www.chenyan.com/chenyan/11/fruits/fruits/public/index.php/home/fruits/index [运行时间：0.112431s][吞吐率：8.89req/s] [内存消耗：1,892.86kb] [文件加载：41]
 >>>>>>> 5d49a5e015b9f16950dcbf0344e70db4aa58d4c4
+>>>>>>> a795b2b4ba4b5f7f9f1c4042af3e8b21711fe974
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
     0 => 'index',
     1 => 'user',
@@ -769,12 +1138,24 @@
 [ 2017-04-26T10:58:28+08:00 ] 127.0.0.1 127.0.0.1 GET /fruits/fruits/public/index.php/index/user/ajaxs.html?p=1
 [ log ] www.phpstudy.com/fruits/fruits/public/index.php/index/user/ajaxs.html?p=1 [运行时间：0.113205s][吞吐率：8.83req/s] [内存消耗：1,718.21kb] [文件加载：38]
 =======
+>>>>>>> a795b2b4ba4b5f7f9f1c4042af3e8b21711fe974
     0 => 'home',
     1 => 'fruits',
     2 => 'index',
   ),
 )
 [ info ] [ HEADER ] array (
+<<<<<<< HEAD
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:53.0) Gecko/20100101 Firefox/53.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://localhost/github/fruits/fruits/public/index.php/home/cart/index.html',
+  'cookie' => 'think_var=zh-cn; PHPSESSID=avsok9l14h728k44doff141l10',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+=======
   'host' => 'www.chenyan.com',
   'connection' => 'keep-alive',
   'cache-control' => 'max-age=0',
@@ -784,15 +1165,24 @@
   'accept-encoding' => 'gzip, deflate, sdch',
   'accept-language' => 'zh-CN,zh;q=0.8',
   'cookie' => 'PHPSESSID=d8ad7ine9q9kr1mkgnmdlngk40; think_var=zh-cn',
+>>>>>>> a795b2b4ba4b5f7f9f1c4042af3e8b21711fe974
 )
 [ info ] [ PARAM ] array (
 )
 [ info ] [ RUN ] Method [ <user> public method index ] {
+<<<<<<< HEAD
+  @@ F:\soft\phpStudy\WWW\github\fruits\fruits\application\home\controller\Fruits.php 10 - 26
+}
+
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] F:\soft\phpStudy\WWW\github\fruits\fruits\public/../application/home\view\fruits\index.html [ array (
+=======
   @@ E:\WAPM\WWW\chenyan\11\fruits\fruits\application\home\controller\Fruits.php 10 - 26
 }
 
 [ info ] [ DB ] INIT mysql
 [ info ] [ VIEW ] E:\WAPM\WWW\chenyan\11\fruits\fruits\public/../application/home\view\fruits\index.html [ array (
+>>>>>>> a795b2b4ba4b5f7f9f1c4042af3e8b21711fe974
   0 => 'arr',
   1 => 'a',
 ) ]
@@ -804,6 +1194,15 @@
   'auto_start' => true,
 )
 [ info ] [ LOG ] INIT File
+<<<<<<< HEAD
+[ sql ] [ DB ] CONNECT:[ UseTime:0.231162s ] mysql:dbname=fruits;host=101.200.41.87;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sg_fruits` [ RunTime:0.033315s ]
+[ sql ] [ SQL ] SELECT * FROM `sg_fruits` WHERE  (  is_show =1 ) ORDER BY f_time desc LIMIT 6   [ RunTime:0.021439s ]
+
+---------------------------------------------------------------
+[ 2017-04-26T09:28:06+08:00 ] ::1 ::1 GET /github/fruits/fruits/public/uploads/20170425/26bdf37371d79b460d9a788be1654a3c.jpg
+[ log ] localhost/github/fruits/fruits/public/uploads/20170425/26bdf37371d79b460d9a788be1654a3c.jpg [运行时间：0.039680s][吞吐率：25.20req/s] [内存消耗：916.60kb] [文件加载：29]
+=======
 [ sql ] [ DB ] CONNECT:[ UseTime:0.035935s ] mysql:dbname=fruits;host=101.200.41.87;charset=utf8
 [ sql ] [ SQL ] SHOW COLUMNS FROM `sg_fruits` [ RunTime:0.011787s ]
 [ sql ] [ SQL ] SELECT * FROM `sg_fruits` WHERE  (  is_show =1 ) ORDER BY f_time desc LIMIT 6   [ RunTime:0.016136s ]
@@ -812,10 +1211,35 @@
 [ 2017-04-26T09:11:00+08:00 ] 127.0.0.1 127.0.0.1 GET /chenyan/11/fruits/fruits/public/uploads/20170425/26bdf37371d79b460d9a788be1654a3c.jpg
 [ log ] www.chenyan.com/chenyan/11/fruits/fruits/public/uploads/20170425/26bdf37371d79b460d9a788be1654a3c.jpg [运行时间：0.032910s][吞吐率：30.39req/s] [内存消耗：916.07kb] [文件加载：29]
 >>>>>>> 5d49a5e015b9f16950dcbf0344e70db4aa58d4c4
+>>>>>>> a795b2b4ba4b5f7f9f1c4042af3e8b21711fe974
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
+<<<<<<< HEAD
+    0 => 'github',
+    1 => 'fruits',
+    2 => 'fruits',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:53.0) Gecko/20100101 Firefox/53.0',
+  'accept' => '*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://localhost/github/fruits/fruits/public/index.php/home/fruits/index.html',
+  'cookie' => 'think_var=zh-cn; PHPSESSID=avsok9l14h728k44doff141l10',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+  '/uploads/20170425/26bdf37371d79b460d9a788be1654a3c_jpg' => '',
+  'public' => 'uploads',
+  0 => '26bdf37371d79b460d9a788be1654a3c.jpg',
+)
+[ info ] [ LANG ] F:\soft\phpStudy\WWW\github\fruits\fruits\framework\lang\zh-cn.php
+[ info ] [ LOG ] INIT File
+=======
 <<<<<<< HEAD
     0 => 'index',
     1 => 'user',
@@ -41111,5 +41535,6 @@ Method [ <user> public method payfor ] {
 [ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 50 ) LIMIT 1   [ RunTime:0.017269s ]
 [ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 91 ) LIMIT 1   [ RunTime:0.015714s ]
 >>>>>>> 5d49a5e015b9f16950dcbf0344e70db4aa58d4c4
+>>>>>>> a795b2b4ba4b5f7f9f1c4042af3e8b21711fe974
 
 ---------------------------------------------------------------

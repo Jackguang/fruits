@@ -1,7 +1,4 @@
-<?php
-use think\Session;
-$uid=Session::get('u_id');
-?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:90:"F:\soft\phpStudy\WWW\github\fruits\fruits\public/../application/home\view\fruits\info.html";i:1492745078;}*/ ?>
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -27,7 +24,7 @@ $uid=Session::get('u_id');
     <![endif]-->
     <style type="text/css">
         <!--
-        body{ background:#eeeeee;  font-family:"微软雅黑";}
+        body{ background:#eeeeee;  font-family:"微软雅黑"； }
         input[type="text"],input[type="password"],input[type="date"],input[type="month"],input[type="month"],input[type="time"],input[type="week"],input[type="email"],select{border:none; outline:none; transition:border 0.2s ease-in 0s;  }
         input[type="button"],input[type="submit"]{outline:none;cursor:pointer;border:none;}		input[type="text"]:focus,input[type="password"]:focus,input[type="date"]:focus,input[type="month"]:focus,input[type="month"]:focus,input[type="time"]:focus,input[type="week"]:focus,input[type="email"]:focus,select:focus{border:1px solid #17a862;  }
         -->
@@ -36,21 +33,12 @@ $uid=Session::get('u_id');
 <body >
 <div class="toper navbar-fixed-top">
     <div class="row color_white " >
-        <div class="col-xs-2" style="padding-left:25px;"><a class="cwhite" href="{:url('home/Fruits/index')}"><i class="icon-angle-left font32"></i></a></div>
+        <div class="col-xs-2" style="padding-left:25px;"><a class="cwhite" href="#"><i class="icon-angle-left font32"></i></a></div>
         <div class="col-xs-8 text-center font20">商品详情</div>
         <div class="col-xs-2" >
             <div class="icon_shopcar">
-                <div class="icon_shopcar_ts"></div>
-                {if condition="!$uid"}
-
-
-                <a class="cwhite" href="{:url('home/user/login')}"><div class="photo_30"><img src="home/images/icon_shopcar.png" alt="购物车"></div></a>
-
-                {else /}
-                <a class="cwhite" href="{:url('home/Cart/index')}"><div class="photo_30"><img src="home/images/icon_shopcar.png" alt="购物车"></div></a>
-
-                {/if}
-
+                <div class="icon_shopcar_ts">15</div>
+                <a class="cwhite" href="#"><div class="photo_30"><img src="images/icon_shopcar.png" alt="购物车"></div></a>
             </div>
         </div>
     </div>
@@ -92,7 +80,7 @@ $uid=Session::get('u_id');
                     <i class="icon-minus"></i></button>
             </div>
         </span>
-    <p class=" color_gray font16"><span class="color_orange font20">¥<?= $fruit_one[0]['m_price']?></span>&nbsp;&nbsp;&nbsp;&nbsp;<del>¥<?= $fruit_one[0]['m_price']?></del></p>
+    <p class=" color_gray font16"><span class="color_orange font20">¥<?= $fruit_one[0]['v_price']?></span>&nbsp;&nbsp;&nbsp;&nbsp;<del>¥<?= $fruit_one[0]['m_price']?></del></p>
     <div class="height10"></div>
     <div class=" width100 bg_white border_top hang32">
         <span class=" font16">商品规格</span>
@@ -124,35 +112,36 @@ $uid=Session::get('u_id');
         <a title="收起" class=" cgreen" href="#"><i class="icon-angle-up" style="font-size:24px;"></i></a>
         </span>
 </div>
-{if condition="$ci != 0"}
-{foreach name='arr' item='v'}
 <div class=" width100 bg_white" style="padding:10px;">
-    <input type="hidden" class="fid" value="<?php echo $v['f_id']?>">
-    <span><?= $v['u_tel']?></span>
+    <input type="hidden" class="fid" value="<?php echo $fruit_one[0]['f_id']?>">
+    <span><?= $t?></span>
         <span class="pull-right color_orange">
-
+             <?php if($count == ''): else: ?>
             <i class="icon-star"></i>
         <i class="icon-star"></i>
         <i class="icon-star"></i>
         <i class="icon-star"></i>
         <i class="icon-star-empty"></i>
+            <?php endif; ?>
+
         </span>
     <div class="height10"></div>
     <div class="artic14">
-        <p><?= $v['opinion_content']?></p>
+        <p><?= $opinions[0]['opinion_content']?></p>
     </div>
     <span class="pull-right">
-        <?= date('Y-m-d h:i:s',$v['opinion_time']);?>
+
+ <?php if($opinions == 1): ?>
+无评论
+<?php else: ?>
+        <?= date('Y-m-d h:i:s',$opinions[0]['opinion_time']);endif; ?>
+
+
+
     </span><!--b-->
     <div class="height10 border_bottom"></div>
     <div class="height10"></div>
 </div><!--a-->
-{/foreach}{else /}
-<center><img src="uploads/620.jpg" alt=""></center>
-{/if}
-
-
-
 <div class="height10"></div>
 <!--    <div class=" width100 bg_white" style="padding:10px;">
        <div class="media">
@@ -174,17 +163,19 @@ $uid=Session::get('u_id');
             <button class="btn btn-lg btn-success btn-group-justified" type="submit" >联系客服</button>
         </div>
         <div class="col-xs-6" style="padding-left:5px; padding-right:0px;">
+            <?php
+use think\Session;
+Session::set('u_id',11);
+$uid=Session::get('u_id');
+if(!$uid): ?> 请先登录
+            <button class="btn btn-lg btn-success btn-group-justified" >加入购物车</button>
 
-
-           {if condition="!$uid"}
-            <a href="{:url('home/user/login')}" class="btn btn-lg btn-success btn-group-justified">加入购物车</a>
-
-            {else /}
-            <input type="hidden" class="uid" value="{$uid}">
+            <?php else: ?>
+            <input type="hidden" class="uid" value="<?php echo $uid; ?>">
             <button class="btn btn-lg btn-success btn-group-justified" id="che" alt="">加入购物车</button>
 
 
-            {/if}
+            <?php endif; ?>
 
 
         </div>
@@ -200,19 +191,14 @@ $uid=Session::get('u_id');
 <script>
     //加入购物车
     $('#che').click(function(){
-
         var uid=$('.uid').val();
-        if(!uid){
-            window.location.href="{:url('index.php/home/User/login')}";
-        }
         var fid=$('.fid').val();
         var num = $(".disabled").html();
         $.ajax({
             type: "POST",
-            url: "{:url('index.php/home/fruits/cartdesc')}",
+            url: "<?php echo url('index.php/home/fruits/cartdesc'); ?>",
             data: "fid="+fid+"&uid="+uid+"&num="+num,
             success: function(msg){
-//                alert(msg);
                 if(msg==222){
                     alert('加入购物车成功');
                 }
@@ -240,7 +226,7 @@ $uid=Session::get('u_id');
         var nums=parseInt(num)+1;
         $.ajax({
             type: "POST",
-            url: "{:url('index.php/home/fruits/ku')}",
+            url: "<?php echo url('index.php/home/fruits/ku'); ?>",
             data: "num="+num+"&fid="+fid,
             dataType:'json',
             success: function(msg){
@@ -255,5 +241,5 @@ $uid=Session::get('u_id');
 
     })
 
-
+    $("")
 </script>

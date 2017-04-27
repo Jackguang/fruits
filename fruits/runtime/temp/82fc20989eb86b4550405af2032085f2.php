@@ -1,3 +1,4 @@
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:83:"E:\study\HHH\liupeng\fruits\fruits\public/../application/home\view\fruits\info.html";i:1493254609;}*/ ?>
 <?php
 use think\Session;
 $uid=Session::get('u_id');
@@ -36,20 +37,20 @@ $uid=Session::get('u_id');
 <body >
 <div class="toper navbar-fixed-top">
     <div class="row color_white " >
-        <div class="col-xs-2" style="padding-left:25px;"><a class="cwhite" href="{:url('home/Fruits/index')}"><i class="icon-angle-left font32"></i></a></div>
+        <div class="col-xs-2" style="padding-left:25px;"><a class="cwhite" href="<?php echo url('home/Fruits/index'); ?>"><i class="icon-angle-left font32"></i></a></div>
         <div class="col-xs-8 text-center font20">商品详情</div>
         <div class="col-xs-2" >
             <div class="icon_shopcar">
                 <div class="icon_shopcar_ts"></div>
-                {if condition="!$uid"}
+                <?php if(!$uid): ?>
 
 
-                <a class="cwhite" href="{:url('home/user/login')}"><div class="photo_30"><img src="home/images/icon_shopcar.png" alt="购物车"></div></a>
+                <a class="cwhite" href="<?php echo url('home/user/login'); ?>"><div class="photo_30"><img src="home/images/icon_shopcar.png" alt="购物车"></div></a>
 
-                {else /}
-                <a class="cwhite" href="{:url('home/Cart/index')}"><div class="photo_30"><img src="home/images/icon_shopcar.png" alt="购物车"></div></a>
+                <?php else: ?>
+                <a class="cwhite" href="<?php echo url('home/Cart/index'); ?>"><div class="photo_30"><img src="home/images/icon_shopcar.png" alt="购物车"></div></a>
 
-                {/if}
+                <?php endif; ?>
 
             </div>
         </div>
@@ -124,8 +125,7 @@ $uid=Session::get('u_id');
         <a title="收起" class=" cgreen" href="#"><i class="icon-angle-up" style="font-size:24px;"></i></a>
         </span>
 </div>
-{if condition="$ci != 0"}
-{foreach name='arr' item='v'}
+<?php if($ci != 0): if(is_array($arr) || $arr instanceof \think\Collection): if( count($arr)==0 ) : echo "" ;else: foreach($arr as $key=>$v): ?>
 <div class=" width100 bg_white" style="padding:10px;">
     <input type="hidden" class="fid" value="<?php echo $v['f_id']?>">
     <span><?= $v['u_tel']?></span>
@@ -147,9 +147,9 @@ $uid=Session::get('u_id');
     <div class="height10 border_bottom"></div>
     <div class="height10"></div>
 </div><!--a-->
-{/foreach}{else /}
+<?php endforeach; endif; else: echo "" ;endif; else: ?>
 <center><img src="uploads/620.jpg" alt=""></center>
-{/if}
+<?php endif; ?>
 
 
 
@@ -176,15 +176,15 @@ $uid=Session::get('u_id');
         <div class="col-xs-6" style="padding-left:5px; padding-right:0px;">
 
 
-           {if condition="!$uid"}
-            <a href="{:url('home/user/login')}" class="btn btn-lg btn-success btn-group-justified">加入购物车</a>
+           <?php if(!$uid): ?>
+            <a href="<?php echo url('home/user/login'); ?>" class="btn btn-lg btn-success btn-group-justified">加入购物车</a>
 
-            {else /}
-            <input type="hidden" class="uid" value="{$uid}">
+            <?php else: ?>
+            <input type="hidden" class="uid" value="<?php echo $uid; ?>">
             <button class="btn btn-lg btn-success btn-group-justified" id="che" alt="">加入购物车</button>
 
 
-            {/if}
+            <?php endif; ?>
 
 
         </div>
@@ -203,13 +203,13 @@ $uid=Session::get('u_id');
 
         var uid=$('.uid').val();
         if(!uid){
-            window.location.href="{:url('index.php/home/User/login')}";
+            window.location.href="<?php echo url('index.php/home/User/login'); ?>";
         }
         var fid=$('.fid').val();
         var num = $(".disabled").html();
         $.ajax({
             type: "POST",
-            url: "{:url('index.php/home/fruits/cartdesc')}",
+            url: "<?php echo url('index.php/home/fruits/cartdesc'); ?>",
             data: "fid="+fid+"&uid="+uid+"&num="+num,
             success: function(msg){
 //                alert(msg);
@@ -240,7 +240,7 @@ $uid=Session::get('u_id');
         var nums=parseInt(num)+1;
         $.ajax({
             type: "POST",
-            url: "{:url('index.php/home/fruits/ku')}",
+            url: "<?php echo url('index.php/home/fruits/ku'); ?>",
             data: "num="+num+"&fid="+fid,
             dataType:'json',
             success: function(msg){

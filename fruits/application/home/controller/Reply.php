@@ -14,8 +14,8 @@ class Reply extends Controller
         $arr = Db::table('sg_order')->where('u_id', $id)->where('o_state', '4')->select();
         if(empty($arr))
         {
-            $drr['isset']=0;
-            $this->assign('arr',$drr);
+            $error=0;
+            $this->assign('error',$error);
             return view("order_list");
         }
         foreach ($arr as $k => $v) {
@@ -39,8 +39,10 @@ class Reply extends Controller
                 }
             }
         }
-        $drr['isset']=1;
+
+        $error=1;
         $this->assign('arr',$drr);
+        $this->assign('error',$error);
         return view("order_list");
     }
     public function reply_show()

@@ -48,7 +48,7 @@ $uid=Session::get('u_id');
 <div class="height20"></div>
 <div class=" container-fluid">
     <div class="row">
-        {if condition="$arr['isset'] == 1"}
+        {if condition="$error == 1"}
         <div class="table">
             <?php foreach($arr as $k=>$v) { ?>
             <div style="padding-right:5px;" >

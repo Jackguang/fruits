@@ -15,7 +15,6 @@ class Cart extends Controller
             return view('user/login');
         }
           $data= Db::table('sg_fruits')
-
            ->field('a.f_id,f_name,f_img,f_weight,m_price,f_num,w.u_id')
            ->alias('a')
            ->join('sg_cart w','a.f_id = w.f_id')

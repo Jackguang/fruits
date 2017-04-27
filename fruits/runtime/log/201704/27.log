@@ -11204,3 +11204,1900 @@
 [ sql ] [ SQL ] SELECT * FROM `sg_user` WHERE  (  u_tel = 13121615343 )  [ RunTime:0.014001s ]
 
 ---------------------------------------------------------------
+[ 2017-04-27T10:27:47+08:00 ] 127.0.0.1 127.0.0.1 GET /liupeng/fruits/fruits/public/index.php/home/cart/orderinfo.html
+[ log ] www.peng.com/liupeng/fruits/fruits/public/index.php/home/cart/orderinfo.html [运行时间：1.702098s][吞吐率：0.59req/s] [内存消耗：1,926.65kb] [文件加载：41]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'cart',
+    2 => 'orderinfo',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.peng.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:53.0) Gecko/20100101 Firefox/53.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.peng.com/liupeng/fruits/fruits/public/index.php/home/userinfo/user.html',
+  'cookie' => 'PHPSESSID=9odgltk2gd0hec0nds2mdtjue3; think_var=zh-cn',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] Method [ <user> public method orderinfo ] {
+  @@ E:\study\HHH\liupeng\fruits\fruits\application\home\controller\Cart.php 343 - 388
+}
+
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\study\HHH\liupeng\fruits\fruits\public/../application/home\view\cart\orderinfo.html [ array (
+  0 => 'data',
+  1 => 'list',
+  2 => 'num',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.425024s ] mysql:dbname=fruits;host=101.200.41.87;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sg_order` [ RunTime:0.245014s ]
+[ sql ] [ SQL ] SELECT * FROM sg_order a INNER JOIN sg_uaddress w ON a.o_address = w.a_id  WHERE  (  a.u_id = 1  ) ORDER BY o_state desc  [ RunTime:0.237014s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sg_fruits` [ RunTime:0.257015s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 84 ) LIMIT 1   [ RunTime:0.247014s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 84 ) LIMIT 1   [ RunTime:0.235013s ]
+
+---------------------------------------------------------------
+[ 2017-04-27T10:27:54+08:00 ] 127.0.0.1 127.0.0.1 POST /liupeng/fruits/fruits/public/index.php/home/cart/orderstate.html
+[ log ] www.peng.com/liupeng/fruits/fruits/public/index.php/home/cart/orderstate.html [运行时间：3.230185s][吞吐率：0.31req/s] [内存消耗：1,902.81kb] [文件加载：45]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'cart',
+    2 => 'orderstate',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.peng.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:53.0) Gecko/20100101 Firefox/53.0',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'x-requested-with' => 'XMLHttpRequest',
+  'referer' => 'http://www.peng.com/liupeng/fruits/fruits/public/index.php/home/cart/orderinfo.html',
+  'cookie' => 'PHPSESSID=9odgltk2gd0hec0nds2mdtjue3; think_var=zh-cn',
+  'connection' => 'keep-alive',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'content-length' => '14',
+)
+[ info ] [ PARAM ] array (
+  'o_id' => 'undefined',
+)
+[ info ] [ RUN ] Method [ <user> public method orderstate ] {
+  @@ E:\study\HHH\liupeng\fruits\fruits\application\home\controller\Cart.php 418 - 453
+}
+
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] E:\study\HHH\liupeng\fruits\fruits\framework\lang\zh-cn.php
+[ info ] [ LANG ] E:\study\HHH\liupeng\fruits\fruits\framework\lang\zh-cn.php
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:1.324076s ] mysql:dbname=fruits;host=101.200.41.87;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sg_order` [ RunTime:0.087005s ]
+[ error ] [10501]SQLSTATE[42S22]: Column not found: 1054 Unknown column 'undefined' in 'where clause'[E:\study\HHH\liupeng\fruits\fruits\framework\library\think\db\Connection.php:405]
+
+---------------------------------------------------------------
+[ 2017-04-27T10:28:03+08:00 ] 127.0.0.1 127.0.0.1 GET /liupeng/fruits/fruits/public/index.php/home/cart/orderinfo.html
+[ log ] www.peng.com/liupeng/fruits/fruits/public/index.php/home/cart/orderinfo.html [运行时间：0.463027s][吞吐率：2.16req/s] [内存消耗：1,926.48kb] [文件加载：41]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'cart',
+    2 => 'orderinfo',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.peng.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:53.0) Gecko/20100101 Firefox/53.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'PHPSESSID=9odgltk2gd0hec0nds2mdtjue3; think_var=zh-cn',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] Method [ <user> public method orderinfo ] {
+  @@ E:\study\HHH\liupeng\fruits\fruits\application\home\controller\Cart.php 343 - 388
+}
+
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\study\HHH\liupeng\fruits\fruits\public/../application/home\view\cart\orderinfo.html [ array (
+  0 => 'data',
+  1 => 'list',
+  2 => 'num',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.067004s ] mysql:dbname=fruits;host=101.200.41.87;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sg_order` [ RunTime:0.068003s ]
+[ sql ] [ SQL ] SELECT * FROM sg_order a INNER JOIN sg_uaddress w ON a.o_address = w.a_id  WHERE  (  a.u_id = 1  ) ORDER BY o_state desc  [ RunTime:0.079004s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sg_fruits` [ RunTime:0.057003s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 84 ) LIMIT 1   [ RunTime:0.075005s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 84 ) LIMIT 1   [ RunTime:0.060003s ]
+
+---------------------------------------------------------------
+[ 2017-04-27T10:28:11+08:00 ] 127.0.0.1 127.0.0.1 POST /liupeng/fruits/fruits/public/index.php/home/cart/orderstate.html
+[ log ] www.peng.com/liupeng/fruits/fruits/public/index.php/home/cart/orderstate.html [运行时间：0.547032s][吞吐率：1.83req/s] [内存消耗：1,902.81kb] [文件加载：45]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'cart',
+    2 => 'orderstate',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.peng.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:53.0) Gecko/20100101 Firefox/53.0',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'x-requested-with' => 'XMLHttpRequest',
+  'referer' => 'http://www.peng.com/liupeng/fruits/fruits/public/index.php/home/cart/orderinfo.html',
+  'cookie' => 'PHPSESSID=9odgltk2gd0hec0nds2mdtjue3; think_var=zh-cn',
+  'connection' => 'keep-alive',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'content-length' => '14',
+)
+[ info ] [ PARAM ] array (
+  'o_id' => 'undefined',
+)
+[ info ] [ RUN ] Method [ <user> public method orderstate ] {
+  @@ E:\study\HHH\liupeng\fruits\fruits\application\home\controller\Cart.php 418 - 453
+}
+
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] E:\study\HHH\liupeng\fruits\fruits\framework\lang\zh-cn.php
+[ info ] [ LANG ] E:\study\HHH\liupeng\fruits\fruits\framework\lang\zh-cn.php
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.124007s ] mysql:dbname=fruits;host=101.200.41.87;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sg_order` [ RunTime:0.326019s ]
+[ error ] [10501]SQLSTATE[42S22]: Column not found: 1054 Unknown column 'undefined' in 'where clause'[E:\study\HHH\liupeng\fruits\fruits\framework\library\think\db\Connection.php:405]
+
+---------------------------------------------------------------
+[ 2017-04-27T10:28:19+08:00 ] 127.0.0.1 127.0.0.1 GET /liupeng/fruits/fruits/public/index.php/home/cart/unpaid.html
+[ log ] www.peng.com/liupeng/fruits/fruits/public/index.php/home/cart/unpaid.html [运行时间：0.832047s][吞吐率：1.20req/s] [内存消耗：2,063.98kb] [文件加载：43]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'cart',
+    2 => 'unpaid',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.peng.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:53.0) Gecko/20100101 Firefox/53.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.peng.com/liupeng/fruits/fruits/public/index.php/home/cart/orderinfo.html',
+  'cookie' => 'PHPSESSID=9odgltk2gd0hec0nds2mdtjue3; think_var=zh-cn',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] Method [ <user> public method unpaid ] {
+  @@ E:\study\HHH\liupeng\fruits\fruits\application\home\controller\Cart.php 455 - 517
+}
+
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\study\HHH\liupeng\fruits\fruits\public/../application/home\view\cart\unpaid.html [ array (
+  0 => 'num',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.372021s ] mysql:dbname=fruits;host=101.200.41.87;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sg_order` [ RunTime:0.086005s ]
+[ sql ] [ SQL ] SELECT * FROM sg_order a WHERE  (  a.u_id = 1 AND o_state =0  )  [ RunTime:0.315018s ]
+
+---------------------------------------------------------------
+[ 2017-04-27T10:28:23+08:00 ] 127.0.0.1 127.0.0.1 GET /liupeng/fruits/fruits/public/index.php/home/cart/orderinfo.html
+[ log ] www.peng.com/liupeng/fruits/fruits/public/index.php/home/cart/orderinfo.html [运行时间：0.181010s][吞吐率：5.52req/s] [内存消耗：1,926.65kb] [文件加载：41]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'cart',
+    2 => 'orderinfo',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.peng.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:53.0) Gecko/20100101 Firefox/53.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.peng.com/liupeng/fruits/fruits/public/index.php/home/cart/unpaid.html',
+  'cookie' => 'PHPSESSID=9odgltk2gd0hec0nds2mdtjue3; think_var=zh-cn',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] Method [ <user> public method orderinfo ] {
+  @@ E:\study\HHH\liupeng\fruits\fruits\application\home\controller\Cart.php 343 - 388
+}
+
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\study\HHH\liupeng\fruits\fruits\public/../application/home\view\cart\orderinfo.html [ array (
+  0 => 'data',
+  1 => 'list',
+  2 => 'num',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.026001s ] mysql:dbname=fruits;host=101.200.41.87;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sg_order` [ RunTime:0.026002s ]
+[ sql ] [ SQL ] SELECT * FROM sg_order a INNER JOIN sg_uaddress w ON a.o_address = w.a_id  WHERE  (  a.u_id = 1  ) ORDER BY o_state desc  [ RunTime:0.019001s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sg_fruits` [ RunTime:0.020001s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 84 ) LIMIT 1   [ RunTime:0.016001s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 84 ) LIMIT 1   [ RunTime:0.021001s ]
+
+---------------------------------------------------------------
+[ 2017-04-27T10:28:26+08:00 ] 127.0.0.1 127.0.0.1 GET /liupeng/fruits/fruits/public/index.php/home/cart/logistics.html?oid=101
+[ log ] www.peng.com/liupeng/fruits/fruits/public/index.php/home/cart/logistics.html?oid=101 [运行时间：15.258873s][吞吐率：0.07req/s] [内存消耗：2,040.65kb] [文件加载：42]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'cart',
+    2 => 'logistics',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.peng.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:53.0) Gecko/20100101 Firefox/53.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.peng.com/liupeng/fruits/fruits/public/index.php/home/cart/orderinfo.html',
+  'cookie' => 'PHPSESSID=9odgltk2gd0hec0nds2mdtjue3; think_var=zh-cn',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+  'oid' => '101',
+)
+[ info ] [ RUN ] Method [ <user> public method logistics ] {
+  @@ E:\study\HHH\liupeng\fruits\fruits\application\home\controller\Cart.php 391 - 416
+}
+
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\study\HHH\liupeng\fruits\fruits\public/../application/home\view\cart\logistics.html [ array (
+  0 => 'data',
+  1 => 'num',
+  2 => 'list',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:12.553718s ] mysql:dbname=fruits;host=101.200.41.87;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sg_order` [ RunTime:0.344020s ]
+[ sql ] [ SQL ] SELECT * FROM sg_order a INNER JOIN sg_uaddress w ON a.o_address = w.a_id  WHERE  (  o_id = 101 ) LIMIT 1   [ RunTime:0.849049s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sg_fruits` [ RunTime:1.113063s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 84 ) LIMIT 1   [ RunTime:0.340019s ]
+
+---------------------------------------------------------------
+[ 2017-04-27T10:28:32+08:00 ] 127.0.0.1 127.0.0.1 GET /liupeng/fruits/fruits/public/index.php/home/cart/orderinfo.html
+[ log ] www.peng.com/liupeng/fruits/fruits/public/index.php/home/cart/orderinfo.html [运行时间：0.192011s][吞吐率：5.21req/s] [内存消耗：1,926.48kb] [文件加载：41]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'cart',
+    2 => 'orderinfo',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.peng.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:53.0) Gecko/20100101 Firefox/53.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'PHPSESSID=9odgltk2gd0hec0nds2mdtjue3; think_var=zh-cn',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] Method [ <user> public method orderinfo ] {
+  @@ E:\study\HHH\liupeng\fruits\fruits\application\home\controller\Cart.php 343 - 388
+}
+
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\study\HHH\liupeng\fruits\fruits\public/../application/home\view\cart\orderinfo.html [ array (
+  0 => 'data',
+  1 => 'list',
+  2 => 'num',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.037002s ] mysql:dbname=fruits;host=101.200.41.87;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sg_order` [ RunTime:0.022001s ]
+[ sql ] [ SQL ] SELECT * FROM sg_order a INNER JOIN sg_uaddress w ON a.o_address = w.a_id  WHERE  (  a.u_id = 1  ) ORDER BY o_state desc  [ RunTime:0.018001s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sg_fruits` [ RunTime:0.028002s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 84 ) LIMIT 1   [ RunTime:0.027001s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 84 ) LIMIT 1   [ RunTime:0.020001s ]
+
+---------------------------------------------------------------
+[ 2017-04-27T10:28:58+08:00 ] 127.0.0.1 127.0.0.1 GET /liupeng/fruits/fruits/public/index.php/home/cart/logistics.html?oid=101
+[ log ] www.peng.com/liupeng/fruits/fruits/public/index.php/home/cart/logistics.html?oid=101 [运行时间：67.587866s][吞吐率：0.01req/s] [内存消耗：1,879.34kb] [文件加载：40]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'cart',
+    2 => 'logistics',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.peng.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:53.0) Gecko/20100101 Firefox/53.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.peng.com/liupeng/fruits/fruits/public/index.php/home/cart/orderinfo.html',
+  'cookie' => 'PHPSESSID=9odgltk2gd0hec0nds2mdtjue3; think_var=zh-cn',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+  'oid' => '101',
+)
+[ info ] [ RUN ] Method [ <user> public method logistics ] {
+  @@ E:\study\HHH\liupeng\fruits\fruits\application\home\controller\Cart.php 391 - 416
+}
+
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\study\HHH\liupeng\fruits\fruits\public/../application/home\view\cart\logistics.html [ array (
+  0 => 'data',
+  1 => 'num',
+  2 => 'list',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.417024s ] mysql:dbname=fruits;host=101.200.41.87;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sg_order` [ RunTime:4.015230s ]
+[ sql ] [ SQL ] SELECT * FROM sg_order a INNER JOIN sg_uaddress w ON a.o_address = w.a_id  WHERE  (  o_id = 101 ) LIMIT 1   [ RunTime:62.946601s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sg_fruits` [ RunTime:0.082004s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 84 ) LIMIT 1   [ RunTime:0.063004s ]
+
+---------------------------------------------------------------
+[ 2017-04-27T10:29:51+08:00 ] 127.0.0.1 127.0.0.1 GET /liupeng/fruits/fruits/public/index.php/home/cart/unpaid.html
+[ log ] www.peng.com/liupeng/fruits/fruits/public/index.php/home/cart/unpaid.html [运行时间：0.547031s][吞吐率：1.83req/s] [内存消耗：1,914.68kb] [文件加载：41]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'cart',
+    2 => 'unpaid',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.peng.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:53.0) Gecko/20100101 Firefox/53.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.peng.com/liupeng/fruits/fruits/public/index.php/home/cart/orderinfo.html',
+  'cookie' => 'PHPSESSID=9odgltk2gd0hec0nds2mdtjue3; think_var=zh-cn',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] Method [ <user> public method unpaid ] {
+  @@ E:\study\HHH\liupeng\fruits\fruits\application\home\controller\Cart.php 455 - 517
+}
+
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\study\HHH\liupeng\fruits\fruits\public/../application/home\view\cart\unpaid.html [ array (
+  0 => 'num',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.121007s ] mysql:dbname=fruits;host=101.200.41.87;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sg_order` [ RunTime:0.084005s ]
+[ sql ] [ SQL ] SELECT * FROM sg_order a WHERE  (  a.u_id = 1 AND o_state =0  )  [ RunTime:0.292017s ]
+
+---------------------------------------------------------------
+[ 2017-04-27T10:31:34+08:00 ] 127.0.0.1 127.0.0.1 GET /liupeng/fruits/fruits/public/index.php/home/cart/orderinfo.html
+[ log ] www.peng.com/liupeng/fruits/fruits/public/index.php/home/cart/orderinfo.html [运行时间：0.223013s][吞吐率：4.48req/s] [内存消耗：1,926.48kb] [文件加载：41]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'cart',
+    2 => 'orderinfo',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.peng.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:53.0) Gecko/20100101 Firefox/53.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'PHPSESSID=9odgltk2gd0hec0nds2mdtjue3; think_var=zh-cn',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] Method [ <user> public method orderinfo ] {
+  @@ E:\study\HHH\liupeng\fruits\fruits\application\home\controller\Cart.php 343 - 388
+}
+
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\study\HHH\liupeng\fruits\fruits\public/../application/home\view\cart\orderinfo.html [ array (
+  0 => 'data',
+  1 => 'list',
+  2 => 'num',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.032002s ] mysql:dbname=fruits;host=101.200.41.87;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sg_order` [ RunTime:0.029001s ]
+[ sql ] [ SQL ] SELECT * FROM sg_order a INNER JOIN sg_uaddress w ON a.o_address = w.a_id  WHERE  (  a.u_id = 1  ) ORDER BY o_state desc  [ RunTime:0.024002s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sg_fruits` [ RunTime:0.030001s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 84 ) LIMIT 1   [ RunTime:0.017001s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 84 ) LIMIT 1   [ RunTime:0.022002s ]
+
+---------------------------------------------------------------
+[ 2017-04-27T10:31:40+08:00 ] 127.0.0.1 127.0.0.1 GET /liupeng/fruits/fruits/public/index.php/home/userinfo/user.html
+[ log ] www.peng.com/liupeng/fruits/fruits/public/index.php/home/userinfo/user.html [运行时间：4.833277s][吞吐率：0.21req/s] [内存消耗：1,860.43kb] [文件加载：41]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'userinfo',
+    2 => 'user',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.peng.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:53.0) Gecko/20100101 Firefox/53.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'PHPSESSID=9odgltk2gd0hec0nds2mdtjue3; think_var=zh-cn',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] Method [ <user> public method user ] {
+  @@ E:\study\HHH\liupeng\fruits\fruits\application\home\controller\Userinfo.php 8 - 53
+}
+
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\study\HHH\liupeng\fruits\fruits\public/../application/home\view\userinfo\user.html [ array (
+  0 => 'num',
+  1 => 'one',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.113007s ] mysql:dbname=fruits;host=101.200.41.87;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sg_order` [ RunTime:0.123007s ]
+[ sql ] [ SQL ] SELECT * FROM `sg_order` WHERE  `u_id` = 1  AND `o_state` = '4'    [ RunTime:0.073004s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:4.304246s ] mysql:dbname=fruits;host=101.200.41.87;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sg_user` [ RunTime:0.077004s ]
+[ sql ] [ SQL ] SELECT * FROM `sg_user` WHERE  (  u_tel = 13121615343 )  [ RunTime:0.082004s ]
+
+---------------------------------------------------------------
+[ 2017-04-27T10:31:40+08:00 ] 127.0.0.1 127.0.0.1 GET /liupeng/fruits/fruits/public/index.php/home/userinfo/user.html
+[ log ] www.peng.com/liupeng/fruits/fruits/public/index.php/home/userinfo/user.html [运行时间：3.145180s][吞吐率：0.32req/s] [内存消耗：1,860.43kb] [文件加载：41]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'userinfo',
+    2 => 'user',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.peng.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:53.0) Gecko/20100101 Firefox/53.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'PHPSESSID=9odgltk2gd0hec0nds2mdtjue3; think_var=zh-cn',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] Method [ <user> public method user ] {
+  @@ E:\study\HHH\liupeng\fruits\fruits\application\home\controller\Userinfo.php 8 - 53
+}
+
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\study\HHH\liupeng\fruits\fruits\public/../application/home\view\userinfo\user.html [ array (
+  0 => 'num',
+  1 => 'one',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.023001s ] mysql:dbname=fruits;host=101.200.41.87;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sg_order` [ RunTime:0.017001s ]
+[ sql ] [ SQL ] SELECT * FROM `sg_order` WHERE  `u_id` = 1  AND `o_state` = '4'    [ RunTime:0.015001s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.014001s ] mysql:dbname=fruits;host=101.200.41.87;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sg_user` [ RunTime:0.010000s ]
+[ sql ] [ SQL ] SELECT * FROM `sg_user` WHERE  (  u_tel = 13121615343 )  [ RunTime:0.010001s ]
+
+---------------------------------------------------------------
+[ 2017-04-27T12:28:32+08:00 ] 127.0.0.1 127.0.0.1 GET /liupeng/fruits/fruits/public/index.php
+[ log ] www.peng.com/liupeng/fruits/fruits/public/index.php [运行时间：0.972056s][吞吐率：1.03req/s] [内存消耗：1,241.06kb] [文件加载：34]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.peng.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:53.0) Gecko/20100101 Firefox/53.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.peng.com/liupeng/fruits/fruits/public/',
+  'cookie' => 'PHPSESSID=9odgltk2gd0hec0nds2mdtjue3',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] Method [ <user> public method index ] {
+  @@ E:\study\HHH\liupeng\fruits\fruits\application\index\controller\Index.php 7 - 12
+}
+
+[ info ] [ VIEW ] E:\study\HHH\liupeng\fruits\fruits\public/../application/index\view\index\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-04-27T12:28:59+08:00 ] 127.0.0.1 127.0.0.1 GET /liupeng/fruits/fruits/public/index.php/home/user/login.html
+[ log ] www.peng.com/liupeng/fruits/fruits/public/index.php/home/user/login.html [运行时间：0.112006s][吞吐率：8.93req/s] [内存消耗：1,166.33kb] [文件加载：33]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'user',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.peng.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:53.0) Gecko/20100101 Firefox/53.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'PHPSESSID=9odgltk2gd0hec0nds2mdtjue3',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] Method [ <user> public method login ] {
+  @@ E:\study\HHH\liupeng\fruits\fruits\application\home\controller\User.php 86 - 109
+}
+
+[ info ] [ VIEW ] E:\study\HHH\liupeng\fruits\fruits\public/../application/home\view\user\login.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-04-27T12:29:06+08:00 ] 127.0.0.1 127.0.0.1 POST /liupeng/fruits/fruits/public/index.php/home/user/login.html
+[ log ] www.peng.com/liupeng/fruits/fruits/public/index.php/home/user/login.html [运行时间：0.977056s][吞吐率：1.02req/s] [内存消耗：1,831.06kb] [文件加载：41]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'user',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.peng.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:53.0) Gecko/20100101 Firefox/53.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.peng.com/liupeng/fruits/fruits/public/index.php/home/user/login.html',
+  'cookie' => 'PHPSESSID=9odgltk2gd0hec0nds2mdtjue3',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'content-length' => '38',
+)
+[ info ] [ PARAM ] array (
+  'u_name' => '张三',
+  'u_pwd' => '123456',
+)
+[ info ] [ RUN ] Method [ <user> public method login ] {
+  @@ E:\study\HHH\liupeng\fruits\fruits\application\home\controller\User.php 86 - 109
+}
+
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.204012s ] mysql:dbname=fruits;host=101.200.41.87;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sg_user` [ RunTime:0.045003s ]
+[ sql ] [ SQL ] SELECT * FROM `sg_user` WHERE  `u_name` = '张三'  AND `u_pwd` = '123456' LIMIT 1     [ RunTime:0.013000s ]
+[ sql ] [ SQL ] SELECT * FROM `sg_user` WHERE  `u_tel` = '张三'  AND `u_pwd` = '123456' LIMIT 1     [ RunTime:0.014000s ]
+
+---------------------------------------------------------------
+[ 2017-04-27T12:29:07+08:00 ] 127.0.0.1 127.0.0.1 GET /liupeng/fruits/fruits/public/index.php/home/userinfo/user.html
+[ log ] www.peng.com/liupeng/fruits/fruits/public/index.php/home/userinfo/user.html [运行时间：1.223070s][吞吐率：0.82req/s] [内存消耗：1,860.48kb] [文件加载：41]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'userinfo',
+    2 => 'user',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.peng.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:53.0) Gecko/20100101 Firefox/53.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.peng.com/liupeng/fruits/fruits/public/index.php/home/user/login.html',
+  'cookie' => 'PHPSESSID=9odgltk2gd0hec0nds2mdtjue3',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] Method [ <user> public method user ] {
+  @@ E:\study\HHH\liupeng\fruits\fruits\application\home\controller\Userinfo.php 8 - 53
+}
+
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\study\HHH\liupeng\fruits\fruits\public/../application/home\view\userinfo\user.html [ array (
+  0 => 'num',
+  1 => 'one',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.048003s ] mysql:dbname=fruits;host=101.200.41.87;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sg_order` [ RunTime:0.025001s ]
+[ sql ] [ SQL ] SELECT * FROM `sg_order` WHERE  `u_id` = 1  AND `o_state` = '4'    [ RunTime:0.018001s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.486028s ] mysql:dbname=fruits;host=101.200.41.87;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sg_user` [ RunTime:0.260015s ]
+[ sql ] [ SQL ] SELECT * FROM `sg_user` WHERE  (  u_tel = 13121615343 )  [ RunTime:0.228013s ]
+
+---------------------------------------------------------------
+[ 2017-04-27T12:29:11+08:00 ] 127.0.0.1 127.0.0.1 GET /liupeng/fruits/fruits/public/index.php/home/reply/order_list.html
+[ log ] www.peng.com/liupeng/fruits/fruits/public/index.php/home/reply/order_list.html [运行时间：0.217012s][吞吐率：4.61req/s] [内存消耗：1,831.86kb] [文件加载：41]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'reply',
+    2 => 'order_list',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.peng.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:53.0) Gecko/20100101 Firefox/53.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.peng.com/liupeng/fruits/fruits/public/index.php/home/userinfo/user.html',
+  'cookie' => 'PHPSESSID=9odgltk2gd0hec0nds2mdtjue3',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] Method [ <user> public method order_list ] {
+  @@ E:\study\HHH\liupeng\fruits\fruits\application\home\controller\Reply.php 10 - 45
+}
+
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\study\HHH\liupeng\fruits\fruits\public/../application/home\view\reply\order_list.html [ array (
+  0 => 'arr',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.039002s ] mysql:dbname=fruits;host=101.200.41.87;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sg_order` [ RunTime:0.038002s ]
+[ sql ] [ SQL ] SELECT * FROM `sg_order` WHERE  `u_id` = 1  AND `o_state` = '4'    [ RunTime:0.026002s ]
+
+---------------------------------------------------------------
+[ 2017-04-27T12:29:15+08:00 ] 127.0.0.1 127.0.0.1 GET /liupeng/fruits/fruits/public/index.php/home/userinfo/user.html
+[ log ] www.peng.com/liupeng/fruits/fruits/public/index.php/home/userinfo/user.html [运行时间：1.392079s][吞吐率：0.72req/s] [内存消耗：1,860.48kb] [文件加载：41]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'userinfo',
+    2 => 'user',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.peng.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:53.0) Gecko/20100101 Firefox/53.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.peng.com/liupeng/fruits/fruits/public/index.php/home/user/login.html',
+  'cookie' => 'PHPSESSID=9odgltk2gd0hec0nds2mdtjue3',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] Method [ <user> public method user ] {
+  @@ E:\study\HHH\liupeng\fruits\fruits\application\home\controller\Userinfo.php 8 - 53
+}
+
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\study\HHH\liupeng\fruits\fruits\public/../application/home\view\userinfo\user.html [ array (
+  0 => 'num',
+  1 => 'one',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.029002s ] mysql:dbname=fruits;host=101.200.41.87;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sg_order` [ RunTime:0.022001s ]
+[ sql ] [ SQL ] SELECT * FROM `sg_order` WHERE  `u_id` = 1  AND `o_state` = '4'    [ RunTime:0.022002s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:1.229070s ] mysql:dbname=fruits;host=101.200.41.87;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sg_user` [ RunTime:0.021001s ]
+[ sql ] [ SQL ] SELECT * FROM `sg_user` WHERE  (  u_tel = 13121615343 )  [ RunTime:0.022002s ]
+
+---------------------------------------------------------------
+[ 2017-04-27T12:29:27+08:00 ] 127.0.0.1 127.0.0.1 GET /liupeng/fruits/fruits/public/index.php/home/user/login.html
+[ log ] www.peng.com/liupeng/fruits/fruits/public/index.php/home/user/login.html [运行时间：0.033002s][吞吐率：30.30req/s] [内存消耗：1,166.33kb] [文件加载：33]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'user',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.peng.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:53.0) Gecko/20100101 Firefox/53.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'PHPSESSID=9odgltk2gd0hec0nds2mdtjue3',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] Method [ <user> public method login ] {
+  @@ E:\study\HHH\liupeng\fruits\fruits\application\home\controller\User.php 86 - 109
+}
+
+[ info ] [ VIEW ] E:\study\HHH\liupeng\fruits\fruits\public/../application/home\view\user\login.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-04-27T12:29:40+08:00 ] 127.0.0.1 127.0.0.1 POST /liupeng/fruits/fruits/public/index.php/home/user/login.html
+[ log ] www.peng.com/liupeng/fruits/fruits/public/index.php/home/user/login.html [运行时间：0.445025s][吞吐率：2.25req/s] [内存消耗：1,782.84kb] [文件加载：40]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'user',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.peng.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:53.0) Gecko/20100101 Firefox/53.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.peng.com/liupeng/fruits/fruits/public/index.php/home/user/login.html',
+  'cookie' => 'PHPSESSID=9odgltk2gd0hec0nds2mdtjue3',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'content-length' => '24',
+)
+[ info ] [ PARAM ] array (
+  'u_name' => 'chen',
+  'u_pwd' => '123456',
+)
+[ info ] [ RUN ] Method [ <user> public method login ] {
+  @@ E:\study\HHH\liupeng\fruits\fruits\application\home\controller\User.php 86 - 109
+}
+
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\study\HHH\liupeng\fruits\fruits\public/../application/home\view\user\login.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.125007s ] mysql:dbname=fruits;host=101.200.41.87;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sg_user` [ RunTime:0.075005s ]
+[ sql ] [ SQL ] SELECT * FROM `sg_user` WHERE  `u_name` = 'chen'  AND `u_pwd` = '123456' LIMIT 1     [ RunTime:0.107006s ]
+[ sql ] [ SQL ] SELECT * FROM `sg_user` WHERE  `u_tel` = 'chen'  AND `u_pwd` = '123456' LIMIT 1     [ RunTime:0.095005s ]
+
+---------------------------------------------------------------
+[ 2017-04-27T12:29:49+08:00 ] 127.0.0.1 127.0.0.1 POST /liupeng/fruits/fruits/public/index.php/home/user/login.html
+[ log ] www.peng.com/liupeng/fruits/fruits/public/index.php/home/user/login.html [运行时间：0.118007s][吞吐率：8.47req/s] [内存消耗：1,831.07kb] [文件加载：41]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'user',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.peng.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:53.0) Gecko/20100101 Firefox/53.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.peng.com/liupeng/fruits/fruits/public/index.php/home/user/login.html',
+  'cookie' => 'PHPSESSID=9odgltk2gd0hec0nds2mdtjue3',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'content-length' => '24',
+)
+[ info ] [ PARAM ] array (
+  'u_name' => 'chen',
+  'u_pwd' => '123321',
+)
+[ info ] [ RUN ] Method [ <user> public method login ] {
+  @@ E:\study\HHH\liupeng\fruits\fruits\application\home\controller\User.php 86 - 109
+}
+
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.022002s ] mysql:dbname=fruits;host=101.200.41.87;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sg_user` [ RunTime:0.017001s ]
+[ sql ] [ SQL ] SELECT * FROM `sg_user` WHERE  `u_name` = 'chen'  AND `u_pwd` = '123321' LIMIT 1     [ RunTime:0.014001s ]
+[ sql ] [ SQL ] SELECT * FROM `sg_user` WHERE  `u_tel` = 'chen'  AND `u_pwd` = '123321' LIMIT 1     [ RunTime:0.012000s ]
+
+---------------------------------------------------------------
+[ 2017-04-27T12:29:49+08:00 ] 127.0.0.1 127.0.0.1 GET /liupeng/fruits/fruits/public/index.php/home/userinfo/user.html
+[ log ] www.peng.com/liupeng/fruits/fruits/public/index.php/home/userinfo/user.html [运行时间：0.231013s][吞吐率：4.33req/s] [内存消耗：1,860.48kb] [文件加载：41]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'userinfo',
+    2 => 'user',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.peng.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:53.0) Gecko/20100101 Firefox/53.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.peng.com/liupeng/fruits/fruits/public/index.php/home/user/login.html',
+  'cookie' => 'PHPSESSID=9odgltk2gd0hec0nds2mdtjue3',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] Method [ <user> public method user ] {
+  @@ E:\study\HHH\liupeng\fruits\fruits\application\home\controller\Userinfo.php 8 - 53
+}
+
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\study\HHH\liupeng\fruits\fruits\public/../application/home\view\userinfo\user.html [ array (
+  0 => 'num',
+  1 => 'one',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.023001s ] mysql:dbname=fruits;host=101.200.41.87;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sg_order` [ RunTime:0.018001s ]
+[ sql ] [ SQL ] SELECT * FROM `sg_order` WHERE  `u_id` = 23  AND `o_state` = '4'    [ RunTime:0.018001s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.069004s ] mysql:dbname=fruits;host=101.200.41.87;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sg_user` [ RunTime:0.027002s ]
+[ sql ] [ SQL ] SELECT * FROM `sg_user` WHERE  (  u_tel = 18762036831 )  [ RunTime:0.024001s ]
+
+---------------------------------------------------------------
+[ 2017-04-27T12:29:55+08:00 ] 127.0.0.1 127.0.0.1 GET /liupeng/fruits/fruits/public/index.php/home/cart/orderinfo.html
+[ log ] www.peng.com/liupeng/fruits/fruits/public/index.php/home/cart/orderinfo.html [运行时间：0.950055s][吞吐率：1.05req/s] [内存消耗：2,026.34kb] [文件加载：41]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'cart',
+    2 => 'orderinfo',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.peng.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:53.0) Gecko/20100101 Firefox/53.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.peng.com/liupeng/fruits/fruits/public/index.php/home/userinfo/user.html',
+  'cookie' => 'PHPSESSID=9odgltk2gd0hec0nds2mdtjue3',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] Method [ <user> public method orderinfo ] {
+  @@ E:\study\HHH\liupeng\fruits\fruits\application\home\controller\Cart.php 343 - 388
+}
+
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\study\HHH\liupeng\fruits\fruits\public/../application/home\view\cart\orderinfo.html [ array (
+  0 => 'data',
+  1 => 'list',
+  2 => 'num',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.045003s ] mysql:dbname=fruits;host=101.200.41.87;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sg_order` [ RunTime:0.018001s ]
+[ sql ] [ SQL ] SELECT * FROM sg_order a INNER JOIN sg_uaddress w ON a.o_address = w.a_id  WHERE  (  a.u_id = 23  ) ORDER BY o_state desc  [ RunTime:0.017001s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sg_fruits` [ RunTime:0.016001s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 86 ) LIMIT 1   [ RunTime:0.017001s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 102 ) LIMIT 1   [ RunTime:0.021001s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 86 ) LIMIT 1   [ RunTime:0.024002s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 102 ) LIMIT 1   [ RunTime:0.025001s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 86 ) LIMIT 1   [ RunTime:0.015001s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 102 ) LIMIT 1   [ RunTime:0.015001s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 86 ) LIMIT 1   [ RunTime:0.014001s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 102 ) LIMIT 1   [ RunTime:0.022001s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 86 ) LIMIT 1   [ RunTime:0.026002s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 102 ) LIMIT 1   [ RunTime:0.025001s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 103 ) LIMIT 1   [ RunTime:0.028002s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 84 ) LIMIT 1   [ RunTime:0.019001s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 86 ) LIMIT 1   [ RunTime:0.014001s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 102 ) LIMIT 1   [ RunTime:0.015001s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 86 ) LIMIT 1   [ RunTime:0.021001s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 102 ) LIMIT 1   [ RunTime:0.015001s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 86 ) LIMIT 1   [ RunTime:0.019001s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 86 ) LIMIT 1   [ RunTime:0.017001s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 85 ) LIMIT 1   [ RunTime:0.016001s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 84 ) LIMIT 1   [ RunTime:0.015001s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 85 ) LIMIT 1   [ RunTime:0.016001s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 102 ) LIMIT 1   [ RunTime:0.026002s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 85 ) LIMIT 1   [ RunTime:0.017001s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 101 ) LIMIT 1   [ RunTime:0.017001s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 85 ) LIMIT 1   [ RunTime:0.023001s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 101 ) LIMIT 1   [ RunTime:0.016001s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 85 ) LIMIT 1   [ RunTime:0.015001s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 101 ) LIMIT 1   [ RunTime:0.018001s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 102 ) LIMIT 1   [ RunTime:0.014001s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 85 ) LIMIT 1   [ RunTime:0.013001s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 85 ) LIMIT 1   [ RunTime:0.015001s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 101 ) LIMIT 1   [ RunTime:0.017001s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 103 ) LIMIT 1   [ RunTime:0.018001s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 85 ) LIMIT 1   [ RunTime:0.016001s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 86 ) LIMIT 1   [ RunTime:0.015001s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 96 ) LIMIT 1   [ RunTime:0.017001s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 85 ) LIMIT 1   [ RunTime:0.013001s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 86 ) LIMIT 1   [ RunTime:0.014000s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 103 ) LIMIT 1   [ RunTime:0.014001s ]
+
+---------------------------------------------------------------
+[ 2017-04-27T12:30:00+08:00 ] 127.0.0.1 127.0.0.1 GET /liupeng/fruits/fruits/public/index.php/home/userinfo/user.html
+[ log ] www.peng.com/liupeng/fruits/fruits/public/index.php/home/userinfo/user.html [运行时间：0.152008s][吞吐率：6.58req/s] [内存消耗：1,860.48kb] [文件加载：41]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'userinfo',
+    2 => 'user',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.peng.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:53.0) Gecko/20100101 Firefox/53.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.peng.com/liupeng/fruits/fruits/public/index.php/home/user/login.html',
+  'cookie' => 'PHPSESSID=9odgltk2gd0hec0nds2mdtjue3',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] Method [ <user> public method user ] {
+  @@ E:\study\HHH\liupeng\fruits\fruits\application\home\controller\Userinfo.php 8 - 53
+}
+
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\study\HHH\liupeng\fruits\fruits\public/../application/home\view\userinfo\user.html [ array (
+  0 => 'num',
+  1 => 'one',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.024002s ] mysql:dbname=fruits;host=101.200.41.87;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sg_order` [ RunTime:0.017001s ]
+[ sql ] [ SQL ] SELECT * FROM `sg_order` WHERE  `u_id` = 23  AND `o_state` = '4'    [ RunTime:0.015001s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.031001s ] mysql:dbname=fruits;host=101.200.41.87;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sg_user` [ RunTime:0.016001s ]
+[ sql ] [ SQL ] SELECT * FROM `sg_user` WHERE  (  u_tel = 18762036831 )  [ RunTime:0.017001s ]
+
+---------------------------------------------------------------
+[ 2017-04-27T12:30:31+08:00 ] 127.0.0.1 127.0.0.1 POST /liupeng/fruits/fruits/public/index.php/home/user/login.html
+[ log ] www.peng.com/liupeng/fruits/fruits/public/index.php/home/user/login.html [运行时间：0.133007s][吞吐率：7.52req/s] [内存消耗：1,831.16kb] [文件加载：41]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'user',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.peng.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:53.0) Gecko/20100101 Firefox/53.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.peng.com/liupeng/fruits/fruits/public/index.php/home/user/login.html',
+  'cookie' => 'PHPSESSID=9odgltk2gd0hec0nds2mdtjue3',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'content-length' => '23',
+)
+[ info ] [ PARAM ] array (
+  'u_name' => 'sha',
+  'u_pwd' => '123321',
+)
+[ info ] [ RUN ] Method [ <user> public method login ] {
+  @@ E:\study\HHH\liupeng\fruits\fruits\application\home\controller\User.php 86 - 109
+}
+
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.032002s ] mysql:dbname=fruits;host=101.200.41.87;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sg_user` [ RunTime:0.018001s ]
+[ sql ] [ SQL ] SELECT * FROM `sg_user` WHERE  `u_name` = 'sha'  AND `u_pwd` = '123321' LIMIT 1     [ RunTime:0.016001s ]
+[ sql ] [ SQL ] SELECT * FROM `sg_user` WHERE  `u_tel` = 'sha'  AND `u_pwd` = '123321' LIMIT 1     [ RunTime:0.012001s ]
+
+---------------------------------------------------------------
+[ 2017-04-27T12:30:32+08:00 ] 127.0.0.1 127.0.0.1 GET /liupeng/fruits/fruits/public/index.php/home/userinfo/user.html
+[ log ] www.peng.com/liupeng/fruits/fruits/public/index.php/home/userinfo/user.html [运行时间：0.464027s][吞吐率：2.16req/s] [内存消耗：1,875.05kb] [文件加载：41]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'userinfo',
+    2 => 'user',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.peng.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:53.0) Gecko/20100101 Firefox/53.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.peng.com/liupeng/fruits/fruits/public/index.php/home/user/login.html',
+  'cookie' => 'PHPSESSID=9odgltk2gd0hec0nds2mdtjue3',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] Method [ <user> public method user ] {
+  @@ E:\study\HHH\liupeng\fruits\fruits\application\home\controller\Userinfo.php 8 - 53
+}
+
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\study\HHH\liupeng\fruits\fruits\public/../application/home\view\userinfo\user.html [ array (
+  0 => 'num',
+  1 => 'one',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.030002s ] mysql:dbname=fruits;host=101.200.41.87;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sg_order` [ RunTime:0.021001s ]
+[ sql ] [ SQL ] SELECT * FROM `sg_order` WHERE  `u_id` = 25  AND `o_state` = '4'    [ RunTime:0.026001s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sg_opinion` [ RunTime:0.021002s ]
+[ sql ] [ SQL ] SELECT * FROM `sg_opinion` WHERE  `o_id` = 45  AND `f_id` = 85    [ RunTime:0.021001s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sg_fruits` [ RunTime:0.027002s ]
+[ sql ] [ SQL ] SELECT * FROM `sg_fruits` WHERE  `f_id` = 85 LIMIT 1    [ RunTime:0.029001s ]
+[ sql ] [ SQL ] SELECT * FROM `sg_opinion` WHERE  `o_id` = 45  AND `f_id` = 103    [ RunTime:0.022002s ]
+[ sql ] [ SQL ] SELECT * FROM `sg_fruits` WHERE  `f_id` = 103 LIMIT 1    [ RunTime:0.021001s ]
+[ sql ] [ SQL ] SELECT * FROM `sg_opinion` WHERE  `o_id` = 92  AND `f_id` = 85    [ RunTime:0.036002s ]
+[ sql ] [ SQL ] SELECT * FROM `sg_fruits` WHERE  `f_id` = 85 LIMIT 1    [ RunTime:0.036002s ]
+[ sql ] [ SQL ] SELECT * FROM `sg_opinion` WHERE  `o_id` = 92  AND `f_id` = 102    [ RunTime:0.034002s ]
+[ sql ] [ SQL ] SELECT * FROM `sg_fruits` WHERE  `f_id` = 102 LIMIT 1    [ RunTime:0.028002s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.021001s ] mysql:dbname=fruits;host=101.200.41.87;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sg_user` [ RunTime:0.015001s ]
+[ sql ] [ SQL ] SELECT * FROM `sg_user` WHERE  (  u_tel = 18514599543 )  [ RunTime:0.014001s ]
+
+---------------------------------------------------------------
+[ 2017-04-27T12:30:37+08:00 ] 127.0.0.1 127.0.0.1 GET /liupeng/fruits/fruits/public/index.php/home/reply/order_list.html
+[ log ] www.peng.com/liupeng/fruits/fruits/public/index.php/home/reply/order_list.html [运行时间：0.265016s][吞吐率：3.77req/s] [内存消耗：1,858.68kb] [文件加载：41]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'reply',
+    2 => 'order_list',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.peng.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:53.0) Gecko/20100101 Firefox/53.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.peng.com/liupeng/fruits/fruits/public/index.php/home/userinfo/user.html',
+  'cookie' => 'PHPSESSID=9odgltk2gd0hec0nds2mdtjue3',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] Method [ <user> public method order_list ] {
+  @@ E:\study\HHH\liupeng\fruits\fruits\application\home\controller\Reply.php 10 - 45
+}
+
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\study\HHH\liupeng\fruits\fruits\public/../application/home\view\reply\order_list.html [ array (
+  0 => 'arr',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.025001s ] mysql:dbname=fruits;host=101.200.41.87;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sg_order` [ RunTime:0.027002s ]
+[ sql ] [ SQL ] SELECT * FROM `sg_order` WHERE  `u_id` = 25  AND `o_state` = '4'    [ RunTime:0.019001s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sg_opinion` [ RunTime:0.013001s ]
+[ sql ] [ SQL ] SELECT * FROM `sg_opinion` WHERE  `o_id` = 45  AND `f_id` = 85    [ RunTime:0.013000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sg_fruits` [ RunTime:0.014001s ]
+[ sql ] [ SQL ] SELECT * FROM `sg_fruits` WHERE  `f_id` = 85 LIMIT 1    [ RunTime:0.013001s ]
+[ sql ] [ SQL ] SELECT * FROM `sg_opinion` WHERE  `o_id` = 45  AND `f_id` = 103    [ RunTime:0.014001s ]
+[ sql ] [ SQL ] SELECT * FROM `sg_fruits` WHERE  `f_id` = 103 LIMIT 1    [ RunTime:0.014001s ]
+[ sql ] [ SQL ] SELECT * FROM `sg_opinion` WHERE  `o_id` = 92  AND `f_id` = 85    [ RunTime:0.017001s ]
+[ sql ] [ SQL ] SELECT * FROM `sg_fruits` WHERE  `f_id` = 85 LIMIT 1    [ RunTime:0.015001s ]
+[ sql ] [ SQL ] SELECT * FROM `sg_opinion` WHERE  `o_id` = 92  AND `f_id` = 102    [ RunTime:0.011000s ]
+[ sql ] [ SQL ] SELECT * FROM `sg_fruits` WHERE  `f_id` = 102 LIMIT 1    [ RunTime:0.016001s ]
+
+---------------------------------------------------------------
+[ 2017-04-27T12:30:45+08:00 ] 127.0.0.1 127.0.0.1 GET /liupeng/fruits/fruits/public/index.php/home/userinfo/user.html
+[ log ] www.peng.com/liupeng/fruits/fruits/public/index.php/home/userinfo/user.html [运行时间：0.306017s][吞吐率：3.27req/s] [内存消耗：1,875.05kb] [文件加载：41]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'userinfo',
+    2 => 'user',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.peng.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:53.0) Gecko/20100101 Firefox/53.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.peng.com/liupeng/fruits/fruits/public/index.php/home/user/login.html',
+  'cookie' => 'PHPSESSID=9odgltk2gd0hec0nds2mdtjue3',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] Method [ <user> public method user ] {
+  @@ E:\study\HHH\liupeng\fruits\fruits\application\home\controller\Userinfo.php 8 - 53
+}
+
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\study\HHH\liupeng\fruits\fruits\public/../application/home\view\userinfo\user.html [ array (
+  0 => 'num',
+  1 => 'one',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.026001s ] mysql:dbname=fruits;host=101.200.41.87;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sg_order` [ RunTime:0.014001s ]
+[ sql ] [ SQL ] SELECT * FROM `sg_order` WHERE  `u_id` = 25  AND `o_state` = '4'    [ RunTime:0.012001s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sg_opinion` [ RunTime:0.012001s ]
+[ sql ] [ SQL ] SELECT * FROM `sg_opinion` WHERE  `o_id` = 45  AND `f_id` = 85    [ RunTime:0.013000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sg_fruits` [ RunTime:0.018001s ]
+[ sql ] [ SQL ] SELECT * FROM `sg_fruits` WHERE  `f_id` = 85 LIMIT 1    [ RunTime:0.014001s ]
+[ sql ] [ SQL ] SELECT * FROM `sg_opinion` WHERE  `o_id` = 45  AND `f_id` = 103    [ RunTime:0.014001s ]
+[ sql ] [ SQL ] SELECT * FROM `sg_fruits` WHERE  `f_id` = 103 LIMIT 1    [ RunTime:0.014001s ]
+[ sql ] [ SQL ] SELECT * FROM `sg_opinion` WHERE  `o_id` = 92  AND `f_id` = 85    [ RunTime:0.013001s ]
+[ sql ] [ SQL ] SELECT * FROM `sg_fruits` WHERE  `f_id` = 85 LIMIT 1    [ RunTime:0.016001s ]
+[ sql ] [ SQL ] SELECT * FROM `sg_opinion` WHERE  `o_id` = 92  AND `f_id` = 102    [ RunTime:0.012000s ]
+[ sql ] [ SQL ] SELECT * FROM `sg_fruits` WHERE  `f_id` = 102 LIMIT 1    [ RunTime:0.013001s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.022001s ] mysql:dbname=fruits;host=101.200.41.87;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sg_user` [ RunTime:0.016001s ]
+[ sql ] [ SQL ] SELECT * FROM `sg_user` WHERE  (  u_tel = 18514599543 )  [ RunTime:0.012001s ]
+
+---------------------------------------------------------------
+[ 2017-04-27T12:30:49+08:00 ] 127.0.0.1 127.0.0.1 GET /liupeng/fruits/fruits/public/index.php/home/cart/orderinfo.html
+[ log ] www.peng.com/liupeng/fruits/fruits/public/index.php/home/cart/orderinfo.html [运行时间：0.627036s][吞吐率：1.59req/s] [内存消耗：2,008.42kb] [文件加载：41]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'cart',
+    2 => 'orderinfo',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.peng.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:53.0) Gecko/20100101 Firefox/53.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.peng.com/liupeng/fruits/fruits/public/index.php/home/userinfo/user.html',
+  'cookie' => 'PHPSESSID=9odgltk2gd0hec0nds2mdtjue3',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] Method [ <user> public method orderinfo ] {
+  @@ E:\study\HHH\liupeng\fruits\fruits\application\home\controller\Cart.php 343 - 388
+}
+
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\study\HHH\liupeng\fruits\fruits\public/../application/home\view\cart\orderinfo.html [ array (
+  0 => 'data',
+  1 => 'list',
+  2 => 'num',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.027002s ] mysql:dbname=fruits;host=101.200.41.87;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sg_order` [ RunTime:0.034002s ]
+[ sql ] [ SQL ] SELECT * FROM sg_order a INNER JOIN sg_uaddress w ON a.o_address = w.a_id  WHERE  (  a.u_id = 25  ) ORDER BY o_state desc  [ RunTime:0.016001s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sg_fruits` [ RunTime:0.020001s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 85 ) LIMIT 1   [ RunTime:0.013001s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 103 ) LIMIT 1   [ RunTime:0.013001s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 85 ) LIMIT 1   [ RunTime:0.013000s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 102 ) LIMIT 1   [ RunTime:0.015001s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 84 ) LIMIT 1   [ RunTime:0.015001s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 62 ) LIMIT 1   [ RunTime:0.020001s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 103 ) LIMIT 1   [ RunTime:0.019001s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 102 ) LIMIT 1   [ RunTime:0.017001s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 102 ) LIMIT 1   [ RunTime:0.014001s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 103 ) LIMIT 1   [ RunTime:0.013001s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 85 ) LIMIT 1   [ RunTime:0.014001s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 103 ) LIMIT 1   [ RunTime:0.018001s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 102 ) LIMIT 1   [ RunTime:0.017001s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 86 ) LIMIT 1   [ RunTime:0.013001s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 85 ) LIMIT 1   [ RunTime:0.013000s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 86 ) LIMIT 1   [ RunTime:0.012001s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 85 ) LIMIT 1   [ RunTime:0.013001s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 63 ) LIMIT 1   [ RunTime:0.017001s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 59 ) LIMIT 1   [ RunTime:0.012001s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 86 ) LIMIT 1   [ RunTime:0.012000s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 85 ) LIMIT 1   [ RunTime:0.013001s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 53 ) LIMIT 1   [ RunTime:0.012001s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 85 ) LIMIT 1   [ RunTime:0.013000s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 50 ) LIMIT 1   [ RunTime:0.016001s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 102 ) LIMIT 1   [ RunTime:0.012001s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 50 ) LIMIT 1   [ RunTime:0.019001s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 102 ) LIMIT 1   [ RunTime:0.019001s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 50 ) LIMIT 1   [ RunTime:0.012001s ]
+[ sql ] [ SQL ] SELECT `f_id`,`f_name`,`f_img`,`f_weight`,`f_title`,`m_price` FROM `sg_fruits` WHERE  (  f_id = 91 ) LIMIT 1   [ RunTime:0.016001s ]
+
+---------------------------------------------------------------
+[ 2017-04-27T12:30:56+08:00 ] 127.0.0.1 127.0.0.1 GET /liupeng/fruits/fruits/public/index.php/home/userinfo/user.html
+[ log ] www.peng.com/liupeng/fruits/fruits/public/index.php/home/userinfo/user.html [运行时间：3.167181s][吞吐率：0.32req/s] [内存消耗：1,875.05kb] [文件加载：41]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'userinfo',
+    2 => 'user',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.peng.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:53.0) Gecko/20100101 Firefox/53.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.peng.com/liupeng/fruits/fruits/public/index.php/home/user/login.html',
+  'cookie' => 'PHPSESSID=9odgltk2gd0hec0nds2mdtjue3',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] Method [ <user> public method user ] {
+  @@ E:\study\HHH\liupeng\fruits\fruits\application\home\controller\Userinfo.php 8 - 53
+}
+
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\study\HHH\liupeng\fruits\fruits\public/../application/home\view\userinfo\user.html [ array (
+  0 => 'num',
+  1 => 'one',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.289016s ] mysql:dbname=fruits;host=101.200.41.87;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sg_order` [ RunTime:0.203012s ]
+[ sql ] [ SQL ] SELECT * FROM `sg_order` WHERE  `u_id` = 25  AND `o_state` = '4'    [ RunTime:0.205012s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sg_opinion` [ RunTime:0.239013s ]
+[ sql ] [ SQL ] SELECT * FROM `sg_opinion` WHERE  `o_id` = 45  AND `f_id` = 85    [ RunTime:0.241014s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sg_fruits` [ RunTime:0.225013s ]
+[ sql ] [ SQL ] SELECT * FROM `sg_fruits` WHERE  `f_id` = 85 LIMIT 1    [ RunTime:0.201012s ]
+[ sql ] [ SQL ] SELECT * FROM `sg_opinion` WHERE  `o_id` = 45  AND `f_id` = 103    [ RunTime:0.214012s ]
+[ sql ] [ SQL ] SELECT * FROM `sg_fruits` WHERE  `f_id` = 103 LIMIT 1    [ RunTime:0.217012s ]
+[ sql ] [ SQL ] SELECT * FROM `sg_opinion` WHERE  `o_id` = 92  AND `f_id` = 85    [ RunTime:0.206012s ]
+[ sql ] [ SQL ] SELECT * FROM `sg_fruits` WHERE  `f_id` = 85 LIMIT 1    [ RunTime:0.149009s ]
+[ sql ] [ SQL ] SELECT * FROM `sg_opinion` WHERE  `o_id` = 92  AND `f_id` = 102    [ RunTime:0.117007s ]
+[ sql ] [ SQL ] SELECT * FROM `sg_fruits` WHERE  `f_id` = 102 LIMIT 1    [ RunTime:0.129007s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.192011s ] mysql:dbname=fruits;host=101.200.41.87;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sg_user` [ RunTime:0.147009s ]
+[ sql ] [ SQL ] SELECT * FROM `sg_user` WHERE  (  u_tel = 18514599543 )  [ RunTime:0.130007s ]
+
+---------------------------------------------------------------
+[ 2017-04-27T12:30:58+08:00 ] 127.0.0.1 127.0.0.1 GET /liupeng/fruits/fruits/public/index.php/home/reply/order_list.html
+[ log ] www.peng.com/liupeng/fruits/fruits/public/index.php/home/reply/order_list.html [运行时间：0.212013s][吞吐率：4.72req/s] [内存消耗：1,858.68kb] [文件加载：41]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'reply',
+    2 => 'order_list',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.peng.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:53.0) Gecko/20100101 Firefox/53.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.peng.com/liupeng/fruits/fruits/public/index.php/home/userinfo/user.html',
+  'cookie' => 'PHPSESSID=9odgltk2gd0hec0nds2mdtjue3',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] Method [ <user> public method order_list ] {
+  @@ E:\study\HHH\liupeng\fruits\fruits\application\home\controller\Reply.php 10 - 45
+}
+
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\study\HHH\liupeng\fruits\fruits\public/../application/home\view\reply\order_list.html [ array (
+  0 => 'arr',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.019001s ] mysql:dbname=fruits;host=101.200.41.87;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sg_order` [ RunTime:0.013001s ]
+[ sql ] [ SQL ] SELECT * FROM `sg_order` WHERE  `u_id` = 25  AND `o_state` = '4'    [ RunTime:0.012001s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sg_opinion` [ RunTime:0.014001s ]
+[ sql ] [ SQL ] SELECT * FROM `sg_opinion` WHERE  `o_id` = 45  AND `f_id` = 85    [ RunTime:0.013000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sg_fruits` [ RunTime:0.011001s ]
+[ sql ] [ SQL ] SELECT * FROM `sg_fruits` WHERE  `f_id` = 85 LIMIT 1    [ RunTime:0.012001s ]
+[ sql ] [ SQL ] SELECT * FROM `sg_opinion` WHERE  `o_id` = 45  AND `f_id` = 103    [ RunTime:0.014001s ]
+[ sql ] [ SQL ] SELECT * FROM `sg_fruits` WHERE  `f_id` = 103 LIMIT 1    [ RunTime:0.009000s ]
+[ sql ] [ SQL ] SELECT * FROM `sg_opinion` WHERE  `o_id` = 92  AND `f_id` = 85    [ RunTime:0.011001s ]
+[ sql ] [ SQL ] SELECT * FROM `sg_fruits` WHERE  `f_id` = 85 LIMIT 1    [ RunTime:0.010001s ]
+[ sql ] [ SQL ] SELECT * FROM `sg_opinion` WHERE  `o_id` = 92  AND `f_id` = 102    [ RunTime:0.012000s ]
+[ sql ] [ SQL ] SELECT * FROM `sg_fruits` WHERE  `f_id` = 102 LIMIT 1    [ RunTime:0.014001s ]
+
+---------------------------------------------------------------
+[ 2017-04-27T12:31:08+08:00 ] 127.0.0.1 127.0.0.1 POST /liupeng/fruits/fruits/public/index.php/home/reply/reply_add.html
+[ log ] www.peng.com/liupeng/fruits/fruits/public/index.php/home/reply/reply_add.html [运行时间：0.217012s][吞吐率：4.61req/s] [内存消耗：1,760.28kb] [文件加载：38]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'reply',
+    2 => 'reply_add',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.peng.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:53.0) Gecko/20100101 Firefox/53.0',
+  'accept' => '*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'x-requested-with' => 'XMLHttpRequest',
+  'referer' => 'http://www.peng.com/liupeng/fruits/fruits/public/index.php/home/reply/order_list.html',
+  'cookie' => 'PHPSESSID=9odgltk2gd0hec0nds2mdtjue3',
+  'connection' => 'keep-alive',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'content-length' => '61',
+)
+[ info ] [ PARAM ] array (
+  'f_id' => '85',
+  'o_number' => '25149303926845',
+  'o_id' => '45',
+  'opinion_content' => 'sdasd',
+)
+[ info ] [ RUN ] Method [ <user> public method reply_add ] {
+  @@ E:\study\HHH\liupeng\fruits\fruits\application\home\controller\Reply.php 77 - 99
+}
+
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.103006s ] mysql:dbname=fruits;host=101.200.41.87;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sg_opinion` [ RunTime:0.024002s ]
+[ sql ] [ SQL ] INSERT INTO `sg_opinion` (`f_id` , `o_number` , `o_id` , `opinion_content` , `u_id` , `opinion_statu` , `opinion_reply` , `opinion_time`) VALUES (85 , '25149303926845' , 45 , 'sdasd' , 25 , '1' , 0 , '1493267468')          [ RunTime:0.058003s ]
+
+---------------------------------------------------------------
+[ 2017-04-27T12:31:28+08:00 ] 127.0.0.1 127.0.0.1 GET /liupeng/fruits/fruits/public/index.php/home/reply/order_list.html
+[ log ] www.peng.com/liupeng/fruits/fruits/public/index.php/home/reply/order_list.html [运行时间：4.234242s][吞吐率：0.24req/s] [内存消耗：1,855.21kb] [文件加载：41]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'reply',
+    2 => 'order_list',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.peng.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:53.0) Gecko/20100101 Firefox/53.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'PHPSESSID=9odgltk2gd0hec0nds2mdtjue3',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] Method [ <user> public method order_list ] {
+  @@ E:\study\HHH\liupeng\fruits\fruits\application\home\controller\Reply.php 10 - 45
+}
+
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\study\HHH\liupeng\fruits\fruits\public/../application/home\view\reply\order_list.html [ array (
+  0 => 'arr',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.427024s ] mysql:dbname=fruits;host=101.200.41.87;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sg_order` [ RunTime:0.284016s ]
+[ sql ] [ SQL ] SELECT * FROM `sg_order` WHERE  `u_id` = 25  AND `o_state` = '4'    [ RunTime:0.280016s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sg_opinion` [ RunTime:0.300017s ]
+[ sql ] [ SQL ] SELECT * FROM `sg_opinion` WHERE  `o_id` = 45  AND `f_id` = 85    [ RunTime:0.255014s ]
+[ sql ] [ SQL ] SELECT * FROM `sg_opinion` WHERE  `o_id` = 45  AND `f_id` = 103    [ RunTime:0.217013s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sg_fruits` [ RunTime:0.281016s ]
+[ sql ] [ SQL ] SELECT * FROM `sg_fruits` WHERE  `f_id` = 103 LIMIT 1    [ RunTime:0.312018s ]
+[ sql ] [ SQL ] SELECT * FROM `sg_opinion` WHERE  `o_id` = 92  AND `f_id` = 85    [ RunTime:0.284016s ]
+[ sql ] [ SQL ] SELECT * FROM `sg_fruits` WHERE  `f_id` = 85 LIMIT 1    [ RunTime:0.276016s ]
+[ sql ] [ SQL ] SELECT * FROM `sg_opinion` WHERE  `o_id` = 92  AND `f_id` = 102    [ RunTime:0.297017s ]
+[ sql ] [ SQL ] SELECT * FROM `sg_fruits` WHERE  `f_id` = 102 LIMIT 1    [ RunTime:0.962055s ]
+
+---------------------------------------------------------------
+[ 2017-04-27T13:31:40+08:00 ] 127.0.0.1 127.0.0.1 GET /liupeng/fruits/fruits/public/index.php/home/fruits/info.html?id=103
+[ log ] www.peng.com/liupeng/fruits/fruits/public/index.php/home/fruits/info.html?id=103 [运行时间：1.175067s][吞吐率：0.85req/s] [内存消耗：1,886.16kb] [文件加载：41]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'fruits',
+    2 => 'info',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.peng.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:53.0) Gecko/20100101 Firefox/53.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.peng.com/liupeng/fruits/fruits/public/index.php/home/reply/order_list.html',
+  'cookie' => 'PHPSESSID=9odgltk2gd0hec0nds2mdtjue3',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+  'id' => '103',
+)
+[ info ] [ RUN ] Method [ <user> public method info ] {
+  @@ E:\study\HHH\liupeng\fruits\fruits\application\home\controller\Fruits.php 94 - 134
+}
+
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\study\HHH\liupeng\fruits\fruits\public/../application/home\view\fruits\info.html [ array (
+  0 => 'arr',
+  1 => 'count',
+  2 => 'ci',
+  3 => 'fruit_one',
+) ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.031002s ] mysql:dbname=fruits;host=101.200.41.87;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sg_fruits` [ RunTime:0.022001s ]
+[ sql ] [ SQL ] SELECT * FROM `sg_fruits` WHERE  (  f_id = 103 )  [ RunTime:0.019001s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.440026s ] mysql:dbname=fruits;host=101.200.41.87;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sg_opinion` [ RunTime:0.269015s ]
+[ sql ] [ SQL ] SELECT * FROM `sg_opinion` INNER JOIN sg_user ON sg_user.u_id = sg_opinion.u_id  WHERE  (  f_id = 103 )  [ RunTime:0.248014s ]
+
+---------------------------------------------------------------
+[ 2017-04-27T13:31:42+08:00 ] 127.0.0.1 127.0.0.1 GET /liupeng/fruits/fruits/public/index.php/home/reply/order_list.html
+[ log ] www.peng.com/liupeng/fruits/fruits/public/index.php/home/reply/order_list.html [运行时间：0.286016s][吞吐率：3.50req/s] [内存消耗：1,855.21kb] [文件加载：41]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'reply',
+    2 => 'order_list',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.peng.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:53.0) Gecko/20100101 Firefox/53.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'PHPSESSID=9odgltk2gd0hec0nds2mdtjue3',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] Method [ <user> public method order_list ] {
+  @@ E:\study\HHH\liupeng\fruits\fruits\application\home\controller\Reply.php 10 - 45
+}
+
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\study\HHH\liupeng\fruits\fruits\public/../application/home\view\reply\order_list.html [ array (
+  0 => 'arr',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.027002s ] mysql:dbname=fruits;host=101.200.41.87;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sg_order` [ RunTime:0.021001s ]
+[ sql ] [ SQL ] SELECT * FROM `sg_order` WHERE  `u_id` = 25  AND `o_state` = '4'    [ RunTime:0.017001s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sg_opinion` [ RunTime:0.021001s ]
+[ sql ] [ SQL ] SELECT * FROM `sg_opinion` WHERE  `o_id` = 45  AND `f_id` = 85    [ RunTime:0.015001s ]
+[ sql ] [ SQL ] SELECT * FROM `sg_opinion` WHERE  `o_id` = 45  AND `f_id` = 103    [ RunTime:0.015001s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sg_fruits` [ RunTime:0.022002s ]
+[ sql ] [ SQL ] SELECT * FROM `sg_fruits` WHERE  `f_id` = 103 LIMIT 1    [ RunTime:0.016001s ]
+[ sql ] [ SQL ] SELECT * FROM `sg_opinion` WHERE  `o_id` = 92  AND `f_id` = 85    [ RunTime:0.019001s ]
+[ sql ] [ SQL ] SELECT * FROM `sg_fruits` WHERE  `f_id` = 85 LIMIT 1    [ RunTime:0.018001s ]
+[ sql ] [ SQL ] SELECT * FROM `sg_opinion` WHERE  `o_id` = 92  AND `f_id` = 102    [ RunTime:0.022001s ]
+[ sql ] [ SQL ] SELECT * FROM `sg_fruits` WHERE  `f_id` = 102 LIMIT 1    [ RunTime:0.021001s ]
+
+---------------------------------------------------------------
+[ 2017-04-27T13:37:03+08:00 ] 127.0.0.1 127.0.0.1 GET /liupeng/fruits/fruits/public/index.php/home/reply/order_list.html
+[ log ] www.peng.com/liupeng/fruits/fruits/public/index.php/home/reply/order_list.html [运行时间：0.631036s][吞吐率：1.58req/s] [内存消耗：2,058.04kb] [文件加载：49]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'reply',
+    2 => 'order_list',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.peng.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:53.0) Gecko/20100101 Firefox/53.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'PHPSESSID=9odgltk2gd0hec0nds2mdtjue3',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] Method [ <user> public method order_list ] {
+  @@ E:\study\HHH\liupeng\fruits\fruits\application\home\controller\Reply.php 10 - 46
+}
+
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\study\HHH\liupeng\fruits\fruits\public/../application/home\view\reply\order_list.html [ array (
+  0 => 'arr',
+) ]
+[ info ] [ LANG ] E:\study\HHH\liupeng\fruits\fruits\framework\lang\zh-cn.php
+[ info ] [ LANG ] E:\study\HHH\liupeng\fruits\fruits\framework\lang\zh-cn.php
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.028001s ] mysql:dbname=fruits;host=101.200.41.87;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sg_order` [ RunTime:0.020001s ]
+[ sql ] [ SQL ] SELECT * FROM `sg_order` WHERE  `u_id` = 25  AND `o_state` = '4'    [ RunTime:0.020002s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sg_opinion` [ RunTime:0.020001s ]
+[ sql ] [ SQL ] SELECT * FROM `sg_opinion` WHERE  `o_id` = 45  AND `f_id` = 85    [ RunTime:0.016001s ]
+[ sql ] [ SQL ] SELECT * FROM `sg_opinion` WHERE  `o_id` = 45  AND `f_id` = 103    [ RunTime:0.015001s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sg_fruits` [ RunTime:0.023001s ]
+[ sql ] [ SQL ] SELECT * FROM `sg_fruits` WHERE  `f_id` = 103 LIMIT 1    [ RunTime:0.017001s ]
+[ sql ] [ SQL ] SELECT * FROM `sg_opinion` WHERE  `o_id` = 92  AND `f_id` = 85    [ RunTime:0.022001s ]
+[ sql ] [ SQL ] SELECT * FROM `sg_fruits` WHERE  `f_id` = 85 LIMIT 1    [ RunTime:0.018001s ]
+[ sql ] [ SQL ] SELECT * FROM `sg_opinion` WHERE  `o_id` = 92  AND `f_id` = 102    [ RunTime:0.022002s ]
+[ sql ] [ SQL ] SELECT * FROM `sg_fruits` WHERE  `f_id` = 102 LIMIT 1    [ RunTime:0.016001s ]
+[ error ] [8]未定义变量: error[E:\study\HHH\liupeng\fruits\fruits\runtime\temp\51cce5895070047e61b7a4a88bfedfc5.php:52]
+
+---------------------------------------------------------------
+[ 2017-04-27T13:37:33+08:00 ] 127.0.0.1 127.0.0.1 GET /liupeng/fruits/fruits/public/index.php/home/reply/order_list.html
+[ log ] www.peng.com/liupeng/fruits/fruits/public/index.php/home/reply/order_list.html [运行时间：3.602206s][吞吐率：0.28req/s] [内存消耗：1,855.38kb] [文件加载：41]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'reply',
+    2 => 'order_list',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.peng.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:53.0) Gecko/20100101 Firefox/53.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'PHPSESSID=9odgltk2gd0hec0nds2mdtjue3; think_var=zh-cn',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] Method [ <user> public method order_list ] {
+  @@ E:\study\HHH\liupeng\fruits\fruits\application\home\controller\Reply.php 10 - 47
+}
+
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\study\HHH\liupeng\fruits\fruits\public/../application/home\view\reply\order_list.html [ array (
+  0 => 'arr',
+  1 => 'error',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.435025s ] mysql:dbname=fruits;host=101.200.41.87;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sg_order` [ RunTime:0.286016s ]
+[ sql ] [ SQL ] SELECT * FROM `sg_order` WHERE  `u_id` = 25  AND `o_state` = '4'    [ RunTime:0.278016s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sg_opinion` [ RunTime:0.275016s ]
+[ sql ] [ SQL ] SELECT * FROM `sg_opinion` WHERE  `o_id` = 45  AND `f_id` = 85    [ RunTime:0.294017s ]
+[ sql ] [ SQL ] SELECT * FROM `sg_opinion` WHERE  `o_id` = 45  AND `f_id` = 103    [ RunTime:0.284016s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sg_fruits` [ RunTime:0.282016s ]
+[ sql ] [ SQL ] SELECT * FROM `sg_fruits` WHERE  `f_id` = 103 LIMIT 1    [ RunTime:0.314017s ]
+[ sql ] [ SQL ] SELECT * FROM `sg_opinion` WHERE  `o_id` = 92  AND `f_id` = 85    [ RunTime:0.275015s ]
+[ sql ] [ SQL ] SELECT * FROM `sg_fruits` WHERE  `f_id` = 85 LIMIT 1    [ RunTime:0.245014s ]
+[ sql ] [ SQL ] SELECT * FROM `sg_opinion` WHERE  `o_id` = 92  AND `f_id` = 102    [ RunTime:0.261015s ]
+[ sql ] [ SQL ] SELECT * FROM `sg_fruits` WHERE  `f_id` = 102 LIMIT 1    [ RunTime:0.283017s ]
+
+---------------------------------------------------------------

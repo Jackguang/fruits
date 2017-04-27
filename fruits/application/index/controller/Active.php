@@ -16,7 +16,6 @@ class Active extends Controller{
         $data=db('sg_active')->select();
         $this->view->engine->layout(true);
         $this->assign('data',$data);
-        return view('lists');
     }
     //活动添加
     public function add_do(){

@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:88:"E:\study\HHH\liupeng\fruits\fruits\public/../application/home\view\reply\order_list.html";i:1493255652;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:88:"E:\study\HHH\liupeng\fruits\fruits\public/../application/home\view\reply\order_list.html";i:1493271421;}*/ ?>
 <?php
 use think\Session;
 $uid=Session::get('u_id');
@@ -49,7 +49,7 @@ $uid=Session::get('u_id');
 <div class="height20"></div>
 <div class=" container-fluid">
     <div class="row">
-        <?php if($arr['isset'] == 1): ?>
+        <?php if($error == 1): ?>
         <div class="table">
             <?php foreach($arr as $k=>$v) { ?>
             <div style="padding-right:5px;" >

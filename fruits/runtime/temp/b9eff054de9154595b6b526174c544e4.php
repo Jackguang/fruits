@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:92:"F:\soft\phpStudy\WWW\github\fruits\fruits\public/../application/home\view\userinfo\user.html";i:1493016413;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:87:"E:\WAPM\WWW\chenyan\11\fruits\fruits\public/../application/home\view\userinfo\user.html";i:1493279761;}*/ ?>
 <!DOCTYPE html>
 <html class="no-js">
 <head>
@@ -74,7 +74,10 @@
 	        			<?php endif; ?>
 	        		</span>
 	        		<br>等级</li>
-	        		<li><a href="myorder.html"><span class="bar"></span><span>2</span><br>我的订单</a></li>
+	        		<li>
+						<a href="<?php echo url('home/Cart/orderinfo'); ?>"><span class="bar"></span>
+							<span><?= $order_num?></span><br>我的订单</a>
+					</li>
 	        	</ul>
 	        </div>
 	        <ul class="m-user-content">
@@ -87,6 +90,7 @@
 	                </div>
 	            </li> -->
 	            <li>
+
 	            	<div class="m-user-item">
 	                   <a href="<?php echo url('home/userinfo/address'); ?>" class="user-site">管理收货地址</a>
 	                </div>
@@ -94,8 +98,13 @@
 	                   <a href="/user/coupon" class="user-set">设置</a>
 	                </div>
 	                <div class="m-user-item">
-	                   <div class="user-score"><span class="pull-right">400-110110</span>联系客服</div>
+	                   <div class="user-score"><span class="pull-right"><a href="tel://17319231327">17319231327</a></span>联系客服</div>
 	                </div>
+					<div>
+						<div class="user-score"><span class="pull-right" style="color: lightgrey	;font-size: 15px;"><?php echo $num; ?></span><span style="font-size: 25px;color: deepskyblue;"> ★</span><a
+								href="<?php echo url('home/reply/order_list'); ?>" style="font-size: 14px;">&nbsp;&nbsp;未评价的订单</a></div>
+					</div>
+
 	            </li>
 	            <li class="m-user-footer">
 	            粤ICP备8888888 广东·广州

@@ -108,7 +108,8 @@
                 <input type="hidden" class="address" value="{$address}">
                 <a href="{:url('index.php/home/Userinfo/address')}">没有收货地址，请点我去添加,<br>否则自动选择默认地址</a>
                 {/if}
-                <input type="button" value="我要付款"  class="fu"  alt="{$va.o_id}" style="background-color: red;width: 90px;height: 30px;"/>
+                <input type="button" value="我要付款"  class="fu"  alt="{$va.o_id}" style="background-color: red;width: 75px;height: 30px;"/>
+                <input type="button" value="取消订单"  class="qu"  alt="{$va.o_id}" style="background-color: red;width: 75px;height: 30px;"/>
 
                 {/if}
                 <!--<input type="button" value="确认收货" class="order-que"/>-->
@@ -132,6 +133,30 @@
 </html>
 <script src="js/jq.js"></script>
 <script>
+    //取消订单
+    $('.qu').click(function(){
+        var oid=$(this).attr('alt');//获取订单id
+        $.ajax({
+            type: "POST",
+            url: "{:url('index.php/home/Cart/qu')}",
+            data: "o_id="+oid,
+            dataType:'json',
+            success: function(msg){
+
+                if(msg==1){
+
+                    $('.n'+oid).hide();
+                    alert('订单取消成功');
+//                    $('.huo').html('已确认收货');
+                }
+                if(msg==2){
+                    alert('订单取消失败');
+                }
+
+            }
+        });
+//        alert(oid);
+    })
     //我要付款
     $('.fu').click(function(){
         //修改订单状态为收货状态

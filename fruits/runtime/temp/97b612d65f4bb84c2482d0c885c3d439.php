@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:96:"F:\soft\phpStudy\WWW\github\fruits\fruits\public/../application/home\view\fruits\classifyin.html";i:1493016413;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:91:"E:\WAPM\WWW\chenyan\11\fruits\fruits\public/../application/home\view\fruits\classifyin.html";i:1492835992;}*/ ?>
 <?php
 use think\Session;
 $uid=Session::get('u_id');

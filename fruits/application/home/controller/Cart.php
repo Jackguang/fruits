@@ -144,6 +144,22 @@ class Cart extends Controller
         $data['f_id']=$_POST['str'];//商品id
         $data['o_price']=$_POST['price'];//单价
         $data['all_price']=$_POST['allprice'];//总价
+
+
+
+
+//
+////根据
+//        $id=explode(',',$data['f_id']);
+//        $num=explode(',',$data['o_num']);
+//     foreach($id as $k=>$v){
+//        $datas= Db::table('sg_fruits')
+//           ->where("f_id = $v ")
+//           ->find();
+//       $qian[]= $datas['m_price'] *$num[$k];
+//
+//     }
+//        echo array_sum($qian);die;
         $data['o_time']=date("Y-m-d H:i:s");//下单时间
 
         $data['o_number']=$uid.time();//总价
@@ -188,18 +204,23 @@ class Cart extends Controller
             ->limit(1)
             ->find();
 //        var_dump($data);die;
-//        var_dump($data);die;
+
              $a=explode(',',$data['f_id']);//商品id
+
              $price=explode(',',$data['o_price']);//商品单价
              $num=explode(',',$data['o_num']);//商品数量
+
         foreach($a as $k=>$v){
+
             $list[]=Db::table('sg_fruits')
                 ->field('f_id,f_name,f_img,f_weight,f_title,m_price')
                 ->where("f_id = $v")
                 ->find();
         }
+//        var_dump($list);die;
 
         foreach($a as $k=>$v){
+//            echo $v;die;
             $arr[$k]['f_id']=$a[$k];//商品id
             $arr[$k]['price']=$price[$k];//商品单价
             $arr[$k]['num']=$num[$k];//商品数量
@@ -262,30 +283,31 @@ public function address(){
         $arr=explode(',',$str);
         //选择了收货地址
         //            **************chen******判断库存是否够**********
-        $data=Db::table('sg_order')
+        $datas=Db::table('sg_order')
             ->alias('a')
-            ->join('sg_uaddress w','a.o_address = w.a_id')
             ->where("o_id = $arr[0]")
             ->find();
 
-        $a=explode(',',$data['f_id']);//商品id
-        $price=explode(',',$data['o_price']);//商品单价
-        $num=explode(',',$data['o_num']);//商品数量
-        foreach($a as $k=>$v){
-            $list[]=Db::table('sg_fruits')
+        $as=explode(',',$datas['f_id']);//商品id
+//         var_dump($a) ;die;
+        $prices=explode(',',$datas['o_price']);//商品单价
+        $nums=explode(',',$datas['o_num']);//商品数量
+        foreach($as as $k=>$v){
+
+            $lists[]=Db::table('sg_fruits')
                 ->field('f_id,f_name,f_img,f_weight,f_title,m_price')
                 ->where("f_id = $v")
                 ->find();
 
         }
 //                ***************比较库存*******
-        foreach($a as $k=>$v){
+        foreach($as as $k=>$v){
             $res= Db::table('sg_fruits')
                 ->where("f_id = $v ")
                 ->find();
             $number= $res['f_surplus'];
             $name= $res['f_name'];
-            if($number<$num[$k]){
+            if($number<$nums[$k]){
                echo "<script>alert($name+'库存不足');</script>";die;
             }
 
@@ -616,6 +638,17 @@ public function address(){
             }
          }
 
+//取消订单
+     public function qu(){
+      $oid=$_POST['o_id'];
+//         echo $oid;
+     $res=Db::table('sg_order')->where('o_id',$oid)->delete();
+         if($res){
+             echo 1;
+         }else{
+             echo 2;
+         }
 
+}
 
 }

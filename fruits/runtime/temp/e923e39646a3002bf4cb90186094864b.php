@@ -1,3 +1,4 @@
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:77:"E:\phpStudy\WWW\fruits\fruits\public/../application/home\view\user\enter.html";i:1493122032;}*/ ?>
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -38,7 +39,7 @@
 <div class="height53"></div>
 <div class="height20"></div>
 <div class=" container-fluid" >
-    <form class="form-horizontal" action="{:url('home/user/enter_d')}" method="post" onsubmit="return yan();">
+    <form class="form-horizontal" action="<?php echo url('home/user/enter_d'); ?>" method="post" onsubmit="return yan();">
         <div class="form-group form-group-lg">
             <div class="col-xs-12">
                 <input type="text" class="form-control" onblur="names()" name="u_name" id="u_name" placeholder="请输入设置的用户名">
@@ -85,7 +86,7 @@
     </form>
     <div class="height10"></div>
     <div class=" width100 text-center font16 color_gray"> 点击注册，即表示您同意<a href="#">《免责声明》</a></div>
-    <div class=" width100 text-center font16 color_gray"> 如果你有账号，请点击 <a href="{:url('home/user/login')}">登录</a></div>
+    <div class=" width100 text-center font16 color_gray"> 如果你有账号，请点击 <a href="<?php echo url('home/user/login'); ?>">登录</a></div>
 </div><!-- 中部 -->
 
 <!-- jQuery (necessary for Bootstrap's JavaScript p lugins) -->
@@ -148,7 +149,7 @@
     if(reg.test(username)){
         $.ajax({
             type: "GET",
-            url: "{:url('index.php/home/user/enter_b')}",
+            url: "<?php echo url('index.php/home/user/enter_b'); ?>",
             data: "username="+username,
             success: function(msg){
                 if(msg=='1')
@@ -179,7 +180,7 @@
         if(reg.test(phone)){
             $.ajax({
                 type: "GET",
-                url: "{:url('index.php/home/user/enter_b')}",
+                url: "<?php echo url('index.php/home/user/enter_b'); ?>",
                 data: "phone="+phone,
                 success: function(msg) {
                     if (msg == '1') {
@@ -203,7 +204,7 @@
             var code=$('#code').val();
             $.ajax({
                 type: "GET",
-                url: "{:url('index.php/home/user/code')}",
+                url: "<?php echo url('index.php/home/user/code'); ?>",
                 data: "code="+code,
                 success: function(msg) {
                     if (msg == '1') {
@@ -229,7 +230,7 @@
         }
         $.ajax({
             type: "GET",
-            url: "{:url('index.php/home/user/enter')}",
+            url: "<?php echo url('index.php/home/user/enter'); ?>",
             data: "phone="+phone,
             success: function(msg){
                 alert('已发送');
@@ -243,7 +244,7 @@
         if(reg.test(username)){
             $.ajax({
                 type: "GET",
-                url: "{:url('index.php/home/user/enter_b')}",
+                url: "<?php echo url('index.php/home/user/enter_b'); ?>",
                 data: "username="+username,
                 success: function(msg){
                     if(msg=='1')
@@ -284,7 +285,7 @@
         if(reg.test(phone)){
             $.ajax({
                 type: "GET",
-                url: "{:url('index.php/home/user/enter_b')}",
+                url: "<?php echo url('index.php/home/user/enter_b'); ?>",
                 data: "phone="+phone,
                 success: function(msg) {
                     if (msg == '1') {

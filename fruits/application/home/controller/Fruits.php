@@ -14,7 +14,7 @@ class Fruits extends Controller
 //        $this->view->engine->layout(true);
         //赋值
         $arr=db('sg_fruits')
-            ->where('is_show =1')
+            ->where('is_show =1 AND f_surplus > 0')
                 ->order('f_time desc')
                 ->limit(6)
                 ->select();
@@ -61,7 +61,7 @@ public function jia(){
 //    echo $p;
     //总条数
     $arr=db('sg_fruits')
-        ->where('is_show =1')
+        ->where('is_show =1 AND f_surplus > 0')
         ->order('f_time desc')
         ->limit(6)
         ->count();
@@ -79,7 +79,7 @@ public function jia(){
         $limit=($ap-1)*6;
         //返回下一页数据
         $data['resl']= Db::table('sg_fruits')
-            ->where('is_show =1')
+            ->where('is_show =1 AND f_surplus > 0')
             ->limit($limit,6)
             ->select();
         $data['sid']=1;
@@ -104,27 +104,33 @@ public function jia(){
         join("sg_user","sg_user.u_id = sg_opinion.u_id")
             ->where("f_id = $id")->select();
         $count = count($opinions);
+        if($count)
+        {
+            $ci=1;
+        }
+        else{
+            $ci=0;
+        }
       if(!$opinions){
           return view('info',[
               'fruit_one'=>$fruit_one,
               'opinions'=>1,
-              'count'=>'',
-              't'=>''
+              'count'=>'0',
+              'ci'=>$ci
           ]);
       }else{
-          $tel = $opinions[0]['u_tel'];
-          $tels = substr($tel,3,4);
-          $t = str_replace($tels,'****', $tel);
+          foreach($opinions as $k=>$v)
+          {
+              $tels = substr($v['u_tel'],3,4);
+              $opinions[$k]['u_tel']=str_replace($tels,'****', $v['u_tel']);
+          }
       }
 
-
-        // print_r($opinions);die;
-        return view('info',[
-            'fruit_one'=>$fruit_one,
-            'opinions'=>$opinions,
-            'count'=>$count,
-            't'=>$t
-        ]);
+        $this->assign('arr',$opinions);
+        $this->assign('count',$count);
+        $this->assign('ci',$ci);
+        $this->assign('fruit_one',$fruit_one);
+        return view('info');
     }
 
     public function ajaxs()
@@ -138,7 +144,7 @@ public function jia(){
        $t_id=$_GET['t_id'];
         $arr=db('sg_fruits')
             ->join("sg_type","sg_fruits.t_id = sg_type.t_id")
-            ->where("is_show =1 and sg_fruits.t_id=$t_id")
+            ->where("is_show =1 and sg_fruits.t_id=$t_id AND f_surplus > 0")
             ->order('f_time desc')
             ->limit(6)
             ->select();
@@ -158,7 +164,7 @@ public function jia(){
 //    echo $p;
         //总条数
         $arr=db('sg_fruits')
-            ->where("is_show =1 and t_id= $t_id")
+            ->where("is_show =1 and t_id= $t_id AND f_surplus > 0")
             ->order('f_time desc')
             ->limit(6)
             ->count();
@@ -176,7 +182,7 @@ public function jia(){
             $limit=($ap-1)*6;
             //返回下一页数据
             $data['resl']= Db::table('sg_fruits')
-                ->where("is_show =1 and t_id= $t_id")
+                ->where("is_show =1 and t_id= $t_id AND f_surplus > 0")
                 ->limit($limit,6)
                 ->select();
             $data['sid']=1;
@@ -192,7 +198,7 @@ public function jia(){
     public function classifyin(){
         $arr=db('sg_fruits')
             ->join("sg_type","sg_fruits.t_id = sg_type.t_id")
-            ->where("is_show =1 ")
+            ->where("is_show =1 AND f_surplus > 0")
             ->order('f_time desc')
             ->limit(6)
             ->select();
@@ -224,13 +230,15 @@ public function jia(){
     }
     //从详情页加入购物车
     public function cartdesc(){
+//       echo  json_encode($_POST);die;
         $num=$_POST['num'];
         $fid=$_POST['fid'];
+
         $q= Db::table('sg_fruits')
             ->field('f_id,f_surplus')
-
             ->where("f_id = $fid")
             ->find();
+//        echo json_encode($q);die;
         $sum=$q['f_surplus'];//库存总个数
 //        foreach($q as $k=>$v){
 //            $qa[]=$v['f_num'];
@@ -242,8 +250,11 @@ public function jia(){
         $data= Db::table('sg_cart')
             ->where("f_id = $fid AND u_id =$uid")
             ->find();
-        $number=$data['f_num'];
+
+
+
         if($data){
+            $number=$data['f_num'];
             if($num<=($sum-$data['f_num'])){
                 //已存在继续累加
                 $a=Db::table('sg_cart')
@@ -259,10 +270,10 @@ public function jia(){
 
         }else{
             //不存在入库
-            $data['num']=$_POST['num'];
-            $data['fid']=$_POST['fid'];
-            $data['uid']=$_POST['uid'];
-            $b=Db::table('sg_cart')->insert($data);
+            $arr['f_num']=$_POST['num'];
+            $arr['f_id']=$_POST['fid'];
+            $arr['u_id']=$_POST['uid'];
+            $b=Db::table('sg_cart')->insert($arr);
             if($b){
                 echo 222;
             }

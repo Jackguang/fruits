@@ -43,19 +43,23 @@
 			</a>
 	</header>
 	
-	<div class="contaniner fixed-conta">
+	<div class="contaniner fixed-conta" id="sty">
 		<?php foreach($data as $k=>$v){?>
 		<dl class="address">
 			<!-- <a href="go-address.html"> -->
 				<dt>
 					<p><?= $v['a_name']?></p>
 					<span><?= $v['a_tel']?></span>
-						{if condition="$v.a_state eq '1'"}
-							<small va="<?= $v['a_id']?>">默认</small>
-						{else /}
-							<small class="default" val="<?= $v['a_id']?>">			
-							可设为默认</small>
-						{/if}
+
+				{if condition="$v.a_state eq '1'"}
+					<small va="<?= $v['a_id']?>">默认</small>
+				{else /}
+					<small class="default" val="<?= $v['a_id']?>">			
+					可设为默认</small>
+				{/if}
+
+						
+
 				</dt>
 				<dd><?= $v['a_address']?></dd>
 			<!-- </a> -->
@@ -65,20 +69,38 @@
 </body>
 </html>
 <script>
-	$(".default").click(function(){
+$(document).on("click",".default",function(){
+
 		var id = $(this).attr('val');
-		// var ids = $(this).prev().attr('va');
-		// alert(ids);
 		var _this = $(this);
 		$.ajax({
 		   type: "POST",
 		   url: "{:url('home/Userinfo/upda')}",
 		   data: {id:id},
+		   dataType:'json',
 		    success: function(msg){
+
+		    	var str ="";
+		    	$.each(msg,function(k,v){			    	
+			    	str+='<dl class="address"><dt><p>'+v.a_name+'</p>';		
+			    	str+='<span>'+v.a_tel+'</span>';
+			    	if(v.a_state == 1){
+			    		str+='<small va='+v.a_id+'>默认</small>';
+			    	}else{
+			    		str+='<small class="default" val='+v.a_id+'>可设为默认</small>';
+			    	}
+			    	str+='<dd>'+v.a_address+'</dd>';
+			    	str+='</dt></dl>';    		
+		    	})  		
+		    	$("#sty").html(str);	
+		    						    	
+
 		    	if(msg == 1){
 		    		_this.html('默认');
-		    		// _this.prev().html('可设为默认');	
+		    		// _this.prev().html('可设为默认');
+
 		    	}
+
 		    }
 		})
 	})

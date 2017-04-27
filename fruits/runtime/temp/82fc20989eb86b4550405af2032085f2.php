@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:83:"E:\study\HHH\liupeng\fruits\fruits\public/../application/home\view\fruits\info.html";i:1493126033;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:83:"E:\study\HHH\liupeng\fruits\fruits\public/../application/home\view\fruits\info.html";i:1493254609;}*/ ?>
 <?php
 use think\Session;
 $uid=Session::get('u_id');
@@ -136,29 +136,19 @@ $uid=Session::get('u_id');
         <i class="icon-star"></i>
         <i class="icon-star"></i>
         <i class="icon-star-empty"></i>
-
-
         </span>
     <div class="height10"></div>
     <div class="artic14">
         <p><?= $v['opinion_content']?></p>
     </div>
     <span class="pull-right">
-
-
-
-
         <?= date('Y-m-d h:i:s',$v['opinion_time']);?>
-
-
-
-
     </span><!--b-->
     <div class="height10 border_bottom"></div>
     <div class="height10"></div>
 </div><!--a-->
 <?php endforeach; endif; else: echo "" ;endif; else: ?>
-无评论
+<center><img src="uploads/620.jpg" alt=""></center>
 <?php endif; ?>
 
 

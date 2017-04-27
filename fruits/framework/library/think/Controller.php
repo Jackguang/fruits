@@ -43,15 +43,17 @@ class Controller
      */
     public function __construct(Request $request = null)
     {
-        $con = $request->controller();
-        $act = $request->action();
-        if(empty(Session::get('u_name')))
-        {
-            if(($con!='user' && $act!='login')&&($con!='fruits' && $act!='index')&&($con!='fruits' && $act!='info'))
-            {
-                echo "<script>alert('请先登录');location.href='http://www.yii.com/10/fruits/fruits/public/index.php/home/user/login'</script>";
-            }
-        }
+//        $con = $request->controller();
+//        $act = $request->action();
+//        if(empty(Session::get('u_name')))
+//        {
+//            if(($con!='user' && $act!='login')&&($con!='fruits' && $act!='index')&&($con!='fruits' && $act!='info'))
+//            {
+//                echo "<script>alert('请先登录');</script>";
+//                return view('home/user/login');
+//
+//            }
+//        }
 
         if (is_null($request)) {
             $request = Request::instance();

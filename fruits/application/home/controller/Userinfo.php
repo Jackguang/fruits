@@ -8,9 +8,47 @@ class Userinfo extends Controller
 	public function user()
 	{
 		$tel = Session::get('u_tel');
+		if(!$tel){
+			return view('user/login');
+		}
+
+		$id = Session::get('u_id');
+		$arr = Db::table('sg_order')->where('u_id', $id)->where('o_state', '4')->select();
+		if(empty($arr))
+		{
+			$num=0;
+			$user = db('sg_user');
+			$one = $user->where("u_tel = $tel")->select();
+			$this->assign('num',$num);
+
+			return view('user',['one'=>$one]);
+		}
+		foreach ($arr as $k => $v) {
+			$arr[$k]['o_num'] = explode(',', $arr[$k]['o_num']);
+			$arr[$k]['o_price'] = explode(',', $arr[$k]['o_price']);
+			$arr[$k]['f_id'] = explode(',', $arr[$k]['f_id']);
+		}
+		foreach ($arr as $k => $v)
+		{
+			foreach($v['f_id'] as $key=>$val)
+			{
+				$brr = Db::table('sg_opinion')->where('o_id',$v['o_id'])->where('f_id',$val)->select();
+
+				if(empty($brr))
+				{
+					$crr=Db::table('sg_fruits')->where('f_id',$val)->find();
+					$crr['o_id']=$v['o_id'];
+					$crr['o_number']=$v['o_number'];
+					$crr['o_num']=$v['o_num'][$key];
+					$drr[]=$crr;
+				}
+			}
+		}
+		$num=count($drr);
 		// $tel = '17319231328';
 		$user = db('sg_user');
 		$one = $user->where("u_tel = $tel")->select();
+		$this->assign('num',$num);
 		return view('user',['one'=>$one]);
 	}
 

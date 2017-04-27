@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:88:"E:\study\HHH\liupeng\fruits\fruits\public/../application/home\view\reply\order_list.html";i:1493255624;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:88:"E:\study\HHH\liupeng\fruits\fruits\public/../application/home\view\reply\order_list.html";i:1493255652;}*/ ?>
 <?php
 use think\Session;
 $uid=Session::get('u_id');
@@ -69,7 +69,6 @@ $uid=Session::get('u_id');
                 </div>
             </div>
             <?php } ?>
-
         </div>
         <?php else: ?>
         <center><img src="uploads/620.jpg" alt="">

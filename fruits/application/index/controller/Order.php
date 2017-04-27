@@ -15,7 +15,28 @@ class Order extends Controller
 		}else
 		{
 			$order = db('sg_order');
-			$order_list = $order->limit(5)->select();
+			$order_list = $order->join('sg_uaddress','sg_order.o_address=sg_uaddress.a_id')
+            // ->join('sg_fruits','sg_order.f_id = sg_fruits.f_id')
+            ->limit(5)->select();
+
+            // foreach($order_list as $k=>$v){
+            //     $fruits = db('sg_fruits')->field('f_name')->where("f_id in ($v[f_id])")->select();
+
+            //     // print_r($fruits);die;
+            //     $fr="";
+            //     foreach($fruits as $kk=>$vv){
+                    
+            //         // print_r($vv['f_name']);die;
+            //         // $fr.=$vv['f_name']+",";
+
+            //         $fruits_name[] = $vv['f_name'];
+            //     }
+            // print_r($fruits_name);die;
+                
+            // $fname =implode($fruits_name, ',');
+            // $order_list[$k]['ame']=$fname;
+            // }
+
 
 			$page = new Page();
 			$count = $order->count();
@@ -51,9 +72,9 @@ class Order extends Controller
         $limit=5;
         $offset=($page-1)*5;
         $user=db('sg_order');
-        $ad_list=$user->where("$wheres")->select();
+        $ad_list=$user->join('sg_uaddress','sg_order.o_address=sg_uaddress.a_id')->where("$wheres")->select();
         $count=count($ad_list);
-        $list=$user->where("$wheres")->limit("$offset,$limit")->select();
+        $list=$user->join('sg_uaddress','sg_order.o_address=sg_uaddress.a_id')->where("$wheres")->limit("$offset,$limit")->select();
         // print_r($list);die;
         $page_model= new Page();
         $page=$page_model->page($count,$page,$limit);
@@ -62,3 +83,5 @@ class Order extends Controller
         echo json_encode($data);
 	}
 }
+
+

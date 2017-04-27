@@ -1,3 +1,4 @@
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:77:"E:\phpStudy\WWW\fruits\fruits\public/../application/home\view\cart\index.html";i:1493122032;}*/ ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -24,69 +25,59 @@
 
 <div class="contaniner fixed-contb">
 
-     {if condition="$money==0 "}
-
-
-     {else /}
-
-    {foreach name='data' item='v'}
-    <section class="shopcar" alt="{$v.f_id}">
+     <?php if($money==0): else: if(is_array($data) || $data instanceof \think\Collection): if( count($data)==0 ) : echo "" ;else: foreach($data as $key=>$v): ?>
+    <section class="shopcar" alt="<?php echo $v['f_id']; ?>">
         <div class="shopcar-checkbox">
-            <label for="shopcar" onselectstart="return false"  alt="{$v.f_id}" alp="{$v.m_price}" name="box" us="{$v.f_name}"></label>
-            <input type="checkbox" alt="{$v.f_id}" class="shopcar"/>
+            <label for="shopcar" onselectstart="return false"  alt="<?php echo $v['f_id']; ?>" alp="<?php echo $v['m_price']; ?>" name="box" ></label>
+            <input type="checkbox" alt="<?php echo $v['f_id']; ?>" class="shopcar"/>
         </div>
-        <figure><img src="{$v.f_img}"/></figure>
+        <figure><img src="<?php echo $v['f_img']; ?>"/></figure>
         <dl>
-            <dt>{$v.f_name}</dt>
-            <dd>{$v.f_weight}</dd>
+            <dt><?php echo $v['f_name']; ?></dt>
+            <dd><?php echo $v['f_weight']; ?></dd>
             <!--<dd>尺寸：L</dd>-->
             <div class="add" >
-                <span class="jian" alt="{$v.m_price}">-</span>
-                <input type="text" value="{$v.f_num}"  class="n{$v.f_id}" name="num"/>
-                <span class="jia" alt="{$v.m_price}">+</span>
+                <span class="jian" alt="<?php echo $v['m_price']; ?>">-</span>
+                <input type="text" value="<?php echo $v['f_num']; ?>"  class="n<?php echo $v['f_id']; ?>" name="num"/>
+                <span class="jia" alt="<?php echo $v['m_price']; ?>">+</span>
             </div>
-            <h3>￥{$v.m_price}</h3>
+            <h3>￥<?php echo $v['m_price']; ?></h3>
 
-            <small class="del" alt="{$v.f_id}" ma="{$v.m_price}"><img src="car/images/shopcar-icon01.png"/></small>
+            <small class="del" alt="<?php echo $v['f_id']; ?>" ma="<?php echo $v['m_price']; ?>"><img src="car/images/shopcar-icon01.png"/></small>
         </dl>
     </section>
-    {/foreach}
-
-     {/if}
+    <?php endforeach; endif; else: echo "" ;endif; endif; ?>
 
 
-    <!--{foreach name='data' item='v'}-->
-    <!--<section class="shopcar" alt="{$v.f_id}">-->
+    <!--<?php if(is_array($data) || $data instanceof \think\Collection): if( count($data)==0 ) : echo "" ;else: foreach($data as $key=>$v): ?>-->
+    <!--<section class="shopcar" alt="<?php echo $v['f_id']; ?>">-->
         <!--<div class="shopcar-checkbox">-->
-            <!--<label for="shopcar" onselectstart="return false"  alt="{$v.f_id}" alp="{$v.m_price}" name="box" ></label>-->
-            <!--<input type="checkbox" alt="{$v.f_id}" class="shopcar"/>-->
+            <!--<label for="shopcar" onselectstart="return false"  alt="<?php echo $v['f_id']; ?>" alp="<?php echo $v['m_price']; ?>" name="box" ></label>-->
+            <!--<input type="checkbox" alt="<?php echo $v['f_id']; ?>" class="shopcar"/>-->
         <!--</div>-->
-        <!--<figure><img src="{$v.f_img}"/></figure>-->
+        <!--<figure><img src="<?php echo $v['f_img']; ?>"/></figure>-->
         <!--<dl>-->
-            <!--<dt>{$v.f_name}</dt>-->
-            <!--<dd>{$v.f_weight}</dd>-->
+            <!--<dt><?php echo $v['f_name']; ?></dt>-->
+            <!--<dd><?php echo $v['f_weight']; ?></dd>-->
             <!--&lt;!&ndash;<dd>尺寸：L</dd>&ndash;&gt;-->
             <!--<div class="add" >-->
-                <!--<span class="jian" alt="{$v.m_price}">-</span>-->
-                <!--<input type="text" value="{$v.f_num}"  class="n{$v.f_id}" name="num"/>-->
-                <!--<span class="jia" alt="{$v.m_price}">+</span>-->
+                <!--<span class="jian" alt="<?php echo $v['m_price']; ?>">-</span>-->
+                <!--<input type="text" value="<?php echo $v['f_num']; ?>"  class="n<?php echo $v['f_id']; ?>" name="num"/>-->
+                <!--<span class="jia" alt="<?php echo $v['m_price']; ?>">+</span>-->
             <!--</div>-->
-            <!--<h3>￥{$v.m_price}</h3>-->
+            <!--<h3>￥<?php echo $v['m_price']; ?></h3>-->
 
-            <!--<small class="del" alt="{$v.f_id}" ma="{$v.m_price}"><img src="car/images/shopcar-icon01.png"/></small>-->
+            <!--<small class="del" alt="<?php echo $v['f_id']; ?>" ma="<?php echo $v['m_price']; ?>"><img src="car/images/shopcar-icon01.png"/></small>-->
         <!--</dl>-->
     <!--</section>-->
-    <!--{/foreach}-->
+    <!--<?php endforeach; endif; else: echo "" ;endif; ?>-->
     <!--去结算-->
     <div style="margin-bottom: 16%;"></div>
 
-    {if condition="$money == 0"}
-
-
-    {else /}
+    <?php if($money == 0): else: ?>
     <input type="hidden" value="<?php echo $data[0]['u_id']?>" class="uid">
 
-   {/if}
+   <?php endif; ?>
 
 
 </div>
@@ -127,26 +118,26 @@
     </div>
     <ul>
         <li>
-            <a href="{:url('home/Fruits/index')}">
+            <a href="<?php echo url('home/Fruits/index'); ?>">
                 <img src="car/images/footer001.png"/>
                 <p>首页</p>
             </a>
         </li>
         <li>
-            <a href="{:url('home/Fruits/classifyin')}">
+            <a href="<?php echo url('home/Fruits/classifyin'); ?>">
 
             <img src="car/images/footer002.png"/>
                 <p>分类</p>
             </a>
         </li>
         <li class="active">
-            <a href="{:url('home/Cart/index')}">
+            <a href="<?php echo url('home/Cart/index'); ?>">
                 <img src="car/images/footer03.png"/>
                 <p>购物车</p>
             </a>
         </li>
         <li>
-            <a href="{:url('home/userinfo/user')}">
+            <a href="<?php echo url('home/userinfo/user'); ?>">
                 <img src="car/images/footer004.png"/>
                 <p>个人中心</p>
             </a>
@@ -166,7 +157,6 @@
         var price='';
         var a='';
         var num='';
-        var username='';
         var box=document.getElementsByName('box');
         var _this=$(this);
         var allprice = $('#allprice').html();//总价
@@ -175,18 +165,15 @@
         $('.shopcar-checkd').each(function(){
                 str +=','+$(this).attr('alt');//商品id
                 price +=','+$(this).attr('alp');//商品单价
-               username +=','+$(this).attr('us');//商品单价
                 a=$(this).attr('alt');//商品数量
                 num +=','+$('.n'+a).val();
-//                username +=','+$('.n'+a).val();
-//                alert(username);
+//                alert(1111);
 
         })
 
         str=str.substr(1);
         price=price.substr(1);
         num=num.substr(1);
-        username=username.substr(1);
       if(!num){
           alert('没有商品被选择');
           return false;
@@ -198,13 +185,13 @@
 //            alert(allprice);
         $.ajax({
             type: "POST",
-            url: "{:url('index.php/home/Cart/ruku')}",
-            data: "num="+num+"&str="+str+"&price="+price+"&allprice="+allprice+"&username="+username,
+            url: "<?php echo url('index.php/home/Cart/ruku'); ?>",
+            data: "num="+num+"&str="+str+"&price="+price+"&allprice="+allprice,
             success: function(msg){
 
             if(msg==333){
                 //调到订单页
-                window.location.href="{:url('home/cart/buy')}";
+                window.location.href="<?php echo url('home/cart/buy'); ?>";
 
             }else{
                 alert(msg);
@@ -231,7 +218,7 @@
         var _this=$(this);
         $.ajax({
             type: "POST",
-            url: "{:url('index.php/home/Cart/del')}",
+            url: "<?php echo url('index.php/home/Cart/del'); ?>",
             data: "uid="+uid+"&fid="+fid,
             dataType:'json',
             success: function(msg){
@@ -266,7 +253,7 @@
             if(a>0){
                 $.ajax({
                     type: "POST",
-                    url: "{:url('index.php/home/Cart/kushao')}",
+                    url: "<?php echo url('index.php/home/Cart/kushao'); ?>",
                     data: "num="+num+"&fid="+fid+"&uid="+uid,
                     success: function(msg){
                         if(msg==2){
@@ -295,7 +282,7 @@
             if(a>0){
                 $.ajax({
                     type: "POST",
-                    url: "{:url('index.php/home/Cart/kushao')}",
+                    url: "<?php echo url('index.php/home/Cart/kushao'); ?>",
                     data: "num="+num+"&fid="+fid+"&uid="+uid,
                     success: function(msg){
                         if(msg==2){
@@ -335,7 +322,7 @@
 //        alert(a);
             $.ajax({
                 type: "POST",
-                url: "{:url('index.php/home/Cart/ku')}",
+                url: "<?php echo url('index.php/home/Cart/ku'); ?>",
                 data: "num="+num+"&fid="+fid+"&uid="+uid,
                 dataType:'json',
                 success: function(msg){
@@ -362,7 +349,7 @@
 //        alert(a);
             $.ajax({
                 type: "POST",
-                url: "{:url('index.php/home/Cart/ku')}",
+                url: "<?php echo url('index.php/home/Cart/ku'); ?>",
                 data: "num="+num+"&fid="+fid+"&uid="+uid,
                 dataType:'json',
                 success: function(msg){

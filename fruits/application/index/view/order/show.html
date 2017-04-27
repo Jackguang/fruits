@@ -54,12 +54,12 @@
 									<span class="lbl"></span>
 								</label>
 							</td>
-							<td>{$v.o_id}</td>
+							<td>{$v.o_number}</td>
 							<td>{$v.u_name}</td>
-							<td>{$v.f_name}</td>
+							<td>{$v.sg_fruitsname}</td>
 							<td>{$v.o_num}</td>
 							<td>{$v.o_price}</td>
-							<td>{$v.o_address}</td>
+							<td>{$v.a_address}</td>
 							<td>{$v.o_time}</td>
 							<td>{$v.o_type}</td>
 
@@ -102,7 +102,7 @@
 	       var str ="";
 	       $.each(msg.list,function(k,v){
 	       	str+='<tr><td class="center"><label><input type="checkbox" class="ace" /><span class="lbl"></span></label></td>';
-	       	str+='<td>'+v.o_id+'</td><td>'+v.u_name+'</td><td>'+v.f_name+'</td><td>'+v.o_num+'</td><td>'+v.o_price+'</td><td>'+v.o_address+'</td><td>'+v.o_time+'</td><td>'+v.o_type+'</td>';
+	       	str+='<td>'+v.o_number+'</td><td>'+v.u_name+'</td><td>'+v.sg_fruitsname+'</td><td>'+v.o_num+'</td><td>'+v.o_price+'</td><td>'+v.a_address+'</td><td>'+v.o_time+'</td><td>'+v.o_type+'</td>';
 			
 	       	str+='</tr>';
 	       	

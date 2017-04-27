@@ -107,9 +107,9 @@ $uid=Session::get('u_id');
             url: "{:url('index.php/home/reply/reply_add')}",
             data: "f_id=" + f_id + "&o_number=" + o_number+"&o_id="+o_id+"&opinion_content="+cont,
             success: function (msg) {
-            alert(msg);
+                history.go(0);
             }
         });
     });
-
 </script>
+

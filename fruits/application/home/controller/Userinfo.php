@@ -15,13 +15,13 @@ class Userinfo extends Controller
 		$name = Session::get('u_name');
 		$order_num = count(db('sg_order')->where("u_name='$name'")->select());
 		$this->assign('order_num',$order_num);
-		
+		$user = db('sg_user');
 		$id = Session::get('u_id');
 		$arr = Db::table('sg_order')->where('u_id', $id)->where('o_state', '4')->select();
 		if(empty($arr))
 		{
 			$num=0;
-			$user = db('sg_user');
+
 			$one = $user->where("u_tel = $tel")->select();
 			$this->assign('num',$num);
 

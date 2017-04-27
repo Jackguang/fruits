@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:88:"E:\study\HHH\liupeng\fruits\fruits\public/../application/home\view\reply\order_list.html";i:1493271421;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:88:"E:\study\HHH\liupeng\fruits\fruits\public/../application/home\view\reply\order_list.html";i:1493273069;}*/ ?>
 <?php
 use think\Session;
 $uid=Session::get('u_id');
@@ -108,9 +108,9 @@ $uid=Session::get('u_id');
             url: "<?php echo url('index.php/home/reply/reply_add'); ?>",
             data: "f_id=" + f_id + "&o_number=" + o_number+"&o_id="+o_id+"&opinion_content="+cont,
             success: function (msg) {
-            alert(msg);
+                history.go(0);
             }
         });
     });
-
 </script>
+

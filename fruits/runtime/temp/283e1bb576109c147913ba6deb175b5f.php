@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:85:"E:\study\HHH\liupeng\fruits\fruits\public/../application/home\view\userinfo\user.html";i:1493260011;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:85:"E:\study\HHH\liupeng\fruits\fruits\public/../application/home\view\userinfo\user.html";i:1493271559;}*/ ?>
 <!DOCTYPE html>
 <html class="no-js">
 <head>
@@ -75,7 +75,7 @@
 	        		</span>
 	        		<br>等级</li>
 	        		<li>
-						<a href="<?php echo url('home/Cart/orderinfo'); ?>"><span class="bar"></span><span>2</span><br>我的订单</a>
+						<a href="<?php echo url('home/Cart/orderinfo'); ?>"><span class="bar"></span><span><?= $order_num?></span><br>我的订单</a>
 					</li>
 	        	</ul>
 	        </div>

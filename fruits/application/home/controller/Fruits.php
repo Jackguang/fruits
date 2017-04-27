@@ -14,7 +14,7 @@ class Fruits extends Controller
 //        $this->view->engine->layout(true);
         //赋值
         $arr=db('sg_fruits')
-            ->where('is_show =1')
+            ->where('is_show =1 AND f_surplus > 0')
                 ->order('f_time desc')
                 ->limit(6)
                 ->select();
@@ -61,7 +61,7 @@ public function jia(){
 //    echo $p;
     //总条数
     $arr=db('sg_fruits')
-        ->where('is_show =1')
+        ->where('is_show =1 AND f_surplus > 0')
         ->order('f_time desc')
         ->limit(6)
         ->count();
@@ -79,7 +79,7 @@ public function jia(){
         $limit=($ap-1)*6;
         //返回下一页数据
         $data['resl']= Db::table('sg_fruits')
-            ->where('is_show =1')
+            ->where('is_show =1 AND f_surplus > 0')
             ->limit($limit,6)
             ->select();
         $data['sid']=1;
@@ -138,7 +138,7 @@ public function jia(){
        $t_id=$_GET['t_id'];
         $arr=db('sg_fruits')
             ->join("sg_type","sg_fruits.t_id = sg_type.t_id")
-            ->where("is_show =1 and sg_fruits.t_id=$t_id")
+            ->where("is_show =1 and sg_fruits.t_id=$t_id AND f_surplus > 0")
             ->order('f_time desc')
             ->limit(6)
             ->select();
@@ -158,7 +158,7 @@ public function jia(){
 //    echo $p;
         //总条数
         $arr=db('sg_fruits')
-            ->where("is_show =1 and t_id= $t_id")
+            ->where("is_show =1 and t_id= $t_id AND f_surplus > 0")
             ->order('f_time desc')
             ->limit(6)
             ->count();
@@ -176,7 +176,7 @@ public function jia(){
             $limit=($ap-1)*6;
             //返回下一页数据
             $data['resl']= Db::table('sg_fruits')
-                ->where("is_show =1 and t_id= $t_id")
+                ->where("is_show =1 and t_id= $t_id AND f_surplus > 0")
                 ->limit($limit,6)
                 ->select();
             $data['sid']=1;
@@ -192,7 +192,7 @@ public function jia(){
     public function classifyin(){
         $arr=db('sg_fruits')
             ->join("sg_type","sg_fruits.t_id = sg_type.t_id")
-            ->where("is_show =1 ")
+            ->where("is_show =1 AND f_surplus > 0")
             ->order('f_time desc')
             ->limit(6)
             ->select();

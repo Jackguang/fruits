@@ -262,6 +262,37 @@ public function address(){
 //        echo $str;die;
         $arr=explode(',',$str);
         //选择了收货地址
+        //            **************chen******判断库存是否够**********
+        $data=Db::table('sg_order')
+            ->alias('a')
+            ->join('sg_uaddress w','a.o_address = w.a_id')
+            ->where("o_id = $arr[0]")
+            ->find();
+
+        $a=explode(',',$data['f_id']);//商品id
+        $price=explode(',',$data['o_price']);//商品单价
+        $num=explode(',',$data['o_num']);//商品数量
+        foreach($a as $k=>$v){
+            $list[]=Db::table('sg_fruits')
+                ->field('f_id,f_name,f_img,f_weight,f_title,m_price')
+                ->where("f_id = $v")
+                ->find();
+
+        }
+//                ***************比较库存*******
+        foreach($a as $k=>$v){
+            $res= Db::table('sg_fruits')
+                ->where("f_id = $v ")
+                ->find();
+            $number= $res['f_surplus'];
+            $name= $res['f_name'];
+            if($number<$num[$k]){
+               echo "<script>alert($name+'库存不足');</script>";die;
+            }
+
+
+        }
+//            *********************chen****************
         //改变付款状态
         $res=Db::table('sg_order')
         ->where('o_id', $arr[0])
@@ -489,6 +520,45 @@ public function address(){
             $uid = Session::get('u_id');//用户id
             $o_id= $_POST['o_id'];
             $address= $_POST['address'];
+//            **************chen******判断库存是否够**********
+            $data=Db::table('sg_order')
+                ->alias('a')
+                ->join('sg_uaddress w','a.o_address = w.a_id')
+                ->where("o_id = $o_id")
+                ->find();
+
+            $a=explode(',',$data['f_id']);//商品id
+            $price=explode(',',$data['o_price']);//商品单价
+            $num=explode(',',$data['o_num']);//商品数量
+            foreach($a as $k=>$v){
+                $list[]=Db::table('sg_fruits')
+                    ->field('f_id,f_name,f_img,f_weight,f_title,m_price')
+                    ->where("f_id = $v")
+                    ->find();
+
+            }
+//                ***************比较库存*******
+            foreach($a as $k=>$v){
+                $res= Db::table('sg_fruits')
+                    ->where("f_id = $v ")
+                    ->find();
+                $number= $res['f_surplus'];
+                $name= $res['f_name'];
+                if($number<$num[$k]){
+                    $resli['az']=3.; //商品详细信息
+                    $resli['list']=$name; //商品详细信息
+                    echo json_encode($resli);die;
+//                    echo "<script>alert($name+'库存不足');</script>";die;
+                }
+//                if($number<$num[$k]){
+//                    $resli['az']=3.; //商品详细信息
+//                    echo json_encode($resli);die;
+//                }
+
+
+            }
+//            *********************chen****************
+
 
 
             $res= Db::table('sg_order')
@@ -518,6 +588,7 @@ public function address(){
                         ->where("f_id = $v ")
                         ->find();
                     $number= $res['f_surplus'];
+
                     Db::table('sg_fruits')
                         ->where("f_id = $v ")
                         ->update(['f_surplus' => $number-$num[$k]]);
@@ -541,8 +612,8 @@ public function address(){
                 $resli['az']=2; //商品详细信息
                 echo json_encode($resli);
             }else{
-                $res['az']=1; //商品详细信息
-                echo json_encode($res);
+                $resli['az']=1; //商品详细信息
+                echo json_encode($resli);
             }
          }
 

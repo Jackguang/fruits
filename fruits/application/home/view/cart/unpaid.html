@@ -136,6 +136,7 @@
     $('.fu').click(function(){
         //修改订单状态为收货状态
         var oid=$(this).attr('alt');
+
         var address=$('.address').val();
         var str='';
         var _this=$('this');
@@ -153,6 +154,9 @@
                 }
                 if(msg.az==1){
                     alert('付款失败');
+                }
+                if(msg.az==3){
+                    alert(msg.list+'库存不足');
                 }
             }
         });

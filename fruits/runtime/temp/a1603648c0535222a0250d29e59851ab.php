@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:85:"E:\WAPM\WWW\chenyan\11\fruits\fruits\public/../application/home\view\cart\unpaid.html";i:1493211077;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:85:"E:\WAPM\WWW\chenyan\11\fruits\fruits\public/../application/home\view\cart\unpaid.html";i:1493255766;}*/ ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -134,6 +134,7 @@
     $('.fu').click(function(){
         //修改订单状态为收货状态
         var oid=$(this).attr('alt');
+
         var address=$('.address').val();
         var str='';
         var _this=$('this');
@@ -151,6 +152,9 @@
                 }
                 if(msg.az==1){
                     alert('付款失败');
+                }
+                if(msg.az==3){
+                    alert(msg.list+'库存不足');
                 }
             }
         });

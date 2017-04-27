@@ -12,6 +12,10 @@ class Userinfo extends Controller
 			return view('user/login');
 		}
 
+		$name = Session::get('u_name');
+		$order_num = count(db('sg_order')->where("u_name='$name'")->select());
+		$this->assign('order_num',$order_num);
+		
 		$id = Session::get('u_id');
 		$arr = Db::table('sg_order')->where('u_id', $id)->where('o_state', '4')->select();
 		if(empty($arr))
@@ -46,8 +50,9 @@ class Userinfo extends Controller
 		}
 		$num=count($drr);
 		// $tel = '17319231328';
-		$user = db('sg_user');
 		$one = $user->where("u_tel = $tel")->select();
+
+		
 		$this->assign('num',$num);
 		return view('user',['one'=>$one]);
 	}

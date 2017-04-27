@@ -9,9 +9,15 @@ class Reply extends Controller
 //    为平论商品列表
     public function order_list()
     {
-//        $id = Session::get('u_id');
-        $id=22;
-        $arr = Db::table('sg_order')->where('u_id', $id)->where('o_state', '1')->select();
+        $id = Session::get('u_id');
+//        $id=22;
+        $arr = Db::table('sg_order')->where('u_id', $id)->where('o_state', '4')->select();
+        if(empty($arr))
+        {
+            $drr['isset']=0;
+            $this->assign('arr',$drr);
+            return view("order_list");
+        }
         foreach ($arr as $k => $v) {
             $arr[$k]['o_num'] = explode(',', $arr[$k]['o_num']);
             $arr[$k]['o_price'] = explode(',', $arr[$k]['o_price']);
@@ -33,10 +39,10 @@ class Reply extends Controller
                 }
             }
         }
+        $drr['isset']=1;
         $this->assign('arr',$drr);
         return view("order_list");
     }
-
     public function reply_show()
     {
 //        $id=$_GET['id'];

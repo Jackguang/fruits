@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:88:"E:\study\HHH\liupeng\fruits\fruits\public/../application/home\view\reply\order_list.html";i:1493110372;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:88:"E:\study\HHH\liupeng\fruits\fruits\public/../application/home\view\reply\order_list.html";i:1493255624;}*/ ?>
 <?php
 use think\Session;
 $uid=Session::get('u_id');
@@ -49,6 +49,7 @@ $uid=Session::get('u_id');
 <div class="height20"></div>
 <div class=" container-fluid">
     <div class="row">
+        <?php if($arr['isset'] == 1): ?>
         <div class="table">
             <?php foreach($arr as $k=>$v) { ?>
             <div style="padding-right:5px;" >
@@ -70,6 +71,12 @@ $uid=Session::get('u_id');
             <?php } ?>
 
         </div>
+        <?php else: ?>
+        <center><img src="uploads/620.jpg" alt="">
+            <br>
+            <a href="<?php echo url('home/fruits/index'); ?>"><span style="font-size: 25px;">去商城买点水果吧→</span></a></center>
+
+        <?php endif; ?>
 
     </div>
 </div>

@@ -48,6 +48,7 @@ $uid=Session::get('u_id');
 <div class="height20"></div>
 <div class=" container-fluid">
     <div class="row">
+        {if condition="$arr['isset'] == 1"}
         <div class="table">
             <?php foreach($arr as $k=>$v) { ?>
             <div style="padding-right:5px;" >
@@ -67,8 +68,13 @@ $uid=Session::get('u_id');
                 </div>
             </div>
             <?php } ?>
-
         </div>
+        {else /}
+        <center><img src="uploads/620.jpg" alt="">
+            <br>
+            <a href="{:url('home/fruits/index')}"><span style="font-size: 25px;">去商城买点水果吧→</span></a></center>
+
+        {/if}
 
     </div>
 </div>

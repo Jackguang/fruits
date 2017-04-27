@@ -104,27 +104,33 @@ public function jia(){
         join("sg_user","sg_user.u_id = sg_opinion.u_id")
             ->where("f_id = $id")->select();
         $count = count($opinions);
+        if($count)
+        {
+            $ci=1;
+        }
+        else{
+            $ci=0;
+        }
       if(!$opinions){
           return view('info',[
               'fruit_one'=>$fruit_one,
               'opinions'=>1,
-              'count'=>'',
-              't'=>''
+              'count'=>'0',
+              'ci'=>$ci
           ]);
       }else{
-          $tel = $opinions[0]['u_tel'];
-          $tels = substr($tel,3,4);
-          $t = str_replace($tels,'****', $tel);
+          foreach($opinions as $k=>$v)
+          {
+              $tels = substr($v['u_tel'],3,4);
+              $opinions[$k]['u_tel']=str_replace($tels,'****', $v['u_tel']);
+          }
       }
 
-
-        // print_r($opinions);die;
-        return view('info',[
-            'fruit_one'=>$fruit_one,
-            'opinions'=>$opinions,
-            'count'=>$count,
-            't'=>$t
-        ]);
+        $this->assign('arr',$opinions);
+        $this->assign('count',$count);
+        $this->assign('ci',$ci);
+        $this->assign('fruit_one',$fruit_one);
+        return view('info');
     }
 
     public function ajaxs()

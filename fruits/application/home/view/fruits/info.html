@@ -27,7 +27,7 @@ $uid=Session::get('u_id');
     <![endif]-->
     <style type="text/css">
         <!--
-        body{ background:#eeeeee;  font-family:"微软雅黑"； }
+        body{ background:#eeeeee;  font-family:"微软雅黑";}
         input[type="text"],input[type="password"],input[type="date"],input[type="month"],input[type="month"],input[type="time"],input[type="week"],input[type="email"],select{border:none; outline:none; transition:border 0.2s ease-in 0s;  }
         input[type="button"],input[type="submit"]{outline:none;cursor:pointer;border:none;}		input[type="text"]:focus,input[type="password"]:focus,input[type="date"]:focus,input[type="month"]:focus,input[type="month"]:focus,input[type="time"]:focus,input[type="week"]:focus,input[type="email"]:focus,select:focus{border:1px solid #17a862;  }
         -->
@@ -124,39 +124,35 @@ $uid=Session::get('u_id');
         <a title="收起" class=" cgreen" href="#"><i class="icon-angle-up" style="font-size:24px;"></i></a>
         </span>
 </div>
+{if condition="$ci != 0"}
+{foreach name='arr' item='v'}
 <div class=" width100 bg_white" style="padding:10px;">
-    <input type="hidden" class="fid" value="<?php echo $fruit_one[0]['f_id']?>">
-    <span><?= $t?></span>
+    <input type="hidden" class="fid" value="<?php echo $v['f_id']?>">
+    <span><?= $v['u_tel']?></span>
         <span class="pull-right color_orange">
-             {if condition="$count == ''"}
 
-{else /}
             <i class="icon-star"></i>
         <i class="icon-star"></i>
         <i class="icon-star"></i>
         <i class="icon-star"></i>
         <i class="icon-star-empty"></i>
-            {/if}
-
         </span>
     <div class="height10"></div>
     <div class="artic14">
-        <p><?= $opinions[0]['opinion_content']?></p>
+        <p><?= $v['opinion_content']?></p>
     </div>
     <span class="pull-right">
-
- {if condition="$opinions == 1"}
-无评论
-{else /}
-        <?= date('Y-m-d h:i:s',$opinions[0]['opinion_time']);?>
-{/if}
-
-
-
+        <?= date('Y-m-d h:i:s',$v['opinion_time']);?>
     </span><!--b-->
     <div class="height10 border_bottom"></div>
     <div class="height10"></div>
 </div><!--a-->
+{/foreach}{else /}
+<center><img src="uploads/620.jpg" alt=""></center>
+{/if}
+
+
+
 <div class="height10"></div>
 <!--    <div class=" width100 bg_white" style="padding:10px;">
        <div class="media">

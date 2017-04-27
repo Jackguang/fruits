@@ -1,0 +1,407 @@
+[ 2017-04-27T09:01:08+08:00 ] 127.0.0.1 127.0.0.1 GET /fruits/fruits/public/
+[ log ] www.phpstudy.com/fruits/fruits/public/ [运行时间：0.551374s][吞吐率：1.81req/s] [内存消耗：1,103.91kb] [文件加载：32]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.phpstudy.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:53.0) Gecko/20100101 Firefox/53.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.phpstudy.com/fruits/fruits/',
+  'cookie' => 'Hm_lvt_4233e74dff0ae5bd0a3d81c6ccf756e6=1488243713,1488454475,1488501774,1488606646; _pk_ysp_id.[object Object].027a=8cc65277cd1440f4.1488348524.1.1488348524.1488348524.; Hm_lvt_91c9613acf14840c5b88007112a0878f=1489798824,1489919883,1490154825,1490236390; Hm_lvt_15577700f8ecddb1a927813c81166ade=1489147005,1489193276; pgv_pvi=1849504768; _uab_collina=149205364261451043432196; cna=Pi6eELmegRICAd6As6vrz84G; _umdata=C234BF9D3AFA6FE77CC3B8DABDAB322ECA6997BF84F2EA765C4E6251C8851D615C553413D2367607CD43AD3E795C914C1C77DAC1D01CE3EBC730B5777C933F4B; l=AhkZRwXR-a0SaSA-n33dHtYAKQ/z6g1Y; isg=ArKy6dA1PiPhRQIfQl8uVim7AvhXCLbd6WWeAnyLkmVQD1IJZNMG7bgviRBc; o2-webp=false; tu=1a354589b9e582fac7da3a90fcc7512f',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] Method [ <user> public method index ] {
+  @@ E:\phpStudy\WWW\fruits\fruits\application\index\controller\Index.php 7 - 12
+}
+
+[ info ] [ VIEW ] E:\phpStudy\WWW\fruits\fruits\public/../application/index\view\index\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-04-27T09:01:19+08:00 ] 127.0.0.1 127.0.0.1 GET /fruits/fruits/public/index.php/index/login/login
+[ log ] www.phpstudy.com/fruits/fruits/public/index.php/index/login/login [运行时间：0.131847s][吞吐率：7.58req/s] [内存消耗：1,154.62kb] [文件加载：33]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'login',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.phpstudy.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:53.0) Gecko/20100101 Firefox/53.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'Hm_lvt_4233e74dff0ae5bd0a3d81c6ccf756e6=1488243713,1488454475,1488501774,1488606646; _pk_ysp_id.[object Object].027a=8cc65277cd1440f4.1488348524.1.1488348524.1488348524.; Hm_lvt_91c9613acf14840c5b88007112a0878f=1489798824,1489919883,1490154825,1490236390; Hm_lvt_15577700f8ecddb1a927813c81166ade=1489147005,1489193276; pgv_pvi=1849504768; _uab_collina=149205364261451043432196; cna=Pi6eELmegRICAd6As6vrz84G; _umdata=C234BF9D3AFA6FE77CC3B8DABDAB322ECA6997BF84F2EA765C4E6251C8851D615C553413D2367607CD43AD3E795C914C1C77DAC1D01CE3EBC730B5777C933F4B; l=AhkZRwXR-a0SaSA-n33dHtYAKQ/z6g1Y; isg=ArKy6dA1PiPhRQIfQl8uVim7AvhXCLbd6WWeAnyLkmVQD1IJZNMG7bgviRBc; o2-webp=false; tu=1a354589b9e582fac7da3a90fcc7512f',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] Method [ <user> public method login ] {
+  @@ E:\phpStudy\WWW\fruits\fruits\application\index\controller\Login.php 10 - 14
+}
+
+[ info ] [ VIEW ] E:\phpStudy\WWW\fruits\fruits\public/../application/index\view\login\login.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-04-27T09:01:20+08:00 ] 127.0.0.1 127.0.0.1 GET /fruits/fruits/public/bower_components/metisMenu/dist/metisMenu.min.css
+[ log ] www.phpstudy.com/fruits/fruits/public/bower_components/metisMenu/dist/metisMenu.min.css [运行时间：0.264362s][吞吐率：3.78req/s] [内存消耗：917.70kb] [文件加载：29]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'fruits',
+    1 => 'fruits',
+    2 => 'public',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.phpstudy.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:53.0) Gecko/20100101 Firefox/53.0',
+  'accept' => 'text/css,*/*;q=0.1',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.phpstudy.com/fruits/fruits/public/index.php/index/login/login',
+  'cookie' => 'Hm_lvt_4233e74dff0ae5bd0a3d81c6ccf756e6=1488243713,1488454475,1488501774,1488606646; _pk_ysp_id.[object Object].027a=8cc65277cd1440f4.1488348524.1.1488348524.1488348524.; Hm_lvt_91c9613acf14840c5b88007112a0878f=1489798824,1489919883,1490154825,1490236390; Hm_lvt_15577700f8ecddb1a927813c81166ade=1489147005,1489193276; pgv_pvi=1849504768; _uab_collina=149205364261451043432196; cna=Pi6eELmegRICAd6As6vrz84G; _umdata=C234BF9D3AFA6FE77CC3B8DABDAB322ECA6997BF84F2EA765C4E6251C8851D615C553413D2367607CD43AD3E795C914C1C77DAC1D01CE3EBC730B5777C933F4B; l=AhkZRwXR-a0SaSA-n33dHtYAKQ/z6g1Y; isg=ArKy6dA1PiPhRQIfQl8uVim7AvhXCLbd6WWeAnyLkmVQD1IJZNMG7bgviRBc; o2-webp=false; tu=1a354589b9e582fac7da3a90fcc7512f',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+  '/bower_components/metisMenu/dist/metisMenu_min_css' => '',
+  'bower_components' => 'metisMenu',
+  'dist' => 'metisMenu.min.css',
+)
+[ info ] [ LANG ] E:\phpStudy\WWW\fruits\fruits\framework\lang\zh-cn.php
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-04-27T09:01:32+08:00 ] 127.0.0.1 127.0.0.1 POST /fruits/fruits/public/index.php/index/Login/posts.html
+[ log ] www.phpstudy.com/fruits/fruits/public/index.php/index/Login/posts.html [运行时间：0.872206s][吞吐率：1.15req/s] [内存消耗：1,816.91kb] [文件加载：41]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Login',
+    2 => 'posts',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.phpstudy.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:53.0) Gecko/20100101 Firefox/53.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.phpstudy.com/fruits/fruits/public/index.php/index/login/login',
+  'cookie' => 'Hm_lvt_4233e74dff0ae5bd0a3d81c6ccf756e6=1488243713,1488454475,1488501774,1488606646; _pk_ysp_id.[object Object].027a=8cc65277cd1440f4.1488348524.1.1488348524.1488348524.; Hm_lvt_91c9613acf14840c5b88007112a0878f=1489798824,1489919883,1490154825,1490236390; Hm_lvt_15577700f8ecddb1a927813c81166ade=1489147005,1489193276; pgv_pvi=1849504768; _uab_collina=149205364261451043432196; cna=Pi6eELmegRICAd6As6vrz84G; _umdata=C234BF9D3AFA6FE77CC3B8DABDAB322ECA6997BF84F2EA765C4E6251C8851D615C553413D2367607CD43AD3E795C914C1C77DAC1D01CE3EBC730B5777C933F4B; l=AhkZRwXR-a0SaSA-n33dHtYAKQ/z6g1Y; isg=ArKy6dA1PiPhRQIfQl8uVim7AvhXCLbd6WWeAnyLkmVQD1IJZNMG7bgviRBc; o2-webp=false; tu=1a354589b9e582fac7da3a90fcc7512f; think_var=zh-cn',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'content-length' => '28',
+)
+[ info ] [ PARAM ] array (
+  'name' => 'admin',
+  'password' => 'admin123',
+)
+[ info ] [ RUN ] Method [ <user> public method posts ] {
+  @@ E:\phpStudy\WWW\fruits\fruits\application\index\controller\Login.php 16 - 35
+}
+
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.238526s ] mysql:dbname=fruits;host=101.200.41.87;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sg_admin` [ RunTime:0.163370s ]
+[ sql ] [ SQL ] SELECT * FROM `sg_admin` WHERE  `a_name` = 'admin'  AND `a_pwd` = 'admin123' LIMIT 1     [ RunTime:0.168250s ]
+
+---------------------------------------------------------------
+[ 2017-04-27T09:01:32+08:00 ] 127.0.0.1 127.0.0.1 GET /fruits/fruits/public/index.php/index/index/show.html
+[ log ] www.phpstudy.com/fruits/fruits/public/index.php/index/index/show.html [运行时间：0.133156s][吞吐率：7.51req/s] [内存消耗：1,368.91kb] [文件加载：36]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'show',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.phpstudy.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:53.0) Gecko/20100101 Firefox/53.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.phpstudy.com/fruits/fruits/public/index.php/index/login/login',
+  'cookie' => 'Hm_lvt_4233e74dff0ae5bd0a3d81c6ccf756e6=1488243713,1488454475,1488501774,1488606646; _pk_ysp_id.[object Object].027a=8cc65277cd1440f4.1488348524.1.1488348524.1488348524.; Hm_lvt_91c9613acf14840c5b88007112a0878f=1489798824,1489919883,1490154825,1490236390; Hm_lvt_15577700f8ecddb1a927813c81166ade=1489147005,1489193276; pgv_pvi=1849504768; _uab_collina=149205364261451043432196; cna=Pi6eELmegRICAd6As6vrz84G; _umdata=C234BF9D3AFA6FE77CC3B8DABDAB322ECA6997BF84F2EA765C4E6251C8851D615C553413D2367607CD43AD3E795C914C1C77DAC1D01CE3EBC730B5777C933F4B; l=AhkZRwXR-a0SaSA-n33dHtYAKQ/z6g1Y; isg=ArKy6dA1PiPhRQIfQl8uVim7AvhXCLbd6WWeAnyLkmVQD1IJZNMG7bgviRBc; o2-webp=false; tu=1a354589b9e582fac7da3a90fcc7512f; think_var=zh-cn; PHPSESSID=ickg4n373j77t2aiv94ap54g94',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] Method [ <user> public method show ] {
+  @@ E:\phpStudy\WWW\fruits\fruits\application\index\controller\Index.php 15 - 19
+}
+
+[ info ] [ VIEW ] E:\phpStudy\WWW\fruits\fruits\public/../application/index\view\index\show.html [ array (
+) ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-04-27T09:04:04+08:00 ] 127.0.0.1 127.0.0.1 GET /fruits/fruits/public/
+[ log ] www.phpstudy.com/fruits/fruits/public/ [运行时间：0.038658s][吞吐率：25.87req/s] [内存消耗：1,104.05kb] [文件加载：32]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.phpstudy.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:53.0) Gecko/20100101 Firefox/53.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.phpstudy.com/fruits/fruits/',
+  'cookie' => 'Hm_lvt_4233e74dff0ae5bd0a3d81c6ccf756e6=1488243713,1488454475,1488501774,1488606646; _pk_ysp_id.[object Object].027a=8cc65277cd1440f4.1488348524.1.1488348524.1488348524.; Hm_lvt_91c9613acf14840c5b88007112a0878f=1489798824,1489919883,1490154825,1490236390; Hm_lvt_15577700f8ecddb1a927813c81166ade=1489147005,1489193276; pgv_pvi=1849504768; _uab_collina=149205364261451043432196; cna=Pi6eELmegRICAd6As6vrz84G; _umdata=C234BF9D3AFA6FE77CC3B8DABDAB322ECA6997BF84F2EA765C4E6251C8851D615C553413D2367607CD43AD3E795C914C1C77DAC1D01CE3EBC730B5777C933F4B; l=AhkZRwXR-a0SaSA-n33dHtYAKQ/z6g1Y; isg=ArKy6dA1PiPhRQIfQl8uVim7AvhXCLbd6WWeAnyLkmVQD1IJZNMG7bgviRBc; o2-webp=false; tu=1a354589b9e582fac7da3a90fcc7512f; think_var=zh-cn; PHPSESSID=ickg4n373j77t2aiv94ap54g94',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] Method [ <user> public method index ] {
+  @@ E:\phpStudy\WWW\fruits\fruits\application\index\controller\Index.php 7 - 12
+}
+
+[ info ] [ VIEW ] E:\phpStudy\WWW\fruits\fruits\public/../application/index\view\index\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-04-27T09:04:55+08:00 ] 127.0.0.1 127.0.0.1 GET /fruits/fruits/public/home/user/login
+[ log ] www.phpstudy.com/fruits/fruits/public/home/user/login [运行时间：0.040041s][吞吐率：24.97req/s] [内存消耗：916.30kb] [文件加载：29]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'fruits',
+    1 => 'fruits',
+    2 => 'public',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.phpstudy.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:53.0) Gecko/20100101 Firefox/53.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'Hm_lvt_4233e74dff0ae5bd0a3d81c6ccf756e6=1488243713,1488454475,1488501774,1488606646; _pk_ysp_id.[object Object].027a=8cc65277cd1440f4.1488348524.1.1488348524.1488348524.; Hm_lvt_91c9613acf14840c5b88007112a0878f=1489798824,1489919883,1490154825,1490236390; Hm_lvt_15577700f8ecddb1a927813c81166ade=1489147005,1489193276; pgv_pvi=1849504768; _uab_collina=149205364261451043432196; cna=Pi6eELmegRICAd6As6vrz84G; _umdata=C234BF9D3AFA6FE77CC3B8DABDAB322ECA6997BF84F2EA765C4E6251C8851D615C553413D2367607CD43AD3E795C914C1C77DAC1D01CE3EBC730B5777C933F4B; l=AhkZRwXR-a0SaSA-n33dHtYAKQ/z6g1Y; isg=ArKy6dA1PiPhRQIfQl8uVim7AvhXCLbd6WWeAnyLkmVQD1IJZNMG7bgviRBc; o2-webp=false; tu=1a354589b9e582fac7da3a90fcc7512f; think_var=zh-cn; PHPSESSID=ickg4n373j77t2aiv94ap54g94',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+  '/home/user/login' => '',
+  'home' => 'user',
+)
+[ info ] [ LANG ] E:\phpStudy\WWW\fruits\fruits\framework\lang\zh-cn.php
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-04-27T09:05:24+08:00 ] 127.0.0.1 127.0.0.1 GET /fruits/fruits/public/home/user/login
+[ log ] www.phpstudy.com/fruits/fruits/public/home/user/login [运行时间：0.041015s][吞吐率：24.38req/s] [内存消耗：916.29kb] [文件加载：29]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'fruits',
+    1 => 'fruits',
+    2 => 'public',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.phpstudy.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:53.0) Gecko/20100101 Firefox/53.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'Hm_lvt_4233e74dff0ae5bd0a3d81c6ccf756e6=1488243713,1488454475,1488501774,1488606646; _pk_ysp_id.[object Object].027a=8cc65277cd1440f4.1488348524.1.1488348524.1488348524.; Hm_lvt_91c9613acf14840c5b88007112a0878f=1489798824,1489919883,1490154825,1490236390; Hm_lvt_15577700f8ecddb1a927813c81166ade=1489147005,1489193276; pgv_pvi=1849504768; _uab_collina=149205364261451043432196; cna=Pi6eELmegRICAd6As6vrz84G; _umdata=C234BF9D3AFA6FE77CC3B8DABDAB322ECA6997BF84F2EA765C4E6251C8851D615C553413D2367607CD43AD3E795C914C1C77DAC1D01CE3EBC730B5777C933F4B; l=AhkZRwXR-a0SaSA-n33dHtYAKQ/z6g1Y; isg=ArKy6dA1PiPhRQIfQl8uVim7AvhXCLbd6WWeAnyLkmVQD1IJZNMG7bgviRBc; o2-webp=false; tu=1a354589b9e582fac7da3a90fcc7512f; think_var=zh-cn; PHPSESSID=ickg4n373j77t2aiv94ap54g94',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+  '/home/user/login' => '',
+  'home' => 'user',
+)
+[ info ] [ LANG ] E:\phpStudy\WWW\fruits\fruits\framework\lang\zh-cn.php
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-04-27T09:05:55+08:00 ] 127.0.0.1 127.0.0.1 GET /fruits/fruits/public/home/user/login
+[ log ] www.phpstudy.com/fruits/fruits/public/home/user/login [运行时间：0.032986s][吞吐率：30.32req/s] [内存消耗：916.29kb] [文件加载：29]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'fruits',
+    1 => 'fruits',
+    2 => 'public',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.phpstudy.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:53.0) Gecko/20100101 Firefox/53.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'Hm_lvt_4233e74dff0ae5bd0a3d81c6ccf756e6=1488243713,1488454475,1488501774,1488606646; _pk_ysp_id.[object Object].027a=8cc65277cd1440f4.1488348524.1.1488348524.1488348524.; Hm_lvt_91c9613acf14840c5b88007112a0878f=1489798824,1489919883,1490154825,1490236390; Hm_lvt_15577700f8ecddb1a927813c81166ade=1489147005,1489193276; pgv_pvi=1849504768; _uab_collina=149205364261451043432196; cna=Pi6eELmegRICAd6As6vrz84G; _umdata=C234BF9D3AFA6FE77CC3B8DABDAB322ECA6997BF84F2EA765C4E6251C8851D615C553413D2367607CD43AD3E795C914C1C77DAC1D01CE3EBC730B5777C933F4B; l=AhkZRwXR-a0SaSA-n33dHtYAKQ/z6g1Y; isg=ArKy6dA1PiPhRQIfQl8uVim7AvhXCLbd6WWeAnyLkmVQD1IJZNMG7bgviRBc; o2-webp=false; tu=1a354589b9e582fac7da3a90fcc7512f; think_var=zh-cn; PHPSESSID=ickg4n373j77t2aiv94ap54g94',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+  '/home/user/login' => '',
+  'home' => 'user',
+)
+[ info ] [ LANG ] E:\phpStudy\WWW\fruits\fruits\framework\lang\zh-cn.php
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-04-27T09:08:19+08:00 ] 127.0.0.1 127.0.0.1 GET /fruits/fruits/public/
+[ log ] www.phpstudy.com/fruits/fruits/public/ [运行时间：0.031804s][吞吐率：31.44req/s] [内存消耗：1,104.05kb] [文件加载：32]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.phpstudy.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:53.0) Gecko/20100101 Firefox/53.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.phpstudy.com/fruits/fruits/',
+  'cookie' => 'Hm_lvt_4233e74dff0ae5bd0a3d81c6ccf756e6=1488243713,1488454475,1488501774,1488606646; _pk_ysp_id.[object Object].027a=8cc65277cd1440f4.1488348524.1.1488348524.1488348524.; Hm_lvt_91c9613acf14840c5b88007112a0878f=1489798824,1489919883,1490154825,1490236390; Hm_lvt_15577700f8ecddb1a927813c81166ade=1489147005,1489193276; pgv_pvi=1849504768; _uab_collina=149205364261451043432196; cna=Pi6eELmegRICAd6As6vrz84G; _umdata=C234BF9D3AFA6FE77CC3B8DABDAB322ECA6997BF84F2EA765C4E6251C8851D615C553413D2367607CD43AD3E795C914C1C77DAC1D01CE3EBC730B5777C933F4B; l=AhkZRwXR-a0SaSA-n33dHtYAKQ/z6g1Y; isg=ArKy6dA1PiPhRQIfQl8uVim7AvhXCLbd6WWeAnyLkmVQD1IJZNMG7bgviRBc; o2-webp=false; tu=1a354589b9e582fac7da3a90fcc7512f; think_var=zh-cn; PHPSESSID=ickg4n373j77t2aiv94ap54g94',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] Method [ <user> public method index ] {
+  @@ E:\phpStudy\WWW\fruits\fruits\application\index\controller\Index.php 7 - 12
+}
+
+[ info ] [ VIEW ] E:\phpStudy\WWW\fruits\fruits\public/../application/index\view\index\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-04-27T09:08:50+08:00 ] 127.0.0.1 127.0.0.1 GET /fruits/fruits/public/index.php/home/user/login
+[ log ] www.phpstudy.com/fruits/fruits/public/index.php/home/user/login [运行时间：0.053814s][吞吐率：18.58req/s] [内存消耗：1,167.19kb] [文件加载：33]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'user',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.phpstudy.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:53.0) Gecko/20100101 Firefox/53.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'Hm_lvt_4233e74dff0ae5bd0a3d81c6ccf756e6=1488243713,1488454475,1488501774,1488606646; _pk_ysp_id.[object Object].027a=8cc65277cd1440f4.1488348524.1.1488348524.1488348524.; Hm_lvt_91c9613acf14840c5b88007112a0878f=1489798824,1489919883,1490154825,1490236390; Hm_lvt_15577700f8ecddb1a927813c81166ade=1489147005,1489193276; pgv_pvi=1849504768; _uab_collina=149205364261451043432196; cna=Pi6eELmegRICAd6As6vrz84G; _umdata=C234BF9D3AFA6FE77CC3B8DABDAB322ECA6997BF84F2EA765C4E6251C8851D615C553413D2367607CD43AD3E795C914C1C77DAC1D01CE3EBC730B5777C933F4B; l=AhkZRwXR-a0SaSA-n33dHtYAKQ/z6g1Y; isg=ArKy6dA1PiPhRQIfQl8uVim7AvhXCLbd6WWeAnyLkmVQD1IJZNMG7bgviRBc; o2-webp=false; tu=1a354589b9e582fac7da3a90fcc7512f; think_var=zh-cn; PHPSESSID=ickg4n373j77t2aiv94ap54g94',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] Method [ <user> public method login ] {
+  @@ E:\phpStudy\WWW\fruits\fruits\application\home\controller\User.php 86 - 109
+}
+
+[ info ] [ VIEW ] E:\phpStudy\WWW\fruits\fruits\public/../application/home\view\user\login.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-04-27T09:15:58+08:00 ] 127.0.0.1 127.0.0.1 GET /fruits/fruits/public/index.php/index/index/show.html
+[ log ] www.phpstudy.com/fruits/fruits/public/index.php/index/index/show.html [运行时间：0.043464s][吞吐率：23.01req/s] [内存消耗：1,212.48kb] [文件加载：34]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'show',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.phpstudy.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:53.0) Gecko/20100101 Firefox/53.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.phpstudy.com/fruits/fruits/public/index.php/index/login/login',
+  'cookie' => 'ace.settings=%7B%22sidebar-collapsed%22%3A-1%7D; Hm_lvt_4233e74dff0ae5bd0a3d81c6ccf756e6=1488243713,1488454475,1488501774,1488606646; _pk_ysp_id.[object Object].027a=8cc65277cd1440f4.1488348524.1.1488348524.1488348524.; Hm_lvt_91c9613acf14840c5b88007112a0878f=1489798824,1489919883,1490154825,1490236390; Hm_lvt_15577700f8ecddb1a927813c81166ade=1489147005,1489193276; pgv_pvi=1849504768; _uab_collina=149205364261451043432196; cna=Pi6eELmegRICAd6As6vrz84G; _umdata=C234BF9D3AFA6FE77CC3B8DABDAB322ECA6997BF84F2EA765C4E6251C8851D615C553413D2367607CD43AD3E795C914C1C77DAC1D01CE3EBC730B5777C933F4B; l=AhkZRwXR-a0SaSA-n33dHtYAKQ/z6g1Y; isg=ArKy6dA1PiPhRQIfQl8uVim7AvhXCLbd6WWeAnyLkmVQD1IJZNMG7bgviRBc; o2-webp=false; tu=1a354589b9e582fac7da3a90fcc7512f; think_var=zh-cn; PHPSESSID=ickg4n373j77t2aiv94ap54g94',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] Method [ <user> public method show ] {
+  @@ E:\phpStudy\WWW\fruits\fruits\application\index\controller\Index.php 15 - 19
+}
+
+[ info ] [ VIEW ] E:\phpStudy\WWW\fruits\fruits\public/../application/index\view\index\show.html [ array (
+) ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------

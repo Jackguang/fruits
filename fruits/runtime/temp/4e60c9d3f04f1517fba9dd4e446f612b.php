@@ -1,4 +1,8 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:78:"E:\phpStudy\WWW\fruits\fruits\public/../application/home\view\fruits\info.html";i:1493005028;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:78:"E:\phpStudy\WWW\fruits\fruits\public/../application/home\view\fruits\info.html";i:1493122032;}*/ ?>
+<?php
+use think\Session;
+$uid=Session::get('u_id');
+?>
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -33,12 +37,21 @@
 <body >
 <div class="toper navbar-fixed-top">
     <div class="row color_white " >
-        <div class="col-xs-2" style="padding-left:25px;"><a class="cwhite" href="#"><i class="icon-angle-left font32"></i></a></div>
+        <div class="col-xs-2" style="padding-left:25px;"><a class="cwhite" href="<?php echo url('home/Fruits/index'); ?>"><i class="icon-angle-left font32"></i></a></div>
         <div class="col-xs-8 text-center font20">商品详情</div>
         <div class="col-xs-2" >
             <div class="icon_shopcar">
-                <div class="icon_shopcar_ts">15</div>
-                <a class="cwhite" href="#"><div class="photo_30"><img src="images/icon_shopcar.png" alt="购物车"></div></a>
+                <div class="icon_shopcar_ts"></div>
+                <?php if(!$uid): ?>
+
+
+                <a class="cwhite" href="<?php echo url('home/user/login'); ?>"><div class="photo_30"><img src="home/images/icon_shopcar.png" alt="购物车"></div></a>
+
+                <?php else: ?>
+                <a class="cwhite" href="<?php echo url('home/Cart/index'); ?>"><div class="photo_30"><img src="home/images/icon_shopcar.png" alt="购物车"></div></a>
+
+                <?php endif; ?>
+
             </div>
         </div>
     </div>
@@ -80,7 +93,7 @@
                     <i class="icon-minus"></i></button>
             </div>
         </span>
-    <p class=" color_gray font16"><span class="color_orange font20">¥<?= $fruit_one[0]['v_price']?></span>&nbsp;&nbsp;&nbsp;&nbsp;<del>¥<?= $fruit_one[0]['m_price']?></del></p>
+    <p class=" color_gray font16"><span class="color_orange font20">¥<?= $fruit_one[0]['m_price']?></span>&nbsp;&nbsp;&nbsp;&nbsp;<del>¥<?= $fruit_one[0]['m_price']?></del></p>
     <div class="height10"></div>
     <div class=" width100 bg_white border_top hang32">
         <span class=" font16">商品规格</span>
@@ -163,12 +176,10 @@
             <button class="btn btn-lg btn-success btn-group-justified" type="submit" >联系客服</button>
         </div>
         <div class="col-xs-6" style="padding-left:5px; padding-right:0px;">
-            <?php
-use think\Session;
-Session::set('u_id',11);
-$uid=Session::get('u_id');
-if(!$uid): ?> 请先登录
-            <button class="btn btn-lg btn-success btn-group-justified" >加入购物车</button>
+
+
+           <?php if(!$uid): ?>
+            <a href="<?php echo url('home/user/login'); ?>" class="btn btn-lg btn-success btn-group-justified">加入购物车</a>
 
             <?php else: ?>
             <input type="hidden" class="uid" value="<?php echo $uid; ?>">
@@ -191,7 +202,11 @@ if(!$uid): ?> 请先登录
 <script>
     //加入购物车
     $('#che').click(function(){
+
         var uid=$('.uid').val();
+        if(!uid){
+            window.location.href="<?php echo url('index.php/home/User/login'); ?>";
+        }
         var fid=$('.fid').val();
         var num = $(".disabled").html();
         $.ajax({
@@ -199,6 +214,7 @@ if(!$uid): ?> 请先登录
             url: "<?php echo url('index.php/home/fruits/cartdesc'); ?>",
             data: "fid="+fid+"&uid="+uid+"&num="+num,
             success: function(msg){
+//                alert(msg);
                 if(msg==222){
                     alert('加入购物车成功');
                 }
@@ -241,5 +257,5 @@ if(!$uid): ?> 请先登录
 
     })
 
-    $("")
+
 </script>

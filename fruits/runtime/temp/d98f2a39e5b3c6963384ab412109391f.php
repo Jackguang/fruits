@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:85:"E:\phpStudy\WWW\fruits\fruits\public/../application/home\view\userinfo\goaddress.html";i:1493005677;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:85:"E:\phpStudy\WWW\fruits\fruits\public/../application/home\view\userinfo\goaddress.html";i:1493187589;}*/ ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -67,7 +67,8 @@
 					<label class="check" for="check" onselectstart="return false"  >设置为默认地址</label>
 				</li>
 			</ul> -->		
-			<input type="button" value="保存" class="save"/>
+			<!-- <input type="button" value="保存" class="save"/> -->
+			<center><button class="save" style="height: 35px;width: 80px;border-radius: 16px;">保 存<tton></center>
 		</form>
 	</div>
 	
@@ -80,8 +81,7 @@
 				$(".checkboxa label").addClass("checkd");
 			}
 		})
-	</script>
-	
+	</script>	
 
 </body>
 </html>

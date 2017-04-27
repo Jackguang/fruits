@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:80:"E:\phpStudy\WWW\fruits\fruits\public/../application/home\view\userinfo\user.html";i:1493005674;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:80:"E:\phpStudy\WWW\fruits\fruits\public/../application/home\view\userinfo\user.html";i:1493122032;}*/ ?>
 <!DOCTYPE html>
 <html class="no-js">
 <head>
@@ -74,7 +74,7 @@
 	        			<?php endif; ?>
 	        		</span>
 	        		<br>等级</li>
-	        		<li><a href="myorder.html"><span class="bar"></span><span>2</span><br>我的订单</a></li>
+	        		<li><a href="<?php echo url('home/Cart/orderinfo'); ?>"><span class="bar"></span><span>2</span><br>我的订单</a></li>
 	        	</ul>
 	        </div>
 	        <ul class="m-user-content">
